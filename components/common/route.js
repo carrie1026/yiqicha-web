@@ -39,6 +39,12 @@ define(['angular'], function (angular) {
               .when('/index', {
                 templateUrl: '/templates/home/index.html'
             })
+              .when('/changeRecord', {
+                templateUrl: '/templates/compinfo/changeRecord/changeRecord.html'
+            })
+              .when('/investAbroad', {
+                templateUrl: '/templates/compinfo/changeRecord/investAbroad.html'
+            })
             // 默认路由-首页
             .otherwise({
                 redirectTo: '/home'
