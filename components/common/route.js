@@ -36,6 +36,9 @@ define(['angular'], function (angular) {
               .when('/xiugai_info', {
                 templateUrl: '/templates/mycenter/xiugai_info.html'
             })
+              .when('/index', {
+                templateUrl: '/templates/home/index.html'
+            })
             // 默认路由-首页
             .otherwise({
                 redirectTo: '/home'
