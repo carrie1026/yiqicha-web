@@ -45,9 +45,12 @@ define(['angular'], function (angular) {
               .when('/investAbroad', {
                 templateUrl: '/templates/compinfo/changeRecord/investAbroad.html'
             })
+              .when('/compadd',{
+                templateUrl: '/templates/compinfo/compdet/compadd.html'
+            })
             // 默认路由-首页
             .otherwise({
-                redirectTo: '/home'
+                redirectTo: '/index'
             });
     }]);
 });
