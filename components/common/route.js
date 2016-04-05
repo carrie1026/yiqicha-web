@@ -48,6 +48,10 @@ define(['angular'], function (angular) {
               .when('/compadd',{
                 templateUrl: '/templates/compinfo/compdet/compadd.html'
             })
+              .when('/indana',{
+                templateUrl: '/templates/compinfo/indana/indana.html',
+                controller: 'columnBarChartController'
+            })
             // 默认路由-首页
             .otherwise({
                 redirectTo: '/index'
