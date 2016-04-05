@@ -51,3 +51,22 @@
 	position:relative;
 	top:-15px;
 }
+.wb60{
+	width:60%;
+}
+.wb40{
+	width:40%;
+}
+.tin{
+	text-indent: 0;
+}
+.ti2{
+	text-indent: 2em;
+}
+.rightp{
+	width:30px;
+	height:30px;
+}
+.fz12{
+	font-size:1.2em;
+}
