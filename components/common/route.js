@@ -52,6 +52,18 @@ define(['angular'], function (angular) {
                 templateUrl: '/templates/compinfo/indana/indana.html',
                 controller: 'columnBarChartController'
             })
+              .when('/login',{
+                templateUrl: '/templates/loginAndRegister/login.html',
+                controller: ''
+            })
+                .when('/register',{
+                        templateUrl: '/templates/loginAndRegister/register.html',
+                        controller: ''
+            })
+                .when('/search_company',{
+                        templateUrl: '/templates/search/search_company.html',
+                        controller: ''
+            })
             // 默认路由-首页
             .otherwise({
                 redirectTo: '/index'
