@@ -202,6 +202,12 @@ define(['./mod'], function(mod){
                 showInLegend: true,
                 
                 data: [{
+                    name: '0 - 50 人',
+                    y: 0.2
+                },{
+                    name: '50 - 100 人',
+                    y: 0.91
+                },{
                     name: '100 - 200 人',
                     y: 56.33
                 }, {
@@ -215,12 +221,6 @@ define(['./mod'], function(mod){
                 }, {
                     name: '400 - 500 人',
                     y: 4.77
-                }, {
-                    name: '50 - 100 人',
-                    y: 0.91
-                }, {
-                    name: '0 - 50 人',
-                    y: 0.2
                 }]
             }]
     	};
@@ -255,6 +255,12 @@ define(['./mod'], function(mod){
                 showInLegend: true,
                 
                 data: [{
+                    name: '0 - 50 人',
+                    y: 0.21
+                },{
+                    name: '50 - 100 人',
+                    y: 0.7
+                },{
                     name: '100 - 200 人',
                     y: 60.33
                 }, {
@@ -268,12 +274,6 @@ define(['./mod'], function(mod){
                 }, {
                     name: '400 - 500 人',
                     y: 0.97
-                }, {
-                    name: '50 - 100 人',
-                    y: 0.7
-                }, {
-                    name: '0 - 50 人',
-                    y: 0.21
                 }]
             }]
     	};
@@ -308,6 +308,12 @@ define(['./mod'], function(mod){
                 showInLegend: true,
                 
                 data: [{
+                    name: '0 - 50 人',
+                    y: 0.21
+                },{
+                    name: '50 - 100 人',
+                    y: 0.7
+                },{
                     name: '100 - 200 人',
                     y: 68.36
                 }, {
@@ -321,12 +327,6 @@ define(['./mod'], function(mod){
                 }, {
                     name: '400 - 500 人',
                     y: 0.97
-                }, {
-                    name: '50 - 100 人',
-                    y: 0.7
-                }, {
-                    name: '0 - 50 人',
-                    y: 0.21
                 }]
             }]
     	};
@@ -361,6 +361,12 @@ define(['./mod'], function(mod){
                 showInLegend: true,
                 
                 data: [{
+                    name: '0 - 50 人',
+                    y: 6.21
+                },{
+                    name: '50 - 100 人',
+                    y: 3.7
+                },{
                     name: '100 - 200 人',
                     y: 58.36
                 }, {
@@ -374,12 +380,6 @@ define(['./mod'], function(mod){
                 }, {
                     name: '400 - 500 人',
                     y: 1.97
-                }, {
-                    name: '50 - 100 人',
-                    y: 3.7
-                }, {
-                    name: '0 - 50 人',
-                    y: 6.21
                 }]
             }]
     	};
