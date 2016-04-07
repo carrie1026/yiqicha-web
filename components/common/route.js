@@ -56,7 +56,7 @@ define(['angular'], function (angular) {
                 templateUrl: '/templates/loginAndRegister/login.html',
                 controller: ''
             })
-                .when('/register',{
+             .when('/register',{
                         templateUrl: '/templates/loginAndRegister/register.html',
                         controller: ''
             })
