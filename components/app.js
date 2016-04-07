@@ -10,10 +10,12 @@ define([
     'directives/_base',
     'filters/_base',
     'services/_base',
-    'mobileAngularUi'
+    'mobileAngularUi',
+    'highcharts',
+    'highchartsng'
 ], function (angular) {
     'use strict';
-    return angular.module('MyApp', ['ngRoute','mobile-angular-ui', 'ngFileUpload', 'app.route', 'app.api', 'app.constants', 'app.ctrls', 'app.directives', 'app.filters', 'app.services'])
+    return angular.module('MyApp', ['ngRoute','mobile-angular-ui', 'ngFileUpload','highcharts-ng', 'app.route', 'app.api', 'app.constants', 'app.ctrls', 'app.directives', 'app.filters', 'app.services'])
 
     .config(['$httpProvider', '$routeProvider','$locationProvider', function ($httpProvider, $routeProvider, $locationProvider) {
         // 设置Http拦截器

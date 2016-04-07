@@ -37,6 +37,12 @@
 .bdr{
 	border-right:1px solid #ddd;
 }
+<<<<<<< HEAD
+=======
+.bdb{
+	border-bottom: 1px solid #ccc;
+}
+>>>>>>> eddb42921ccb04bd549ea5352fee7d609308873b
 .ti15{
 	text-indent: 15px
 }
@@ -50,4 +56,36 @@
 	font-size:2em;
 	position:relative;
 	top:-15px;
+<<<<<<< HEAD
+=======
+	color:#ccc;
+}
+.wb60{
+	width:60%;
+}
+.wb40{
+	width:40%;
+}
+.tin{
+	text-indent: 0;
+}
+.ti2{
+	text-indent: 2em;
+}
+.rightp{
+	width:30px;
+	height:30px;
+}
+.fz12{
+	font-size:1.2em;
+}
+.co{
+	color:orange;
+}
+.wb30{
+	width:30%;
+}
+.bgt{
+	background-image: url("../images/clock@3x.png");
+>>>>>>> eddb42921ccb04bd549ea5352fee7d609308873b
 }

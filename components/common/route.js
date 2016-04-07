@@ -36,6 +36,7 @@ define(['angular'], function (angular) {
               .when('/xiugai_info', {
                 templateUrl: '/templates/mycenter/xiugai_info.html'
             })
+<<<<<<< HEAD
               .when('/nopromise_details', {
                 templateUrl: '/templates/nopromise/nopromise_details.html'
             })
@@ -62,10 +63,39 @@ define(['angular'], function (angular) {
             })
                  .when('/search_nopromise', {
                 templateUrl: '/templates/search/search_nopromise.html'
+=======
+              .when('/index', {
+                templateUrl: '/templates/home/index.html'
+            })
+              .when('/changeRecord', {
+                templateUrl: '/templates/compinfo/changeRecord/changeRecord.html'
+            })
+              .when('/investAbroad', {
+                templateUrl: '/templates/compinfo/changeRecord/investAbroad.html'
+            })
+              .when('/compadd',{
+                templateUrl: '/templates/compinfo/compdet/compadd.html'
+            })
+              .when('/indana',{
+                templateUrl: '/templates/compinfo/indana/indana.html',
+                controller: 'columnBarChartController'
+            })
+              .when('/login',{
+                templateUrl: '/templates/loginAndRegister/login.html',
+                controller: ''
+            })
+                .when('/register',{
+                        templateUrl: '/templates/loginAndRegister/register.html',
+                        controller: ''
+            })
+                .when('/search_company',{
+                        templateUrl: '/templates/search/search_company.html',
+                        controller: ''
+>>>>>>> eddb42921ccb04bd549ea5352fee7d609308873b
             })
             // 默认路由-首页
             .otherwise({
-                redirectTo: '/home'
+                redirectTo: '/index'
             });
     }]);
 });

@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 .investa{
+=======
+/*此css关系多个页面，谨慎更改*/
+.nvesta{
+>>>>>>> eddb42921ccb04bd549ea5352fee7d609308873b
 	width:100%;
 	height:auto;
 }
@@ -42,6 +47,10 @@
 	height:30px;
 	line-height:30px;
 	text-indent: 10px;
+<<<<<<< HEAD
+=======
+	overflow:hidden;
+>>>>>>> eddb42921ccb04bd549ea5352fee7d609308873b
 }
 .investa1123{
 	width:40%;
@@ -51,4 +60,189 @@
 }
 .fwb{
 	font-weight:700;
+<<<<<<< HEAD
+=======
+}
+.corpp1{
+	line-height:60px;
+	color:#666;
+}
+.investa1 .p2{
+	color:#666;
+	line-height: 24px
+}
+.investa1 p{
+	font-size:1.1em;
+}
+.bgf{
+	background-image: url("../images/file@3x.png");
+}
+.bgt{
+	background-image: url("../images/clock@3x.png");
+}
+/*诉讼信息详情*/
+.liti{
+	width:100%;
+	position: relative;
+	top:40px;
+}
+.liti1{
+	width:100%;
+	height:80px;
+	border-bottom:1px solid #ccc;
+	background-color:#FFF;
+}
+.liti11{
+	width:90%;
+	margin-left:5%;
+}
+.liti111{
+	width:100%;
+	height:40px;
+	line-height:40px;
+	border-bottom:1px solid #ccc;
+	color:#ccc;
+}
+.liti112{
+	width:100%;
+	height:40px;
+	line-height:40px;
+	color:#777;
+	font-size:1.1em;
+}
+.liti2{
+	width:100%;
+	height:15px;
+}
+/*主要成员css*/
+.leadmem{
+	width:100%;
+}
+.leadmem1{
+	width:100%;
+	height:15px;
+}
+.leadmem2{
+	width:100%;
+	height:80px;
+}
+.leadmem21{
+	width:80px;
+	height:80px;
+	border-radius:60px;
+	float:left;
+	overflow:hidden;
+}
+.leadmem21 img{
+	width:100%;
+	height:100%;
+}
+.leadmem22{
+	width:70%;
+	height:60px;
+	float:left;
+	margin-top:20px;
+}
+.leadmem221{
+	width:100%;
+	height:20px;
+	line-height:20px;
+}
+/*行业分析*/
+.indana{
+	width:100%;
+	position:relative;
+	top:40px;
+}
+.indana1{
+	width:90%;
+	margin-left:5%;
+}
+.indana11{
+	width:100%;
+	height:40px;
+	position:relative;
+}
+.indana111{
+	width:70%;
+	height:40px;
+	line-height:40px;
+	color:orange;
+	font-size:1.1em;
+	float:left;
+}
+.indana112{
+	width:30%;
+	float:left;
+	height:40px;
+	text-align: right
+}
+.indana112 img{
+	width:20px;
+	height:14px;
+	margin-top:13px;
+}
+.indana12{
+	width:100%;
+	height:20px;
+}
+.indana13{
+	width:100%;
+	height:30px;
+	line-height:30px;
+	color:#777;
+	font-size:1.1em;
+}
+.indana14{
+	width:100%;
+	height:500px;
+	
+}
+.zzc{
+	width:100%;
+	height:700px;
+	background-color:gray;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:9;
+	opacity: 0.6;
+}
+.indanalist{
+	width:200px;
+	height:200px;
+	border-radius:10px;
+	background-color:#FFF;
+	position:absolute;
+	z-index:99;
+	top:40px;
+	right:10px;
+}
+.indanalist1{
+	width:100%;
+	height:40px;
+
+}
+.indanalist11{
+	width:80%;
+	height:40px;
+	line-height:40px;
+	float:left;
+	color:#777;
+	text-indent:10px;
+	font-size:1.1em;
+}
+.indanalist12{
+	width:15%;
+	margin-right:4%;
+	height:40px;
+	line-height:40px;
+	float:left;
+	text-align: right;
+	font-size:1.4em;
+	color:#ccc;
+}
+.nbbg{
+	background-image: url("../images/company@3x.png");
+>>>>>>> eddb42921ccb04bd549ea5352fee7d609308873b
 }

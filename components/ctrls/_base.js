@@ -1,4 +1,5 @@
 define([
     './mod',
-    'homeCtrl'
+    'homeCtrl',
+    'highchartsCtrl'
 ]);

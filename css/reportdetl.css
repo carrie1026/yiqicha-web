@@ -1,0 +1,63 @@
+.rdl{
+	width:100%;
+}
+.rdl1{
+	width:100%;
+	position:relative;
+	top:40px;
+}
+.rdl11{
+	width:100%;
+	height:40px;
+	border-top: 1px solid #ccc;
+}
+.rdl111{
+	width:80%;
+	height:40px;
+	line-height: 40px;
+	float:left;
+	margin-left:5%;
+	color:#777;
+}
+.rdl112{
+	width:16px;
+	height:16px;
+	float:right;
+	margin-right: 5%;
+	margin-top:16px;
+	background-image: url("../images/down@3x.png");
+	background-size: 100% 50%;
+	background-repeat: no-repeat;
+}
+.nbnr{
+	width:90%;
+	margin-left:5%;
+}
+.ititle{
+	height:20px;
+	line-height:20px;
+	color:#ccc;
+}
+.icontent{
+	height:30px;
+	line-height:30px;
+	color:#777;
+}
+.jj15{
+	height:15px;
+}
+.wb50{
+	width:50%;
+}
+.fl{
+	float:left;
+}
+.h20{
+	height:20px;
+}
+.h30{
+	height:30px;
+}
+.fz1{
+	font-size:1em;
+}
