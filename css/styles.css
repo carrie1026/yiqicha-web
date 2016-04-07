@@ -1,6 +1,8 @@
 @charset "utf-8";
 /* webrx CSS Document */
 
+
+
 /*header*/
 #mycenter_header{
 	width: 100%;
@@ -468,4 +470,436 @@ a{
 	width: 7px;
 	height: 12px;
 	display: inline-block;
+}
+
+/*失信榜单详情*/
+#nopromise_details {
+	width: 100%;
+	height: 100%;
+	background: #f2f3f4;
+}
+#nopromise_details #details_con p{
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	color: #3c3c3c;
+	padding: 0 0 0 5%;
+	border-top: 1px solid #c0c0c0;
+}
+#nopromise_details #details_con ul{
+	background: #fff;
+	border-top: 1px solid #d8d8d8;
+	border-bottom: 1px solid #d8d8d8;
+	padding: 0 0 0 5%;
+	margin: 0 0 11px 0;
+}
+#nopromise_details #details_con ul li{
+	height: 40px;
+	line-height: 40px;
+}
+#nopromise_details #details_con ul li.li_one{
+	border-bottom: 1px solid #d8d8d8;
+	color: #a0a0a0;
+}
+#nopromise_details #details_con ul li.li_two{
+	color: #3c3c3c;
+	font-size: 16px;
+}
+
+
+/*失信榜单*/
+#nopromise_business{
+	width: 100%;
+	height: 100%;
+	background: #f2f3f4;
+}
+#nopromise_business #business_con p{
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	color: #3c3c3c;
+	padding: 0 0 0 5%;
+	border-top: 1px solid #c0c0c0;
+	border-bottom: 1px solid #c0c0c0;
+}
+#nopromise_business #business_con p span{
+	color: #fe5529;
+}
+#nopromise_business #business_con ul{
+	background: #fff;
+}
+#nopromise_business #business_con ul li{
+	height: 40px;
+	line-height: 40px;
+	margin: 0 5% 0 5%;
+}
+#nopromise_business #business_con ul li.li_one{
+	color: #3c3c3c;
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+}
+#nopromise_business #business_con ul li.li_two{
+	color: #a0a0a0;
+}
+#nopromise_business #business_con ul li.li_two span{
+}
+#nopromise_business #business_con ul li.li_two span img{
+	width: 13px;
+	height: 13px;
+	display: inline-block;
+	margin: 0 2% 0 0;
+}
+#nopromise_business #business_con ul li.li_two em{
+	float: right;
+	width: 15%;
+}
+#nopromise_business #business_con ul li.li_two em img{
+	width: 14px;
+	height: 16px;
+	display: inline-block;
+	margin: 0 10% 0 0;
+}
+#nopromise_business #business_con ul li.li_three{
+	color: #a0a0a0;
+	padding: 0 0 17px 0;
+	border-bottom: 1px solid #d8d8d8;
+}
+#nopromise_business #business_con ul li.li_three img{
+	width: 13px;
+	height: 15px;
+	display: inline-block;
+	margin: 0 2% 0 0;
+}
+
+
+
+#load_more{
+	width: 100%;
+	margin: 33px auto;
+	font-size: 16px;
+	color: #a0a0a0;
+	text-align: center;
+}
+#load_more img{
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+	margin: -3px 2% 0 0;
+}
+
+/*不良信用查询系统*/
+#nopromise_inquire{
+	width: 100%;
+	height: 100%;
+	background: #fff;
+}
+
+
+/*筛选头部*/
+#search_header{
+	width: 100%;
+	height: 44px;
+	line-height: 44px;
+	background: #00bbfb;
+	padding: 0 5%;
+}
+#search_header p{
+	float: left;
+	width: 10%;
+}
+#search_header p img{
+	width: 10px;
+	height: 19px;
+	display: inline-block;
+}
+#search_header ul{
+	float: right;
+	width: 81%;
+	height: 30px;
+	line-height: 30px;
+	background: #fff; 
+	color: #3c3c3c;
+	font-size: 14px;
+	border-radius: 3px;
+	margin: 7px 0;
+}
+#search_header ul li{
+	float: left;
+	padding: 0 2% 0 3%;
+}
+#search_header ul li.li_one img{
+	width: 13px;
+	height: 13px;
+	display: inline-block;
+}
+#search_header ul li.li_three{
+	float: right;
+	padding: 0 3% 0 0;
+}
+#search_header ul li.li_three img{
+	width: 12px;
+	height: 12px;
+	display: inline-block;
+
+}
+
+/*筛选地区*/
+#search_area{
+	width: 100%;
+	height: 100%;
+	background: #fff;
+}
+#search_area #searcharea_con{
+	width: 100%;
+}
+#search_area #searcharea_con ul{
+	height: 50px;
+	border-bottom: 1px solid #3c3c3c;
+}
+#search_area #searcharea_con ul li{
+	float: left;
+	width: 33.333%;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 14px;
+}
+#search_area #searcharea_con ul li:hover , #search_area #searcharea_con ul li.current{
+	color: #01bafb;
+	padding: 0 0 15px 0;
+	border-bottom: 2.5px solid #01bafb;
+}
+#search_area #searcharea_con p{
+	height: 40px;
+	line-height: 40px;
+	padding: 0 5%;
+	color: #a0a0a0;
+	background: #f2f3f4;
+	font-size: 13px;
+}
+#search_area #searcharea_con p span{
+	color: #01bafb;
+	margin: 0 0 0 1%;
+}
+#search_area #searcharea_con p em{
+	float: right;
+}
+#search_area #searcharea_con p em img{
+	width: 12px;
+	height: 7px;
+	display: inline-block;
+}
+#search_area #searcharea_con #searcharea_con1 p{
+	height: 39px;
+	line-height: 39px;
+	color: #3c3c3c;
+	border-top:1px solid #e2e2e2;
+	background: #fff;
+}
+
+/*筛选法人股东     用的是筛选地区的样式*/
+#search_area #searcharea_con p em{
+	font-size: 10px;
+	color: #01bafb;
+}
+#search_area  #searchpeople_con1 ul{
+	border-bottom: 1px solid #d8d8d8;
+	margin: 0 5%;
+}
+#search_area  #searchpeople_con1 ul p{
+	color: #3c3c3c;
+	font-size: 15px;
+	margin: 15px 0 0 0;
+}
+#search_area #searchpeople_con1 ul li{
+	float: left;
+	color: #a0a0a0;
+	height: 40px;
+	line-height: 40px;
+}
+#search_area  #searchpeople_con1 ul li.li_one{
+	margin: 0 1.5% 0 0;
+}
+#search_area  #searchpeople_con1 ul li.li_one img{
+	width: 14px;
+	height: 15px;
+	display: inline-block;
+	margin: -5px 0 0 0;
+}
+#search_area  #searchpeople_con1 ul li.li_three{
+	float: right;
+}
+
+
+
+/*筛选记录和关注*/
+#search_record{
+	width: 100%;
+	height: 100%;
+}
+#search_record #record_con{
+	padding: 0 5% 45px 5%;
+	background: #f2f3f4;
+}
+#search_record #record_con p{
+	height: 40px;
+	line-height: 40px;
+	padding: 10px 0 20px 0;
+	color: #a0a0a0;
+	font-size: 18px;
+}
+#search_record #record_con p.p_1{
+	margin: 45px 0 0 0;
+}
+#search_record #record_con ul.ul_one li{
+	float: left;
+	margin: 10px 2.5% 0 0;
+	padding: 0 2%;
+	background: #fff;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	color: #a0a0a0;
+}
+#search_record #record_con ul.ul_one li a{
+	text-align: center;
+	color: #a0a0a0;
+}
+#search_record #record_con ul.ul_two li{
+	float: left;
+	margin: 10px 4% 0 0;
+	padding: 0 2%;
+	text-align: center;
+	color: #a0a0a0;
+}
+#search_record #record_con ul.ul_two li.li_one{
+	height: 26px;
+	line-height: 26px;
+	border: 1px solid #05a5df;
+	border-radius: 3px;
+}
+#search_record #record_con ul.ul_two li.li_one a{
+	color: #05a5df;
+}
+#search_record #record_con ul.ul_two li.li_one img{
+	width: 16px;
+	height: 15px;
+	display: inline-block;
+	padding: 0 6% 0 0;
+}
+#search_record #record_con ul.ul_two li.li_two{
+	height: 28px;
+	line-height: 28px;
+	background: #05a5df;
+	color: #fff;
+	border-radius: 3px;
+}
+#search_record #record_con ul.ul_two li.li_two a{
+	color: #fff;
+}
+#search_record #record_con ul.ul_two li.li_two a img{
+	width: 16px;
+	height: 15px;
+	display: inline-block;
+	padding: 0 6% 0 0;
+}
+#search_record #record_con ul.ul_three{
+	border-bottom: 1px solid #d8d8d8;
+}
+#search_record #record_con ul.ul_three p{
+	color: #3c3c3c;
+	font-size: 15px;
+}
+#search_record #record_con ul.ul_three li{
+	float: left;
+	color: #a0a0a0;
+	height: 40px;
+	line-height: 40px;
+}
+#search_record #record_con ul.ul_three li.li_one{
+	margin: 0 1.5% 0 0;
+}
+#search_record #record_con ul.ul_three li.li_one img{
+	width: 14px;
+	height: 15px;
+	display: inline-block;
+	margin: -5px 0 0 0;
+}
+#search_record #record_con ul.ul_three li.li_three{
+	float: right;
+}
+
+
+
+/*搜索企业*/
+#search_area #searchbusiness_con1 ul{
+	border-bottom: 1px solid #d8d8d8;
+	margin: 0 5%;
+}
+#search_area #searchbusiness_con1 p{
+	color: #3c3c3c;
+	font-size: 15px;
+	margin: 15px 0 0 0;
+}
+#search_area #searchbusiness_con1 li{
+	float: left;
+	color: #a0a0a0;
+	height: 40px;
+	line-height: 40px;
+}
+#search_area #searchbusiness_con1 li.li_one{
+	margin: 0 1.5% 0 0;
+}
+#search_area #searchbusiness_con1 li.li_one img{
+	width: 14px;
+	height: 15px;
+	display: inline-block;
+	margin: -5px 0 0 0;
+}
+#search_area #searchbusiness_con1 li.li_three{
+	float: right;
+}
+
+/*法院判决书*/
+#law_book #lawbook_con{
+	width: 100%;
+	padding: 0 5%;
+	background: #fff;
+	line-height: 200%;
+}
+#law_book #lawbook_con1{
+	border-bottom: #ececec 1px solid;
+	text-align: center;
+}
+#law_book #lawbook_con1 h3{
+	font-size: 15px;
+	color: #000;
+	margin: 30px 0 0 0;
+	font-weight: bold;
+	font-family: "微软雅黑";
+	line-height: 160%;
+}
+#law_book #lawbook_con1 em{
+	color: #414141;
+	height: 65px;
+	line-height: 65px;
+}
+#law_book #lawbook_con2{
+	padding: 25px 0 35px 0;
+	line-height: 200%;
+	color: #3f3f3f;
+}
+#law_book #lawbook_con2 p{
+	text-indent: 2em;
+}
+#law_book #lawbook_con2 p.p_1{
+	text-indent: 0;
+}
+#law_book #lawbook_con3{
+	float: right;
+	padding: 0 10% 0 0;
+}
+#law_book #lawbook_con3 p.p_2{
+	margin:25px 0 0 0; 
 }
