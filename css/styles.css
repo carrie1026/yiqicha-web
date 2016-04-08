@@ -222,10 +222,17 @@
 #mycenter_questions{
 	width: 100%;
 	height: 100%;
+    background: #fff;
+    
 }
 #mycenter_questions #questions1{
+<<<<<<< HEAD
 	padding: 0 5%;
 	background: #fff;
+=======
+	width: 88%;
+	
+>>>>>>> 27e66e9134911f9e1222b5ee89defa0d1fb5b4e8
 	margin: 0 auto;
 	border-bottom: 1px dashed #e0e0e0;
 }

@@ -5,6 +5,7 @@
 }
 .index{
 	width:100%;
+    height: 100%;
 }
 .index1{
 	width:100%;
@@ -96,6 +97,7 @@
 	top:20px;
 	height:120px;
 }
+.index2211 p{ text-align: center;}
 .index22111{
 	width:30%;
 	float:left;
@@ -122,6 +124,7 @@
 	background-size: 50% 50%;
 	background-position: center center;
 	background-repeat: no-repeat;
+    width: 90px;
 }
 .ib2{
 	background-color:orange;
@@ -155,16 +158,16 @@
 	color:gray;
 }
 .index23111{
-	width:30px;
-	height:30px;
-	line-height:25px;
+	width:25px;
+	height:25px;
+	line-height:20px;
 	text-align:center;
 	margin-top:5px;
 	border-radius:15px;
 	float:right;
 	background-color:#ddd;
 	color:#FFF;
-	font-size:30px;
+	font-size:20px;
 }
 .index2312{
 	width:100%;
@@ -188,21 +191,13 @@
 	text-align:right;
 }
 .index2312211{
-	width:20px;
-	height:20px;
 	float:left;
-	background-color:#000;
-}
-.index2312211 img{
-	width:100%;
-	height:100%;
 }
 .index2312212{
-	width:160px;
-	height:20px;
 	float:left;
 	text-indent:10px;
-
+    height: 20px;
+    line-height: 20px;
 }
 .index23122{
 	width:100%;
