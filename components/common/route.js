@@ -63,7 +63,6 @@ define(['angular'], function (angular) {
                  .when('/law_book', {
                 templateUrl: '/templates/search/law_book.html'
             })
-<<<<<<< HEAD
                  .when('/search_shixin', {
                 templateUrl: '/templates/search/search_shixin.html'
 				 })
@@ -77,11 +76,9 @@ define(['angular'], function (angular) {
                   .when('/search_shixinbs', {
                 templateUrl: '/templates/search/search_shixinbs.html'
                  })
-=======
                  .when('/search_nopromise', {
                 templateUrl: '/templates/search/search_nopromise.html'
             })
->>>>>>> 27e66e9134911f9e1222b5ee89defa0d1fb5b4e8
               .when('/index', {
                 templateUrl: '/templates/home/index.html'
             })
