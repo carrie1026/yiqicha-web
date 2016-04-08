@@ -7,56 +7,51 @@
 	width:100%;
     height: 100%;
 }
-.index1{
+.index_top{ background:url(/images/indextop_bg.png) repeat-x;height: 160px;background-size: 100% 100%;padding-top: 15px;}
+.index_topde{height:36px;background-color: #1E78CC;width: 100%;margin-bottom: 15px;}
+.index_topdelf,.index_topdecon,.index_topderg{float: left;}
+.index_topdelf{width: 10%;text-align: center;line-height: 36px;}
+.index_topdecon{width: 76%;height: 34px;background-color: #fff;line-height: 34px;margin: 1px 2%;border-radius: 3px;}
+.index_topdecon label,.index_topdecon input{float: left;}
+.index_topdecon label{width: 20%;text-align: center;}
+.index_topdecon input{height: 32px;line-height: 32px;width: 80%;border:none;border-radius: 3px;}
+.index_topderg{width: 10%;text-align: center;line-height: 36px;}
+.Dataupdate{
+	width:90%;
+	margin:0 5%;
+}
+.Dataupdate_top{
 	width:100%;
-	height:40px;
-	position:absolute;
-	top:0;
-	text-align:center;
-	line-height:40px;
-	background-color:#2D427A;
+	height:14px;
+	line-height:14px;
+	text-align:left;
 	color:#FFF;
-	font-size:1.3em;
+	font-size:16px;
+    margin-top: 15px;
 }
-.index11{
-	width:24px;
-	height:26px;
-	position:absolute;
-	right:10px;
-	top:5px;
-	background-image:url("../images/member@3x.png");
-	background-size: 100% 100%;
+.Dataupdate_con{
+	width:100%;
+    margin-top: 15px;
 }
+.index_search{
+	width:100%;
+	height:80px;
+	background-color:#FFF;
+}
+.index_search p{color: #fff;float: left;margin-right: 5px;}
+.index_searchlf{float: left;width: 34%;background-color: #43BCC6;height:80px;padding:24px 0 0 5%;}
+.index_searchcon{float: left;width: 33%;background-color: #F68745;height:80px;padding:24px 0 0 5%;}
+.index_searchrg{float: left;width: 33%;background-color: #4C7E54;height:80px;padding:24px 0 0 5%;}
+
 .index2{
 	width:100%;
-	margin-top:40px;
 }
 .index21{
 	width:100%;
 	height:160px;
 	background-color:#8A98C3;
 }
-.index211{
-	width:90%;
-	height:160px;
-	margin-left:5%;
-}
-.index2111{
-	width:100%;
-	height:14px;
-	line-height:14px;
-	text-align:right;
-	color:#FFF;
-	font-size:0.9em;
-	position:relative;
-	top:10px;
-}
-.index2112{
-	width:100%;
-	height:50px;
-	position:relative;
-	top:15px;
-}
+
 .index21121{
 	width:11%;
 	height:50px;
@@ -85,11 +80,7 @@
 	
 	background-color:#CCC;
 }
-.index221{
-	width:100%;
-	height:160px;
-	background-color:#FFF;
-}
+
 .index2211{
 	width:80%;
 	margin-left:10%;

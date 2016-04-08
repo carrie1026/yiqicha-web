@@ -2,6 +2,10 @@ define(['angular'], function (angular) {
     'use strict';
     return angular.module('app.route', []).config(['$routeProvider', function ($routeProvider) {
         $routeProvider
+            .when('/index', {
+                templateUrl: '/templates/index.html',
+                controller: ''
+            })
             .when('/home', {
                 templateUrl: '/templates/home.html',
                 controller: 'HomeCtrl'
