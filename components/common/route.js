@@ -36,7 +36,6 @@ define(['angular'], function (angular) {
               .when('/xiugai_info', {
                 templateUrl: '/templates/mycenter/xiugai_info.html'
             })
-<<<<<<< HEAD
               .when('/nopromise_details', {
                 templateUrl: '/templates/nopromise/nopromise_details.html'
             })
@@ -45,6 +44,9 @@ define(['angular'], function (angular) {
             })
               .when('/nopromise_inquire', {
                 templateUrl: '/templates/nopromise/nopromise_inquire.html'
+            })
+              .when('/nopromise_all', {
+                templateUrl: '/templates/nopromise/nopromise_all.html'
             })
                .when('/search_area', {
                 templateUrl: '/templates/search/search_area.html'
@@ -61,9 +63,19 @@ define(['angular'], function (angular) {
                  .when('/law_book', {
                 templateUrl: '/templates/search/law_book.html'
             })
-                 .when('/search_nopromise', {
-                templateUrl: '/templates/search/search_nopromise.html'
-=======
+                 .when('/search_shixin', {
+                templateUrl: '/templates/search/search_shixin.html'
+				 })
+
+                 .when('/shixin_details', {
+                templateUrl: '/templates/search/shixin_details.html'
+                 })
+                 .when('/search_first', {
+                templateUrl: '/templates/search/search_first.html'
+                 })
+                  .when('/search_shixinbs', {
+                templateUrl: '/templates/search/search_shixinbs.html'
+                 })
               .when('/index', {
                 templateUrl: '/templates/home/index.html'
             })
@@ -91,7 +103,6 @@ define(['angular'], function (angular) {
                 .when('/search_company',{
                         templateUrl: '/templates/search/search_company.html',
                         controller: ''
->>>>>>> eddb42921ccb04bd549ea5352fee7d609308873b
             })
             // 默认路由-首页
             .otherwise({
