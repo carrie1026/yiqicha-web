@@ -49,6 +49,9 @@ define(['angular'], function (angular) {
               .when('/nopromise_inquire', {
                 templateUrl: '/templates/nopromise/nopromise_inquire.html'
             })
+              .when('/nopromise_all', {
+                templateUrl: '/templates/nopromise/nopromise_all.html'
+            })
                .when('/search_area', {
                 templateUrl: '/templates/search/search_area.html'
             })
@@ -64,6 +67,19 @@ define(['angular'], function (angular) {
                  .when('/law_book', {
                 templateUrl: '/templates/search/law_book.html'
             })
+                 .when('/search_shixin', {
+                templateUrl: '/templates/search/search_shixin.html'
+				 })
+
+                 .when('/shixin_details', {
+                templateUrl: '/templates/search/shixin_details.html'
+                 })
+                 .when('/search_first', {
+                templateUrl: '/templates/search/search_first.html'
+                 })
+                  .when('/search_shixinbs', {
+                templateUrl: '/templates/search/search_shixinbs.html'
+                 })
                  .when('/search_nopromise', {
                 templateUrl: '/templates/search/search_nopromise.html'
             })
