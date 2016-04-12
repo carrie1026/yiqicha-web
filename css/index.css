@@ -6,6 +6,8 @@
 .index{
 	width:100%;
     height: 100%;
+    margin:0;
+	padding:0;
 }
 .index_top{ background:url(/images/indextop_bg.png) repeat-x;height: 160px;background-size: 100% 100%;padding-top: 15px;}
 .index_topde{height:36px;background-color: #1E78CC;width: 100%;margin-bottom: 15px;}
@@ -142,32 +144,29 @@
 	width:90%;
 	margin-left:5%;
 }
-.index2311{
-	width:100%;
+.index_follow{
+	width:90%;
 	height:40px;
 	line-height:40px;
-	color:gray;
+	margin: 0 5% 0px 5%;
 }
-.index23111{
-	width:25px;
-	height:25px;
-	line-height:20px;
-	text-align:center;
-	margin-top:5px;
-	border-radius:15px;
+.index_followlf{
+	float:left;
+    color: #7B7B7C;
+    font-size: 16px;
+}
+.index_followrg{
 	float:right;
-	background-color:#ddd;
-	color:#FFF;
-	font-size:20px;
+    color: #C1C1C1;
+    font-size: 16px;
 }
-.index2312{
+.index_followde{
 	width:100%;
-	border-top:1px solid #ccc;
+    background-color: #fff;
+    padding: 10px 5%;
 }
 .index23121{
-	width:100%;
-	height:36px;
-	line-height:36px;
+	font-size: 16px;
 	color:#666;
 }
 .index231221{
@@ -187,15 +186,16 @@
 .index2312212{
 	float:left;
 	text-indent:10px;
-    height: 20px;
-    line-height: 20px;
+    height: 30px;
+    line-height: 32px;
 }
 .index23122{
 	width:100%;
-	height:40px;
-	margin-top:10px;
+	margin-top:5px;
 	color:#ddd;
-	font-size:0.9em;
+	font-size:14px;
+    height: 30px;
+    line-height: 30px;
 }
 .index231223{
 	width:60%;
@@ -238,32 +238,4 @@
 	line-height:20px;
 	text-align:center;
 	font-size:0.9em;
-}
-.index231232{
-	width:70%;
-	height:60px;
-	line-height:60px;
-	color:#777;
-	float:left;
-	margin-top:10px;
-	text-indent:15px;
-}
-.index21131{
-	width:20px;
-	height:20px;
-	margin-top:10px;
-	display:inline-block;
-	float:left;
-	margin-left:70px;
-}
-.index21132{
-	width:160px;
-	height:20px;
-	line-height:20px;
-	display:inline-block;
-	float:left;
-	margin-top:10px;
-	color:#666;
-	border:none;
-	text-indent:10px;
 }
