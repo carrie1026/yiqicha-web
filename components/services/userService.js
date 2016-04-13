@@ -4,6 +4,60 @@
  */
 define(['./mod'], function (mod) {
     'use strict';
+mod.factory('UserService', ['$http', '$q', function($http, $q) {
+        // 注册
+        var register = function(param) {
+            var defer = $q.defer();
+            $http.post('/yiqicha/manager/unLogin/register.do', param).success(function(data) {
+                if (isRequestSuccess(data)) {
+                    defer.resolve(data);
+                    findUserInfo();
+                } else {
+                    defer.reject();
+                }
+            });
+            return defer.promise;
+        };
+        // 发送短信验证码
+        var sendSmsCaptcha = function(phoneNumber,imageCaptcha,isRegister) {
+                var defer = $q.defer();
+                $http.post('/yiqicha/manager/unLogin/sendSmsCaptcha.do', {
+                    phoneNumber: phoneNumber,
+                    imageCaptcha:imageCaptcha,
+                    isRegister: isRegister
+                }).success(function(data) {
+                    if (isRequestSuccess(data)) {
+                        defer.resolve(data);
+                    }
+                });
+                return defer.promise;
+        };
+        return {
+            register: register,
+            sendSmsCaptcha:sendSmsCaptcha,
+        };
+    }
+])
+
+//    mod.factory('UserService', ['$http', '$q', function($http, $q) {
+//        // 登录
+//        var login = function() {
+//            var defer = $q.defer();
+//            $http.post('/easyplay/manager/unLogin/login.do').success(function(data) {
+//                if (isRequestSuccess(data)) {
+//                    defer.resolve(data);
+//                } else {
+//                    defer.reject(data);
+//                }
+//            });
+//            return defer.promise;
+//        };
+//
+//        return {
+//            login: login,
+//        };
+//      }
+//    ])
     // mod.factory('UserService', [
     //     '$$http', '$rootScope', '$location', 'Roles', 'LoginTemplateUrl', 'LoginSuccessRedirctUrl', 'HomeUrl', '$interval', '$q',
     //     function ($$http, $rootScope, $location, Roles, LoginTemplateUrl, LoginSuccessRedirctUrl, HomeUrl, $interval, $q) {

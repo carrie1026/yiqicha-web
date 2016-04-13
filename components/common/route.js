@@ -101,11 +101,11 @@ define(['angular'], function (angular) {
             })
               .when('/login',{
                 templateUrl: '/templates/loginAndRegister/login.html',
-                controller: ''
+                controller: 'LoginCtrl'
             })
              .when('/register',{
                         templateUrl: '/templates/loginAndRegister/register.html',
-                        controller: ''
+                        controller: 'registerCtrl'
             })
                 .when('/search_company',{
                         templateUrl: '/templates/search/search_company.html',
