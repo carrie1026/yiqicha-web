@@ -5,11 +5,11 @@
         <ul>
             <li class="li_one"><a href="#"><img src="../../images/Oval 81 + Line@3x.png"></li>
             <li class="li_two"><input placeholder="请输入法定代表人或股东名"/></li>  
-            <li class="li_three"><img src="../../images/change@3x.png"></li>
+            <li class="li_three" style="display: none;"><img src="../../images/change@3x.png"></li>
             <br style="clear: both;" />
         </ul>
     </div>
-    <div class="record_con">
+    <div class="record_con" style="display: none;">
         <p>最近搜索</p>
         <ul class="ul_one">
             <li><a href="#">金融</a></li>
@@ -61,5 +61,11 @@
 
     </div>
 </div>
-
-
+<script type="text/javascript">
+    $(function(){
+        $('.search_header .li_two').click(function(){
+            $('.record_con').show();
+        })
+    });
+</script>
+  
