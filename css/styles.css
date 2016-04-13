@@ -711,6 +711,7 @@ a{
 	background: #f2f3f4;
 	font-size: 14px;
 	width: 100%;
+	border-top: #c0c0c0 1px solid;
 	border-bottom: #c0c0c0 1px solid;
 }
 
