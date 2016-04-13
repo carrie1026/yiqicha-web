@@ -768,7 +768,7 @@ a{
 
 .nopromise_all .no_all_con2 ul , .nopromise_all .no_all_con3 ul{
 	margin: 0 0 0 5%;
-
+	border-bottom: #c0c0c0 1px solid;
 }
 .nopromise_all .no_all_con2 ul.ul_last , .nopromise_all .no_all_con3 ul.ul_last{
 	border-bottom: none;
