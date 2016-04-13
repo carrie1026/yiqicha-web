@@ -1,6 +1,6 @@
 
 <div class="nopromise_all">
-	<div id="mycenter_header">
+	<div class="mycenter_header">
         <ul>
             <li class="li_1"><a href="#"><img src="../../images/icon_2.png"></a></li>
             <li class="li_2">失信榜单详情 2016年2月</li>
@@ -24,9 +24,16 @@
     	    <br style="clear: both;" />
     	</ul>
     </div>
+
+
     <div class="no_all_con">
         <div class="no_all_con1">
-        	<p class="p_one">失信行业TOP10<span><img src="../../images/upbottom@3x.png"></span></p>
+        	<div class="p_1 p_one" ng-class="{arrow2:isUp,arrow3:!isUp}" ng-click="isUp=!isUp" ng-init="isUp=true">失信行业
+              <em>TOP<i>10</i></em>
+               <div ng-class="{arrow2:isUp,arrow3:!isUp}" ng-click="isUp=!isUp" ng-init="isUp=true" style="float: right;margin-top: 15px;"></div> 
+               <div style="clear: both;"></div>
+            </div>
+           
         	<ul>
         		<li class="li_one">房地产开发经营</li>
         		<li class="li_two">2，6578</li>
@@ -67,15 +74,24 @@
         		<li class="li_two">1,7578</li>
         		<br style="clear: both;" />
         	</ul>
-        	<ul>
+        	<ul style="padding: 0 0 10px 0;">
         		<li class="li_one">金属及金属矿批发</li>
         		<li class="li_two">2，1578</li>
         		<br style="clear: both;" />
         	</ul>
         </div>
+
+
     	<div class="no_all_con2">
-    		<p class="p_one">失信企业TOP10<span><img src="../../images/upbottom@3x.png"></span></p>
-    		<br style="clear: both;" />
+    		<!-- <p class="p_one">失信企业<em>TOP<i>10</i></em><span><img src="../../images/upbottom@3x.png"></span></p> -->
+    		
+            <div class="p_2 p_one" ng-class="{arrow2:isUp,arrow3:!isUp}" ng-click="isUp=!isUp" ng-init="isUp=true">失信企业
+              <em>TOP<i>10</i></em>
+               <div ng-class="{arrow2:isUp,arrow3:!isUp}" ng-click="isUp=!isUp" ng-init="isUp=true" style="float: right;margin-top: 15px;"></div> 
+               <div style="clear: both;"></div>
+            </div>
+
+
     		<ul class="ul_one">
     			<li class="li_one">01</li>
     			<li class="li_two">黄石盛行海运有限公司</li>
@@ -113,8 +129,16 @@
     			<br style="clear: both;" />
     		</ul>
     	</div>
+
+
     	<div class="no_all_con3">
-    	    <p class="p_one">失信个人TOP10<span><img src="../../images/upbottom@3x.png"></span></p>
+    	    <!-- <p class="p_one">失信个人<em>TOP<i>10</i></em><span><img src="../../images/upbottom@3x.png"></span></p> -->
+            <div class="p_3 p_one" ng-class="{arrow2:isUp,arrow3:!isUp}" ng-click="isUp=!isUp" ng-init="isUp=true">失信个人
+              <em>TOP<i>10</i></em>
+               <div ng-class="{arrow2:isUp,arrow3:!isUp}" ng-click="isUp=!isUp" ng-init="isUp=true" style="float: right;margin-top: 15px;"></div> 
+               <div style="clear: both;"></div>
+            </div>
+
     		<ul class="ul_one">
     			<li class="li_one">01</li>
     			<li class="li_two">
@@ -166,13 +190,31 @@
     			<br style="clear: both;" />
     		</ul>
     	</div>
-    	<p class="p_one">失信企业地狱分布TOP10<span><img src="../../images/pic_1.png"></span></p>
-    	<br style="clear: both;" />
-    	<p>欠薪公司TOP10<span><img src="../../images/pic_1.png"></span></p>
-    	<p>投资黑名单TOP10<span><img src="../../images/pic_1.png"></span></p>
-    	<p>中介TOP10<span><img src="../../images/pic_1.png"></span></p>
-    	<p>旅游类黑名单TOP10<span><img src="../../images/pic_1.png"></span></p>
-    	<p>保险类黑名单TOP10<span><img src="../../images/pic_1.png"></span></p>
-    	<p>医药类黑名单TOP10<span><img src="../../images/pic_1.png"></span></p>
+    	<p class="p_one">失信企业地狱分布<em>TOP<i>10</i></em><span><img src="../../images/pic_1.png"></span></p>
+<!--     	<br style="clear: both;" /> -->
+    	<p>欠薪公司<em>TOP<i>10</i></em><span><img src="../../images/pic_1.png"></span></p>
+    	<p>投资黑名单<em>TOP<i>10</i></em><span><img src="../../images/pic_1.png"></span></p>
+    	<p>中介<em>TOP<i>10</i></em><span><img src="../../images/pic_1.png"></span></p>
+    	<p>旅游类黑名单<em>TOP<i>10</i></em><span><img src="../../images/pic_1.png"></span></p>
+    	<p>保险类黑名单<em>TOP<i>10</i></em><span><img src="../../images/pic_1.png"></span></p>
+    	<p>医药类黑名单<em>TOP<i>10</i></em><span><img src="../../images/pic_1.png"></span></p>
     </div>
 </div>
+<script type="text/javascript">
+    $(function(){
+        $('.no_all_con1 .p_1').click(function(){
+            $('.no_all_con1 ul').slideToggle('1000');
+        });
+
+        $('.no_all_con2 .p_2').click(function(){
+            $('.no_all_con2 ul').slideToggle('1000');
+           
+        });
+
+        $('.no_all_con3 .p_3').click(function(){
+            $('.no_all_con3 ul').slideToggle('1000');
+            $('.no_all_con3 p.p_one').css('border-top':'none');
+          
+        });
+    });
+</script>
