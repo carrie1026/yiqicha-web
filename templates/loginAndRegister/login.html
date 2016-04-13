@@ -12,18 +12,22 @@
         <p><img src="/images/logo.png" width="40%"></p>
     </div>
     <div class="login_in">
-        <div class="login_phone">
-            <span><img src="/images/login_phone.png" height="25px"></span><input type="text" placeholder="请输入手机号">
-        </div>
-        <div class="login_password">
-            <span><img src="/images/login_passward.png" height="25px"></span><input type="password" placeholder="请输入密码">
-        </div>
+        <form name="loginForm" novalidate>
+            <div class="login_phone">
+                <span><img src="/images/login_phone.png" height="25px"></span>
+                <input type="text" placeholder="请输入手机号" ng-model="loginFormData.username" ng-pattern="/^1[3|4|5|8|7][0-9]{9}$/" required />
+            </div>
+            <div class="login_password">
+                <span><img src="/images/login_passward.png" height="25px"></span>
+                <input type="password" placeholder="请输入密码" ng-model="loginFormData.password" ng-maxlength="20" required />
+            </div>
+            <div>
+                <p style="float:right;margin:15px 10% 15px 0;"><a href="#">忘记密码</a></p>
+                <div class="clear"></div>
+            </div>
+        </form>
         <div>
-            <p style="float:right;margin:15px 10% 15px 0;"><a href="#">忘记密码</a></p>
-            <div class="clear"></div>
-        </div>
-        <div>
-            <p style="text-align:center;"><a href=""><img src="/images/login_button.png" height="44px"></a></p>
+            <p style="text-align:center;"><a href="" ng-click="submitBtn()" ng-disabled="loginForm.$invalid"><img src="/images/login_button.png" height="44px"></a></p>
         </div>
     </div>
     <div class="quick_login">
