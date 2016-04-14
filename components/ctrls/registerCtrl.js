@@ -4,6 +4,10 @@ define(['./mod'], function (mod) {
         // init registerFormData
             $scope.registerFormData = {};
             $scope.submitBtn = function() {
+                if (!$scope.registerFormData.password || $scope.registerFormData.password.length == 0) {
+                    alert('请输入密码!');
+                    return;
+                }
                 $scope.registerFormData.username  = $scope.registerFormData.phoneNumber;
                 var promise = UserService.register($scope.registerFormData);
                 promise.then(function(data) {
@@ -16,10 +20,6 @@ define(['./mod'], function (mod) {
                 // console.log('send');
                 if (!$scope.registerFormData.phoneNumber || $scope.registerFormData.phoneNumber.length != 11) {
                     alert('手机号码格式不正确!');
-                    return;
-                }
-                if (!$scope.registerFormData.password || $scope.registerFormData.password.length == 0) {
-                    alert('请输入密码!');
                     return;
                 }
                 var isRegister=true;

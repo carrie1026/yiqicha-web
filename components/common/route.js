@@ -104,10 +104,14 @@ define(['angular'], function (angular) {
                 controller: 'LoginCtrl'
             })
              .when('/register',{
-                        templateUrl: '/templates/loginAndRegister/register.html',
-                        controller: 'registerCtrl'
+                templateUrl: '/templates/loginAndRegister/register.html',
+                controller: 'registerCtrl'
             })
-                .when('/search_company',{
+            .when('/retrievepassword',{
+                templateUrl: '/templates/loginAndRegister/retrievepassword.html',
+                controller: ''
+            })
+             .when('/search_company',{
                         templateUrl: '/templates/search/search_company.html',
                         controller: ''
             })
