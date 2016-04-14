@@ -4,13 +4,17 @@
         <p><a href="#"><img src="../../images/icon_2.png"></a></p>
         <ul>
             <li class="li_one"><a href="#"><img src="../../images/Oval 81 + Line@3x.png"></li>
-            <li class="li_two"><input placeholder="请输入法定代表人或股东名"/></li>  
-            <li class="li_three" style="display: none;"><img src="../../images/change@3x.png"></li>
-            <br style="clear: both;" />
+            <li class="li_two">
+            <form action="#" method="post">
+            <input placeholder="请输入法定代表人或股东名" type="text" ng-model="txt"/>
+            </form>
+            </li>  
+                <li class="li_three" ng-show="txt != 0"><img src="../../images/change@3x.png"></li>
+            <br style="clear: both;"/>
         </ul>
     </div>
-    <div class="record_con" style="display: none;">
-        <p>最近搜索</p>
+    <div class="record_con">
+        <p class="p_record">最近搜索</p>
         <ul class="ul_one">
             <li><a href="#">金融</a></li>
             <li><a href="#">担保公司</a></li>
@@ -62,10 +66,10 @@
     </div>
 </div>
 <script type="text/javascript">
-    $(function(){
-        $('.search_header .li_two').click(function(){
-            $('.record_con').show();
-        })
+$(function(){
+    $('.ul_two .li_two').click(function(){
+        $('.record_con p.p_record , .record_con .ul_one , .record_con .ul_two').hide(1000);
     });
+});
 </script>
   
