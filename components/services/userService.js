@@ -4,7 +4,7 @@
  */
 define(['./mod'], function (mod) {
     'use strict';
-mod.factory('UserService', ['$http', '$q', function($http, $q) {
+mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$interval) {
         // 注册
         var register = function(param) {
             var defer = $q.defer();
@@ -17,6 +17,14 @@ mod.factory('UserService', ['$http', '$q', function($http, $q) {
                 }
             });
             return defer.promise;
+        };
+        // 启动倒计时
+        var startCountDown = function($scope) {
+            var count = 60
+            $scope.countdown = count;
+            $interval(function() {
+                $scope.countdown--;
+            }, 1000, count)
         };
         // 发送短信验证码
         var sendSmsCaptcha = function(phoneNumber,imageCaptcha,isRegister) {
@@ -32,18 +40,31 @@ mod.factory('UserService', ['$http', '$q', function($http, $q) {
                 });
                 return defer.promise;
         };
+         // 登录
+        var login = function() {
+                var defer = $q.defer();
+                $http.post('/yiqicha/manager/unLogin/login.do').success(function(data) {
+                    if (isRequestSuccess(data)) {
+                        defer.resolve(data);
+                    } else {
+                        defer.reject(data);
+                    }
+                });
+                return defer.promise;
+        };
         return {
             register: register,
             sendSmsCaptcha:sendSmsCaptcha,
+            login,login,
         };
     }
 ])
 
-//    mod.factory('UserService', ['$http', '$q', function($http, $q) {
+//mod.factory('UserService', ['$http', '$q', function($http, $q) {
 //        // 登录
 //        var login = function() {
 //            var defer = $q.defer();
-//            $http.post('/easyplay/manager/unLogin/login.do').success(function(data) {
+//            $http.post('/yiqicha/manager/unLogin/login.do').success(function(data) {
 //                if (isRequestSuccess(data)) {
 //                    defer.resolve(data);
 //                } else {
@@ -57,7 +78,7 @@ mod.factory('UserService', ['$http', '$q', function($http, $q) {
 //            login: login,
 //        };
 //      }
-//    ])
+//])
     // mod.factory('UserService', [
     //     '$$http', '$rootScope', '$location', 'Roles', 'LoginTemplateUrl', 'LoginSuccessRedirctUrl', 'HomeUrl', '$interval', '$q',
     //     function ($$http, $rootScope, $location, Roles, LoginTemplateUrl, LoginSuccessRedirctUrl, HomeUrl, $interval, $q) {

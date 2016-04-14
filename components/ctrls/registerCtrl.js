@@ -1,6 +1,6 @@
 define(['./mod'], function (mod) {
     'use strict';
-    mod.controller('registerCtrl', ['$scope', '$location', 'UserService', function($scope, $location, UserService) {
+    mod.controller('registerCtrl', ['$scope', '$location', 'UserService','$interval', function($scope, $location, UserService,$interval) {
         // init registerFormData
             $scope.registerFormData = {};
             $scope.submitBtn = function() {
@@ -20,7 +20,17 @@ define(['./mod'], function (mod) {
                 }
                 var isRegister=true;
                 var imageCaptcha=null;
-                UserService.sendSmsCaptcha($scope.registerFormData.phoneNumber,imageCaptcha,isRegister);
+                UserService.sendSmsCaptcha($scope.registerFormData.phoneNumber,imageCaptcha,isRegister)
+                .then(function(data) {
+                    // 启动倒计时
+                    var count = 60
+                    $scope.countdown = count;
+                    $interval(function() {
+                        $scope.countdown--;
+                    }, 1000, count)
+                }, function(data) {
+                    alert("系统异常");
+                });
             };
       }])
 });
