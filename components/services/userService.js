@@ -41,9 +41,9 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
                 return defer.promise;
         };
          // 登录
-        var login = function() {
+        var login = function(param) {
                 var defer = $q.defer();
-                $http.post('/yiqicha/manager/unLogin/login.do').success(function(data) {
+                $http.post('/yiqicha/manager/unLogin/login.do',param).success(function(data) {
                     if (isRequestSuccess(data)) {
                         defer.resolve(data);
                     } else {

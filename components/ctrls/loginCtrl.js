@@ -17,7 +17,7 @@ mod.controller('LoginCtrl', ['$scope', '$location', 'UserService', function($sco
             return;
         }
         if (!$scope.loginFormData.password || $scope.loginFormData.password.length == 0) {
-            alert('请输入正确密码!');
+            alert('请输入密码!');
             return;
         }
         var promise = UserService.login( $scope.loginFormData);
