@@ -18,6 +18,10 @@ define(['./mod'], function (mod) {
                     alert('手机号码格式不正确!');
                     return;
                 }
+                if (!$scope.registerFormData.password || $scope.registerFormData.password.length == 0) {
+                    alert('请输入密码!');
+                    return;
+                }
                 var isRegister=true;
                 var imageCaptcha=null;
                 UserService.sendSmsCaptcha($scope.registerFormData.phoneNumber,imageCaptcha,isRegister)
