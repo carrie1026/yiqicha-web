@@ -13,12 +13,20 @@
 }
 .mycenter_header li.li_1 , .mycenter_header li.li_3{
 	width: 25%;
+}
+.mycenter_header li.li_1{
 	float: left;
 	padding: 8px 0 0 0;
 }
 .mycenter_header li.li_2{
 	width: 50%;
 	float: left;
+}
+.mycenter_header li.li_3{
+	float: right;
+	text-align: right;
+	color: #fff;
+	font-size: 16px;
 }
 .mycenter_header li.li_1 img{
 	width: 16px;
@@ -34,6 +42,36 @@
 	width: 22px;
 	height: 23px;
 	display: block;
+}
+
+
+
+.mycenter_header1{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background: #00bafc;
+	padding: 0 4.6%;
+}
+.mycenter_header1 li.li_1{
+	width: 25%;
+}
+.mycenter_header1 li.li_1{
+	float: left;
+	padding: 8px 0 0 0;
+}
+.mycenter_header1 li.li_2{
+	width: 75%;
+	float: left;
+}
+.mycenter_header1 li.li_1 img{
+	width: 16px;
+	height: 19px;
+	display: block;
+}
+.mycenter_header1 li.li_2{
+	color: #fff;
+	font-size: 18px;
 }
 
 
@@ -70,8 +108,8 @@
 	display: block;
 }
 .mycenter_home .myhome_ban ul.ul_one li.li_three{
-	float: left;
-	
+	float: right;
+	text-align: right;
 }
 .mycenter_home .myhome_ban ul.ul_one li.li_three img{
 	width: 22px;
@@ -1081,6 +1119,7 @@ a{
 	line-height: 28px;
 	text-align: center;
 	color: #a0a0a0;
+	border-radius: 3px;
 }
 .search_record .record_con ul.ul_one li a{
 	text-align: center;
@@ -1285,6 +1324,13 @@ a{
 	font-size: 14px;
 	color: #a0a0a0;
 }
+
+
+
+
+
+
+
 .arrow2 {
 	background: url(/images/upbottom@3x.png) no-repeat center bottom;
 	width: 24px;
