@@ -10,6 +10,9 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
             var defer = $q.defer();
             $http.post('/yiqicha/manager/unLogin/register.do', param).success(function(data) {
                 if (isRequestSuccess(data)) {
+                    console.log(data.message);
+                    console.log(data.data);
+                    console.log(data.status);
                     defer.resolve(data);
                     findUserInfo();
                 } else {

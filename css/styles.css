@@ -937,8 +937,8 @@ a{
 }
 .search_header ul li.li_two input{
 	width: 100%;
-	padding: 2% 5%;
-	
+	height: 26px;
+	/*padding: 2% 5%;*/
 	border: none;
 }
 .search_header ul li.li_three{
