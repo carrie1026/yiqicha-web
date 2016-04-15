@@ -109,7 +109,7 @@ define(['angular'], function (angular) {
             })
             .when('/retrievepassword',{
                 templateUrl: '/templates/loginAndRegister/retrievepassword.html',
-                controller: ''
+                controller: 'RetrievepasswordCtrl'
             })
              .when('/search_company',{
                         templateUrl: '/templates/search/search_company.html',
