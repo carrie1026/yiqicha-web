@@ -89,8 +89,8 @@
 	height: 40px;
 	line-height: 40px;
 }
-.mycenter_home .myhome_ban ul.ul_one li.li_one , .mycenter_home .myhome_ban ul.ul_one li.li_three{
-	width: 12.5%;
+.mycenter_home .myhome_ban ul.ul_one li.li_one{
+	width: 12%;
 	padding: 10px 0 0 0;
 }
 .mycenter_home .myhome_ban ul.ul_one li.li_one{
@@ -110,12 +110,12 @@
 .mycenter_home .myhome_ban ul.ul_one li.li_three{
 	float: right;
 	text-align: right;
+	padding: 10px 0 0 0;
 }
 .mycenter_home .myhome_ban ul.ul_one li.li_three img{
 	width: 22px;
 	height: 21px;
 	display: block;
-	text-align: right;
 }
 .mycenter_home .myhome_ban p{
 	margin: 20px 0 0 0;
