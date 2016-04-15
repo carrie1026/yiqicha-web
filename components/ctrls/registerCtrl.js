@@ -4,6 +4,10 @@ define(['./mod'], function (mod) {
         // init registerFormData
             $scope.registerFormData = {};
             $scope.submitBtn = function() {
+                if (!$scope.registerFormData.phoneNumber || $scope.registerFormData.phoneNumber.length == 0) {
+                    alert('请输入手机号!');
+                    return;
+                }
                 if (!$scope.registerFormData.password || $scope.registerFormData.password.length == 0) {
                     alert('请输入密码!');
                     return;

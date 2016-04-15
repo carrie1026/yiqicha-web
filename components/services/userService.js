@@ -10,9 +10,9 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
             var defer = $q.defer();
             $http.post('/yiqicha/manager/unLogin/register.do', param).success(function(data) {
                 if (isRequestSuccess(data)) {
-                    console.log(data.message);
-                    console.log(data.data);
-                    console.log(data.status);
+//                    console.log(data.message);
+//                    console.log(data.data);
+//                    console.log(data.status);
                     defer.resolve(data);
                     findUserInfo();
                 } else {
@@ -63,6 +63,42 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
     }
 ])
 
+//忘记密码 服务
+.factory('RetrieveService', ['$http', '$q', function($http, $q) {
+    // find Dict by key
+    var forgetPasswordSmsCaptcha = function(phoneNumber,imageCaptcha,isRegister) {
+        var defer = $q.defer();
+        $http.post('/yiqicha/manager/unLogin/sendSmsCaptcha.do', {
+            phoneNumber: phoneNumber,
+            imageCaptcha:imageCaptcha,
+            isRegister: isRegister
+        }).success(function(data) {
+            if (isRequestSuccess(data)) {
+                defer.resolve(data.data);
+            } else {
+                defer.reject(data);
+            }
+        });
+        return defer.promise;
+    };
+
+    var forgetPassword = function(newPassword,captcha) {
+        var defer = $q.defer();
+        $http.post('/yiqicha/manager/unLogin/forgetPassword.do', {newPassword: newPassword, captcha: captcha }).success(function(data) {
+            if (isRequestSuccess(data)) {
+                defer.resolve(data.data);
+            } else {
+                defer.reject(data);
+            }
+        });
+        return defer.promise;
+    };
+
+    return {
+        forgetPasswordSmsCaptcha: forgetPasswordSmsCaptcha,
+        forgetPassword: forgetPassword
+    };
+}])
 //mod.factory('UserService', ['$http', '$q', function($http, $q) {
 //        // 登录
 //        var login = function() {

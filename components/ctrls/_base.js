@@ -4,4 +4,5 @@ define([
     'highchartsCtrl',
     'loginCtrl',
     'registerCtrl',
+    'retrieveCtrl',
 ]);
