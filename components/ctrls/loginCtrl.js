@@ -1,6 +1,6 @@
 define(['./mod'], function (mod) {
     'use strict';
-mod.controller('LoginCtrl', ['$scope', '$location', 'UserService', function($scope, $location, UserService) {
+mod.controller('LoginCtrl', ['$scope','$location', 'UserService','$rootScope', function($scope, $location, UserService,$rootScope) {
     
     $scope.loginFormData = {};
     var isSuccessRedirect = function() {
@@ -21,16 +21,13 @@ mod.controller('LoginCtrl', ['$scope', '$location', 'UserService', function($sco
             return;
         }
         var promise = UserService.login( $scope.loginFormData);
-        console.log($scope.loginFormData);
         promise.then(function(data) {
-            // login success
-            console.log(data);
-            console.log();
             var redirectUrl = isSuccessRedirect();
             if (redirectUrl) {
                 $location.path(redirectUrl);
             } else {
-                $location.path('/index');
+                $location.path('/mycenter_home');
+                $rootScope.user = data.data;
             }
         }, function(data) {
             // login error
