@@ -55,10 +55,22 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
                 });
                 return defer.promise;
         };
+        // 登出
+        var logout = function(request) {
+            var defer = $q.defer();
+            $http.post('/yiqicha/manager/unLogin/logout.do',request).success(function(data) {
+                if (isRequestSuccess(data)) {
+                    defer.resolve(data);
+                    location.reload(); // 登出成功，刷新页面
+                }
+            });
+            return defer.promise;
+        };
         return {
             register: register,
             sendSmsCaptcha:sendSmsCaptcha,
-            login,login,
+            login:login,
+            logout:logout,
         };
     }
 ])

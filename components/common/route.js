@@ -14,7 +14,8 @@ define(['angular'], function (angular) {
                 templateUrl: '/templates/foo.html'
             })
             .when('/mycenter_home', {
-                templateUrl: '/templates/mycenter/mycenter_home.html'
+                templateUrl: '/templates/mycenter/mycenter_home.html',
+                controller: 'mycenterCtrl'
             })
              .when('/questions', {
                 templateUrl: '/templates/mycenter/questions.html'

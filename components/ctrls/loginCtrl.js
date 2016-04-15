@@ -24,6 +24,8 @@ mod.controller('LoginCtrl', ['$scope', '$location', 'UserService', function($sco
         console.log($scope.loginFormData);
         promise.then(function(data) {
             // login success
+            console.log(data);
+            console.log();
             var redirectUrl = isSuccessRedirect();
             if (redirectUrl) {
                 $location.path(redirectUrl);

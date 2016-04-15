@@ -5,4 +5,5 @@ define([
     'loginCtrl',
     'registerCtrl',
     'retrieveCtrl',
+    'mycenterCtrl',
 ]);
