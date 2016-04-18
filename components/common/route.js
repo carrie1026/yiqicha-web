@@ -124,6 +124,9 @@ define(['angular'], function (angular) {
                 templateUrl: '/templates/compinfo/shareholderinfo/shareholderInfo.html',
                 controller: 'ShareholderCtrl'
             })
+             .when('/userInfo',{
+                        templateUrl: '/templates/mycenter/userInfo.html'
+             })
             // 默认路由-首页
             .otherwise({
                 redirectTo: '/index'
