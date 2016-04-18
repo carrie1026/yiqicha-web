@@ -6,4 +6,7 @@ define([
     'registerCtrl',
     'retrieveCtrl',
     'mycenterCtrl',
+    'searchPeopleCtrl',
+    'litigationCtrl',
+    'shareholderCtrl',
 ]);

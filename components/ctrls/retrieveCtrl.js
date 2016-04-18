@@ -3,7 +3,7 @@ define(['./mod'], function (mod) {
 mod.controller('RetrievepasswordCtrl', ['$scope', '$location', 'UserService', '$interval','RetrieveService', function($scope, $location, UserService, $interval,RetrieveService) {
 
     $scope.retrieveFormData = {};
-    $scope.submitBtn = function() {
+    $scope.submitBtn = function(newPassword,captcha) {
         // 提交到后台
         RetrieveService.forgetPassword($scope.retrieveFormData.password, $scope.retrieveFormData.captcha)
             .then(function(data) {
