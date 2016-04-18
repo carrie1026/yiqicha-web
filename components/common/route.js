@@ -116,6 +116,9 @@ define(['angular'], function (angular) {
                         templateUrl: '/templates/search/search_company.html',
                         controller: ''
             })
+             .when('/userInfo',{
+                        templateUrl: '/templates/mycenter/userInfo.html'
+             })
             // 默认路由-首页
             .otherwise({
                 redirectTo: '/index'
