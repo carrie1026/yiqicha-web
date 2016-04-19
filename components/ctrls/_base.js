@@ -6,4 +6,5 @@ define([
     'registerCtrl',
     'retrieveCtrl',
     'mycenterCtrl',
+    'compdetCtrl',
 ]);

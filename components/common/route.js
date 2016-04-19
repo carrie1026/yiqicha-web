@@ -96,6 +96,16 @@ define(['angular'], function (angular) {
               .when('/compadd',{
                 templateUrl: '/templates/compinfo/compdet/compadd.html'
             })
+               .when('/compdet',{
+                templateUrl: '/templates/compinfo/compdet/compdet.html',
+                controller: 'compdetctrl'
+            })
+              .when('/shareholder1',{
+                templateUrl: '/templates/compinfo/shareholderinfo/shareholder1.html'
+            })
+               .when('/shareholderinfod',{
+                templateUrl: '/templates/compinfo/shareholderinfo/shareholderinfod.html'
+            })
               .when('/indana',{
                 templateUrl: '/templates/compinfo/indana/indana.html',
                 controller: 'columnBarChartController'
