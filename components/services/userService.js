@@ -10,9 +10,6 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
             var defer = $q.defer();
             $http.post('/yiqicha/manager/unLogin/register.do', param).success(function(data) {
                 if (isRequestSuccess(data)) {
-//                    console.log(data.message);
-//                    console.log(data.data);
-//                    console.log(data.status);
                     defer.resolve(data);
                     findUserInfo();
                 } else {
@@ -109,6 +106,58 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
     return {
         forgetPasswordSmsCaptcha: forgetPasswordSmsCaptcha,
         forgetPassword: forgetPassword
+    };
+}])
+//查询企业详情信息 服务
+.factory('SearchpeopleService', ['$http', '$q', function($http, $q) {
+    var Searchpeople = function() {
+        var defer = $q.defer();
+        $http.get('/yiqicha/companyInfo/login/findEnterpriseInfo.do').success(function(data) {
+            $scope.searchpeople = data;
+        });
+        return defer.promise;
+    };
+
+    return {
+        Searchpeople: Searchpeople
+    };
+}])
+//查询诉讼信息 服务
+.factory('LitigationService', ['$http', '$q', function($http, $q) {
+    var Litigation = function($scope) {
+        var defer = $q.defer();
+        $http.get('/yiqicha/companyInfo/findLawsuitMsg.do',$scope).success(function(data) {
+            if (isRequestSuccess(data)) {
+                defer.resolve(data);
+                $scope.Litigation = data;
+            } else {
+                defer.reject(data);
+            }
+        });
+        return defer.promise;
+    };
+
+    return {
+        Litigation: Litigation
+    };
+}])
+//查询股东信息 服务
+.factory('ShareholderService', ['$http', '$q', function($http, $q) {
+    var Shareholder = function($scope) {
+        var defer = $q.defer();
+        $http.get('/yiqicha/companyInfo/findStockMsg.do',$scope).success(function(data) {
+            if (isRequestSuccess(data)) {
+                defer.resolve(data);
+                $scope.Shareholder = data;
+            } else {
+                defer.reject(data);
+            }
+        });
+        return defer.promise;
+    };
+
+    return {
+        Shareholder: Shareholder
     };
 }])
 //mod.factory('UserService', ['$http', '$q', function($http, $q) {

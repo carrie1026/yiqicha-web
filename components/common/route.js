@@ -60,7 +60,8 @@ define(['angular'], function (angular) {
                 templateUrl: '/templates/search/search_record.html'
             })
                 .when('/search_people', {
-                templateUrl: '/templates/search/search_people.html'
+                templateUrl: '/templates/search/search_people.html',
+                controller: 'SearchpeopleCtrl'
             })
                  .when('/search_business', {
                 templateUrl: '/templates/search/search_business.html'
@@ -70,32 +71,32 @@ define(['angular'], function (angular) {
             })
                  .when('/search_shixin', {
                 templateUrl: '/templates/search/search_shixin.html'
-				 })
-
+            })
                  .when('/shixin_details', {
                 templateUrl: '/templates/search/shixin_details.html'
-                 })
+            })
                  .when('/search_first', {
                 templateUrl: '/templates/search/search_first.html'
-                 })
+            })
                   .when('/search_shixinbs', {
                 templateUrl: '/templates/search/search_shixinbs.html'
-                 })
+            })
                  .when('/search_nopromise', {
                 templateUrl: '/templates/search/search_nopromise.html'
             })
-              .when('/index', {
+                .when('/index', {
                 templateUrl: '/templates/home/index.html'
             })
-              .when('/changeRecord', {
+                .when('/changeRecord', {
                 templateUrl: '/templates/compinfo/changeRecord/changeRecord.html'
             })
-              .when('/investAbroad', {
+                .when('/investAbroad', {
                 templateUrl: '/templates/compinfo/changeRecord/investAbroad.html'
             })
-              .when('/compadd',{
+                .when('/compadd',{
                 templateUrl: '/templates/compinfo/compdet/compadd.html'
             })
+<<<<<<< HEAD
                .when('/compdet',{
                 templateUrl: '/templates/compinfo/compdet/compdet.html',
                 controller: 'compdetctrl'
@@ -107,25 +108,39 @@ define(['angular'], function (angular) {
                 templateUrl: '/templates/compinfo/shareholderinfo/shareholderinfod.html'
             })
               .when('/indana',{
+=======
+                .when('/indana',{
+>>>>>>> e81c60d2477655867075a29473f57b20b9783986
                 templateUrl: '/templates/compinfo/indana/indana.html',
                 controller: 'columnBarChartController'
             })
-              .when('/login',{
+                .when('/login',{
                 templateUrl: '/templates/loginAndRegister/login.html',
                 controller: 'LoginCtrl'
             })
-             .when('/register',{
+                .when('/register',{
                 templateUrl: '/templates/loginAndRegister/register.html',
                 controller: 'registerCtrl'
             })
-            .when('/retrievepassword',{
+                .when('/retrievepassword',{
                 templateUrl: '/templates/loginAndRegister/retrievepassword.html',
                 controller: 'RetrievepasswordCtrl'
             })
-             .when('/search_company',{
-                        templateUrl: '/templates/search/search_company.html',
-                        controller: ''
+                .when('/search_company',{
+                templateUrl: '/templates/search/search_company.html',
+                controller: ''
             })
+                .when('/litiinfo',{
+                templateUrl: '/templates/compinfo/litiinfo/litiinfo.html',
+                controller: 'LitigationCtrl'
+            })
+                .when('/shareholderInfo',{
+                templateUrl: '/templates/compinfo/shareholderinfo/shareholderInfo.html',
+                controller: 'ShareholderCtrl'
+            })
+             .when('/userInfo',{
+                        templateUrl: '/templates/mycenter/userInfo.html'
+             })
             // 默认路由-首页
             .otherwise({
                 redirectTo: '/index'
