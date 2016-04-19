@@ -168,6 +168,50 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
         Litigationde: Litigationde
     };
 }])
+//查询企业咨询信息 服务
+.factory('CorpinfoService', ['$http', '$q', function($http, $q) {
+    var Corpinfo = function(companyId,page,rows) {
+        var defer = $q.defer();
+        $http.post('/yiqicha/enterpriseNews/findEnterpriseNewsList.do',{
+            companyId:companyId,
+            page:page,
+            rows:rows
+        }).success(function(data) {
+            if (isRequestSuccess(data)) {
+                defer.resolve(data);
+            } else {
+                defer.reject(data);
+            }
+        });
+        return defer.promise;
+    };
+
+    return {
+        Corpinfo: Corpinfo
+    };
+}])
+//查询企业咨询详情信息 服务
+.factory('CorpinfodeService', ['$http', '$q', function($http, $q) {
+    var Corpinfode = function(companyId,page,rows) {
+        var defer = $q.defer();
+        $http.post('/yiqicha/enterpriseNews/findEnterpriseNewsById.do',{
+            companyId:companyId,
+            page:page,
+            rows:rows
+        }).success(function(data) {
+            if (isRequestSuccess(data)) {
+                defer.resolve(data);
+            } else {
+                defer.reject(data);
+            }
+        });
+        return defer.promise;
+    };
+
+    return {
+        Corpinfode: Corpinfode
+    };
+}])
 //查询股东信息 服务
 .factory('ShareholderService', ['$http', '$q', function($http, $q) {
     var Shareholder = function(page,rows) {

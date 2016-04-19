@@ -144,15 +144,15 @@ define(['angular'], function (angular) {
                 templateUrl: '/templates/compinfo/litiinfo/litiinfod.html',
                 controller: 'LitigationdeCtrl'
             })
-               //企业咨询列表
+            //企业咨询列表
                 .when('/corpinfo',{
-                        templateUrl: '/templates/compinfo/litiinfo/litiinfo.html',
-                        controller: 'LitigationCtrl'
+                templateUrl: '/templates/compinfo/corpinfo/corpinfo.html',
+                controller: 'CorpinfoCtrl'
             })
-               //企业咨询列表
+            //企业咨询列表详情
                 .when('/corpinfod',{
-                templateUrl: '/templates/compinfo/litiinfo/litiinfod.html',
-                controller: 'LitigationdeCtrl'
+                templateUrl: '/templates/compinfo/corpinfo/corpinfod.html',
+                controller: 'CorpinfodeCtrl'
             })
                 .when('/shareholderInfo',{
                 templateUrl: '/templates/compinfo/shareholderinfo/shareholderinfod.html',
