@@ -110,10 +110,17 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
 }])
 //查询企业详情信息 服务
 .factory('SearchpeopleService', ['$http', '$q', function($http, $q) {
-    var Searchpeople = function() {
+    var Searchpeople = function(page,rows) {
         var defer = $q.defer();
-        $http.get('/yiqicha/companyInfo/login/findEnterpriseInfo.do').success(function(data) {
-            $scope.searchpeople = data;
+        $http.post('/yiqicha/companyInfo/login/findEnterpriseInfo.do',{
+           page:page,
+           rows:rows 
+        }).success(function(data) {
+            if (isRequestSuccess(data)) {
+                defer.resolve(data);
+            } else {
+                defer.reject(data);
+            }
         });
         return defer.promise;
     };
