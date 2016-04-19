@@ -134,11 +134,23 @@ define(['angular'], function (angular) {
                 templateUrl: '/templates/search/search_company.html',
                 controller: ''
             })
+            //诉讼列表
                 .when('/litiinfo',{
                 templateUrl: '/templates/compinfo/litiinfo/litiinfo.html',
                 controller: 'LitigationCtrl'
             })
+            //诉讼列表详情
                 .when('/litiinfod',{
+                templateUrl: '/templates/compinfo/litiinfo/litiinfod.html',
+                controller: 'LitigationdeCtrl'
+            })
+               //企业咨询列表
+                .when('/corpinfo',{
+                        templateUrl: '/templates/compinfo/litiinfo/litiinfo.html',
+                        controller: 'LitigationCtrl'
+            })
+               //企业咨询列表
+                .when('/corpinfod',{
                 templateUrl: '/templates/compinfo/litiinfo/litiinfod.html',
                 controller: 'LitigationdeCtrl'
             })
