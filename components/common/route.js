@@ -134,14 +134,15 @@ define(['angular'], function (angular) {
             })
                 .when('/litiinfo',{
                 templateUrl: '/templates/compinfo/litiinfo/litiinfo.html',
-                controller: 'LitigationCtrl'
+                controller: ''
             })
                 .when('/shareholderInfo',{
                 templateUrl: '/templates/compinfo/shareholderinfo/shareholderInfo.html',
                 controller: 'ShareholderCtrl'
             })
              .when('/userInfo',{
-                        templateUrl: '/templates/mycenter/userInfo.html'
+                        templateUrl: '/templates/mycenter/userInfo.html',
+                        controller: 'userImageCtrl'
              })
             // 默认路由-首页
             .otherwise({
