@@ -94,20 +94,21 @@ define(['angular'], function (angular) {
                 .when('/compadd',{
                 templateUrl: '/templates/compinfo/compdet/compadd.html'
             })
-                //jiekou//
+            //股东信息
             .when('/compdet',{
                 templateUrl: '/templates/compinfo/compdet/compdet.html',
                 controller: 'compdetCtrl'
             })
+            //主要成员
             .when('/leadpeople',{
                 templateUrl: '/templates/compinfo/leadpeople/leadpeople.html',
                 controller: 'leadpeopleCtrl'
             })
+            //变更信息
             .when('/changeRecord', {
                 templateUrl: '/templates/compinfo/changeRecord/changeRecord.html',
                 controller: 'changeRecordCtrl'
             })
-               //jeikou//
               .when('/shareholder1',{
                 templateUrl: '/templates/compinfo/shareholderinfo/shareholder1.html'
             })

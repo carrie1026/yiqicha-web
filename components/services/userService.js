@@ -215,9 +215,13 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
 
 //查询主要成员 服务
 .factory('leadpeopleService', ['$http', '$q', function($http, $q) {
-    var leadpeople = function(companyId) {
+    var leadpeople = function(companyId,page,rows) {
         var defer = $q.defer();
-        $http.post('/yiqicha/mainMemberMsg/findMainMemberMsg.do',companyId).success(function(data) {
+        $http.post('/yiqicha/mainMemberMsg/findMainMemberMsg.do',{
+            companyId:companyId,
+            page:page,
+            rows:rows
+        }).success(function(data) {
             if (isRequestSuccess(data)) {
                 defer.resolve(data);
             } else {
@@ -234,9 +238,13 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
 
 //查询变更记录 服务
 .factory('changeRecordService', ['$http', '$q', function($http, $q) {
-    var changeRecord = function(companyId) {
+    var changeRecord = function(companyId,page,rows) {
         var defer = $q.defer();
-        $http.post('/yiqicha/editRecordMsg/findEditRecord.do',companyId).success(function(data) {
+        $http.post('/yiqicha/editRecordMsg/findEditRecord.do',{
+            companyId:companyId,
+            page:page,
+            rows:rows
+        }).success(function(data) {
             if (isRequestSuccess(data)) {
                 defer.resolve(data);
             } else {
