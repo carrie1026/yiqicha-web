@@ -150,6 +150,24 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
         Litigation: Litigation
     };
 }])
+//查询诉讼详情信息 服务
+.factory('LitigationdeService', ['$http', '$q', function($http, $q) {
+    var Litigationde = function(id) {
+        var defer = $q.defer();
+        $http.post('/yiqicha/companyInfo/findLawsuitMsgById.do',id).success(function(data) {
+            if (isRequestSuccess(data)) {
+                defer.resolve(data);
+            } else {
+                defer.reject(data);
+            }
+        });
+        return defer.promise;
+    };
+
+    return {
+        Litigationde: Litigationde
+    };
+}])
 //查询股东信息 服务
 .factory('ShareholderService', ['$http', '$q', function($http, $q) {
     var Shareholder = function(page,rows) {

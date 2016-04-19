@@ -129,10 +129,14 @@ define(['angular'], function (angular) {
             })
                 .when('/litiinfo',{
                 templateUrl: '/templates/compinfo/litiinfo/litiinfo.html',
-                controller: ''
+                controller: 'LitigationCtrl'
+            })
+                .when('/litiinfod',{
+                templateUrl: '/templates/compinfo/litiinfo/litiinfod.html',
+                controller: 'LitigationdeCtrl'
             })
                 .when('/shareholderInfo',{
-                templateUrl: '/templates/compinfo/shareholderinfo/shareholderInfo.html',
+                templateUrl: '/templates/compinfo/shareholderinfo/shareholderinfod.html',
                 controller: 'ShareholderCtrl'
             })
              .when('/userInfo',{

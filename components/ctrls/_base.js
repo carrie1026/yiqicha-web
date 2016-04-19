@@ -9,5 +9,6 @@ define([
     'compdetCtrl',
     'searchPeopleCtrl',
     'litigationCtrl',
+    'litigationdeCtrl',
     'shareholderCtrl',
 ]);
