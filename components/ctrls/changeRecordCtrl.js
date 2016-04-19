@@ -7,8 +7,7 @@ mod.controller('changeRecordCtrl', ['$scope','$location', 'changeRecordService',
     var rows = 1;
     changeRecordService.changeRecord(companyId,page,rows).then(function(data){
         $scope.changeRecord = data;
-        console.log($scope.changeRecord);
-        console.log(123);
+        console.log(123);  
     })
  }])
 });
