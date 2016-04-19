@@ -1,21 +1,23 @@
 define(['./mod'], function (mod) {
     'use strict';
-    mod.controller('compdetctrl', ['$scope', function ($scope,$http) {
+    mod.controller('compdetCtrl', ['$scope','PdetService', function ($scope,PdetService,$http) {
     	 /*$scope.compdetData = {};
 	     var isSuccessRedirect = function() {
 	         var search = $location.search();
 	         if (search && search.success_redirect) {
 	             return search.success_redirect;
-	         }*/
-
-
-	     };
-        $http.post('/yiqicha/companyInfo/findStockMsg.do')
-        .success(function(data){
-        	console.log(data);
-        	console.log(message);
-        	console.log(status);
-        	$scope.names=response.data;});
+	         }
+	     };*/
+         
+        //调用服务层
+        $scope.submitBtn = function() {
+            var promise = PdetService.compdet($scope.companyId);
+            promise.then(function(data) {
+                $location.path('/login');
+            }, function(data) {
+                 
+            });
+        };
 
     }]);
 });

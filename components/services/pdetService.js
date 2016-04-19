@@ -1,7 +1,7 @@
 define(['./mod'], function (mod) {
     'use strict';
-mod.factory('compdetService', ['$http', '$q','$interval', function($http, $q,$interval) {
-        // 注册
+mod.factory('PdetService', ['$http', '$q','$interval', function($http, $q,$interval) {
+       
         var compdet = function(param) {
             var defer = $q.defer();
             $http.post('/yiqicha/companyInfo/findStockMsg.do', param).success(function(data) {
@@ -10,10 +10,11 @@ mod.factory('compdetService', ['$http', '$q','$interval', function($http, $q,$in
 //                    console.log(data.data);
 //                    console.log(data.status);
                     defer.resolve(data);
-                    findUserInfo();
                 } else {
                     defer.reject();
                 }
             });
             return defer.promise;
         };
+    }]);
+});

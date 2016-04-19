@@ -96,8 +96,7 @@ define(['angular'], function (angular) {
                 .when('/compadd',{
                 templateUrl: '/templates/compinfo/compdet/compadd.html'
             })
-<<<<<<< HEAD
-               .when('/compdet',{
+            .when('/compdet',{
                 templateUrl: '/templates/compinfo/compdet/compdet.html',
                 controller: 'compdetctrl'
             })
@@ -107,10 +106,7 @@ define(['angular'], function (angular) {
                .when('/shareholderinfod',{
                 templateUrl: '/templates/compinfo/shareholderinfo/shareholderinfod.html'
             })
-              .when('/indana',{
-=======
-                .when('/indana',{
->>>>>>> e81c60d2477655867075a29473f57b20b9783986
+            .when('/indana',{
                 templateUrl: '/templates/compinfo/indana/indana.html',
                 controller: 'columnBarChartController'
             })
