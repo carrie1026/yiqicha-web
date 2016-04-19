@@ -190,17 +190,16 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
     };
 }])
 
-
-
-
 //查询股东信息 服务
 .factory('compdetService', ['$http', '$q', function($http, $q) {
-    var compdet = function($scope) {
+    var compdet = function(page,rows) {
         var defer = $q.defer();
-        $http.get('/yiqicha/companyInfo/findStockMsg.do',$scope).success(function(data) {
+        $http.post('/yiqicha/companyInfo/findStockMsg.do',{
+            page:page,
+            rows:rows
+        }).success(function(data) {
             if (isRequestSuccess(data)) {
                 defer.resolve(data);
-                $scope.Shareholder = data;
             } else {
                 defer.reject(data);
             }
@@ -212,6 +211,53 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
         compdet: compdet
     };
 }])
+
+
+//查询主要成员 服务
+.factory('leadpeopleService', ['$http', '$q', function($http, $q) {
+    var leadpeople = function(page,rows) {
+        var defer = $q.defer();
+        $http.post('/yiqicha/mainMemberMsg/findMainMemberMsg.do',{
+            page:page,
+            rows:rows
+        }).success(function(data) {
+            if (isRequestSuccess(data)) {
+                defer.resolve(data);
+            } else {
+                defer.reject(data);
+            }
+        });
+        return defer.promise;
+    };
+
+    return {
+        leadpeople: leadpeople
+    };
+}])
+
+//查询变更记录 服务
+.factory('changeRecordService', ['$http', '$q', function($http, $q) {
+    var changeRecord = function(page,rows) {
+        var defer = $q.defer();
+        $http.post('/yiqicha/editRecordMsg/findEditRecord.do',{
+           page:page,
+           rows:rows 
+        }).success(function(data) {
+            if (isRequestSuccess(data)) {
+                defer.resolve(data);
+            } else {
+                defer.reject(data);
+            }
+        });
+        return defer.promise;
+    };
+
+    return {
+        changeRecord: changeRecord
+    };
+}])
+
+
 //mod.factory('UserService', ['$http', '$q', function($http, $q) {
 //        // 登录
 //        var login = function() {

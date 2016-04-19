@@ -11,4 +11,6 @@ define([
     'litigationCtrl',
     'litigationdeCtrl',
     'shareholderCtrl',
+    'leadpeopleCtrl',
+    'changeRecordCtrl'
 ]);

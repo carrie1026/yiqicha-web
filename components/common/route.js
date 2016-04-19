@@ -87,20 +87,27 @@ define(['angular'], function (angular) {
                 .when('/index', {
                 templateUrl: '/templates/home/index.html'
             })
-                .when('/changeRecord', {
-                templateUrl: '/templates/compinfo/changeRecord/changeRecord.html'
-            })
+                
                 .when('/investAbroad', {
                 templateUrl: '/templates/compinfo/changeRecord/investAbroad.html'
             })
                 .when('/compadd',{
                 templateUrl: '/templates/compinfo/compdet/compadd.html'
             })
-                //jiekou
+                //jiekou//
             .when('/compdet',{
                 templateUrl: '/templates/compinfo/compdet/compdet.html',
                 controller: 'compdetCtrl'
             })
+            .when('/leadpeople',{
+                templateUrl: '/templates/compinfo/leadpeople/leadpeople.html',
+                controller: 'leadpeopleCtrl'
+            })
+            .when('/changeRecord', {
+                templateUrl: '/templates/compinfo/changeRecord/changeRecord.html',
+                controller: 'changeRecordCtrl'
+            })
+               //jeikou//
               .when('/shareholder1',{
                 templateUrl: '/templates/compinfo/shareholderinfo/shareholder1.html'
             })
