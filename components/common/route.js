@@ -96,11 +96,16 @@ define(['angular'], function (angular) {
                 .when('/compadd',{
                 templateUrl: '/templates/compinfo/compdet/compadd.html'
             })
-                //jiekou
+                //jiekou//
             .when('/compdet',{
                 templateUrl: '/templates/compinfo/compdet/compdet.html',
                 controller: 'compdetCtrl'
             })
+            .when('/leadmen1',{
+                templateUrl: '/templates/compinfo/leadmen/leadmen1.html',
+                controller: 'leadmen1Ctrl'
+            })
+               //jeikou//
               .when('/shareholder1',{
                 templateUrl: '/templates/compinfo/shareholderinfo/shareholder1.html'
             })
