@@ -1,3 +1,4 @@
+<<<<<<< HEAD:templates/compinfo/shareholderinfo/shareholderInfo.html
 <!--
 <!DOCTYPE html>
 
@@ -9,6 +10,9 @@
   
  </head>
 -->
+=======
+
+>>>>>>> 6b37857174788200c3dd36f1435c229c926531fb:templates/compinfo/shareholderinfo/compdet
 <div class="investa">
 	<div class="header">
 		股东信息
@@ -38,4 +42,9 @@
 			<div class="investa113"></div>
 		</div>
 	</div>
+<<<<<<< HEAD:templates/compinfo/shareholderinfo/shareholderInfo.html
 </div>
+=======
+</div>
+
+>>>>>>> 6b37857174788200c3dd36f1435c229c926531fb:templates/compinfo/shareholderinfo/compdet
