@@ -87,9 +87,7 @@ define(['angular'], function (angular) {
                 .when('/index', {
                 templateUrl: '/templates/home/index.html'
             })
-                .when('/changeRecord', {
-                templateUrl: '/templates/compinfo/changeRecord/changeRecord.html'
-            })
+                
                 .when('/investAbroad', {
                 templateUrl: '/templates/compinfo/changeRecord/investAbroad.html'
             })
@@ -101,9 +99,13 @@ define(['angular'], function (angular) {
                 templateUrl: '/templates/compinfo/compdet/compdet.html',
                 controller: 'compdetCtrl'
             })
-            .when('/leadmen1',{
-                templateUrl: '/templates/compinfo/leadmen/leadmen1.html',
-                controller: 'leadmen1Ctrl'
+            .when('/leadpeople',{
+                templateUrl: '/templates/compinfo/leadpeople/leadpeople.html',
+                controller: 'leadpeopleCtrl'
+            })
+            .when('/changeRecord', {
+                templateUrl: '/templates/compinfo/changeRecord/changeRecord.html',
+                controller: 'changeRecordCtrl'
             })
                //jeikou//
               .when('/shareholder1',{
