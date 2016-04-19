@@ -96,9 +96,10 @@ define(['angular'], function (angular) {
                 .when('/compadd',{
                 templateUrl: '/templates/compinfo/compdet/compadd.html'
             })
+                //jiekou
             .when('/compdet',{
                 templateUrl: '/templates/compinfo/compdet/compdet.html',
-                controller: 'compdetctrl'
+                controller: 'compdetCtrl'
             })
               .when('/shareholder1',{
                 templateUrl: '/templates/compinfo/shareholderinfo/shareholder1.html'

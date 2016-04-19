@@ -171,6 +171,29 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
         Shareholder: Shareholder
     };
 }])
+
+
+
+
+//查询股东信息 服务
+.factory('compdetService', ['$http', '$q', function($http, $q) {
+    var compdet = function($scope) {
+        var defer = $q.defer();
+        $http.get('/yiqicha/companyInfo/findStockMsg.do',$scope).success(function(data) {
+            if (isRequestSuccess(data)) {
+                defer.resolve(data);
+                $scope.Shareholder = data;
+            } else {
+                defer.reject(data);
+            }
+        });
+        return defer.promise;
+    };
+
+    return {
+        compdet: compdet
+    };
+}])
 //mod.factory('UserService', ['$http', '$q', function($http, $q) {
 //        // 登录
 //        var login = function() {
