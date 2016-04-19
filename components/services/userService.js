@@ -124,12 +124,14 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
 }])
 //查询诉讼信息 服务
 .factory('LitigationService', ['$http', '$q', function($http, $q) {
-    var Litigation = function($scope) {
+    var Litigation = function(page,rows) {
         var defer = $q.defer();
-        $http.get('/yiqicha/companyInfo/findLawsuitMsg.do',$scope).success(function(data) {
+        $http.post('/yiqicha/companyInfo/findLawsuitMsg.do',{
+           page:page,
+           rows:rows 
+        }).success(function(data) {
             if (isRequestSuccess(data)) {
                 defer.resolve(data);
-                $scope.Litigation = data;
             } else {
                 defer.reject(data);
             }
@@ -143,12 +145,14 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
 }])
 //查询股东信息 服务
 .factory('ShareholderService', ['$http', '$q', function($http, $q) {
-    var Shareholder = function($scope) {
+    var Shareholder = function(page,rows) {
         var defer = $q.defer();
-        $http.get('/yiqicha/companyInfo/findStockMsg.do',$scope).success(function(data) {
+        $http.post('/yiqicha/companyInfo/findStockMsg.do',{
+            page:page,
+            rows:rows
+        }).success(function(data) {
             if (isRequestSuccess(data)) {
                 defer.resolve(data);
-                $scope.Shareholder = data;
             } else {
                 defer.reject(data);
             }

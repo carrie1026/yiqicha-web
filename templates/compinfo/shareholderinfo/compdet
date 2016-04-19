@@ -1,4 +1,18 @@
+<<<<<<< HEAD:templates/compinfo/shareholderinfo/shareholderInfo.html
+<!--
+<!DOCTYPE html>
 
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-width;user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui">
+    <link rel="stylesheet" href="../../../css/main.css" />
+    <link rel="stylesheet" href="../../../css/investa.css" />
+  
+ </head>
+-->
+=======
+
+>>>>>>> 6b37857174788200c3dd36f1435c229c926531fb:templates/compinfo/shareholderinfo/compdet
 <div class="investa">
 	<div class="header">
 		股东信息
@@ -28,5 +42,9 @@
 			<div class="investa113"></div>
 		</div>
 	</div>
+<<<<<<< HEAD:templates/compinfo/shareholderinfo/shareholderInfo.html
+</div>
+=======
 </div>
 
+>>>>>>> 6b37857174788200c3dd36f1435c229c926531fb:templates/compinfo/shareholderinfo/compdet
