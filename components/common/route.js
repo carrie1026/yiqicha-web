@@ -35,8 +35,10 @@ define(['angular'], function (angular) {
              .when('/job_2', {
                 templateUrl: '/templates/mycenter/job_2.html'
             })
+             //我关注的企业列表详情
               .when('/myfocus', {
-                templateUrl: '/templates/mycenter/myfocus.html'
+                templateUrl: '/templates/mycenter/myfocus.html',
+                controller: 'myfocusCtrl'
             })
               .when('/xiugai_info', {
                 templateUrl: '/templates/mycenter/xiugai_info.html'
@@ -97,9 +99,11 @@ define(['angular'], function (angular) {
             //股东信息
             .when('/compdet',{
                 templateUrl: '/templates/compinfo/compdet/compdet.html',
-                controller: 'compdetCtrl'
+                controller: 'compdetCtrl',
+                controller: 'addMyAttentionCtrl',
+                controller: 'removeMyAttentionCtrl'
             })
-            //主要成员
+            //主要成
             .when('/leadpeople',{
                 templateUrl: '/templates/compinfo/leadpeople/leadpeople.html',
                 controller: 'leadpeopleCtrl'

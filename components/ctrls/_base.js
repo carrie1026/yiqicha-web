@@ -15,6 +15,7 @@ define([
     'changeRecordCtrl',
     'corpinfoCtrl',
     'corpinfodeCtrl',
-    'userInfoCtrl',
-    'enterpriseCtrl',
+    'myfocusCtrl',
+    'addMyAttentionCtrl',
+    'removeMyAttentionCtrl',
 ]);
