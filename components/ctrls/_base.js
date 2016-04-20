@@ -15,4 +15,6 @@ define([
     'changeRecordCtrl',
     'corpinfoCtrl',
     'corpinfodeCtrl',
+    'userInfoCtrl',
+    'enterpriseCtrl',
 ]);
