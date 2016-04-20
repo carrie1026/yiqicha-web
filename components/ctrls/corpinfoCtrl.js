@@ -3,7 +3,7 @@ define(['./mod'], function (mod) {
 mod.controller('CorpinfoCtrl', ['$scope','$location', 'CorpinfoService','$rootScope', function($scope, $location, CorpinfoService,$rootScope) {
     // 企业咨询
     var page = 1;
-    var rows = 1;
+    var rows = 2;
     var companyId = 12;
     CorpinfoService.Corpinfo(companyId,page,rows).then(function(data){
         $scope.Corpinfo = data.data;

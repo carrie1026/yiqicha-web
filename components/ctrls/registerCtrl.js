@@ -15,6 +15,7 @@ define(['./mod'], function (mod) {
                 $scope.registerFormData.username  = $scope.registerFormData.phoneNumber;
                 var promise = UserService.register($scope.registerFormData);
                 promise.then(function(data) {
+                    alert('注册成功');
                     $location.path('/login');
                 }, function(data) {
                      

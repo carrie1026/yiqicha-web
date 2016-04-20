@@ -233,7 +233,45 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
         Shareholder: Shareholder
     };
 }])
+//修改用户信息 服务
+.factory('reviseUserService', ['$http', '$q', function($http, $q) {
+    var reviseUser = function(name,companyName,job) {
+        var defer = $q.defer();
+        $http.post('/yiqicha/manager/login/modifyUserInfo.do', {name: name, companyName: companyName,job:job}).success(function(data) {
+            if (isRequestSuccess(data)) {
+                defer.resolve(data);
+            } else {
+                defer.reject(data);
+            }
+        });
+        return defer.promise;
+    };
+    return {
+        reviseUser: reviseUser
+    };
+}])
+//查询年报列表信息 服务
+.factory('ReportdetService', ['$http', '$q', function($http, $q) {
+    var Reportdet = function(page,rows,companyId) {
+        var defer = $q.defer();
+        $http.post('/yiqicha/annualPortsMsg/findAnnualPortsMsg.do',{
+            page:page,
+            rows:rows,
+            companyId:companyId
+        }).success(function(data) {
+            if (isRequestSuccess(data)) {
+                defer.resolve(data);
+            } else {
+                defer.reject(data);
+            }
+        });
+        return defer.promise;
+    };
 
+    return {
+        Reportdet: Reportdet
+    };
+}])
 //查询股东信息 服务
 .factory('compdetService', ['$http', '$q', function($http, $q) {
     var compdet = function(page,rows) {
