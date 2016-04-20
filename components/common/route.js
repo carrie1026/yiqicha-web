@@ -111,12 +111,12 @@ define(['angular'], function (angular) {
                 templateUrl: '/templates/compinfo/changeRecord/changeRecord.html',
                 controller: 'changeRecordCtrl'
             })
-              .when('/shareholder1',{
-                templateUrl: '/templates/compinfo/shareholderinfo/shareholder1.html'
-            })
-               .when('/shareholderinfod',{
-                templateUrl: '/templates/compinfo/shareholderinfo/shareholderinfod.html'
-            })
+//              .when('/shareholder1',{
+//                templateUrl: '/templates/compinfo/shareholderinfo/shareholder1.html'
+//            })
+//               .when('/shareholderinfod',{
+//                templateUrl: '/templates/compinfo/shareholderinfo/shareholderinfod.html'
+//            })
             .when('/indana',{
                 templateUrl: '/templates/compinfo/indana/indana.html',
                 controller: 'columnBarChartController'
