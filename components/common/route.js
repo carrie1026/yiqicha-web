@@ -93,7 +93,8 @@ define(['angular'], function (angular) {
             })
                 
                 .when('/investAbroad', {
-                templateUrl: '/templates/compinfo/changeRecord/investAbroad.html'
+                templateUrl: '/templates/compinfo/investabroad/investAbroad.html',
+                controller: 'queryInvestAbroadCtrl'
             })
                 .when('/compadd',{
                 templateUrl: '/templates/compinfo/compdet/compadd.html'
@@ -181,6 +182,10 @@ define(['angular'], function (angular) {
              .when('/sonEnterpriseInterMsg', {
                 templateUrl: 'templates/compinfo/branchStructure/branchStructure.html',
                 controller: 'findSonEnterpriseInterMsgCtrl'
+             })
+             .when('/suggestionFeedback', {
+                templateUrl: 'templates/mycenter/suggestionFeedback.html',
+                controller: 'suggestionFeedbackCtrl'
              })
             // 默认路由-首页
             .otherwise({
