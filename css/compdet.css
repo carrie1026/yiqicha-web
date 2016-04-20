@@ -313,21 +313,28 @@ margin-bottom:20px;
 .cb{
 	color:#0099cc;
 }
+
+
+/*纠错*/
 .compdet2{
-	width:90%;
-	margin-left:5%;
+	/*width:90%;
+	margin-left:5%;*/
+	width: 100%;
+	padding: 0 4.6%;
 	position:relative;
 	top:40px;
+	background: #fff;
 }
 .compdet21{
 	width:100%;
 	height:40px;
 	line-height:40px;
-	color:#777;
+	color:#3c3c3c;
 	font-size:1.1em;
 }
 .compdet22{
 	width:100%;
+	padding: 0 1.4%;
 	height:135px;
 }
 .compdet221{
@@ -335,35 +342,48 @@ margin-bottom:20px;
 	height:30px;
 	line-height:30px;
 	text-align:center;
-	border-radius:5px;
-	border:1px solid #ccffff;
-	color:#777;
+	border-radius:3px;
+	border:1px solid #00bbfb;
+	color:#666;
 	float:left;
 	margin-bottom:10px;
 }
 .mgrb2{
-	margin-right:2%;
+	margin-right:4%;
 }
 .compdet23{
 	width:100%;
 	height:140px;
-	line-height:30px;
-	text-indent:15px;
+	text-indent:none;
 	border:1px solid #ccc;
-	border-radius:10px;
+	border-radius:3px;
 	color:#ccc;
+}
+.compdet23 textarea{
+	display: block;
+	width: 100%;
+	height: 138px;
+	padding: 2% 3%;
+	border-radius:3px;
 }
 .compdet24{
 	width:100%;
 	height:40px;
 	line-height:40px;
-	border-radius:5px;
-	text-indent:10px;
+	border-radius:3px;
 	border:1px solid #ccc;
-	color:#777;
+	color:#3c3c3c;
 	margin-top:15px;
 }
-.compdet25{
+.compdet24 input{
+	display: block;
+	width: 100%;
+	height: 38px;
+	padding: 2% 3%;
+	border-radius:3px;
+	color:#3c3c3c;
+}
+.compdet25 input{
 	width:100%;
 	height:40px;
 	line-height:40px;
@@ -371,4 +391,10 @@ margin-bottom:20px;
 	background-color:#0099cc;
 	color:#FFF;
 	margin-top:15px;
+	border-radius:3px;
+	font-family: "微软雅黑";
+	font-size: 15px;
+}
+.compdet25 input{
+
 }

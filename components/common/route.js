@@ -105,7 +105,11 @@ define(['angular'], function (angular) {
                 controller: 'addMyAttentionCtrl',
                 controller: 'removeMyAttentionCtrl'
             })
-            //主要成
+            //纠错
+            .when('/errorcorrect',{
+                templateUrl: '/templates/compinfo/compdet/errorcorrect.html'
+            })
+            //主要成员
             .when('/leadpeople',{
                 templateUrl: '/templates/compinfo/leadpeople/leadpeople.html',
                 controller: 'leadpeopleCtrl'
@@ -114,6 +118,10 @@ define(['angular'], function (angular) {
             .when('/changeRecord', {
                 templateUrl: '/templates/compinfo/changeRecord/changeRecord.html',
                 controller: 'changeRecordCtrl'
+            })
+            //工商信息
+             .when('/industryinfo',{
+                templateUrl: '/templates/compinfo/compdet/industryinfo.html'
             })
               .when('/shareholder1',{
                 templateUrl: '/templates/compinfo/shareholderinfo/shareholder1.html'
