@@ -155,6 +155,11 @@ define(['angular'], function (angular) {
                 templateUrl: '/templates/compinfo/corpinfo/corpinfod.html',
                 controller: 'CorpinfodeCtrl'
             })
+            //企业年报列表
+                .when('/reportdet',{
+                templateUrl: '/templates/compinfo/reportdet/reportdet.html',
+                controller: ''
+            })
                 .when('/shareholderInfo',{
                 templateUrl: '/templates/compinfo/shareholderinfo/shareholderinfod.html',
                 controller: 'ShareholderCtrl'
