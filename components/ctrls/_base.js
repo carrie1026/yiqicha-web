@@ -21,5 +21,7 @@ define([
     'removeMyAttentionCtrl',
     'userInfoCtrl',
     'enterpriseCtrl',
-    'reviseUserCtrl'
+    'reviseUserCtrl',
+    'feedbackCtrl',
+    'investAbroadCtrl'
 ]);

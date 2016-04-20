@@ -4,7 +4,8 @@ mod.controller('SearchpeopleCtrl', ['$scope','$location', 'SearchpeopleService',
     // 企业信息
     var page = 1;
     var rows = 1;
-    SearchpeopleService.Searchpeople(page,rows).then(function(data){
+    var company = "李建";
+    SearchpeopleService.Searchpeople(page,rows,company).then(function(data){
         $scope.Searchpeople = data;
         console.log($scope.Searchpeople);
     })

@@ -93,7 +93,8 @@ define(['angular'], function (angular) {
             })
                 
                 .when('/investAbroad', {
-                templateUrl: '/templates/compinfo/changeRecord/investAbroad.html'
+                templateUrl: '/templates/compinfo/investabroad/investAbroad.html',
+                controller: 'queryInvestAbroadCtrl'
             })
                 .when('/compadd',{
                 templateUrl: '/templates/compinfo/compdet/compadd.html'
@@ -119,6 +120,7 @@ define(['angular'], function (angular) {
                 templateUrl: '/templates/compinfo/changeRecord/changeRecord.html',
                 controller: 'changeRecordCtrl'
             })
+<<<<<<< HEAD
             //工商信息
              .when('/industryinfo',{
                 templateUrl: '/templates/compinfo/compdet/industryinfo.html'
@@ -129,6 +131,14 @@ define(['angular'], function (angular) {
                .when('/shareholderinfod',{
                 templateUrl: '/templates/compinfo/shareholderinfo/shareholderinfod.html'
             })
+=======
+//              .when('/shareholder1',{
+//                templateUrl: '/templates/compinfo/shareholderinfo/shareholder1.html'
+//            })
+//               .when('/shareholderinfod',{
+//                templateUrl: '/templates/compinfo/shareholderinfo/shareholderinfod.html'
+//            })
+>>>>>>> 9cabc720ec00c6c32a807f0802c0837c0b37aa72
             .when('/indana',{
                 templateUrl: '/templates/compinfo/indana/indana.html',
                 controller: 'columnBarChartController'
@@ -189,6 +199,10 @@ define(['angular'], function (angular) {
              .when('/sonEnterpriseInterMsg', {
                 templateUrl: 'templates/compinfo/branchStructure/branchStructure.html',
                 controller: 'findSonEnterpriseInterMsgCtrl'
+             })
+             .when('/suggestionFeedback', {
+                templateUrl: 'templates/mycenter/suggestionFeedback.html',
+                controller: 'suggestionFeedbackCtrl'
              })
             // 默认路由-首页
             .otherwise({

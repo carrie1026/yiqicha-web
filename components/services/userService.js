@@ -108,13 +108,14 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
         forgetPassword: forgetPassword
     };
 }])
-//查询企业详情信息 服务
+//查询企业列表信息 服务
 .factory('SearchpeopleService', ['$http', '$q', function($http, $q) {
-    var Searchpeople = function(page,rows) {
+    var Searchpeople = function(page,rows,companyName) {
         var defer = $q.defer();
         $http.post('/yiqicha/companyInfo/login/findEnterpriseInfo.do',{
            page:page,
-           rows:rows 
+           rows:rows,
+           companyName:companyName
         }).success(function(data) {
             if (isRequestSuccess(data)) {
                 defer.resolve(data);

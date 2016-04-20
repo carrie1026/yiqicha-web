@@ -1,4 +1,6 @@
 define([
     './mod',
-    'userService'
+    'userService',
+    'suggestionFeedbackService',
+    'investAbroadService'
 ]);

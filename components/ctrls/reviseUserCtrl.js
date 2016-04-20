@@ -8,10 +8,10 @@ define(['./mod'], function (mod) {
                     alert('sb!');
                     return;
                 }
-                var promise = reviseUserService.reviseUser($scope.registerFormData);
+                console.log($scope.reviseUserFormData);
+                var promise = reviseUserService.reviseUser($scope.reviseUserFormData);
                 promise.then(function(data) {
-                    alert('注册成功');
-                    $location.path('/login');
+                    alert('修改成功');
                 }, function(data) {
                      
                 });
