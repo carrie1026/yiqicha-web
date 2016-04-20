@@ -5,34 +5,10 @@
 		<div class="rightwz">纠错</div>
 	</div>
 	<div class="investa1">
-		<div class="investa11">
-			<div class="investa111">2015年年报</div>
+		<div class="investa11" ng-repeat="reportdet in Reportdet.rows">
+			<div class="investa111">{{reportdet.year}}年年报</div>
 			<div class="investa112">
-			<div class="investa1121 fl nbbg"></div><div class="investa1122 fl">上海东华电机集团有限公司</div><div class="investa1123 fr"><span class="yjj">></span></div>
-				
-			</div>
-			<div class="investa113"></div>
-		</div>
-		<div class="investa11">
-			<div class="investa111">2015年年报</div>
-			<div class="investa112">
-			<div class="investa1121 fl nbbg"></div><div class="investa1122 fl">上海东华电机集团有限公司</div><div class="investa1123 fr"><span class="yjj">></span></div>
-				
-			</div>
-			<div class="investa113"></div>
-		</div>
-		<div class="investa11">
-			<div class="investa111">2015年年报</div>
-			<div class="investa112">
-			<div class="investa1121 fl nbbg"></div><div class="investa1122 fl">上海东华电机集团有限公司</div><div class="investa1123 fr"><span class="yjj">></span></div>
-				
-			</div>
-			<div class="investa113"></div>
-		</div>
-		<div class="investa11">
-			<div class="investa111">2015年年报</div>
-			<div class="investa112">
-			<div class="investa1121 fl nbbg"></div><div class="investa1122 fl">上海东华电机集团有限公司</div><div class="investa1123 fr"><span class="yjj">></span></div>
+			<div class="investa1121 fl nbbg"></div><div class="investa1122 fl">{{reportdet.companyName}}</div><div class="investa1123 fr"><span class="yjj">></span></div>
 				
 			</div>
 			<div class="investa113"></div>

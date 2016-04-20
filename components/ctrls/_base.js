@@ -10,6 +10,7 @@ define([
     'searchPeopleCtrl',
     'litigationCtrl',
     'litigationdeCtrl',
+    'reportdetCtrl',
     'shareholderCtrl',
     'leadpeopleCtrl',
     'changeRecordCtrl',
@@ -17,4 +18,5 @@ define([
     'corpinfodeCtrl',
     'userInfoCtrl',
     'enterpriseCtrl',
+    'reviseUserCtrl',
 ]);

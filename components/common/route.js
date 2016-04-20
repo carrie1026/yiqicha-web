@@ -38,8 +38,10 @@ define(['angular'], function (angular) {
               .when('/myfocus', {
                 templateUrl: '/templates/mycenter/myfocus.html'
             })
+            //修改用户信息
               .when('/xiugai_info', {
-                templateUrl: '/templates/mycenter/xiugai_info.html'
+                templateUrl: '/templates/mycenter/xiugai_info.html',
+                controller: 'reviseUserCtrl'
             })
               .when('/nopromise_details', {
                 templateUrl: '/templates/nopromise/nopromise_details.html'
@@ -158,7 +160,7 @@ define(['angular'], function (angular) {
             //企业年报列表
                 .when('/reportdet',{
                 templateUrl: '/templates/compinfo/reportdet/reportdet.html',
-                controller: ''
+                controller: 'ReportdetCtrl'
             })
                 .when('/shareholderInfo',{
                 templateUrl: '/templates/compinfo/shareholderinfo/shareholderinfod.html',
