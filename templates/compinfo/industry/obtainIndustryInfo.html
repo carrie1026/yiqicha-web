@@ -1,0 +1,20 @@
+<div style="width: 100%; height: 40px; background-color: #00BBFB">
+	<div style="float:left;width:32px;height:37px">
+		<img src="/images/icon_2.png">
+	</div>
+	<div style="float:left; width: calc(100% - 32px - 34px); width:-webkit-calc(100% - 32px - 34px); width: -moz-calc(100% - 32px - 34px);   width: -o-calc(100% - 32px - 34px); height: 37px">
+		<div style="text-align:center">
+			<span style="color:#FFF;line-height:37px;font-size:1.2em;">获取行业</span>
+		</div>
+	</div>
+	<div style="float:left;width:34px;height:37px;text-align:right">
+		<span style="color:#FFF;line-height:37px;font-size:1.2em;cursor:pointer">
+			纠错
+		</span>
+	</div>
+</div>
+<div style="width:100%;height:100%">
+	<div ng-repeat="item in industryInfoArray"  style="width:95%;height:60px;background-color:white;border-bottom:1px solid #b3b3b3;margin-left:2.5%;margin-right:2.5%">
+		<span>{{item.sectorName}}</span>
+	</div>
+</div>

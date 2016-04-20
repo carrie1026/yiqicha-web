@@ -2,5 +2,6 @@ define([
     './mod',
     'userService',
     'suggestionFeedbackService',
-    'investAbroadService'
+    'investAbroadService',
+    'industryService'
 ]);

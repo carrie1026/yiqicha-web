@@ -91,7 +91,7 @@ define(['angular'], function (angular) {
                 .when('/index', {
                 templateUrl: '/templates/home/index.html'
             })
-                
+                // 对外投资企业列表
                 .when('/investAbroad', {
                 templateUrl: '/templates/compinfo/investabroad/investAbroad.html',
                 controller: 'queryInvestAbroadCtrl'
@@ -185,21 +185,30 @@ define(['angular'], function (angular) {
                 templateUrl: '/templates/compinfo/shareholderinfo/shareholderinfod.html',
                 controller: 'ShareholderCtrl'
             })
+             // 修改用户头像
              .when('/userInfo',{
                 templateUrl: '/templates/mycenter/userInfo.html',
                 controller: 'userImageCtrl'
              })
+             // 年报详细
               .when('/annualReportDetails', {
                 templateUrl: '/templates/compinfo/reportdet/reportdetl.html',
                 controller: 'findEnterpriseInfoOfAnnualCtrl'
              })
+              // 分支机构
              .when('/sonEnterpriseInterMsg', {
                 templateUrl: 'templates/compinfo/branchStructure/branchStructure.html',
                 controller: 'findSonEnterpriseInterMsgCtrl'
              })
+             // 意见反馈
              .when('/suggestionFeedback', {
                 templateUrl: 'templates/mycenter/suggestionFeedback.html',
                 controller: 'suggestionFeedbackCtrl'
+             })
+             // 获取行业接口
+             .when('/obtainIndustryInfo', {
+                 templateUrl: 'templates/compinfo/industry/obtainIndustryInfo.html',
+                 controller: 'obtainIndustryInfoCtrl'
              })
             // 默认路由-首页
             .otherwise({
