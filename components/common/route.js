@@ -160,8 +160,16 @@ define(['angular'], function (angular) {
                 controller: 'ShareholderCtrl'
             })
              .when('/userInfo',{
-                        templateUrl: '/templates/mycenter/userInfo.html',
-                        controller: 'userImageCtrl'
+                templateUrl: '/templates/mycenter/userInfo.html',
+                controller: 'userImageCtrl'
+             })
+              .when('/annualReportDetails', {
+                templateUrl: '/templates/compinfo/reportdet/reportdetl.html',
+                controller: 'findEnterpriseInfoOfAnnualCtrl'
+             })
+             .when('/sonEnterpriseInterMsg', {
+                templateUrl: 'templates/compinfo/branchStructure/branchStructure.html',
+                controller: 'findSonEnterpriseInterMsgCtrl'
              })
             // 默认路由-首页
             .otherwise({
