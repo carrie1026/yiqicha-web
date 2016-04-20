@@ -237,7 +237,7 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
 .factory('reviseUserService', ['$http', '$q', function($http, $q) {
     var reviseUser = function(name,companyName,job) {
         var defer = $q.defer();
-        $http.post('/yiqicha/manager/login/modifyUserInfo.do', {name: name, companyName: companyName }).success(function(data) {
+        $http.post('/yiqicha/manager/login/modifyUserInfo.do', {name: name, companyName: companyName,job:job}).success(function(data) {
             if (isRequestSuccess(data)) {
                 defer.resolve(data);
             } else {
