@@ -7,7 +7,7 @@ mod.controller('leadpeopleCtrl', ['$scope','$location', 'leadpeopleService','$ro
     var rows = 10;
     console.log(123)
     leadpeopleService.leadpeople(companyId,page,rows).then(function(data){
-        $scope.leadpeople = data;
+        $scope.leadpeople = data.data;
         console.log($scope.leadpeople);
     })
  }])
