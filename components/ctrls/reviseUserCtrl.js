@@ -1,6 +1,6 @@
 define(['./mod'], function (mod) {
     'use strict';
-    mod.controller('reviseUserCtrl', ['$scope', '$location', 'reviseUserService', function($scope, $location, reviseUserService) {
+    mod.controller('reviseUserCtrl', ['$scope', '$location', 'reviseUserService','$rootScope', function($scope, $location, reviseUserService,$rootScope) {
         // init registerFormData
             $scope.reviseUserFormData = {};
             $scope.submitBtn = function() {
@@ -16,5 +16,7 @@ define(['./mod'], function (mod) {
                      
                 });
             };
+            //信息
+            console.log($rootScope.user);
       }])
 });

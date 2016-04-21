@@ -2,7 +2,7 @@
 <div class="mycenter_xiugaiinfo">
      <div class="mycenter_header">
         <ul>
-            <li class="li_1"><img src="../../images/icon_2.png" width="50px" /></li>
+            <li class="li_1"><a href="/index"><img src="../../images/icon_2.png" width="50px" /></a></li>
             <li class="li_2">修改资料</li>
             <li class="li_3" ng-click="submitBtn()">保存</li>
             <div style="clear: both;"></div>
@@ -11,7 +11,7 @@
     <div class="xiugai_info">
         <div>
              <div class="pic"><img src="../../images/组-2@3x.png"></div>
-             <p class="p_1" style="padding-left:10px;">15012345678<em>已绑定</em></p>
+             <p class="p_1" style="padding-left:10px;">{{user.user.username}}<em>已绑定</em></p>
              <div style="clear: both;"></div>
         </div>
         <form action="#" method="post">

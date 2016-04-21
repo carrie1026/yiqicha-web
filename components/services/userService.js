@@ -251,6 +251,23 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
         reviseUser: reviseUser
     };
 }])
+//纠错提交 服务
+.factory('ErrorService', ['$http', '$q', function($http, $q) {
+    var Error = function(errorParts,errorContent,mobileNo) {
+        var defer = $q.defer();
+        $http.post('/yiqicha/companyInfo/addCorrectionManage.do', {errorParts: errorParts, errorContent: errorContent,mobileNo:mobileNo}).success(function(data) {
+            if (isRequestSuccess(data)) {
+                defer.resolve(data);
+            } else {
+                defer.reject(data);
+            }
+        });
+        return defer.promise;
+    };
+    return {
+        Error: Error
+    };
+}])
 //查询年报列表信息 服务
 .factory('ReportdetService', ['$http', '$q', function($http, $q) {
     var Reportdet = function(page,rows,companyId) {
