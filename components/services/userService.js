@@ -290,13 +290,12 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
         Reportdet: Reportdet
     };
 }])
-//查询股东信息 服务
+//查询企业信息 服务
 .factory('compdetService', ['$http', '$q', function($http, $q) {
-    var compdet = function(page,rows) {
+    var compdet = function(id) {
         var defer = $q.defer();
-        $http.post('/yiqicha/companyInfo/findStockMsg.do',{
-            page:page,
-            rows:rows
+        $http.post('/yiqicha/companyInfo/login/findEnterpriseInfoMsgById.do',{
+            id:id
         }).success(function(data) {
             if (isRequestSuccess(data)) {
                 defer.resolve(data);
@@ -313,42 +312,42 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
 }])
 
 //关注企业 服务
-.factory('addMyAttentionService', ['$http', '$q', function($http, $q) {
-    var addMyAttention = function(companyId) {
-        var defer = $q.defer();
-        $http.post('/yiqicha/companyInfo/addMyAttention.do',companyId).success(function(data) {
-            if (isRequestSuccess(data)) {
-                defer.resolve(data);
-            } else {
-                defer.reject(data);
-            }
-        });
-        return defer.promise;
-    };
-
-    return {
-        addMyAttention: addMyAttention
-    };
-}])
+//.factory('addMyAttentionService', ['$http', '$q', function($http, $q) {
+//    var addMyAttention = function(companyId) {
+//        var defer = $q.defer();
+//        $http.post('/yiqicha/companyInfo/addMyAttention.do',companyId).success(function(data) {
+//            if (isRequestSuccess(data)) {
+//                defer.resolve(data);
+//            } else {
+//                defer.reject(data);
+//            }
+//        });
+//        return defer.promise;
+//    };
+//
+//    return {
+//        addMyAttention: addMyAttention
+//    };
+//}])
 
 //取消关注 服务
-.factory('removeMyAttentionService', ['$http', '$q', function($http, $q) {
-    var removeMyAttention = function(companyId) {
-        var defer = $q.defer();
-        $http.post('/yiqicha/companyInfo/removeMyAttention.do',companyId).success(function(data) {
-            if (isRequestSuccess(data)) {
-                defer.resolve(data);
-            } else {
-                defer.reject(data);
-            }
-        });
-        return defer.promise;
-    };
-
-    return {
-        removeMyAttention: removeMyAttention
-    };
-}])
+//.factory('removeMyAttentionService', ['$http', '$q', function($http, $q) {
+//    var removeMyAttention = function(companyId) {
+//        var defer = $q.defer();
+//        $http.post('/yiqicha/companyInfo/removeMyAttention.do',companyId).success(function(data) {
+//            if (isRequestSuccess(data)) {
+//                defer.resolve(data);
+//            } else {
+//                defer.reject(data);
+//            }
+//        });
+//        return defer.promise;
+//    };
+//
+//    return {
+//        removeMyAttention: removeMyAttention
+//    };
+//}])
 
 //我关注的企业列表 服务
 .factory('myfocusService', ['$http', '$q', function($http, $q) {

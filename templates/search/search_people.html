@@ -23,7 +23,7 @@
     </div>
     <div class="search_pre searchbusiness_con1">
         <h1>搜索范围：<span>全国</span><em><img src="../../images/pic_3.png"></em></h1>
-        <ul ng-repeat="Searchpeople in Searchpeople.rows">
+        <ul ng-repeat="Searchpeople in Searchpeople.rows" onclick="document.location='/compdet'">
             <p>{{Searchpeople.companyName}}</p>
             <li class="li_one"><img src="../../images/company_list@3x.png"></li>
             <li>公司法人：尹维安</li>

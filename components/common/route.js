@@ -103,8 +103,8 @@ define(['angular'], function (angular) {
             .when('/compdet',{
                 templateUrl: '/templates/compinfo/compdet/compdet.html',
                 controller: 'compdetCtrl',
-                controller: 'addMyAttentionCtrl',
-                controller: 'removeMyAttentionCtrl'
+//                controller: 'addMyAttentionCtrl',
+//                controller: 'removeMyAttentionCtrl'
             })
             //纠错
             .when('/errorcorrect',{
