@@ -15,8 +15,8 @@
     </div>
     <div class="searcharea_con">
         <ul>
-            <li>企业</li>
-            <li class="current">法人/股东</li>
+            <li class="current">企业</li>
+            <li>法人/股东</li>
             <li>失信</li>
             <div style="clear: both;"></div>
         </ul>
@@ -67,8 +67,8 @@
 </div>
 <script>
     $(function(){
-       /* $('.search_pre:first').show().siblings('.search_pre').hide();*/
-        $('.search_pre').eq(1).show().siblings('.search_pre').hide();
+        $('.search_pre:first').show().siblings('.search_pre').hide();   
+//        $('.search_pre').eq(2).show().siblings('.search_pre').hide();
         $('.searcharea_con ul li').click(function(){
             $(this).addClass('current').siblings('li').removeClass('current');
             num = $(this).index();

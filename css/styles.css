@@ -213,6 +213,7 @@
 .mycenter_home .myhome_con1 ul.ul_one li.li_two , .mycenter_home .myhome_con1 ul.ul_two li.li_two{
 	width: 90%;
 	border-bottom:1px solid #dadada;
+    color: #000;
 }
 .mycenter_home .myhome_con1 ul.ul_two li.li_two p{
 	width: 62%;

@@ -128,13 +128,15 @@
             <div class="clear"></div>
         </a>
         </div>
-        <div class="index_followde">
-            <div class="index2312">
-                <div class="index23123">
-                    <div class="index231231"><div class="index2312311">1月</div><div class="index2312312">2015年</div></div>
-                    <div class="index231232">电商浮躁，失业率大揭秘</div>
-                </div>
+        <div style="overflow:hidden;background-color:#fff;height:80px;">
+            <div class="index_followde">
+                <div class="index2312">
+                    <div class="index23123">
+                        <div class="index231231"><div class="index2312311">1月</div><div class="index2312312">2015年</div></div>
+                        <div class="index231232">电商浮躁，失业率大揭秘</div>
+                    </div>
 
+                </div>
             </div>
         </div>
 </div>
@@ -179,4 +181,4 @@ var iLineHeight = 80; //单行高度，像素
 var iLineCount = 2; //实际行数 
 var iScrollAmount = 1; //每次滚动高度，像素 
 function run() { oMarquee.scrollTop += iScrollAmount; if ( oMarquee.scrollTop == iLineCount * iLineHeight ) oMarquee.scrollTop = 0; if ( oMarquee.scrollTop % iLineHeight == 0 ) { window.setTimeout( "run()", 2500 ); } else { window.setTimeout( "run()", 10 ); } } oMarquee.innerHTML += oMarquee.innerHTML; window.setTimeout( "run()", 2500 );
-</script>>
+</script>
