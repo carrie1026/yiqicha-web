@@ -122,7 +122,8 @@ define(['angular'], function (angular) {
             })
             //工商信息
              .when('/industryinfo',{
-                templateUrl: '/templates/compinfo/compdet/industryinfo.html'
+                templateUrl: '/templates/compinfo/compdet/industryinfo.html',
+                controller:'businessInformationCtrl,ShareholderCtrl'
             })
               .when('/shareholder1',{
                 templateUrl: '/templates/compinfo/shareholderinfo/shareholder1.html'

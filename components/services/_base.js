@@ -3,5 +3,6 @@ define([
     'userService',
     'suggestionFeedbackService',
     'investAbroadService',
-    'industryService'
+    'industryService',
+    'enterpriseService'
 ]);

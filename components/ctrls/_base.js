@@ -24,5 +24,6 @@ define([
     'reviseUserCtrl',
     'feedbackCtrl',
     'investAbroadCtrl',
-    'industryCtrl'
+    'industryCtrl',
+    'businessInformationCtrl'
 ]);
