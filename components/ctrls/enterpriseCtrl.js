@@ -1,10 +1,10 @@
 define(['./mod'], function (mod) {
     'use strict';
 
-    mod.controller('findEnterpriseInfoOfAnnualCtrl', ['$scope', 'EnterpriseService','$routeParams', function($scope, EnterpriseService, $routeParams){
+    mod.controller('findEnterpriseInfoOfAnnualCtrl', ['$scope', 'EnterpriseInfoOfAnnualService','$routeParams', function($scope, EnterpriseInfoOfAnnualService, $routeParams){
     	//var id = $routeParams.id;
     	var companyId = 1;
-    	EnterpriseService.readData(companyId).then(function(data){
+    	EnterpriseInfoOfAnnualService.readData(companyId).then(function(data){
 	        $scope.readData = data;
 	        //console.log($scope.readData);
     	});
