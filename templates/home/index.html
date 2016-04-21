@@ -61,7 +61,7 @@
             <div class="clear"></div>
         </a>
         </div>
-        <div id="show" style="height: 70px; overflow-y: scroll; overflow-x: scroll; background-color:#fff;">
+        <div id="myfocus" onmouseover=iScrollAmount=0 style="overflow: hidden;background-color:#fff;height:80px;" onmouseout=iScrollAmount=1>
             <div class="index_followde" onclick="document.location='/myfocus'">
                 <div class="index23121">香港强悍科技</div>
                 <div class="index23122">
@@ -73,9 +73,11 @@
                     <div class="index231222">在营（开业）企业</div>
                     <div class="clear"></div>
                 </div>
+                <div class="clear"></div>
             </div>
+            <div class="clear"></div>
             <div class="index_followde"  onclick="document.location='/myfocus'">
-                <div class="index23121">香港强悍科技</div>
+                <div class="index23121">香港强悍科技2</div>
                 <div class="index23122">
                     <div class="index231221">
                         <div class="index2312211"><img src="/images/company_list@2x.png" height="20px" /></div>
@@ -85,10 +87,9 @@
                     <div class="index231222">在营（开业）企业</div>
                     <div class="clear"></div>
                 </div>
-            </div>  
-            </div>
-        <div class="index_follow" onClick="window.location.href='/reportdet'">
-
+                <div class="clear"></div>
+            </div> 
+            <div class="clear"></div>
         </div>
         <div class="index_follow">
 
@@ -96,13 +97,29 @@
             <div class="index_followrg">></div>
             <div class="clear"></div>
         </div>
-        <div class="index_followde">
-            <div class="index2312">
-                <div class="index23121">北京巨星世纪信息科技有限公司</div>
-                <div class="index23122">
-                    <div class="index231221"><div class="index231223"><img src="../../images/starjudge.png"></div></div><div class="index231222"><span class="co">20</span>人关注</div>
+        <div id="show" style="overflow:hidden;background-color:#fff;height:80px;">
+            <div class="index_followde">
+                <div class="index2312">
+                    <div class="index23121">北京巨星世纪信息科技有限公司</div>
+                    <div class="index23122">
+                        <div class="index231221"><div class="index231223"><img src="../../images/starjudge.png"></div></div><div class="index231222"><span class="co">20</span>人关注</div>
+                    </div>
+                    <div class="clear"></div>
                 </div>
+                <div class="clear"></div>
             </div>
+            <div class="clear"></div>
+            <div class="index_followde">
+                <div class="index2312">
+                    <div class="index23121">北京巨星世纪信息科技有限公司2</div>
+                    <div class="index23122">
+                        <div class="index231221"><div class="index231223"><img src="../../images/starjudge.png"></div></div><div class="index231222"><span class="co">20</span>人关注</div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
         </div>
         <div class="index_follow">
         <a href="/nopromise_business">
@@ -121,39 +138,7 @@
             </div>
         </div>
 </div>
-<script type="text/javascript">
-	function startmarquee(lh, speed, delay) {
-		var t;
-		var oHeight = 100;/** div的高度 **/　
-		var p = false;
-		var o = document.getElementById("show");
-		var preTop = 0;
-		o.scrollTop = 0;
-		function start() {
-			t = setInterval(scrolling, speed);
-			o.scrollTop += 1;
-		}
-		function scrolling() {
-			if (o.scrollTop % lh != 0
-					&& o.scrollTop % (o.scrollHeight - oHeight - 1) != 0) {
-				preTop = o.scrollTop;
-				o.scrollTop += 1;
-				if (preTop >= o.scrollHeight || preTop == o.scrollTop) {
-					o.scrollTop = 0;
-				}
-			} else {
-				clearInterval(t);
-				setTimeout(start, delay);
-			}
-		}
-		setTimeout(start, delay);
-	}
-	window.onload=function(){
-		/**startmarquee(一次滚动高度,速度,停留时间);**/　　
-		startmarquee(70, 20, 1500);
-	}
-
-</script>
+<!--
 <script type="text/javascript">
 window.onload = function() {
     // 数字到达 100 后还原为 1
@@ -187,3 +172,11 @@ window.onload = function() {
     }, 100);
 };
 </script>
+-->
+<script type="text/javascript">
+var oMarquee = document.getElementById("myfocus"); //滚动对象 
+var iLineHeight = 80; //单行高度，像素 
+var iLineCount = 2; //实际行数 
+var iScrollAmount = 1; //每次滚动高度，像素 
+function run() { oMarquee.scrollTop += iScrollAmount; if ( oMarquee.scrollTop == iLineCount * iLineHeight ) oMarquee.scrollTop = 0; if ( oMarquee.scrollTop % iLineHeight == 0 ) { window.setTimeout( "run()", 2500 ); } else { window.setTimeout( "run()", 10 ); } } oMarquee.innerHTML += oMarquee.innerHTML; window.setTimeout( "run()", 2500 );
+</script>>
