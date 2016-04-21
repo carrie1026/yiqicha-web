@@ -204,7 +204,7 @@ define(['angular'], function (angular) {
                 controller: 'findEnterpriseInfoOfAnnualCtrl'
              })
               // 分支机构
-             .when('/sonEnterpriseInterMsg', {
+             .when('/branchStructure', {
                 templateUrl: 'templates/compinfo/branchStructure/branchStructure.html',
                 controller: 'findSonEnterpriseInterMsgCtrl'
              })
