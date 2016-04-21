@@ -2,10 +2,10 @@
 	<div class="header">
 		年报列表
 		<div class="leftjj"><</div>
-		<div class="rightwz">纠错</div>
+		<div class="rightwz"><a href="errorcorrect">纠错</a></div>
 	</div>
 	<div class="investa1">
-		<div class="investa11" ng-repeat="reportdet in Reportdet.rows">
+		<div class="investa11" ng-repeat="reportdet in Reportdet.rows" onClick="window.location.href='/reportdetl'">
 			<div class="investa111">{{reportdet.year}}年年报</div>
 			<div class="investa112">
 			<div class="investa1121 fl nbbg"></div><div class="investa1122 fl">{{reportdet.companyName}}</div><div class="investa1123 fr"><span class="yjj">></span></div>

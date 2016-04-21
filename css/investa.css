@@ -1,5 +1,10 @@
 
 /*此css关系多个页面，谨慎更改*/
+a{
+	color: #fff;
+}
+
+
 .investa{
 	width:100%;
 	height:auto;

@@ -125,8 +125,9 @@ define(['angular'], function (angular) {
                 templateUrl: '/templates/compinfo/compdet/industryinfo.html',
                 controller:'businessInformationCtrl,ShareholderCtrl'
             })
-              .when('/shareholder1',{
-                templateUrl: '/templates/compinfo/shareholderinfo/shareholder1.html'
+              //股东信息
+               .when('/shareholderinfo',{
+                templateUrl: '/templates/compinfo/shareholderinfo/shareholderinfo.html'
             })
                .when('/shareholderinfod',{
                 templateUrl: '/templates/compinfo/shareholderinfo/shareholderinfod.html'
@@ -182,6 +183,11 @@ define(['angular'], function (angular) {
                 templateUrl: '/templates/compinfo/reportdet/reportdet.html',
                 controller: 'ReportdetCtrl'
             })
+                //年报详情
+                .when('/reportdetl',{
+                templateUrl: '/templates/compinfo/reportdet/reportdetl.html',
+            }) 
+
                 .when('/shareholderInfo',{
                 templateUrl: '/templates/compinfo/shareholderinfo/shareholderinfod.html',
                 controller: 'ShareholderCtrl'
