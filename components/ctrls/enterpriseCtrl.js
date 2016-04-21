@@ -3,7 +3,7 @@ define(['./mod'], function (mod) {
 
     mod.controller('findEnterpriseInfoOfAnnualCtrl', ['$scope', 'EnterpriseInfoOfAnnualService','$routeParams', function($scope, EnterpriseInfoOfAnnualService, $routeParams){
     	//var id = $routeParams.id;
-    	var companyId = 1;
+    	var companyId = 12;
     	EnterpriseInfoOfAnnualService.readData(companyId).then(function(data){
 	        $scope.readData = data;
 	        //console.log($scope.readData);
@@ -15,7 +15,8 @@ define(['./mod'], function (mod) {
     	var page = 1;
     	var rows = 10;
     	SonEnterpriseInterMsgService.readData(companyId,page,rows).then(function(data){
-	        $scope.readData = data;
+	        $scope.sonEnterpriseMsgArray = data.data.rows;
+            console.log(data.data.rows);
 	        //console.log($scope.readData);
     	});
     }]);
