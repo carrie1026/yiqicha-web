@@ -401,12 +401,6 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
         changeRecord: changeRecord
     };
 }])
-
-<<<<<<< HEAD
-        return {
-            readData : readData 
-        };
-}])
 // 分支机构接口
 .factory('SonEnterpriseInterMsgService', ['$http', '$q','$interval', function($http, $q,$interval) {
         var readData = function(companyId, page, rows){
@@ -440,9 +434,6 @@ mod.factory('businessInformationService',['$http', '$q','$interval', function($h
             });
             return defer.promise;
     	}
-=======
->>>>>>> b10930fb4ef81c4ab288cbcee819f9f505c04174
-
     	return {
     		businessInformation : businessInformation
     	};

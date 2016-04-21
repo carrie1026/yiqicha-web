@@ -35,7 +35,6 @@
           
             </div>
         </a>
-
         <a href="/shixin_details">
             <div class="index_searchcon">
                 <p><img src="/images/lose_letter.png" width="28" /></p>
@@ -60,7 +59,7 @@
             <div class="clear"></div>
         </a>
         </div>
-        <marquee align="top" behavior="scroll" direction="up" loop="-1" onMouseOut="this.start()" onMouseOver="this.stop()" scrollamount="1" scrolldelay="0" Height="60" Bgcolor="#fff">
+        <div id="show" style="height: 70px; overflow-y: scroll; overflow-x: scroll; background-color:#fff;">
             <div class="index_followde">
                 <div class="index23121">香港强悍科技</div>
                 <div class="index23122">
@@ -85,7 +84,7 @@
                     <div class="clear"></div>
                 </div>
             </div>  
-        </marquee>
+        </div>
         <div class="index_follow">
             <div class="index_followlf">热门企业</div>
             <div class="index_followrg">></div>
@@ -116,3 +115,36 @@
             </div>
         </div>
 </div>
+<script type="text/javascript">
+	function startmarquee(lh, speed, delay) {
+		var t;
+		var oHeight = 100;/** div的高度 **/　
+		var p = false;
+		var o = document.getElementById("show");
+		var preTop = 0;
+		o.scrollTop = 0;
+		function start() {
+			t = setInterval(scrolling, speed);
+			o.scrollTop += 1;
+		}
+		function scrolling() {
+			if (o.scrollTop % lh != 0
+					&& o.scrollTop % (o.scrollHeight - oHeight - 1) != 0) {
+				preTop = o.scrollTop;
+				o.scrollTop += 1;
+				if (preTop >= o.scrollHeight || preTop == o.scrollTop) {
+					o.scrollTop = 0;
+				}
+			} else {
+				clearInterval(t);
+				setTimeout(start, delay);
+			}
+		}
+		setTimeout(start, delay);
+	}
+	window.onload=function(){
+		/**startmarquee(一次滚动高度,速度,停留时间);**/　　
+		startmarquee(70, 20, 1500);
+	}
+
+</script>
