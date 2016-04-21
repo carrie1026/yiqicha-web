@@ -20,8 +20,10 @@
             <div class="Dataupdate">
                 <div class="Dataupdate_top">企业数据更新中...</div>
                 <div class="Dataupdate_con">
+
                     <div class="index21121">6</div><div class="index21121">3</div><div class="index21121 index21122">,</div><div class="index21121">1</div><div class="index21121">3</div>
                     <div class="index21121">5</div><div class="index21121 index21122">,</div><div class="index21121">5</div><div class="index21121">3</div><div class="index21121">9</div>
+<!--                    <span id="abc">123</span>-->
                 </div>
             </div>
         </div>
@@ -35,7 +37,6 @@
           
             </div>
         </a>
-
         <a href="/shixin_details">
             <div class="index_searchcon">
                 <p><img src="/images/lose_letter.png" width="28" /></p>
@@ -60,8 +61,8 @@
             <div class="clear"></div>
         </a>
         </div>
-        <marquee align="top" behavior="scroll" direction="up" loop="-1" onMouseOut="this.start()" onMouseOver="this.stop()" scrollamount="1" scrolldelay="0" Height="60" Bgcolor="#fff">
-            <div class="index_followde">
+        <div id="show" style="height: 70px; overflow-y: scroll; overflow-x: scroll; background-color:#fff;">
+            <div class="index_followde" onclick="document.location='/myfocus'">
                 <div class="index23121">香港强悍科技</div>
                 <div class="index23122">
                     <div class="index231221">
@@ -73,7 +74,7 @@
                     <div class="clear"></div>
                 </div>
             </div>
-            <div class="index_followde">
+            <div class="index_followde"  onclick="document.location='/myfocus'">
                 <div class="index23121">香港强悍科技</div>
                 <div class="index23122">
                     <div class="index231221">
@@ -85,8 +86,13 @@
                     <div class="clear"></div>
                 </div>
             </div>  
+<<<<<<< HEAD
         </marquee>
         <div class="index_follow" onClick="window.location.href='/reportdet'">
+=======
+        </div>
+        <div class="index_follow">
+>>>>>>> 4a83b7170fa04f9a42fa9b1018aa5873eb3da9fd
             <div class="index_followlf">热门企业</div>
             <div class="index_followrg">></div>
             <div class="clear"></div>
@@ -116,3 +122,69 @@
             </div>
         </div>
 </div>
+<script type="text/javascript">
+	function startmarquee(lh, speed, delay) {
+		var t;
+		var oHeight = 100;/** div的高度 **/　
+		var p = false;
+		var o = document.getElementById("show");
+		var preTop = 0;
+		o.scrollTop = 0;
+		function start() {
+			t = setInterval(scrolling, speed);
+			o.scrollTop += 1;
+		}
+		function scrolling() {
+			if (o.scrollTop % lh != 0
+					&& o.scrollTop % (o.scrollHeight - oHeight - 1) != 0) {
+				preTop = o.scrollTop;
+				o.scrollTop += 1;
+				if (preTop >= o.scrollHeight || preTop == o.scrollTop) {
+					o.scrollTop = 0;
+				}
+			} else {
+				clearInterval(t);
+				setTimeout(start, delay);
+			}
+		}
+		setTimeout(start, delay);
+	}
+	window.onload=function(){
+		/**startmarquee(一次滚动高度,速度,停留时间);**/　　
+		startmarquee(70, 20, 1500);
+	}
+
+</script>
+<script type="text/javascript">
+window.onload = function() {
+    // 数字到达 100 后还原为 1
+    var max = 1000000,
+        o = document.getElementById('abc');
+        var chrome = /chrome/i.test(navigator.userAgent);
+                         
+    // 获取保存的数据
+    if(chrome) {
+        data_num = sessionStorage.getItem("num") || "";
+    }
+    else {
+        data_num = document.cookie.replace(
+        /(?:(?:^|.*;\s*)num\s*\=\s*((?:[^;](?!;))*[^;]?).*)|.*/,
+        "$1");
+    }
+    var num_now = parseInt(data_num) || 0;
+                         
+    o.innerHTML = num_now + 1;
+                         
+    // 每 0.1 秒更新一次数字，并保存数据
+    setInterval(function() {
+        num_now = num_now >= max ? 1 : num_now + 1;
+        o.innerHTML = num_now;
+        if(chrome) {
+            sessionStorage.setItem("num", num_now);
+        }
+        else {
+            document.cookie = "num=" + num_now + ";path=/;";
+        }
+    }, 100);
+};
+</script>

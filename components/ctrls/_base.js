@@ -25,5 +25,6 @@ define([
     'feedbackCtrl',
     'investAbroadCtrl',
     'industryCtrl',
-    'businessInformationCtrl'
+    'businessInformationCtrl',
+    'errorCtrl'
 ]);

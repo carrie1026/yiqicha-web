@@ -108,7 +108,8 @@ define(['angular'], function (angular) {
             })
             //纠错
             .when('/errorcorrect',{
-                templateUrl: '/templates/compinfo/compdet/errorcorrect.html'
+                templateUrl: '/templates/compinfo/compdet/errorcorrect.html',
+                controller: 'ErrorCtrl'
             })
             //主要成员
             .when('/leadpeople',{

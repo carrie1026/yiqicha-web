@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-
-<html><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="height=device-width;user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui">
-    <link rel="stylesheet" href="../../../css/main.css" />
-     <link rel="stylesheet" href="../../../css/compdet.css" />
-  
- </head>
-
-<body style="background-color:#FFF">
 	<div class="compdet">
 		<div class="header">
 		纠错
@@ -17,7 +6,7 @@
 		</div>
 		<div class="compdet2">
 			<div class="compdet21">选择信息有误的部分（多选）</div>
-			<div class="compdet22">
+			<div class="compdet22" ng-model="ErrorFormData.errorParts">
 				<div class="compdet221 mgrb2">工商信息</div>
 				<div class="compdet221 mgrb2">企业图谱</div>
 				<div class="compdet221 mgrb2">行业分析</div>
@@ -40,22 +29,18 @@
 			</div> -->
 			<div class="compdet23">
 				<form action="#" method="post">
-				<textarea placeholder="我们会收集您提交的请求，并在3-5个工作日回复。"></textarea>
+				<textarea placeholder="我们会收集您提交的请求，并在3-5个工作日回复。" ng-model="ErrorFormData.errorContent"></textarea>
 			   </form>
 			</div>
 			<div class="compdet24">
 			    <form action="#" method="post">
-                   <input type="text" placeholder="12345678"/>
+                   <input type="text" placeholder="12345678"  ng-model="ErrorFormData.mobileNo"/>
                 </form>
 			</div>
 			<div class="compdet25">
 			   <form action="#" method="post">
-				<input type="button" value="提交纠错信息" />
+				<input type="button" value="提交纠错信息" ng-click="submitBtn()"/>
 			   </form>
 			</div>
 		</div>
 	</div>
-
-</body>
-
-</html>
