@@ -401,21 +401,8 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
         changeRecord: changeRecord
     };
 }])
-// 年报详细接口
-.factory('EnterpriseService', ['$http', '$q','$interval', function($http, $q,$interval) {
-        var readData = function(companyId) {
-            var defer = $q.defer();
-            $http.post('/yiqicha/annualPortsMsg/findEnterpriseInfoOfAnnual.do',companyId).success(function(data) {
-                if (isRequestSuccess(data)) {
-                    defer.resolve(data);
-                    console.log(data);
-                } else {
-                    defer.reject(data);
-                }
-            });
-            return defer.promise;
-        };
 
+<<<<<<< HEAD
         return {
             readData : readData 
         };
@@ -453,6 +440,8 @@ mod.factory('businessInformationService',['$http', '$q','$interval', function($h
             });
             return defer.promise;
     	}
+=======
+>>>>>>> b10930fb4ef81c4ab288cbcee819f9f505c04174
 
     	return {
     		businessInformation : businessInformation
