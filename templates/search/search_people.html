@@ -16,13 +16,9 @@
     </div>
     <div class="searcharea_con">
         <ul>
-<<<<<<< HEAD
+
             <li>企业</li>
             <li class="current">法人/股东</li>
-=======
-            <li class="current">企业</li>
-            <li>法人/股东</li>
->>>>>>> 1f62f3d8c034e609903bf554e053f3d057c330f5
             <li>失信</li>
             <div style="clear: both;"></div>
         </ul>
@@ -30,19 +26,16 @@
 
     
     <div class="search_pre searchbusiness_con1">
-<<<<<<< HEAD
+
 
         <h1 onClick="window.location.href='/search_area'">搜索范围：<span>全国</span><em><img src="../../images/pic_3.png"></em></h1>
          <ul ng-repeat="Searchpeople in Searchpeople.rows" onclick="document.location='/compdet'">
         
+
+      
          <ul ng-repeat="Searchpeople in Searchpeople.rows">
             <a ng-href="/compdet?id={{Searchpeople.id}}">
 
-=======
-        <h1>搜索范围：<span>全国</span><em><img src="../../images/pic_3.png"></em></h1>
-         <ul ng-repeat="Searchpeople in Searchpeople.rows">
-            <a ng-href="/compdet?id={{Searchpeople.id}}">
->>>>>>> 1f62f3d8c034e609903bf554e053f3d057c330f5
             <p>{{Searchpeople.companyName}}</p>
             <li class="li_one"><img src="../../images/company_list@3x.png"></li>
             <li>公司法人：{{Searchpeople.company}}</li>
@@ -57,13 +50,12 @@
 
 
     <div class="search_pre searchpeople_con1">
-<<<<<<< HEAD
+
 
         <h1 onClick="window.location.href='/search_area'">搜索范围：<span>全国</span><em><i>搜索信息过多，请按地区筛选</i><img src="../../images/pic_3.png"></em></h1>
 
-=======
-        <h1>搜索范围：<span>全国</span><em><i>搜索信息过多，请按地区筛选</i><img src="../../images/pic_3.png"></em></h1>
->>>>>>> 1f62f3d8c034e609903bf554e053f3d057c330f5
+
+      
         <ul ng-repeat="Shareholder in Shareholder.rows" onclick="document.location='/shareholderinfo'">
           <p>{{Shareholder.name}}</p>
           <li class="li_one"><img src="../../images/company@3x.png"></li>
