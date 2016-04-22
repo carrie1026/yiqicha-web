@@ -4,7 +4,7 @@
     <div class="search_header">
         <p><a href="#"><img src="../../images/icon_2.png"></a></p>
         <ul>
-            <li class="li_one" onclick="document.location='/index'"><a href="#"><img src="../../images/Oval 81 + Line@3x.png"></li>
+            <li class="li_one" onclick="document.location='/index'"><img src="../../images/Oval 81 + Line@3x.png"></li>
             <li class="li_two">
             <form action="#" method="post">
             <input placeholder="请输入法定代表人或股东名" type="text" ng-model="txt"/>
@@ -16,7 +16,7 @@
     </div>
     <div class="searcharea_con">
         <ul>
-            <li class="current">企业1</li>
+            <li class="current">企业</li>
             <li>法人/股东</li>
             <li>失信</li>
             <div style="clear: both;"></div>
@@ -27,7 +27,7 @@
          <ul ng-repeat="Searchpeople in Searchpeople.rows" onclick="document.location='/compdet'">
             <p>{{Searchpeople.companyName}}</p>
             <li class="li_one"><img src="../../images/company_list@3x.png"></li>
-            <li>公司法人：尹维安</li>
+            <li>公司法人：{{Searchpeople.company}}</li>
             <li class="li_three">在营（开业）企业</li>
             <br style="clear: both;" />
         </ul>
@@ -38,7 +38,7 @@
 
     <div class="search_pre searchpeople_con1">
         <h1>搜索范围：<span>全国</span><em><i>搜索信息过多，请按地区筛选</i><img src="../../images/pic_3.png"></em></h1>
-        <ul ng-repeat="Shareholder in Shareholder.rows">
+        <ul ng-repeat="Shareholder in Shareholder.rows" onclick="document.location='/shareholderinfo'">
           <p>{{Shareholder.name}}</p>
           <li class="li_one"><img src="../../images/company@3x.png"></li>
           <li>香港万国商业网</li>
