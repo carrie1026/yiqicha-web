@@ -105,6 +105,9 @@ define(['angular'], function (angular) {
                 .when('/share',{
                 templateUrl: '/templates/compinfo/compdet/share.html'
             })
+                .when('/telephone',{
+                templateUrl: '/templates/compinfo/compdet/telephone.html'
+            })
             //股东信息
             .when('/compdet',{
                 templateUrl: '/templates/compinfo/compdet/compdet.html',
