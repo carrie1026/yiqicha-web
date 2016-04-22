@@ -99,6 +99,12 @@ define(['angular'], function (angular) {
                 .when('/compadd',{
                 templateUrl: '/templates/compinfo/compdet/compadd.html'
             })
+                .when('/hot_business',{
+                templateUrl: '/templates/compinfo/compdet/hot_business.html'
+            })
+                .when('/share',{
+                templateUrl: '/templates/compinfo/compdet/share.html'
+            })
             //股东信息
             .when('/compdet',{
                 templateUrl: '/templates/compinfo/compdet/compdet.html',
