@@ -5,13 +5,13 @@
 		<div class="rightwz"></div>
 	</div>
 	<div class="investa1">
-		<div class="investa11" onClick="window.location.href='/litiinfod'" >
+		<div class="investa11" onClick="window.location.href='/litiinfod'" ng-repeat="litinfod in litinfod.rows">
 			<div class="investa111"></div>
 			<div class="investa112">
-				<div class="investa1121 fl bgf"></div><div class="investa1122 fl">公司法人：尹伟安</div><div class="investa1123 fr fz12">></div>
+				<div class="investa1121 fl bgf"></div><div class="investa1122 fl">公司法人：{{litinfod.name}}</div><div class="investa1123 fr fz12">></div>
 			</div>
 			<div class="investa112">
-				<div class="investa1121 fl bgt"></div><div class="investa1122 fl">公司法人：尹伟安</div><div class="investa1123 fr fz12"></div>
+				<div class="investa1121 fl bgt"></div><div class="investa1122 fl">{{litinfod.registrineTime}}</div><div class="investa1123 fr fz12"></div>
 			</div>
 			<div class="investa113"></div>
 		</div>

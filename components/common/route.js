@@ -129,11 +129,13 @@ define(['angular'], function (angular) {
             })
               //股东信息
                .when('/shareholderinfo',{
-                templateUrl: '/templates/compinfo/shareholderinfo/shareholderinfo.html'
+                templateUrl: '/templates/compinfo/shareholderinfo/shareholderinfo.html',
+                controller:'ShareholderCtrl'
             })
                .when('/shareholderinfod',{
                 templateUrl: '/templates/compinfo/shareholderinfo/shareholderinfod.html'
             })
+        
 //              .when('/shareholder1',{
 //                templateUrl: '/templates/compinfo/shareholderinfo/shareholder1.html'
 //            })

@@ -1,17 +1,17 @@
 <div class="mycenter_myfocus">
      <div class="mycenter_header">
         <ul>
-            <li class="li_1"><a href="/mycenter_home"><img src="../../images/icon_2.png"></a></li>
+            <li class="li_1"><a href="/compdet"><img src="../../images/icon_2.png"></a></li>
             <li class="li_2">股东信息</li>
             <li class="li_3">纠错</li>
             <br style="clear: both;" />
         </ul>
     </div>
-    <div class="myfocus" onClick="window.location.href='/shareholderinfod'">
+    <div class="myfocus" onClick="window.location.href='/shareholderinfod'" ng-repeat="Shareholder in Shareholder.rows">
         <p>华东电网有限公司</p>
         <ul>
             <li class="li_one"><img src="../../images/icon_3.png" style="width: 100%;"></li>
-            <li class="li_two">公司法人：马云</li>
+            <li class="li_two">公司法人:{{Shareholder.name}}</li>
             <li class="li_three">存续</li>
             <br style="clear: both;" />
         </ul>

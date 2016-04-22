@@ -5,8 +5,9 @@ mod.controller('ShareholderCtrl', ['$scope','$location', 'ShareholderService','$
     var page = 1;
     var rows = 2;
     ShareholderService.Shareholder(page,rows).then(function(data){
-        $scope.Shareholder = data;
+        $scope.Shareholder = data.data;
         console.log($scope.Shareholder);
     })
  }])
 });
+
