@@ -1,6 +1,8 @@
 define(['./mod'], function (mod) {
     'use strict';
 mod.controller('ShareholderCtrl', ['$scope','$location', 'ShareholderService','$rootScope', function($scope, $location, ShareholderService,$rootScope) {
+    var Shareholdered = $location.search();
+    var id =Shareholdered.id;
     // 股东信息
     var page = 1;
     var rows = 4;
