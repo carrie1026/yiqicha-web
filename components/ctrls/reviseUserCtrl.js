@@ -5,7 +5,7 @@ define(['./mod'], function (mod) {
             $scope.reviseUserFormData = {};
             $scope.submitBtn = function() {
                 if (!$scope.reviseUserFormData.name || $scope.reviseUserFormData.name.length == 0) {
-                    alert('sb!');
+                    alert('内容为空!');
                     return;
                 }
                 console.log($scope.reviseUserFormData);
