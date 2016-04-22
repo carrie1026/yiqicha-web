@@ -4,10 +4,10 @@ mod.controller('myfocusCtrl', ['$scope','$location', 'myfocusService','$rootScop
     // 我关注的企业列表详情
     /*var accountId = 'f271b018c1ad11e5a130eca86ba4ba05';*/
     var page = 1;
-    var rows = 10;
-    console.log(123)
-    myfocusService.myfocus(page,rows).then(function(data){
-        $scope.myfocus = data;
+    var rows = 1;
+    var accountId = 1;
+    myfocusService.myfocus(page,rows,accountId).then(function(data){
+        $scope.myfocus = data.data;
         console.log($scope.myfocus);
     });  
  }])

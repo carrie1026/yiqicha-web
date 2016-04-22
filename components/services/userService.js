@@ -351,11 +351,12 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
 
 //我关注的企业列表 服务
 .factory('myfocusService', ['$http', '$q', function($http, $q) {
-    var myfocus = function(page,rows) {
+    var myfocus = function(page,rows,accountId) {
         var defer = $q.defer();
         $http.post('/yiqicha/myAttenttionMsg/findMyAttenttionMsg.do',{
             page:page,
-            rows:rows
+            rows:rows,
+            accountId:accountId
         }).success(function(data) {
             if (isRequestSuccess(data)) {
                 defer.resolve(data);

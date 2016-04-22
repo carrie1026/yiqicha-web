@@ -6,12 +6,12 @@
             <br style="clear: both;" />
         </ul>
     </div>
-    <div class="myfocus" onClick="window.location.href='/compdet'">
-        <p>华东电网有限公司</p>
+    <div class="myfocus" onClick="window.location.href='/compdet'" ng-repeat="myfocus in myfocus.rows">
+        <p>{{myfocus.companyName}}</p>
         <ul>
             <li class="li_one"><img src="../../images/icon_3.png" style="width: 100%;"></li>
-            <li class="li_two">公司法人：马云</li>
-            <li class="li_three">存续</li>
+            <li class="li_two">公司法人：{{myfocus.repPersion}}</li>
+            <li class="li_three">{{myfocus.recordStatus}}</li>
             <br style="clear: both;" />
         </ul>
     </div>
