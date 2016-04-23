@@ -4,7 +4,7 @@
         <ul>
             <li class="li_1" onclick="javascript :history.back(-1)"><img src="../../images/icon_2.png"></li>
             <li class="li_2">意见反馈</li>
-            <li class="li_3">提交</li>
+            <li class="li_3" ng-click="submitSuggestion()">提交</li>
             <br style="clear: both;" />
         </ul>
     </div>
@@ -12,14 +12,14 @@
         
           <form action="#" method="post">
              <!-- <input type="text" placeholder="我们会收集您提交的请求，并在3-5个工作日回复。"/> -->
-             <textarea placeholder="我们会收集您提交的请求，并在3-5个工作日回复。"></textarea>
+             <textarea id="content" ng-model="content" placeholder="我们会收集您提交的请求，并在3-5个工作日回复。"></textarea>
           </form>
        
     </div>
     <div class="ideas_con">
         <!-- <p>您的联系电话</p> -->
         <form action="#" method="post">
-           <input type="text" placeholder="您的联系电话"/>
+           <input type="text" placeholder="您的联系电话" id="mobileNo" ng-model="mobileNo"/>
         </form>
     </div>
 </div>
