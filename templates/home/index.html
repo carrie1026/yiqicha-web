@@ -105,14 +105,10 @@
             <div class="index_followrg">></div>
             <div class="clear"></div>
         </div>
-
-        <div id="show" style="overflow:hidden;background-color:#fff;height:80px;" onclick="document.location='/hot_business'" >
-
-        <div id="show" style="overflow:hidden;background-color:#fff;height:80px;" onclick="document.location='/hot_business'">
-
+        <div id="scroll" style="overflow:hidden;background-color:#fff;height:80px;" onclick="document.location='/hot_business'">
             <div class="index_followde">
                 <div class="index2312">
-                    <div class="index23121">北京巨星世纪信息科技有限公司</div>
+                    <div class="index23121">北京巨星世纪信息科技有限公司!</div>
                     <div class="index23122">
                         <div class="index231221"><div class="index231223"><img src="../../images/starjudge.png"></div></div><div class="index231222"><span class="co">20</span>人关注</div>
                     </div>
@@ -123,7 +119,29 @@
             <div class="clear"></div>
             <div class="index_followde">
                 <div class="index2312">
-                    <div class="index23121">北京巨星世纪信息科技有限公司2</div>
+                    <div class="index23121">北京巨星世纪信息科技有限公司2.0</div>
+                    <div class="index23122">
+                        <div class="index231221"><div class="index231223"><img src="../../images/starjudge.png"></div></div><div class="index231222"><span class="co">20</span>人关注</div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="index_followde">
+                <div class="index2312">
+                    <div class="index23121">北京巨星世纪信息科技有限公司3</div>
+                    <div class="index23122">
+                        <div class="index231221"><div class="index231223"><img src="../../images/starjudge.png"></div></div><div class="index231222"><span class="co">20</span>人关注</div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="index_followde">
+                <div class="index2312">
+                    <div class="index23121">北京巨星世纪信息科技有限公司4</div>
                     <div class="index23122">
                         <div class="index231221"><div class="index231223"><img src="../../images/starjudge.png"></div></div><div class="index231222"><span class="co">20</span>人关注</div>
                     </div>
@@ -133,7 +151,7 @@
             </div>
             <div class="clear"></div>
         </div>
-
+        <div id="scroll2" style="display:none;"></div> 
 
       <!--   
         <div class="index_follow">
@@ -159,41 +177,6 @@
 
 
 </div>
-<!--
-<script type="text/javascript">
-window.onload = function() {
-    // 数字到达 100 后还原为 1
-    var max = 1000000,
-        o = document.getElementById('abc');
-        var chrome = /chrome/i.test(navigator.userAgent);
-                         
-    // 获取保存的数据
-    if(chrome) {
-        data_num = sessionStorage.getItem("num") || "";
-    }
-    else {
-        data_num = document.cookie.replace(
-        /(?:(?:^|.*;\s*)num\s*\=\s*((?:[^;](?!;))*[^;]?).*)|.*/,
-        "$1");
-    }
-    var num_now = parseInt(data_num) || 0;
-                         
-    o.innerHTML = num_now + 1;
-                         
-    // 每 0.1 秒更新一次数字，并保存数据
-    setInterval(function() {
-        num_now = num_now >= max ? 1 : num_now + 1;
-        o.innerHTML = num_now;
-        if(chrome) {
-            sessionStorage.setItem("num", num_now);
-        }
-        else {
-            document.cookie = "num=" + num_now + ";path=/;";
-        }
-    }, 100);
-};
-</script>
--->
 <script type="text/javascript">
 var oMarquee = document.getElementById("myfocus"); //滚动对象 
 var iLineHeight = 80; //单行高度，像素 
@@ -204,27 +187,67 @@ function run() { oMarquee.scrollTop += iScrollAmount; if ( oMarquee.scrollTop ==
 <script>
   var i=3;
   window.setInterval(function() {
-   i= i + 13;
+   i= i + 3;
    document.getElementById('t').innerHTML=i;
-  }, 500);
+  }, 600);
   var y=5;
   window.setInterval(function() {
-   y= y + 1;
+   y= y + 3;
    document.getElementById('y').innerHTML=y;
-  }, 500);
+  }, 1000);
     var m=5;
   window.setInterval(function() {
    m= m + 2;
    document.getElementById('m').innerHTML=m;
-  }, 500);
+  }, 5000);
   var e=7;
   window.setInterval(function() {
-   e= e + 4;
+   e= e + 1;
    document.getElementById('e').innerHTML=e;
-  }, 500);
+  }, 1200);
   var f=9;
   window.setInterval(function() {
-   f= f + 4;
+   f= f + 1;
    document.getElementById('f').innerHTML=f;
-  }, 500);
+  }, 6000);
  </script>  
+<script type="text/javascript"> 
+    var scrollDelay=8;//数字越大速度越慢 
+    var Scroll=document.getElementById("scroll"); 
+    var Scroll2=document.getElementById("scroll2"); 
+    var currentTop=0,preTop=0,stoptime=0,stopscroll=false; 
+    var ScrollChild=Scroll.getElementsByTagName("li"); 
+    var ScrollHeight=Scroll.offsetHeight; 
+    function ScrollInfo(){ 
+        if(stopscroll==true) return; 
+        currentTop++; 
+        if(currentTop+1>=ScrollHeight){ 
+            currentTop--; 
+            stoptime++; 
+            if(stoptime==parseInt(ScrollHeight)*scrollDelay) { 
+                currentTop=0; 
+                stoptime=0; 
+            } 
+        }else{ 
+            preTop=Scroll.scrollTop; 
+            Scroll.scrollTop++; 
+            if(preTop==Scroll.scrollTop){ 
+     Scroll.scrollTop=Scroll2.offsetHeight-ScrollHeight; 
+     Scroll.scrollTop+=1; 
+     } 
+        } 
+    } 
+    function Int_Scroll(){ 
+        Scroll2.innerHTML=""; 
+        Scroll2.innerHTML=Scroll.innerHTML; 
+        Scroll.innerHTML=Scroll2.innerHTML+Scroll2.innerHTML; 
+        Scroll.onmouseover=function(){ 
+            stopscroll=true; 
+        } 
+        Scroll.onmouseout=function(){ 
+            stopscroll=false; 
+        } 
+        setInterval("ScrollInfo()",scrollDelay); 
+    } 
+    window.setTimeout("Int_Scroll()",1000); 
+</script> 
