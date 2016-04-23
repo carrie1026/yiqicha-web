@@ -1,9 +1,20 @@
 <div class="investa">
-	<div class="header">
+	<!-- <div class="header">
 		年报列表
 		<div class="leftjj" onclick="javascript :history.back(-1)"><img src="../../images/icon_2.png"></div>
 		<div class="rightwz"><a href="errorcorrect">纠错</a></div>
-	</div>
+	</div> -->
+
+
+<div class="mycenter_header">
+	        <ul>
+	            <li class="li_1" onclick="javascript :history.back(-1)"><img src="../../images/icon_2.png"></li>
+	            <li class="li_2">年报列表</li>
+	            <li class="li_3"><a href="/errorcorrect">纠错</a></li>
+	            <br style="clear: both;" />
+	        </ul>
+        </div>
+	
 	<div class="investa1">
 		<div class="investa11" ng-repeat="reportdet in Reportdet.rows" onClick="window.location.href='/reportdetl'">
 			<div class="investa111">{{reportdet.year}}年年报</div>

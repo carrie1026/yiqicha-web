@@ -5,9 +5,9 @@
 			<div class="cpdl21 prt5" onClick="window.location.href='/share'">
 				<div class="cpdl211"><div class="cpdl2111"><img src="../../../images/share2@3x.png"></div><div class="cpdl2112 fxbtn">分享</div></div>
 			</div>
-			<div class="cpdl21">
+			<!-- <div class="cpdl21">
 				<div class="cpdl211"><div class="cpdl2111"><img src="../../../images/phone@3x.png"></div><div class="cpdl2112 dhbtn">电话</div></div>
-			</div>
+			</div> -->
 			<div class="cpdl21" onClick="window.location.href='/errorcorrect'">
 				<div class="cpdl211 bdn"><div class="cpdl2111"><img src="../../../images/change@3x.png"></div><div class="cpdl2112 jcbtn">纠错</div></div>
 			</div>
@@ -68,11 +68,22 @@
 
 
 
-		<div class="header">
+		<!-- <div class="header">
 		{{compdet.companyName}}
-		<div class="leftjj" onclick="javascript :history.back(-1)"><img src="/images/icon_2.png"/></div>
+		<div class="leftjj" onclick="javascript :history.back(-1)"><img src="../../images/icon_2.png"></div>
 		<div class="rightwz"><span class="headdd">...</span></div>
-		</div>
+		</div> -->
+
+        <div class="mycenter_header">
+	        <ul>
+	            <li class="li_1" onclick="javascript :history.back(-1)"><img src="../../images/icon_2.png"></li>
+	            <li class="li_2">{{compdet.companyName}}</li>
+	            <li class="li_3"><span class="headdd">...</span></li>
+	            <br style="clear: both;" />
+	        </ul>
+        </div>
+
+
 
 
 

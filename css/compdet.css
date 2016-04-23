@@ -11,7 +11,7 @@
 .compdet1{
 	width:100%;
 	position:relative;
-	top:40px;
+	/*top:40px;*/
 }
 .compdet11{
 	width:100%;
@@ -112,6 +112,7 @@
 	height:80px;
 	border-bottom:1px solid #ccc;
 	background-color:#FFF;
+	cursor: pointer;
 }
 .compdet131{
 	width:100%;
@@ -171,6 +172,7 @@ margin-bottom:20px;
 	width:24.7%;
 	height:100px;
 	float:left;
+	cursor: pointer;
 }
 .compdet14111{
 	width:100%;
@@ -211,7 +213,7 @@ margin-bottom:20px;
 }
 .cpdl2{
 	width:100%;
-	height:125px;
+	height:84px;
 	background-color:#666;
 	border-radius:5px;
 	color:#ccc;
@@ -332,7 +334,7 @@ margin-bottom:20px;
 	width: 100%;
 	padding: 0 4.6%;
 	position:relative;
-	top:40px;
+	/*top:40px;*/
 	background: #fff;
 }
 .compdet21{
