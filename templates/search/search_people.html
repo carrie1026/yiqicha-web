@@ -17,8 +17,8 @@
     <div class="searcharea_con">
         <ul>
 
-            <li>企业</li>
-            <li class="current">法人/股东</li>
+            <li class="current">企业</li>
+            <li>法人/股东</li>
             <li>失信</li>
             <div style="clear: both;"></div>
         </ul>
@@ -30,20 +30,18 @@
 
         <h1 onClick="window.location.href='/search_area'">搜索范围：<span>全国</span><em><img src="../../images/pic_3.png"></em></h1>
          <ul ng-repeat="Searchpeople in Searchpeople.rows" onclick="document.location='/compdet'">
-        
-
-      
-         <ul ng-repeat="Searchpeople in Searchpeople.rows">
             <a ng-href="/compdet?id={{Searchpeople.id}}">
 
             <p>{{Searchpeople.companyName}}</p>
             <li class="li_one"><img src="../../images/company_list@3x.png"></li>
             <li>公司法人：{{Searchpeople.company}}</li>
             <li class="li_three">在营（开业）企业</li>
-            <br style="clear: both;" />
+            <div style="clear: both;"></div>
             </a>
         </ul>
-
+        <div ng-if="!Searchpeople">
+            暂无内容
+        </div>
         <div class="load_more"><img src="../../images/loading@3x.png">载入更多...</div>
     </div>
 

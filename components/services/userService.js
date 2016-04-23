@@ -371,7 +371,24 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
         myfocus: myfocus
     };
 }])
+//热门企业 服务
+.factory('hotbusinessService', ['$http', '$q', function($http, $q) {
+    var hotbusiness = function() {
+        var defer = $q.defer();
+        $http.post('/yiqicha/companyInfo/hotEnterprise.do').success(function(data) {
+            if (isRequestSuccess(data)) {
+                defer.resolve(data);
+            } else {
+                defer.reject(data);
+            }
+        });
+        return defer.promise;
+    };
 
+    return {
+        hotbusiness: hotbusiness
+    };
+}])
 
 //查询主要成员 服务
 .factory('leadpeopleService', ['$http', '$q', function($http, $q) {

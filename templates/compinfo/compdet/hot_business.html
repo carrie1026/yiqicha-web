@@ -6,12 +6,12 @@
             <br style="clear: both;" />
         </ul>
     </div>
-    <div class="myfocus" onClick="window.location.href='/compdet'">
-        <p>北京巨星世纪乐凯有限公司</p>
-        <ul>
+    <div class="myfocus" onClick="window.location.href='/compdet'"> 
+        <ul ng-repeat="hotbusiness in hotbusiness">
+             <p>{{hotbusiness.companyName}}</p>
             <li class="li_one" style="width: 30%;"><img src="../../images/pic_6.png" style="width: 100%;"></li>
             <li class="li_three">20人关注</li>
-            <br style="clear: both;" />
+            <div style="clear: both;"></div>
         </ul>
     </div>
 </div>

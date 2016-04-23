@@ -7,7 +7,7 @@ mod.controller('SearchpeopleCtrl', ['$scope','$location', 'SearchpeopleService',
     var company = "李建";
     SearchpeopleService.Searchpeople(page,rows,company).then(function(data){
         $scope.Searchpeople = data.data;
-//        console.log($scope.Searchpeople);
+        console.log($scope.Searchpeople);
     })
     // 股东信息
     var page = 1;

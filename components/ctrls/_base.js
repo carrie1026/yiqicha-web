@@ -26,5 +26,6 @@ define([
     'investAbroadCtrl',
     'industryCtrl',
     'businessInformationCtrl',
-    'errorCtrl'
+    'errorCtrl',
+    'hotbusinessCtrl'
 ]);
