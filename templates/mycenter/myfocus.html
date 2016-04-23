@@ -6,14 +6,16 @@
             <br style="clear: both;" />
         </ul>
     </div>
-    <div class="myfocus" onClick="window.location.href='/compdet'" ng-repeat="myfocus in myfocus.rows">
-        <p>{{myfocus.companyName}}</p>
+    <div class="myfocus" ng-repeat="myfocus in myfocus.rows">
+        <a ng-href="/compdet?id={{myfocus.id}}">
         <ul>
+            <p>{{myfocus.companyName}}</p>
             <li class="li_one"><img src="../../images/icon_3.png" style="width: 100%;"></li>
             <li class="li_two">公司法人：{{myfocus.repPersion}}</li>
             <li class="li_three">{{myfocus.recordStatus}}</li>
             <br style="clear: both;" />
         </ul>
+        </a>
     </div>
     <div ng-if="!myfocus" style="padding:20px 0 20px 40%;">
          暂无内容

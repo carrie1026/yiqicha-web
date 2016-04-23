@@ -70,7 +70,7 @@
         </a>
         </div>
         <div id="myfocus" onmouseover=iScrollAmount=0 style="overflow: hidden;background-color:#fff;height:80px;" onmouseout=iScrollAmount=1>
-            <div class="index_followde" onclick="document.location='/myfocus'">
+            <div class="index_followde" onclick="document.location='/compdet'">
                 <div class="index23121">香港强悍科技</div>
                 <div class="index23122">
                     <div class="index231221">
@@ -84,7 +84,7 @@
                 <div class="clear"></div>
             </div>
             <div class="clear"></div>
-            <div class="index_followde"  onclick="document.location='/myfocus'">
+            <div class="index_followde"  onclick="document.location='/compdet'">
                 <div class="index23121">香港强悍科技2</div>
                 <div class="index23122">
                     <div class="index231221">
@@ -106,9 +106,9 @@
             <div class="clear"></div>
         </div>
         <div id="scroll" style="overflow:hidden;background-color:#fff;height:80px;" onclick="document.location='/hot_business'">
-            <div class="index_followde" ng-repeat="hotbusiness in hotbusiness.rows">
+            <div class="index_followde">
                 <div class="index2312">
-                    <div class="index23121">{{hotbusiness.companyName}}</div>
+                    <div class="index23121">中国华能集团公司</div>
                     <div class="index23122">
                         <div class="index231221"><div class="index231223"><img src="../../images/starjudge.png"></div></div><div class="index231222"><span class="co">20</span>人关注</div>
                     </div>
@@ -116,6 +116,29 @@
                 </div>
                 <div class="clear"></div>
             </div>
+            <div class="clear"></div>
+            <div class="index_followde">
+                <div class="index2312">
+                    <div class="index23121">中国华能集团公司</div>
+                    <div class="index23122">
+                        <div class="index231221"><div class="index231223"><img src="../../images/starjudge.png"></div></div><div class="index231222"><span class="co">20</span>人关注</div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="index_followde">
+                <div class="index2312">
+                    <div class="index23121">中国华能集团公司</div>
+                    <div class="index23122">
+                        <div class="index231221"><div class="index231223"><img src="../../images/starjudge.png"></div></div><div class="index231222"><span class="co">20</span>人关注</div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
         </div>
         <div id="scroll2" style="display:none;"></div> 
 
@@ -150,6 +173,7 @@ var iLineCount = 2; //实际行数
 var iScrollAmount = 1; //每次滚动高度，像素 
 function run() { oMarquee.scrollTop += iScrollAmount; if ( oMarquee.scrollTop == iLineCount * iLineHeight ) oMarquee.scrollTop = 0; if ( oMarquee.scrollTop % iLineHeight == 0 ) { window.setTimeout( "run()", 2500 ); } else { window.setTimeout( "run()", 10 ); } } oMarquee.innerHTML += oMarquee.innerHTML; window.setTimeout( "run()", 2500 );
 </script>
+<!--
 <script>
   var i=3;
   window.setInterval(function() {
@@ -177,6 +201,7 @@ function run() { oMarquee.scrollTop += iScrollAmount; if ( oMarquee.scrollTop ==
    document.getElementById('f').innerHTML=f;
   }, 6000);
  </script>  
+-->
 <script type="text/javascript"> 
     var scrollDelay=8;//数字越大速度越慢 
     var Scroll=document.getElementById("scroll"); 
