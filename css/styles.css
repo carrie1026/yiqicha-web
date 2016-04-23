@@ -16,7 +16,7 @@
 }
 .mycenter_header li.li_1{
 	float: left;
-	padding: 8px 0 0 0;
+	padding: 11px 0 0 0;
 }
 .mycenter_header li.li_2{
 	width: 50%;
@@ -538,7 +538,7 @@ a{
 	padding: 15px 0;
 	text-align: center;
 }
-.mycenter_xiugaiinfo .xiugai_info .pic a img{
+.mycenter_xiugaiinfo .xiugai_info .pic img{
 	width: 81px;
 	height: 81px;
 	display: block;
