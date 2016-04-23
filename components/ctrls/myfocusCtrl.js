@@ -6,6 +6,7 @@ mod.controller('myfocusCtrl', ['$scope','$location', 'myfocusService','$rootScop
     var page = 1;
     var rows = 1;
     var accountId = 1;
+    console.log(1);
     myfocusService.myfocus(page,rows,accountId).then(function(data){
         $scope.myfocus = data.data;
         console.log($scope.myfocus);
