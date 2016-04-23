@@ -4,7 +4,7 @@ define(['angular'], function (angular) {
         $routeProvider
             .when('/index', {
                 templateUrl: '/templates/index.html',
-                controller: ''
+                controller: 'indexCtrl'
             })
             .when('/home', {
                 templateUrl: '/templates/home.html',

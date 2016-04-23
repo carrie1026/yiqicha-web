@@ -106,9 +106,9 @@
             <div class="clear"></div>
         </div>
         <div id="scroll" style="overflow:hidden;background-color:#fff;height:80px;" onclick="document.location='/hot_business'">
-            <div class="index_followde">
+            <div class="index_followde" ng-repeat="hotbusiness in hotbusiness.rows">
                 <div class="index2312">
-                    <div class="index23121">北京巨星世纪信息科技有限公司!</div>
+                    <div class="index23121">{{hotbusiness.companyName}}</div>
                     <div class="index23122">
                         <div class="index231221"><div class="index231223"><img src="../../images/starjudge.png"></div></div><div class="index231222"><span class="co">20</span>人关注</div>
                     </div>
@@ -116,40 +116,6 @@
                 </div>
                 <div class="clear"></div>
             </div>
-            <div class="clear"></div>
-            <div class="index_followde">
-                <div class="index2312">
-                    <div class="index23121">北京巨星世纪信息科技有限公司2.0</div>
-                    <div class="index23122">
-                        <div class="index231221"><div class="index231223"><img src="../../images/starjudge.png"></div></div><div class="index231222"><span class="co">20</span>人关注</div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-                <div class="clear"></div>
-            </div>
-            <div class="clear"></div>
-            <div class="index_followde">
-                <div class="index2312">
-                    <div class="index23121">北京巨星世纪信息科技有限公司3</div>
-                    <div class="index23122">
-                        <div class="index231221"><div class="index231223"><img src="../../images/starjudge.png"></div></div><div class="index231222"><span class="co">20</span>人关注</div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-                <div class="clear"></div>
-            </div>
-            <div class="clear"></div>
-            <div class="index_followde">
-                <div class="index2312">
-                    <div class="index23121">北京巨星世纪信息科技有限公司4</div>
-                    <div class="index23122">
-                        <div class="index231221"><div class="index231223"><img src="../../images/starjudge.png"></div></div><div class="index231222"><span class="co">20</span>人关注</div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-                <div class="clear"></div>
-            </div>
-            <div class="clear"></div>
         </div>
         <div id="scroll2" style="display:none;"></div> 
 
@@ -190,9 +156,9 @@ function run() { oMarquee.scrollTop += iScrollAmount; if ( oMarquee.scrollTop ==
    i= i + 3;
    document.getElementById('t').innerHTML=i;
   }, 600);
-  var y=5;
+  var y=1;
   window.setInterval(function() {
-   y= y + 3;
+   y= y + 1;
    document.getElementById('y').innerHTML=y;
   }, 1000);
     var m=5;

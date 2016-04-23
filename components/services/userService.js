@@ -471,15 +471,13 @@ mod.factory('businessInformationService',['$http', '$q','$interval', function($h
     		businessInformation : businessInformation
     	};
 }]);
-});
 // 获取失信信息
-mod.factory('businessInformationService',['$http', '$q','$interval', function($http, $q,$interval) {
-    	var businessInformation = function(companyId){
+mod.factory('dishonestyService',['$http', '$q','$interval', function($http, $q,$interval) {
+    	var dishonesty = function(iname){
     		var defer = $q.defer();
-            $http.post('/yiqicha/companyInfo/findVietinbanhInfoByCompanyId.do',{companyId: companyId}).success(function(data){
+            $http.post('/yiqicha/courtitemMsg/findOccupationList.do',{iname: iname}).success(function(data){
                 if (isRequestSuccess(data)) {
                     defer.resolve(data);
-                    console.log(data);
                 } else {
                     defer.reject(data);
                 }
@@ -487,7 +485,7 @@ mod.factory('businessInformationService',['$http', '$q','$interval', function($h
             return defer.promise;
     	}
     	return {
-    		businessInformation : businessInformation
+    		dishonesty : dishonesty
     	};
 }]);
 });
