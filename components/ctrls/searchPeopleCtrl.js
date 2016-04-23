@@ -3,9 +3,8 @@ define(['./mod'], function (mod) {
 mod.controller('SearchpeopleCtrl', ['$scope','$location', 'SearchpeopleService','$rootScope','ShareholderService', function($scope, $location, SearchpeopleService,$rootScope,ShareholderService) {
     // 企业信息
     var page = 1;
-    var rows = 1;
-    var company = "李建";
-    SearchpeopleService.Searchpeople(page,rows,company).then(function(data){
+    var rows = 4;
+    SearchpeopleService.Searchpeople(page,rows).then(function(data){
         $scope.Searchpeople = data.data;
         console.log($scope.Searchpeople);
     })

@@ -16,7 +16,7 @@
             </div>
             <div class="register_yzm">
                 <input placeholder="请输入验证码" type="text" ng-model="registerFormData.captcha" required/>
-                <a href="" ng-if="!countdown" ng-click="sendMobileCaptchaBtn()">获取验证码</a>
+                <a href="" ng-if="!countdown" ng-click="sendMobileCaptchaBtn()" style="color:#3ACAFC;">获取验证码</a>
                 <label ng-if="countdown" style="padding:5px 0 0 5px;">重新发送{{countdown}}</label>
                 <div class="clear"></div>
             </div>

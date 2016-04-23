@@ -110,12 +110,11 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
 }])
 //查询企业列表信息 服务
 .factory('SearchpeopleService', ['$http', '$q', function($http, $q) {
-    var Searchpeople = function(page,rows,companyName) {
+    var Searchpeople = function(page,rows) {
         var defer = $q.defer();
         $http.post('/yiqicha/companyInfo/findEnterpriseInfo.do',{
            page:page,
-           rows:rows,
-           companyName:companyName
+           rows:rows
         }).success(function(data) {
             if (isRequestSuccess(data)) {
                 defer.resolve(data);
