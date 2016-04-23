@@ -67,7 +67,7 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
             register: register,
             sendSmsCaptcha:sendSmsCaptcha,
             login:login,
-            logout:logout,
+            logout:logout
         };
     }
 ])
@@ -233,23 +233,7 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
         Shareholder: Shareholder
     };
 }])
-//修改用户信息 服务
-.factory('reviseUserService', ['$http', '$q', function($http, $q) {
-    var reviseUser = function(name,companyName,job) {
-        var defer = $q.defer();
-        $http.post('/yiqicha/manager/login/modifyUserInfo.do', {name: name, companyName: companyName,job:job}).success(function(data) {
-            if (isRequestSuccess(data)) {
-                defer.resolve(data);
-            } else {
-                defer.reject(data);
-            }
-        });
-        return defer.promise;
-    };
-    return {
-        reviseUser: reviseUser
-    };
-}])
+
 //纠错提交 服务
 .factory('ErrorService', ['$http', '$q', function($http, $q) {
     var Error = function(errorParts,errorContent,mobileNo) {
