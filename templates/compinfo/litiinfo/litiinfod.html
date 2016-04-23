@@ -16,7 +16,7 @@
 
 
 
-		<div class="liti">
+		<div class="liti" ng-if="litinfodde != null">
 			<div class="liti1">
 				<div class="liti11">
 					<div class="liti111">被执行人姓名/名称</div><div class="liti112">郑荣德</div>
@@ -53,5 +53,8 @@
 				</div>
 			</div>
 		</div>
+        <div ng-if="litinfodde == null" style="padding:20px 0 20px 40%;">
+         暂无内容
+       </div>
 
 	</div>
