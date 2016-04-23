@@ -20,6 +20,9 @@ define(['angular'], function (angular) {
              .when('/questions', {
                 templateUrl: '/templates/mycenter/questions.html'
             })
+             .when('/implant', {
+                templateUrl: '/templates/mycenter/implant.html'
+            })
              .when('/settings', {
                 templateUrl: '/templates/mycenter/settings.html'
             })
