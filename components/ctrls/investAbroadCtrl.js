@@ -1,7 +1,7 @@
 define(['./mod'], function (mod) {
     'use strict';
     mod.controller('queryInvestAbroadCtrl',['$scope','InvestAbroadService', function($scope, InvestAbroadService){
-    	var companyId = '12';
+    	var companyId = 1;
     	var page = 1;
     	var rows = 10;
     	InvestAbroadService.quesyInvestAbroad(companyId, page, rows).then(function(data){
