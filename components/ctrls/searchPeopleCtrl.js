@@ -6,7 +6,7 @@ mod.controller('SearchpeopleCtrl', ['$scope','$location', 'SearchpeopleService',
     var rows = 4;
     SearchpeopleService.Searchpeople(page,rows).then(function(data){
         $scope.Searchpeople = data.data;
-        console.log($scope.Searchpeople);
+   //     console.log($scope.Searchpeople);
     })
     // 股东信息
     var page = 1;
@@ -16,7 +16,7 @@ mod.controller('SearchpeopleCtrl', ['$scope','$location', 'SearchpeopleService',
 //        console.log($scope.Shareholder);
     })
     // 失信信息
-    var iname = 1234;
+    var iname = "顾海林";
     dishonestyService.dishonesty(iname).then(function(data){
         $scope.dishonesty = data.data;
         console.log($scope.dishonesty);
