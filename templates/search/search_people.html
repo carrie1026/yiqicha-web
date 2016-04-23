@@ -30,7 +30,7 @@
 
         <h1 onClick="window.location.href='/search_area'">搜索范围：<span>全国</span><em><img src="../../images/pic_3.png"></em></h1>
          <ul ng-repeat="Searchpeople in Searchpeople.rows">
-            <a ng-href="/compdet?id={{Searchpeople.id}}">
+            <a ng-href="/compdet?id={{Searchpeople.id}}&sts={{Searchpeople.sts}}">
 
             <p>{{Searchpeople.companyName}}</p>
             <li class="li_one"><img src="../../images/company_list@3x.png"></li>

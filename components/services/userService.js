@@ -289,8 +289,38 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
         return defer.promise;
     };
 
+    var addMyAttention = function(companyId){
+        var defer = $q.defer();
+        $http.post('/yiqicha/companyInfo/addMyAttention.do',{
+            companyId:companyId
+        }).success(function(data) {
+            if (isRequestSuccess(data)) {
+                defer.resolve(data);
+            } else {
+                defer.reject(data);
+            }
+        });
+        return defer.promise;
+    };
+
+    var removeMyAttention = function(companyId){
+        var defer = $q.defer();
+        $http.post('/yiqicha/companyInfo/removeMyAttention.do',{
+            companyId:companyId
+        }).success(function(data) {
+            if (isRequestSuccess(data)) {
+                defer.resolve(data);
+            } else {
+                defer.reject(data);
+            }
+        });
+        return defer.promise;
+    };
+
     return {
-        compdet: compdet
+        compdet: compdet,
+        addMyAttention: addMyAttention,
+        removeMyAttention: removeMyAttention
     };
 }])
 

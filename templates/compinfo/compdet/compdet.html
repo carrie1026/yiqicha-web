@@ -89,8 +89,11 @@
 				<div class="compdet112">
 					<img src="../../../images/starjudge.png" />
 				</div>
-				<div class="compdet113" ng-click="addMyAttention()">
-					<a href="#">关注</a>
+				<div class="compdet113" ng-if="isAlreadyFocus==false">
+					<a href="#" ng-click="addMyAttention()">关注</a>
+				</div>
+				<div class="compdet113" ng-if="isAlreadyFocus==true">
+					<a href="#" ng-click="removeMyAttention()">取消关注</a>
 				</div>
 				<div class="compdet114">
 					浏览：51<span class="mgl10">关注：1</span>
