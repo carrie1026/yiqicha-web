@@ -12,6 +12,7 @@ define(['./mod'], function (mod) {
                 var promise = reviseUserService.reviseUser($scope.reviseUserFormData);
                 promise.then(function(data) {
                     alert('修改成功');
+                    $location.path('/mycenter_home');
                 }, function(data) {
                      
                 });
