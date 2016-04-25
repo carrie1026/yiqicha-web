@@ -5,5 +5,6 @@ define([
     'investAbroadService',
     'industryService',
     'enterpriseService',
-    'reviseUserService'
+    'reviseUserService',
+    'authService'
 ]);

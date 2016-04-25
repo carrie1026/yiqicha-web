@@ -2,5 +2,6 @@ define([
     './mod',
     'config',
     'noHttpInjectUrl',
-    'docTitle'
+    'docTitle',
+    'auth'
 ]);

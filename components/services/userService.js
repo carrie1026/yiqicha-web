@@ -4,7 +4,7 @@
  */
 define(['./mod'], function (mod) {
     'use strict';
-mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$interval) {
+mod.factory('UserService', ['$http', '$q','$interval','$$http', function($http, $q,$interval, $$http) {
         // 注册
         var register = function(param) {
             var defer = $q.defer();
@@ -63,11 +63,16 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
             });
             return defer.promise;
         };
+
+        var findUserInfo = function() {
+            return $$http.get('/yiqicha/manager/findUserByUserName.do', {}, true);
+        };
         return {
             register: register,
             sendSmsCaptcha:sendSmsCaptcha,
             login:login,
-            logout:logout
+            logout:logout,
+            findUserInfo: findUserInfo
         };
     }
 ])
@@ -135,7 +140,7 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
         var defer = $q.defer();
         $http.post('/yiqicha/companyInfo/findLawsuitMsg.do',{
            page:page,
-           rows:rows 
+           rows:rows
         }).success(function(data) {
             if (isRequestSuccess(data)) {
                 defer.resolve(data);
@@ -464,7 +469,7 @@ mod.factory('UserService', ['$http', '$q','$interval', function($http, $q,$inter
         };
 
         return {
-            readData : readData 
+            readData : readData
         };
 }])
 // 获取工商信息

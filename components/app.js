@@ -23,6 +23,25 @@ define([
         $locationProvider.html5Mode(true);
     }])
 
+    .run(['$rootScope', 'AuthService', '$location', function($rootScope, AuthService, $location) {
+        // 路由改变监听
+            $rootScope.$on('$routeChangeStart', function (event, next, current) {
+                console.log(next);
+                console.log(current);
+                // 判断权限是否跳转
+                AuthService.doAuth(next, current).then(function () {
+                    // 通过
+                    // console.log('pass');
+                }, function () {
+                    // 不通过
+                    event.preventDefault(); // 取消默认跳转行为
+                    $location.path('/login');
+                    // 将当前请求保存到$rootScope上
+                    $rootScope.savedRequest = current;
+                });
+            });
+    }])
+
     // .run(['$rootScope', '$location', 'AuthService', 'HideHeaderUrl', 'DocTitle', function ($rootScope, $location, AuthService, HideHeaderUrl, DocTitle) {
     //     // 路由改变监听
     //     $rootScope.$on('$routeChangeStart', function (event, next, current) {
