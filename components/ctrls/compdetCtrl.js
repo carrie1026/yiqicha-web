@@ -19,11 +19,16 @@ mod.controller('compdetCtrl', ['$scope','$location','compdetService','$rootScope
 
     // 添加关注
     $scope.addMyAttention = function(){
-    	compdetService.addMyAttention(companyId).then(function(data){
-	    	$scope.isAlreadyFocus = true;
-	    	console.log(data);
-	    });
-    };    
+        if ($rootScope.userInfo){
+            compdetService.addMyAttention(companyId).then(function(data){
+    	    	$scope.isAlreadyFocus = true;
+    	    	console.log(data);
+    	    });
+        } else {
+            var path =  $location.path();
+            $location.path('/login').search({success_redirect: path});
+        }
+    };
 
     // 取消关注
     $scope.removeMyAttention = function(){
@@ -34,5 +39,3 @@ mod.controller('compdetCtrl', ['$scope','$location','compdetService','$rootScope
     };
  }])
 });
-
-

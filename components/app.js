@@ -35,7 +35,7 @@ define([
             }, function() {
                 // 不通过
                 event.preventDefault(); // 取消默认跳转行为
-                $location.path('/login');
+                $location.path('/login').search({success_redirect: current.$$route.originalPath});
                 // 将当前请求保存到$rootScope上
                 $rootScope.savedRequest = current;
             });
