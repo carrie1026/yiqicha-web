@@ -33,7 +33,7 @@
         <a ui-turn-on='myDropdown{{idx}}' class='btn'>
     	   <img src="/images/upbottom@3x.png" style="width: 50%;" />
         </a>
-        <ul 
+        <ul
            ui-state="myDropdown{{idx}}"
            class="dropdown-menu"
            ui-outer-click="Ui.turnOff('myDropdown' + idx)"
@@ -71,3 +71,6 @@
 		<highchart id="chart6" config="enterpriseProductAnalysisChart"></highchart>
 	</div>
 </div>
+<script type="text/javascript">
+    Q.hideHeader('.mycenter_header');
+</script>

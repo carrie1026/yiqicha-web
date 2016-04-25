@@ -10,7 +10,7 @@
 	padding:0;
 }
 .index_top{ background:url(/images/indextop_bg.png) repeat-x;height: 160px;background-size: 100% 100%;padding-top: 15px;}
-.index_topde{height:36px;background-color: #1E78CC;width: 100%;margin-bottom: 15px;}
+.index_topde{height:36px;width: 100%;margin-bottom: 15px;}
 .index_topdelf,.index_topdecon,.index_topderg{float: left;}
 .index_topdelf{width: 10%;text-align: center;line-height: 36px;}
 .index_topdecon{width: 76%;height: 34px;background-color: #fff;line-height: 34px;margin: 1px 2%;border-radius: 3px;}
@@ -79,7 +79,7 @@
 }
 .index22{
 	width:100%;
-	
+
 	background-color:#CCC;
 }
 

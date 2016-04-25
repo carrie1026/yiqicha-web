@@ -39,27 +39,34 @@
                     <div class="index21121" id="y">3</div>
                     <div class="index21121"  id="t">9</div>
                     <div style="clear:both;"></div>
-                    
+
 <!--                     <div class="numberRun2"></div> -->
                 </div>
             </div>
         </div>
         <div class="index_search">
-            <div class="index_searchlf" onclick="document.location='/search_people'">        
-                 <p><img src="/images/search.png" width="28" /></p>
-                 <p style="padding-top:6px;">查企业</p>
-                 <div class="clear"></div>       
-            </div>
-            <div class="index_searchcon" onclick="document.location='/search_people'">
-                <p><img src="/images/farengudong.png" width="28" /></p>
-                <p>查法人<br />股东</p>
-                <div class="clear"></div>
-            </div>
-            <div class="index_searchrg" onclick="document.location='/search_people'">
-                 <p><img src="/images/lose_letter.png" width="28" /></p>
-                 <p style="padding-top:6px;">查失信</p>
-                 <div class="clear"></div>
-            </div>
+            <a href="/search_people?type=qiye">
+                <div class="index_searchlf">
+                    <p><img src="/images/search.png" width="28" /></p>
+                    <p style="padding-top:6px;">查企业</p>
+                    <div class="clear"></div>
+                </div>
+            </a>
+            <a href="/search_people?type=faren">
+                <div class="index_searchcon">
+                    <p><img src="/images/farengudong.png" width="28" /></p>
+                    <p>查法人
+                        <br />股东</p>
+                    <div class="clear"></div>
+                </div>
+            </a>
+            <a href="/search_people?type=shixin">
+                <div class="index_searchrg">
+                    <p><img src="/images/lose_letter.png" width="28" /></p>
+                    <p style="padding-top:6px;">查失信</p>
+                    <div class="clear"></div>
+                </div>
+            </a>
         </div>
         <div class="index_follow">
         <a href="/myfocus">
@@ -95,7 +102,7 @@
                     <div class="clear"></div>
                 </div>
                 <div class="clear"></div>
-            </div> 
+            </div>
             <div class="clear"></div>
         </div>
         <div class="index_follow" onclick="document.location='/hot_business'">
@@ -139,9 +146,9 @@
             </div>
             <div class="clear"></div>
         </div>
-        <div id="scroll2" style="display:none;"></div> 
+        <div id="scroll2" style="display:none;"></div>
 
-      <!--   
+      <!--
         <div class="index_follow">
         <a href="/nopromise_business">
             <div class="index_followlf">失信榜单</div>
@@ -212,6 +219,75 @@ function run() { oMarquee.scrollTop += iScrollAmount; if ( oMarquee.scrollTop ==
     } 
     window.setTimeout("Int_Scroll()",1000); 
 </script> 
+<!--
+<script>
+  var i=3;
+  window.setInterval(function() {
+   i= i + 3;
+   document.getElementById('t').innerHTML=i;
+  }, 600);
+  var y=1;
+  window.setInterval(function() {
+   y= y + 1;
+   document.getElementById('y').innerHTML=y;
+  }, 1000);
+    var m=5;
+  window.setInterval(function() {
+   m= m + 2;
+   document.getElementById('m').innerHTML=m;
+  }, 5000);
+  var e=7;
+  window.setInterval(function() {
+   e= e + 1;
+   document.getElementById('e').innerHTML=e;
+  }, 1200);
+  var f=9;
+  window.setInterval(function() {
+   f= f + 1;
+   document.getElementById('f').innerHTML=f;
+  }, 6000);
+ </script>
+-->
+<script type="text/javascript">
+    var scrollDelay=8;//数字越大速度越慢
+    var Scroll=document.getElementById("scroll");
+    var Scroll2=document.getElementById("scroll2");
+    var currentTop=0,preTop=0,stoptime=0,stopscroll=false;
+    var ScrollChild=Scroll.getElementsByTagName("li");
+    var ScrollHeight=Scroll.offsetHeight;
+    function ScrollInfo(){
+        if(stopscroll==true) return;
+        currentTop++;
+        if(currentTop+1>=ScrollHeight){
+            currentTop--;
+            stoptime++;
+            if(stoptime==parseInt(ScrollHeight)*scrollDelay) {
+                currentTop=0;
+                stoptime=0;
+            }
+        }else{
+            preTop=Scroll.scrollTop;
+            Scroll.scrollTop++;
+            if(preTop==Scroll.scrollTop){
+     Scroll.scrollTop=Scroll2.offsetHeight-ScrollHeight;
+     Scroll.scrollTop+=1;
+     }
+        }
+    }
+    function Int_Scroll(){
+        Scroll2.innerHTML="";
+        Scroll2.innerHTML=Scroll.innerHTML;
+        Scroll.innerHTML=Scroll2.innerHTML+Scroll2.innerHTML;
+        Scroll.onmouseover=function(){
+            stopscroll=true;
+        }
+        Scroll.onmouseout=function(){
+            stopscroll=false;
+        }
+        setInterval("ScrollInfo()",scrollDelay);
+    }
+    window.setTimeout("Int_Scroll()",1000);
+</script>
 <script>
 /**
 *  by Mantou qq:676015863
@@ -228,13 +304,13 @@ function run() { oMarquee.scrollTop += iScrollAmount; if ( oMarquee.scrollTop ==
     }
     //如果setting为空，就取default的值
     var setting = $.extend(defaults, setting);
-  
+
     //如果对象有多个，提示出错
     if($(this).length > 1){
       alert("just only one obj!");
       return;
     }
-  
+
     //如果未设置初始化值。提示出错
     if(setting.num == ""){
       alert("must set a num!");
@@ -253,19 +329,19 @@ function run() { oMarquee.scrollTop += iScrollAmount; if ( oMarquee.scrollTop ==
             <span class="mt-number-animate-span">9</span>\
             <span class="mt-number-animate-span">.</span>\
           </div>';
-  
+
     //数字处理
     var numToArr = function(num){
       num = parseFloat(num).toFixed(setting.dot);
       if(typeof(num) == 'number'){
-        var arrStr = num.toString().split("");  
+        var arrStr = num.toString().split("");
       }else{
         var arrStr = num.split("");
       }
       //console.log(arrStr);
       return arrStr;
     }
-  
+
     //设置DOM symbol:分割符号
     var setNumDom = function(arrStr){
       var shtml = '<div class="mt-number-animate">';
@@ -279,7 +355,7 @@ function run() { oMarquee.scrollTop += iScrollAmount; if ( oMarquee.scrollTop ==
       shtml += '</div>';
       return shtml;
     }
-  
+
     //执行动画
     var runAnimate = function($parent){
       $parent.find(".mt-number-animate-dom").each(function() {
@@ -306,7 +382,7 @@ function run() { oMarquee.scrollTop += iScrollAmount; if ( oMarquee.scrollTop ==
                 '-webkit-transition':setting.speed/1000+'s',
                 '-o-transition':setting.speed/1000+'s',
                 'transition':setting.speed/1000+'s'
-              }); 
+              });
             }
           }else{
             setting.iniAnimate = true;
@@ -317,14 +393,14 @@ function run() { oMarquee.scrollTop += iScrollAmount; if ( oMarquee.scrollTop ==
         }
       });
     }
-  
+
     //初始化
     var init = function($parent){
       //初始化
       $parent.html(setNumDom(numToArr(setting.num)));
       runAnimate($parent);
     };
-  
+
     //重置参数
     this.resetData = function(num){
       var newArr = numToArr(num);
@@ -343,17 +419,17 @@ function run() { oMarquee.scrollTop += iScrollAmount; if ( oMarquee.scrollTop ==
     return this;
   }
 })(jQuery);
-  
+
 $(function(){
-  
-  
+
+
   var numRun2 = $(".numberRun2").numberAnimate({num:'15343242', speed:2000, symbol:","});
   var nums2 = 15343242;
   setInterval(function(){
     nums2+= 1433;
     numRun2.resetData(nums2);
   },2000);
-  
-  
+
+
 });
 </script>
