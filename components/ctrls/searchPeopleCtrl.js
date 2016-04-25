@@ -21,5 +21,19 @@ mod.controller('SearchpeopleCtrl', ['$scope','$location', 'SearchpeopleService',
         $scope.dishonesty = data.data;
         console.log($scope.dishonesty);
     })
+
+    var search = $location.search();
+    switch (search.type) {
+        case 'qiye':
+            $('.searcharea_con ul li:eq(0)').click();
+            break;
+        case 'faren':
+            $('.searcharea_con ul li:eq(1)').click();
+            break;
+        case 'shixin':
+            $('.searcharea_con ul li:eq(2)').click();
+            break;
+        default:
+    }
  }])
 });
