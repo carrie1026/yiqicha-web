@@ -1,7 +1,7 @@
 define(['./mod'], function (mod) {
     'use strict';
 mod.controller('LoginCtrl', ['$scope','$location', 'UserService','$rootScope', function($scope, $location, UserService,$rootScope) {
-    
+
     $scope.loginFormData = {};
     var isSuccessRedirect = function() {
         var search = $location.search();
@@ -33,6 +33,14 @@ mod.controller('LoginCtrl', ['$scope','$location', 'UserService','$rootScope', f
             // login error
             // alert(data.data.message);
         });
+    };
+
+    $scope.backBtn = function() {
+        var url = '/index';
+        if ($rootScope.savedRequest){
+            url = $rootScope.savedRequest.$$route.originalPath;
+        }
+        $location.path(url);
     };
  }])
 });
