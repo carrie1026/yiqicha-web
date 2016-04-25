@@ -4,12 +4,12 @@
     <div class="search_header">
         <p><a href="/index"><img src="../../images/icon_2.png"></a></p>
         <ul>
-            <li class="li_one" onclick="document.location='/index'"><a href="#"><img src="../../images/Oval 81 + Line@3x.png"></li>
+            <li class="li_one"><a href="/index"><img src="../../images/Oval 81 + Line@3x.png"></li>
             <li class="li_two">
             <form action="#" method="post">
             <input placeholder="请输入法定代表人或股东名" type="text" ng-model="txt"/>
             </form>
-            </li>  
+            </li>
                 <li class="li_three" ng-show="txt != 0"><img src="../../images/change@3x.png"></li>
             <br style="clear: both;"/>
         </ul>
@@ -24,12 +24,14 @@
     </div>
     <div class="search_pre searchbusiness_con1">
         <h1 onClick="window.location.href='/search_area'">搜索范围：<span>全国</span><em><img src="../../images/pic_3.png"></em></h1>
-         <ul ng-repeat="Searchpeople in Searchpeople.rows" onclick="document.location='/compdet'">
+         <ul ng-repeat="Searchpeople in Searchpeople.rows">
+             <a href="/compdet">
             <p>{{Searchpeople.companyName}}</p>
             <li class="li_one"><img src="../../images/company_list@3x.png"></li>
             <li>公司法人：尹维安</li>
             <li class="li_three">在营（开业）企业</li>
             <br style="clear: both;" />
+        </a>
         </ul>
         <div class="load_more"><img src="../../images/loading@3x.png">载入更多...</div>
     </div>
