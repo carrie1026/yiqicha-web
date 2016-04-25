@@ -57,7 +57,7 @@
             <br style="clear: both;" />
         </ul>
     </div>
-    <div style="width:100%;height:100%">
+   <!--  <div style="width:100%;height:100%">
 	<div ng-repeat="item in sonEnterpriseMsgArray"  style="width:95%;height:60px;background-color:white;border-bottom:1px solid #b3b3b3;margin-left:2.5%;margin-right:2.5%">
 		<table>
 			<tr>
@@ -82,6 +82,21 @@
 		</table>
 		
 	</div>
-</div> 
+</div>  -->
+
+
+ <div class="myfocus" ng-repeat="item in sonEnterpriseMsgArray">
+       <!--  <a ng-href="/compdet?companyId={{myfocus.companyId}}&sts=1"> -->
+        <ul>
+            <p>{{item.companyName}}</p>
+            <li class="li_one"><img src="../../images/company_list@3x.png" style="width: 100%;"></li>
+            <li class="li_two">公司法人：{{item.legalRepPersion}}</li>
+            <li class="li_three">{{item.recordStatus}}</li>
+            <br style="clear: both;" />
+        </ul>
+      <!--   </a> -->
+</div>
+
+
     
 </div>
