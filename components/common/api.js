@@ -217,3 +217,20 @@ function $string() {
     }
     return s;
 }
+
+function Q() {}
+Q.prototype = {
+    getQueryString : function(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
+    },
+    hideHeader: function(el) {
+        var hideHeader = this.getQueryString('hideHeader');
+        if (hideHeader){
+            $(el).hide();
+        }
+    }
+}
+var Q = new Q();
