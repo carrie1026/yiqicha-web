@@ -23,7 +23,7 @@ define(['./mod'], function(mod) {
 
             if (isAuth) {
                 UserService.findUserInfo().then(function(data){// logined
-                    defer.resolve();
+                    defer.resolve(data);
                 }, function(data) {// no login
                     defer.reject();
                 });
