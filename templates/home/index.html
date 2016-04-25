@@ -104,7 +104,7 @@
             <div class="index_followrg">></div>
             <div class="clear"></div>
         </div>
-        <div id="scroll" style="overflow:hidden;background-color:#fff;height:80px;" onclick="document.location='/compdet    '">
+        <div id="scroll" style="overflow:hidden;background-color:#fff;height:80px;" onclick="document.location='/compdet'">
             <div class="index_followde">
                 <div class="index2312">
                     <div class="index23121">中国华能集团公司</div>
@@ -170,37 +170,8 @@ var oMarquee = document.getElementById("myfocus"); //滚动对象
 var iLineHeight = 80; //单行高度，像素 
 var iLineCount = 2; //实际行数 
 var iScrollAmount = 1; //每次滚动高度，像素 
-function run() { oMarquee.scrollTop += iScrollAmount; if ( oMarquee.scrollTop == iLineCount * iLineHeight ) oMarquee.scrollTop = 0; if ( oMarquee.scrollTop % iLineHeight == 0 ) { window.setTimeout( "run()", 2500 ); } else { window.setTimeout( "run()", 10 ); } } oMarquee.innerHTML += oMarquee.innerHTML; window.setTimeout( "run()", 2500 );
+function run() { oMarquee.scrollTop += iScrollAmount; if ( oMarquee.scrollTop == iLineCount * iLineHeight ) oMarquee.scrollTop = 0; if ( oMarquee.scrollTop % iLineHeight == 0 ) { window.setTimeout( "run()", 3500 ); } else { window.setTimeout( "run()", 10 ); } } oMarquee.innerHTML += oMarquee.innerHTML; window.setTimeout( "run()", 3500 );
 </script>
-<!--
-<script>
-  var i=3;
-  window.setInterval(function() {
-   i= i + 3;
-   document.getElementById('t').innerHTML=i;
-  }, 600);
-  var y=1;
-  window.setInterval(function() {
-   y= y + 1;
-   document.getElementById('y').innerHTML=y;
-  }, 1000);
-    var m=5;
-  window.setInterval(function() {
-   m= m + 2;
-   document.getElementById('m').innerHTML=m;
-  }, 5000);
-  var e=7;
-  window.setInterval(function() {
-   e= e + 1;
-   document.getElementById('e').innerHTML=e;
-  }, 1200);
-  var f=9;
-  window.setInterval(function() {
-   f= f + 1;
-   document.getElementById('f').innerHTML=f;
-  }, 6000);
- </script>  
--->
 <script type="text/javascript"> 
     var scrollDelay=8;//数字越大速度越慢 
     var Scroll=document.getElementById("scroll"); 
