@@ -241,9 +241,20 @@ mod.factory('UserService', ['$http', '$q','$interval','$$http', function($http, 
 
 //纠错提交 服务
 .factory('ErrorService', ['$http', '$q', function($http, $q) {
-    var Error = function(errorParts,errorContent,mobileNo) {
+    var Error = function(param) {
         var defer = $q.defer();
-        $http.post('/yiqicha/companyInfo/addCorrectionManage.do', {errorParts: errorParts, errorContent: errorContent,mobileNo:mobileNo}).success(function(data) {
+        $http.post('/yiqicha/companyInfo/addCorrectionManage.do', param).success(function(data) {
+            if (isRequestSuccess(data)) {
+                defer.resolve(data);
+            } else {
+                defer.reject(data);
+            }
+        });
+        return defer.promise;
+    };
+     var Errortype = function(key) {
+        var defer = $q.defer();
+        $http.post('/yiqicha/manager/unLogin/findTypesByKey.do',{key:key}).success(function(data) {
             if (isRequestSuccess(data)) {
                 defer.resolve(data);
             } else {
@@ -253,7 +264,8 @@ mod.factory('UserService', ['$http', '$q','$interval','$$http', function($http, 
         return defer.promise;
     };
     return {
-        Error: Error
+        Error: Error,
+        Errortype:Errortype
     };
 }])
 //查询年报列表信息 服务

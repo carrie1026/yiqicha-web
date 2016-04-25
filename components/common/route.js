@@ -116,9 +116,7 @@ define(['angular'], function (angular) {
             //股东信息
             .when('/compdet',{
                 templateUrl: '/templates/compinfo/compdet/compdet.html',
-                controller: 'compdetCtrl',
-//                controller: 'addMyAttentionCtrl',
-//                controller: 'removeMyAttentionCtrl'
+                controller: 'compdetCtrl'
             })
             //纠错
             .when('/errorcorrect',{

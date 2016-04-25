@@ -363,6 +363,17 @@
 	float:left;
 	margin-bottom:10px;
 }
+.compdetcur{
+    width:22%;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	border-radius:3px;
+	background-color:#00bbfb;
+	color:#fff;
+	float:left;
+	margin-bottom:10px;  
+}
 .mgrb2{
 	margin-right:4%;
 }

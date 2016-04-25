@@ -10,5 +10,6 @@ define(['./mod'], function(mod) {
                 alert(data.data.message);
             });
         };
+        console.log(123);
     }])
 });

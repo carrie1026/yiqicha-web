@@ -1,9 +1,4 @@
 	<div class="compdet">
-		<!-- <div class="header">
-		纠错
-		<div class="leftjj" onclick="javascript :history.back(-1)"><img src="../../images/icon_2.png"></div>
-		<div class="rightwz"></div>
-		</div> -->
 
         <div class="mycenter_header">
 	        <ul>
@@ -16,23 +11,10 @@
 
 		<div class="compdet2">
 			<div class="compdet21">选择信息有误的部分（多选）</div>
-			<div class="compdet22" ng-model="ErrorFormData.errorParts">
-				<div class="compdet221 mgrb2">工商信息</div>
-				<div class="compdet221 mgrb2">企业图谱</div>
-				<div class="compdet221 mgrb2">行业分析</div>
-				<div class="compdet221">失信信息</div>
-
-
-				<div class="compdet221 mgrb2">工商信息</div>
-				<div class="compdet221 mgrb2">企业图谱</div>
-				<div class="compdet221 mgrb2">行业分析</div>
-				<div class="compdet221">失信信息</div>
-
-
-				<div class="compdet221 mgrb2">工商信息</div>
-				<div class="compdet221 mgrb2">企业图谱</div>
-				<div class="compdet221 mgrb2">行业分析</div>
-				<div class="compdet221">失信信息</div>
+			<div class="compdet22">
+				<div class="compdet221 mgrb2" ng-repeat="Errortype in Errortype" ng-model="ErrorFormData.errorParts" ng-click="subError(Errortype.dictDescribe)">
+                     {{Errortype.dictDescribe}}
+                </div>
 			</div>
 			<!-- <div class="compdet23">
 				我们会搜集您提交的信息，并在3~5个工作日内回复
@@ -54,3 +36,10 @@
 			</div>
 		</div>
 	</div>
+<script>
+    $(function(){
+        $('.compdet221').click(function(){
+            $(this).addClass('compdetcur');
+        });
+    });
+</script>
