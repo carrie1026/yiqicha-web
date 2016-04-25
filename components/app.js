@@ -12,7 +12,8 @@ define([
     'services/_base',
     'mobileAngularUi',
     'highcharts',
-    'highchartsng'
+    'highchartsng',
+    'layer'
 ], function(angular) {
     'use strict';
     return angular.module('MyApp', ['ngRoute', 'mobile-angular-ui', 'ngFileUpload', 'highcharts-ng', 'app.route', 'app.api', 'app.constants', 'app.ctrls', 'app.directives', 'app.filters', 'app.services'])
@@ -20,7 +21,7 @@ define([
     .config(['$httpProvider', '$routeProvider', '$locationProvider', function($httpProvider, $routeProvider, $locationProvider) {
         // 设置Http拦截器
         $httpProvider.interceptors.push('HttpInjector');
-        $locationProvider.html5Mode(true);
+        $locationProvider.html5Mode(true);        
     }])
 
     .run(['$rootScope', 'AuthService', '$location', function($rootScope, AuthService, $location) {
