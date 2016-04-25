@@ -9,8 +9,6 @@ require.config({
         layer: 'lib/layer/layer',
         twitterBootstrap: 'lib/bootstrap/bootstrap.min',
         mobileAngularUi:'lib/angular/mobile-angular-ui.min',
-        highcharts:'lib/highcharts/highcharts',
-        highchartsng:'lib/highcharts/highcharts-ng'
     },
     shim: {
         jquery: {
@@ -28,11 +26,6 @@ require.config({
             exports: 'layer'
         },
         twitterBootstrap: ['jquery'],
-        highcharts: {
-          exports: "Highcharts",
-          deps: ["jquery"]
-        },
-        highchartsng: ["angular"],
         layer: {
             deps: ['jquery'],
             exports: 'layer'

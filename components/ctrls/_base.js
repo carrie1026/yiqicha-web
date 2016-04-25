@@ -1,7 +1,7 @@
 define([
     './mod',
     'homeCtrl',
-    'highchartsCtrl',
+    'echartsCtrl',
     'loginCtrl',
     'registerCtrl',
     'retrieveCtrl',
