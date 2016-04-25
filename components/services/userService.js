@@ -65,7 +65,7 @@ mod.factory('UserService', ['$http', '$q','$interval','$$http', function($http, 
         };
 
         var findUserInfo = function() {
-            return $$http.get('/yiqicha/manager/findUserByUserName.do', {}, true);
+            return $$http.get('/yiqicha/manager/findUserInfo.do', {}, true);
         };
         return {
             register: register,
