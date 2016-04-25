@@ -28,5 +28,6 @@ define([
     'businessInformationCtrl',
     'errorCtrl',
     'hotbusinessCtrl',
-    'indexCtrl'
+    'indexCtrl',
+    'businessMapCtrl'
 ]);

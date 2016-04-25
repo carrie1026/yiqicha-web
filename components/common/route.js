@@ -234,6 +234,9 @@ define(['angular'], function (angular) {
              .when('/obtainIndustryInfo', {
                  templateUrl: 'templates/compinfo/industry/obtainIndustryInfo.html',
                  controller: 'obtainIndustryInfoCtrl'
+             }).when('/businessMap',{
+                templateUrl: 'templates/compinfo/indana/businessMap.html',
+                controller: 'businessMapCtrl'
              })
             // 默认路由-首页
             .otherwise({
