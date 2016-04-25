@@ -75,8 +75,9 @@
             <div class="clear"></div>
         </a>
         </div>
+        <a href="/compdet">
         <div id="myfocus" onmouseover=iScrollAmount=0 style="overflow: hidden;background-color:#fff;height:80px;" onmouseout=iScrollAmount=1>
-            <div class="index_followde" onclick="document.location='/compdet'">
+            <div class="index_followde">
                 <div class="index23121">香港强悍科技</div>
                 <div class="index23122">
                     <div class="index231221">
@@ -90,7 +91,7 @@
                 <div class="clear"></div>
             </div>
             <div class="clear"></div>
-            <div class="index_followde"  onclick="document.location='/compdet'">
+            <div class="index_followde">
                 <div class="index23121">香港强悍科技2</div>
                 <div class="index23122">
                     <div class="index231221">
@@ -105,13 +106,15 @@
             </div>
             <div class="clear"></div>
         </div>
+    </a>
         <div class="index_follow" onclick="document.location='/hot_business'">
 
             <div class="index_followlf">热门企业</div>
             <div class="index_followrg">></div>
             <div class="clear"></div>
         </div>
-        <div id="scroll" style="overflow:hidden;background-color:#fff;height:80px;" onclick="document.location='/compdet'">
+        <a href="/compdet">
+        <div id="scroll" style="overflow:hidden;background-color:#fff;height:80px;">
             <div class="index_followde">
                 <div class="index2312">
                     <div class="index23121">中国华能集团公司</div>
@@ -146,6 +149,7 @@
             </div>
             <div class="clear"></div>
         </div>
+    </a>
         <div id="scroll2" style="display:none;"></div>
 
       <!--
@@ -173,52 +177,52 @@
 
 </div>
 <script type="text/javascript">
-var oMarquee = document.getElementById("myfocus"); //滚动对象 
-var iLineHeight = 80; //单行高度，像素 
-var iLineCount = 2; //实际行数 
-var iScrollAmount = 1; //每次滚动高度，像素 
+var oMarquee = document.getElementById("myfocus"); //滚动对象
+var iLineHeight = 80; //单行高度，像素
+var iLineCount = 2; //实际行数
+var iScrollAmount = 1; //每次滚动高度，像素
 function run() { oMarquee.scrollTop += iScrollAmount; if ( oMarquee.scrollTop == iLineCount * iLineHeight ) oMarquee.scrollTop = 0; if ( oMarquee.scrollTop % iLineHeight == 0 ) { window.setTimeout( "run()", 3500 ); } else { window.setTimeout( "run()", 10 ); } } oMarquee.innerHTML += oMarquee.innerHTML; window.setTimeout( "run()", 3500 );
 </script>
-<script type="text/javascript"> 
-    var scrollDelay=8;//数字越大速度越慢 
-    var Scroll=document.getElementById("scroll"); 
-    var Scroll2=document.getElementById("scroll2"); 
-    var currentTop=0,preTop=0,stoptime=0,stopscroll=false; 
-    var ScrollChild=Scroll.getElementsByTagName("li"); 
-    var ScrollHeight=Scroll.offsetHeight; 
-    function ScrollInfo(){ 
-        if(stopscroll==true) return; 
-        currentTop++; 
-        if(currentTop+1>=ScrollHeight){ 
-            currentTop--; 
-            stoptime++; 
-            if(stoptime==parseInt(ScrollHeight)*scrollDelay) { 
-                currentTop=0; 
-                stoptime=0; 
-            } 
-        }else{ 
-            preTop=Scroll.scrollTop; 
-            Scroll.scrollTop++; 
-            if(preTop==Scroll.scrollTop){ 
-     Scroll.scrollTop=Scroll2.offsetHeight-ScrollHeight; 
-     Scroll.scrollTop+=1; 
-     } 
-        } 
-    } 
-    function Int_Scroll(){ 
-        Scroll2.innerHTML=""; 
-        Scroll2.innerHTML=Scroll.innerHTML; 
-        Scroll.innerHTML=Scroll2.innerHTML+Scroll2.innerHTML; 
-        Scroll.onmouseover=function(){ 
-            stopscroll=true; 
-        } 
-        Scroll.onmouseout=function(){ 
-            stopscroll=false; 
-        } 
-        setInterval("ScrollInfo()",scrollDelay); 
-    } 
-    window.setTimeout("Int_Scroll()",1000); 
-</script> 
+<script type="text/javascript">
+    var scrollDelay=8;//数字越大速度越慢
+    var Scroll=document.getElementById("scroll");
+    var Scroll2=document.getElementById("scroll2");
+    var currentTop=0,preTop=0,stoptime=0,stopscroll=false;
+    var ScrollChild=Scroll.getElementsByTagName("li");
+    var ScrollHeight=Scroll.offsetHeight;
+    function ScrollInfo(){
+        if(stopscroll==true) return;
+        currentTop++;
+        if(currentTop+1>=ScrollHeight){
+            currentTop--;
+            stoptime++;
+            if(stoptime==parseInt(ScrollHeight)*scrollDelay) {
+                currentTop=0;
+                stoptime=0;
+            }
+        }else{
+            preTop=Scroll.scrollTop;
+            Scroll.scrollTop++;
+            if(preTop==Scroll.scrollTop){
+     Scroll.scrollTop=Scroll2.offsetHeight-ScrollHeight;
+     Scroll.scrollTop+=1;
+     }
+        }
+    }
+    function Int_Scroll(){
+        Scroll2.innerHTML="";
+        Scroll2.innerHTML=Scroll.innerHTML;
+        Scroll.innerHTML=Scroll2.innerHTML+Scroll2.innerHTML;
+        Scroll.onmouseover=function(){
+            stopscroll=true;
+        }
+        Scroll.onmouseout=function(){
+            stopscroll=false;
+        }
+        setInterval("ScrollInfo()",scrollDelay);
+    }
+    window.setTimeout("Int_Scroll()",1000);
+</script>
 <!--
 <script>
   var i=3;

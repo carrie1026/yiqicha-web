@@ -24,7 +24,8 @@ mod.controller('LoginCtrl', ['$scope','$location', 'UserService','$rootScope', f
         promise.then(function(data) {
             var redirectUrl = isSuccessRedirect();
             if (redirectUrl) {
-                $location.path(redirectUrl);
+                var search = $location.search();
+                $location.path(redirectUrl).search(search);
             } else {
                 $location.path('/mycenter_home');
                 $rootScope.user = data.data;

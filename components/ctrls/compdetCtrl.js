@@ -1,6 +1,10 @@
 define(['./mod'], function (mod) {
     'use strict';
-mod.controller('compdetCtrl', ['$scope','$location','compdetService','$rootScope', function($scope, $location,compdetService,$rootScope) {
+mod.controller('compdetCtrl', ['$scope','$location','compdetService','$rootScope', 'UserService', function($scope, $location,compdetService,$rootScope, UserService) {
+
+    UserService.findUserInfo().then(function(data){// logined
+        $rootScope.userInfo = data;
+    });
 
 	$scope.isAlreadyFocus = false;
     // 股东信息
@@ -26,7 +30,9 @@ mod.controller('compdetCtrl', ['$scope','$location','compdetService','$rootScope
     	    });
         } else {
             var path =  $location.path();
-            $location.path('/login').search({success_redirect: path});
+            var search = $location.search();
+            $.extend(search, {success_redirect: path});
+            $location.path('/login').search(search);
         }
     };
 
