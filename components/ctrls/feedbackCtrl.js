@@ -11,11 +11,11 @@ define(['./mod'], function (mod) {
     		}else{
                 var phoneNo = $scope.mobileNo.trim();
                 var partten = /^1[3,4,5,7,8]\d{9}$/;
-        
+
                 if(partten.test(phoneNo)) {
                     SuggestionFeedbackService.submitSuggestion($scope.content.trim(), phoneNo).then(function(data){
                         $scope.readData = data;
-                        console.log(data.message);
+                        // console.log(data.message);
                         $scope.content = "";
                         $scope.mobileNo = "";
                         $scope.mobileNoPlaceholder = "您的联系电话";

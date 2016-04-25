@@ -33,18 +33,17 @@
         </ul>
     </div>
     <div class="ideas_top">
-        
+
           <form action="#" method="post">
              <!-- <input type="text" placeholder="我们会收集您提交的请求，并在3-5个工作日回复。"/> -->
              <textarea id="content" ng-model="content" placeholder="我们会收集您提交的请求，并在3-5个工作日回复。"></textarea>
           </form>
-       
+
     </div>
     <div class="ideas_con">
         <!-- <p>您的联系电话</p> -->
         <form action="#" method="post">
-           <input type="text" placeholder="您的联系电话" id="mobileNo" ng-model="mobileNo"/>
+           <input type="text" placeholder="{{mobileNoPlaceholder}}" id="mobileNo" ng-model="mobileNo"/>
         </form>
     </div>
 </div>
-

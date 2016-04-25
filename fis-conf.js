@@ -15,11 +15,12 @@ fis.match('/components/**', {
     isMod: true
 });
 
-fis.match('/components/**.js', {
+// 生产环境
+fis.media('pro').match('/components/**.js', {
     packTo: '/static/app.js',
     optimizer: fis.plugin('uglify-js')
 }).match('/css/**', {
-    useHash: true,
+    packTo: '/static/style.css',
     optimizer: fis.plugin('clean-css')
 }).match('/static/**', {
     useHash: true
@@ -35,4 +36,3 @@ fis.media('dev').match('/components/ctrls/**.js', {
 }).match('/components/constants/*.js', {
     packTo: '/static/constant.js'
 });
-

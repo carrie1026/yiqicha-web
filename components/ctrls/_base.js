@@ -1,7 +1,7 @@
 define([
     './mod',
     'homeCtrl',
-    'highchartsCtrl',
+    'echartsCtrl',
     'loginCtrl',
     'registerCtrl',
     'retrieveCtrl',
@@ -28,5 +28,6 @@ define([
     'businessInformationCtrl',
     'errorCtrl',
     'hotbusinessCtrl',
-    'indexCtrl'
+    'indexCtrl',
+    'businessMapCtrl'
 ]);

@@ -43,33 +43,14 @@
            ui-turn-off="myDropdown{{idx}}">
 
            <li><a ng-click='setActiveItemIndex(1)'>行业企业总数量</a></li>
-           <li><a ng-click='setActiveItemIndex(2)'>历年注册企业数量</a></li>
-           <li><a ng-click='setActiveItemIndex(3)'>注册时间分布</a></li>
-           <li><a ng-click='setActiveItemIndex(4)'>企业人员规模分布</a></li>
-           <li><a ng-click='setActiveItemIndex(5)'>企业注册资金分布</a></li>
-           <li><a ng-click='setActiveItemIndex(6)'>企业产品多样化分析</a></li>
+           <li><a ng-click='setActiveItemIndex(2)'>注册时间分布</a></li>
+           <li><a ng-click='setActiveItemIndex(3)'>企业人员规模分布</a></li>
+           <li><a ng-click='setActiveItemIndex(4)'>企业注册资金分布</a></li>
         </ul>
     </div>
 </div>
 <div style="width:100%">
-	<div ng-if='selectItemIndex == 1'>
-		<highchart id="chart1" config="totalNumberOfIndustryChart"></highchart>
-	</div>
-	<div ng-if='selectItemIndex == 2'>
-		<highchart id="chart2" config="numberOfEnterpriseForYearsChart"></highchart>
-	</div>
-	<div ng-if='selectItemIndex == 3'>
-		<highchart id="chart3" config="registerTimeDistributeChart"></highchart>
-	</div>
-	<div ng-if='selectItemIndex == 4'>
-		<highchart id="chart4" config="enterpriseEmployeeDistributeChart"></highchart>
-	</div>
-	<div ng-if='selectItemIndex == 5'>
-		<highchart id="chart5" config="enterpriseRegisteredFoundDistributeChart"></highchart>
-	</div>
-	<div ng-if='selectItemIndex == 6'>
-		<highchart id="chart6" config="enterpriseProductAnalysisChart"></highchart>
-	</div>
+		<div id='industryAnalysisChart' style='width:100%;height:500px'></div>
 </div>
 <script type="text/javascript">
     Q.hideHeader('.mycenter_header');
