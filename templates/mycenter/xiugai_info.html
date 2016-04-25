@@ -11,12 +11,12 @@
     <div class="xiugai_info">
         <div>
              <div class="pic"><img src="../../images/组-2@3x.png"></div>
-             <p class="p_1" style="padding-left:10px;">{{userInfo.username}}<em>已绑定</em></p>
+             <p class="p_1" style="padding-left:10px;">{{user.username}}<em>已绑定</em></p>
              <div style="clear: both;"></div>
         </div>
         <form action="#" method="post">
             <input type="text" placeholder="修改密码" disabled="true" style="padding-left:10px;" />
-            <input type="text" placeholder="姓名" style="padding-left:10px;" ng-model="reviseUserFormData.name"/>
+            <input type="text" placeholder="姓名" style="padding-left:10px;" ng-model="reviseUserFormData.name" />
             <input type="text" placeholder="公司名称" style="padding-left:10px;" ng-model="reviseUserFormData.companyName"/>
             <input type="text" placeholder="职业" style="padding-left:10px;" ng-model="reviseUserFormData.job"/>
         </form>
