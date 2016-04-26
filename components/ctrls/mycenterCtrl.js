@@ -19,19 +19,13 @@ define(['./mod'], function(mod) {
         var accountId = 1;
         myfocusService.myfocus(page,rows,accountId).then(function(data){
             $scope.myfocus = data.data;
-<<<<<<< HEAD
 //            console.log($scope.myfocus);
         });  
-=======
-            console.log($scope.myfocus);
-        });
 
         $scope.$watch('companyName', function(newValue, oldValue) {
             if (!newValue || newValue.length < 2)
                 return;
-
             $location.path('/search_people').search({type: 'qiye', companyName: newValue});
         });
->>>>>>> 902b63dd039baf4a3b9b2948192b5a9fce694ff9
     }])
 });
