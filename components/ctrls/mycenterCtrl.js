@@ -1,6 +1,6 @@
 define(['./mod'], function(mod) {
     'use strict';
-    mod.controller('mycenterCtrl', ['$scope', '$location', 'UserService', '$rootScope', function($scope, $location, UserService, $rootScope) {
+    mod.controller('mycenterCtrl', ['$scope', '$location', 'UserService', '$rootScope','hotbusinessService','myfocusService', function($scope, $location, UserService, $rootScope,hotbusinessService,myfocusService) {
         // login button
         $scope.logout = function(request) {
             UserService.logout().then(function(data) {
@@ -10,6 +10,15 @@ define(['./mod'], function(mod) {
                 alert(data.data.message);
             });
         };
-        console.log(123);
+        hotbusinessService.hotbusiness().then(function(data){
+        $scope.hotbusiness = data.data;
+        })
+        var page = 1;
+        var rows = 1;
+        var accountId = 1;
+        myfocusService.myfocus(page,rows,accountId).then(function(data){
+            $scope.myfocus = data.data;
+            console.log($scope.myfocus);
+        });  
     }])
 });

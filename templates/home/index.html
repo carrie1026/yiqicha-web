@@ -69,44 +69,29 @@
             </a>
         </div>
         <div class="index_follow">
-        <a href="/myfocus">
+        <a ng-href="/compdet?companyId={{myfocus.companyId}}&sts=1">
             <div class="index_followlf">我的关注</div>
             <div class="index_followrg">></div>
             <div class="clear"></div>
         </a>
         </div>
-        <a href="/compdet">
+        <a ng-href="/compdet?companyId={{myfocus.companyId}}&sts=1">
         <div id="myfocus" onmouseover=iScrollAmount=0 style="overflow: hidden;background-color:#fff;height:80px;" onmouseout=iScrollAmount=1>
-            <div class="index_followde">
-                <div class="index23121">香港强悍科技</div>
+            <div class="index_followde" ng-repeat="myfocus in myfocus.rows">
+                <div class="index23121">{{myfocus.companyName}}</div>
                 <div class="index23122">
                     <div class="index231221">
                         <div class="index2312211"><img src="/images/company_list@2x.png" height="20px" /></div>
-                        <div class="index2312212">公司法人：尹志平</div>
+                        <div class="index2312212">公司法人：{{myfocus.repPersion}}</div>
                         <div class="clear"></div>
                     </div>
-                    <div class="index231222">在营（开业）企业</div>
+                    <div class="index231222">{{myfocus.recordStatus}}</div>
                     <div class="clear"></div>
                 </div>
                 <div class="clear"></div>
             </div>
-            <div class="clear"></div>
-            <div class="index_followde">
-                <div class="index23121">香港强悍科技2</div>
-                <div class="index23122">
-                    <div class="index231221">
-                        <div class="index2312211"><img src="/images/company_list@2x.png" height="20px" /></div>
-                        <div class="index2312212">公司法人：尹志平</div>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="index231222">在营（开业）企业</div>
-                    <div class="clear"></div>
-                </div>
-                <div class="clear"></div>
-            </div>
-            <div class="clear"></div>
         </div>
-    </a>
+        </a>
         <a href="/hot_business">
         <div class="index_follow" >
 
@@ -117,41 +102,22 @@
     </a>
         <a href="/compdet">
         <div id="scroll" style="overflow:hidden;background-color:#fff;height:80px;">
-            <div class="index_followde">
+            <div class="index_followde" ng-repeat="hotbusiness in hotbusiness.rows">
                 <div class="index2312">
-                    <div class="index23121">中国华能集团公司</div>
+                    <div class="index23121">{{hotbusiness.companyName}}</div>
                     <div class="index23122">
-                        <div class="index231221"><div class="index231223"><img src="../../images/starjudge.png"></div></div><div class="index231222"><span class="co">20</span>人关注</div>
+                        <div class="index231221">
+                            <div class="index231223"><img src="../../images/starjudge.png"></div>
+                         </div>
+                        <div class="index231222">
+                            <span class="co">{{hotbusiness.focus}}</span>人关注
+                        </div>
+                        <div style="clear:both;"></div>
                     </div>
-                    <div class="clear"></div>
                 </div>
-                <div class="clear"></div>
             </div>
-            <div class="clear"></div>
-            <div class="index_followde">
-                <div class="index2312">
-                    <div class="index23121">中国华能集团公司</div>
-                    <div class="index23122">
-                        <div class="index231221"><div class="index231223"><img src="../../images/starjudge.png"></div></div><div class="index231222"><span class="co">20</span>人关注</div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-                <div class="clear"></div>
-            </div>
-            <div class="clear"></div>
-            <div class="index_followde">
-                <div class="index2312">
-                    <div class="index23121">中国华能集团公司</div>
-                    <div class="index23122">
-                        <div class="index231221"><div class="index231223"><img src="../../images/starjudge.png"></div></div><div class="index231222"><span class="co">20</span>人关注</div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-                <div class="clear"></div>
-            </div>
-            <div class="clear"></div>
         </div>
-    </a>
+       </a>
         <div id="scroll2" style="display:none;"></div>
 
       <!--
@@ -181,12 +147,12 @@
 <script type="text/javascript">
 var oMarquee = document.getElementById("myfocus"); //滚动对象
 var iLineHeight = 80; //单行高度，像素
-var iLineCount = 2; //实际行数
+var iLineCount = 1; //实际行数
 var iScrollAmount = 1; //每次滚动高度，像素
 function run() { oMarquee.scrollTop += iScrollAmount; if ( oMarquee.scrollTop == iLineCount * iLineHeight ) oMarquee.scrollTop = 0; if ( oMarquee.scrollTop % iLineHeight == 0 ) { window.setTimeout( "run()", 3500 ); } else { window.setTimeout( "run()", 10 ); } } oMarquee.innerHTML += oMarquee.innerHTML; window.setTimeout( "run()", 3500 );
 </script>
 <script type="text/javascript">
-    var scrollDelay=8;//数字越大速度越慢
+    var scrollDelay=10;//数字越大速度越慢
     var Scroll=document.getElementById("scroll");
     var Scroll2=document.getElementById("scroll2");
     var currentTop=0,preTop=0,stoptime=0,stopscroll=false;
@@ -223,7 +189,7 @@ function run() { oMarquee.scrollTop += iScrollAmount; if ( oMarquee.scrollTop ==
         }
         setInterval("ScrollInfo()",scrollDelay);
     }
-    window.setTimeout("Int_Scroll()",1000);
+    window.setTimeout("Int_Scroll()",5000);
 </script>
 <script>
 /**

@@ -92,7 +92,8 @@ define(['angular'], function (angular) {
                 templateUrl: '/templates/search/search_nopromise.html'
             })
                 .when('/index', {
-                templateUrl: '/templates/home/index.html'
+                templateUrl: '/templates/home/index.html',
+                controller: 'mycenterCtrl'
             })
                 // 对外投资企业列表
                 .when('/investAbroad', {
