@@ -136,24 +136,13 @@ define(['angular'], function (angular) {
             //工商信息
              .when('/industryinfo',{
                 templateUrl: '/templates/compinfo/compdet/industryinfo.html',
-                controller:'businessInformationCtrl',
-                controller:'ShareholderCtrl'
+                controller:'businessInformationCtrl'
             })
               //股东信息
                .when('/shareholderinfo',{
                 templateUrl: '/templates/compinfo/shareholderinfo/shareholderinfo.html',
                 controller:'ShareholderCtrl'
             })
-               .when('/shareholderinfod',{
-                templateUrl: '/templates/compinfo/shareholderinfo/shareholderinfod.html'
-            })
-        
-//              .when('/shareholder1',{
-//                templateUrl: '/templates/compinfo/shareholderinfo/shareholder1.html'
-//            })
-//               .when('/shareholderinfod',{
-//                templateUrl: '/templates/compinfo/shareholderinfo/shareholderinfod.html'
-//            })
             .when('/indana',{
                 templateUrl: '/templates/compinfo/indana/indana.html',
                 controller: 'columnBarChartController'
@@ -202,7 +191,7 @@ define(['angular'], function (angular) {
                 //年报详情
                 .when('/reportdetl',{
                 templateUrl: '/templates/compinfo/reportdet/reportdetl.html',
-            }) 
+            })
 
                 .when('/shareholderInfo',{
                 templateUrl: '/templates/compinfo/shareholderinfo/shareholderinfod.html',

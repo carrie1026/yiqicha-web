@@ -1,15 +1,21 @@
-	<div class="compdet">
+<div class="compdet">
 	<div class="cpdl" style="display:none">
 		<div class="cpdl1"><img src="../../../images/jiantou@3x.png"></div>
 		<div class="cpdl2">
 			<div class="cpdl21 prt5" onClick="window.location.href='/share'">
-				<div class="cpdl211"><div class="cpdl2111"><img src="../../../images/share2@3x.png"></div><div class="cpdl2112 fxbtn">分享</div></div>
+				<div class="cpdl211">
+					<div class="cpdl2111"><img src="../../../images/share2@3x.png"></div>
+					<div class="cpdl2112 fxbtn">分享</div>
+				</div>
 			</div>
 			<!-- <div class="cpdl21">
 				<div class="cpdl211"><div class="cpdl2111"><img src="../../../images/phone@3x.png"></div><div class="cpdl2112 dhbtn">电话</div></div>
 			</div> -->
 			<div class="cpdl21" onClick="window.location.href='/errorcorrect'">
-				<div class="cpdl211 bdn"><div class="cpdl2111"><img src="../../../images/change@3x.png"></div><div class="cpdl2112 jcbtn">纠错</div></div>
+				<div class="cpdl211 bdn">
+					<div class="cpdl2111"><img src="../../../images/change@3x.png"></div>
+					<div class="cpdl2112 jcbtn">纠错</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -18,7 +24,7 @@
 
 	<div class="fenxiang" style="display:none;">
 		<div class="fenxiang1">
-		<div class="h15"></div>
+			<div class="h15"></div>
 			<div class="fenxiang11">
 				<div class="fenxiang111">
 					<div class="fenxiang1111">
@@ -71,194 +77,216 @@
 
 
 
-<div class="mycenter_header">
-	        <ul>
-	            <li class="li_1" onclick="javascript :history.back(-1)"><img src="../../images/icon_2.png"></li>
-	            <li class="li_2">{{compdet.companyName}}</li>
-	            <li class="li_3"><span class="headdd">...</span></li>
-	            <br style="clear: both;" />
-	        </ul>
-</div>
+	<div class="mycenter_header">
+		<ul>
+			<li class="li_1" onclick="javascript :history.back(-1)"><img src="../../images/icon_2.png"></li>
+			<li class="li_2">{{compdet.companyName}}</li>
+			<li class="li_3"><span class="headdd">...</span></li>
+			<br style="clear: both;" />
+		</ul>
+	</div>
 
 
-<div class="compdet11">
-				<div class="compdet111">
-					<div class="compdet1111">更新：2016-03-11</div>
-					<div class="compdet1112">存续</div>
+	<div class="compdet11">
+		<div class="compdet111">
+			<div class="compdet1111">更新：2016-03-11</div>
+			<div class="compdet1112">存续</div>
+		</div>
+		<div class="compdet112">
+			<img src="../../../images/starjudge.png" />
+		</div>
+		<div class="compdet113" ng-if="isAlreadyFocus==false">
+			<a href="#" ng-click="addMyAttention()">关注</a>
+		</div>
+		<div class="compdet113" ng-if="isAlreadyFocus==true">
+			<a href="#" ng-click="removeMyAttention()">取消关注</a>
+		</div>
+		<div class="compdet114">
+			浏览：51<span class="mgl10">关注：1</span>
+		</div>
+	</div>
+
+	<div class="compdet12">
+		<div class="compdet121">
+			<div class="compdet1211 bdrw">
+				<div class="compdet12111">法定代表人</div>
+				<div class="compdet12112">容令坤</div>
+			</div>
+			<div class="compdet1211 bdrw">
+				<div class="compdet12111">注册资金</div>
+				<div class="compdet12112">1000万人民币</div>
+			</div>
+			<div class="compdet1211">
+				<div class="compdet12111">成立日期</div>
+				<div class="compdet12112">2016-06-25</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="compdet13">
+		<div class="compdet131">
+			<div class="compdet1311 fl"><img src="../../../images/address@2x.png"></div>
+			<div class="compdet1312 fl">{{compdet.address}}</div>
+			<div class="compdet1313 fl"><img src="../../images/icon_1.png" /></div>
+		</div>
+	</div>
+
+	<div class="compdet14">
+		<div class="compdet141">
+			<div class="compdet1411 bdrw">
+				<a href="/industryinfo">
+					<div class="compdet14111">
+						<img src="../../../images/gongshang@3x.png" />
+					</div>
+					<div class="compdet14112">工商信息</div>
+				</a>
+			</div>
+			<a href="/businessMap">
+				<div class="compdet1411 bdrw">
+					<div class="compdet14111">
+						<img src="../../../images/fzjg@3x.png" />
+					</div>
+					<div class="compdet14112">企业图谱</div>
 				</div>
-				<div class="compdet112">
-					<img src="../../../images/starjudge.png" />
+			</a>
+			<a href="/indana">
+				<div class="compdet1411 bdrw">
+					<div class="compdet14111">
+						<img src="../../../images/hyfx@3x.png" />
+					</div>
+					<div class="compdet14112">行业分析</div>
 				</div>
-				<div class="compdet113" ng-if="isAlreadyFocus==false">
-					<a href="#" ng-click="addMyAttention()">关注</a>
+			</a>
+			<a href="/shixin_details">
+				<div class="compdet1411">
+					<div class="compdet14111">
+						<img src="../../../images/sxxx@3x.png" />
+					</div>
+					<div class="compdet14112">失信信息</div>
 				</div>
-				<div class="compdet113" ng-if="isAlreadyFocus==true">
-					<a href="#" ng-click="removeMyAttention()">取消关注</a>
+			</a>
+		</div>
+		<div class="compdet141">
+			<a href="/litiinfo">
+				<div class="compdet1411 bdrw">
+					<div class="compdet14111">
+						<img src="../../../images/susong@3x.png" />
+					</div>
+					<div class="compdet14112">诉讼信息</div>
 				</div>
-				<div class="compdet114">
-					浏览：51<span class="mgl10">关注：1</span>
+			</a>
+			<a href="/investAbroad">
+				<div class="compdet1411 bdrw">
+					<div class="compdet14111">
+						<img src="../../../images/dwtz@3x.png" />
+					</div>
+					<div class="compdet14112">对外投资</div>
 				</div>
-</div>
+			</a>
 
-<div class="compdet12">
-				<div class="compdet121">
-					<div class="compdet1211 bdrw">
-						<div class="compdet12111">法定代表人</div><div class="compdet12112">容令坤</div>
+			<a href="/shareholderinfo">
+				<div class="compdet1411 bdrw">
+					<div class="compdet14111">
+						<img src="../../../images/gdxx@3x.png" />
 					</div>
-					<div class="compdet1211 bdrw">
-						<div class="compdet12111">注册资金</div><div class="compdet12112">1000万人民币</div>
-					</div>
-					<div class="compdet1211"><div class="compdet12111">成立日期</div><div class="compdet12112">2016-06-25</div></div>
+					<div class="compdet14112">股东信息</div>
 				</div>
-</div>
+			</a>
 
-<div class="compdet13" >
-				<div class="compdet131">
-					<div class="compdet1311 fl"><img src="../../../images/address@2x.png"></div>
-					<div class="compdet1312 fl">{{compdet.address}}</div>
-					<div class="compdet1313 fl"><img src="../../images/icon_1.png"/></div>
+
+			<a href="/corpinfo">
+				<div class="compdet1411">
+					<div class="compdet14111">
+						<img src="../../../images/qyzx@3x.png" />
+					</div>
+					<div class="compdet14112">企业资讯</div>
 				</div>
-</div>
+			</a>
+		</div>
 
 
-<div class="compdet14">
-
-				<div class="compdet141">
-					<div class="compdet1411 bdrw">
-						<div class="compdet14111" onClick="window.location.href='/industryinfo'">
-							<img src="../../../images/gongshang@3x.png" />
-						</div>
-						<div class="compdet14112">工商信息</div>
+		<div class="compdet141">
+			<a href="/reportdet">
+				<div class="compdet1411 bdrw">
+					<div class="compdet14111">
+						<img src="../../../images/nbxx@3x.png" />
 					</div>
-					<div class="compdet1411 bdrw" onClick="window.location.href='/businessMap'">
-						<div class="compdet14111">
-							<img src="../../../images/fzjg@3x.png" />
-						</div>
-						<div class="compdet14112">企业图谱</div>
-					</div>
-					<div class="compdet1411 bdrw" onClick="window.location.href='/indana'">
-						<div class="compdet14111">
-							<img src="../../../images/hyfx@3x.png" />
-						</div>
-						<div class="compdet14112">行业分析</div>
-					</div>
-					<div class="compdet1411" onClick="window.location.href='/shixin_details'">
-						<div class="compdet14111">
-							<img src="../../../images/sxxx@3x.png" />
-						</div>
-						<div class="compdet14112">失信信息</div>
-					</div>
+					<div class="compdet14112">年报信息</div>
 				</div>
-				<div class="compdet141">
-					<div class="compdet1411 bdrw" onClick="window.location.href='/litiinfo'">
-						<div class="compdet14111">
-							<img src="../../../images/susong@3x.png" />
-						</div>
-						<div class="compdet14112">诉讼信息</div>
+			</a>
+			<a href="/branchStructure">
+				<div class="compdet1411 bdrw">
+					<div class="compdet14111">
+						<img src="../../../images/fzjg@3x.png" />
 					</div>
-
-					<div class="compdet1411 bdrw" onClick="window.location.href='/investAbroad'">
-						<div class="compdet14111">
-							<img src="../../../images/dwtz@3x.png" />
-						</div>
-						<div class="compdet14112">对外投资</div>
-					</div>
-
-
-
-					<div class="compdet1411 bdrw" onClick="window.location.href='/shareholderinfo'">
-						<div class="compdet14111">
-							<img src="../../../images/gdxx@3x.png" />
-						</div>
-						<div class="compdet14112">股东信息</div>
-					</div>
-
-
-
-
-					<div class="compdet1411" onClick="window.location.href='/corpinfo'">
-						<div class="compdet14111">
-							<img src="../../../images/qyzx@3x.png" />
-						</div>
-						<div class="compdet14112">企业资讯</div>
-					</div>
+					<div class="compdet14112">分支机构</div>
 				</div>
-
-
-				<div class="compdet141">
-					<div class="compdet1411 bdrw" onClick="window.location.href='/reportdet'">
-						<div class="compdet14111">
-							<img src="../../../images/nbxx@3x.png" />
-						</div>
-						<div class="compdet14112">年报信息</div>
+			</a>
+			<a href="/leadpeople">
+				<div class="compdet1411 bdrw">
+					<div class="compdet14111">
+						<img src="../../../images/zycy@3x.png" />
 					</div>
-					<div class="compdet1411 bdrw" onClick="window.location.href='/branchStructure'">
-						<div class="compdet14111">
-							<img src="../../../images/fzjg@3x.png" />
-						</div>
-						<div class="compdet14112">分支机构</div>
-					</div>
-					<div class="compdet1411 bdrw" onClick="window.location.href='/leadpeople'">
-						<div class="compdet14111">
-							<img src="../../../images/zycy@3x.png" />
-						</div>
-						<div class="compdet14112">主要成员</div>
-					</div>
-					<div class="compdet1411" onClick="window.location.href='/changeRecord'">
-						<div class="compdet14111">
-							<img src="../../../images/bgjl@3x.png" />
-						</div>
-						<div class="compdet14112">变更记录</div>
-					</div>
+					<div class="compdet14112">主要成员</div>
 				</div>
+			</a>
+			<a href="/changeRecord">
+				<div class="compdet1411">
+					<div class="compdet14111">
+						<img src="../../../images/bgjl@3x.png" />
+					</div>
+					<div class="compdet14112">变更记录</div>
+				</div>
+			</a>
+		</div>
 
-</div>
+	</div>
 
 </div>
 
 <script>
-  		$(document).ready(function(){
-  			$(".cpdl21").mouseover(function(){
-  				$(this).css("background-color","#000");
-  			});
-  			$(".cpdl21").mouseleave(function(){
-  				$(this).css("background-color","#666");
-  			});
-  			$(".headdd").click(function(){
-  				if($(".cpdl").css("display")=="none"){
-  					$(".cpdl").css("display","block");
-  				}else{
-  					$(".cpdl").css("display","none");
-  				}
-  				
-  			});
-  			/*$(".fxbtn").click(function(){
-  				$(".fenxiang").css("display","block");
-  			});
-  			$(".dhbtn").click(function(){
-  				$(".dianhua").css("display","block");
-  			});
-  			$(".dhgb").click(function(){
-  				$(".dianhua").css("display","none");
-  			});
+	$(document).ready(function() {
+		$(".cpdl21").mouseover(function() {
+			$(this).css("background-color", "#000");
+		});
+		$(".cpdl21").mouseleave(function() {
+			$(this).css("background-color", "#666");
+		});
+		$(".headdd").click(function() {
+			if ($(".cpdl").css("display") == "none") {
+				$(".cpdl").css("display", "block");
+			} else {
+				$(".cpdl").css("display", "none");
+			}
+
+		});
+		/*$(".fxbtn").click(function(){
+			$(".fenxiang").css("display","block");
+		});
+		$(".dhbtn").click(function(){
+			$(".dianhua").css("display","block");
+		});
+		$(".dhgb").click(function(){
+			$(".dianhua").css("display","none");
+		});
 
 
-  			$('.compdet113').click(function(){
-  				$(this).html('已关注');
-  			});*/
-  		});
-  	</script>
+		$('.compdet113').click(function(){
+			$(this).html('已关注');
+		});*/
+	});
+</script>
 <style>
-/*  	.compdet131{
+	/*  	.compdet131{
 	width:100%;
 	min-height:60px;
 	line-height:60px;
-	
+
 	padding: 0 0 0 4%;
-	
+
 }
 .compdet1311{
-	
+
 	float: left;
 	margin-right:10px;
 }
@@ -266,7 +294,7 @@
 	width: 14px;
 	height: 17px;
 	display: inline-block;
-	
+
 }
 .compdet1312{
 	float: left;
@@ -279,15 +307,15 @@
 	float: left;
 	text-align: right;
 	height:30px;
-	
+
 	color:#ccc;
-	
+
 	margin: 0 0 0 10%;
-	
+
 }
 .compdet1313 img{
-	width: 7px; 
-	height: 13px; 
+	width: 7px;
+	height: 13px;
 	display: inline-block;
 }*/
 </style>
