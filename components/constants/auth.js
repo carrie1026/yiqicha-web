@@ -3,5 +3,8 @@
  * @author zhanghua on 4/24/16
  */
 define(['./mod'], function(mod) {
-    mod.constant('Auths', ['/mycenter_home']);
+    mod.constant('Auths', [
+        '/mycenter_home',
+        '/myfocus'
+    ]);
 });
