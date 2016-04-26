@@ -29,5 +29,6 @@ define([
     'errorCtrl',
     'hotbusinessCtrl',
     'indexCtrl',
-    'businessMapCtrl'
+    'businessMapCtrl',
+    'shiXinDetailsCtrl'
 ]);

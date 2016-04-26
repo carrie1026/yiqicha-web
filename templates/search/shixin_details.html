@@ -1,53 +1,60 @@
 <div class="shixin_details">
- <div class="mycenter_header">
-    <ul>
-       <li class="li_1" onclick="javascript :history.back(-1)"><img src="../../images/icon_2.png"></li>
-       <li class="li_2">失信信息</li>
-       <li class="li_3" style="padding: 7px 0 0 0;"><a href="#"><img src="../../images/pic_5.png"></a></li>
-       <br style="clear: both;" />
-    </ul>
- </div>
- <div class="shixin_con">
-     <a href="/law_book"><p><em><img src="../../images/pic_4.png">查看法院判决书</em><span><img src="../../images/pic_2.png"></span></p></a>
-     <ul>
-       <li class="li_one">被执行人</li>
-       <li class="li_two">邓艾</li>
-     </ul>
-     <ul>
-       <li class="li_one">被执行人证件号</li>
-       <li class="li_two">34544365463***0034523</li>
-     </ul>
-      <ul>
-       <li class="li_one">生效法律文书确定的义务</li>
-       <li class="li_two">邓艾要赔偿xxx人合集人民币损失34566543.241元，病承担诉讼费567元</li>
-     </ul>
-      <ul>
-       <li class="li_one">被执行的履行情况</li>
-       <li class="li_two">全部未履行</li>
-     </ul>
-      <ul>
-       <li class="li_one">失信被执行人行为具体情形</li>
-       <li class="li_two">违反财产报告制度，其他有履行能力而拒不履行生效法律文书确定义务。</li>
-     </ul>
-      <ul>
-       <li class="li_one">执行法院</li>
-       <li class="li_two">江西省萍乡湘东区人民法院</li>
-     </ul>
-      <ul>
-       <li class="li_one">执行依据文号</li>
-       <li class="li_two">（2014）湘民一初字第155号</li>
-     </ul>
-     <ul>
-       <li class="li_one">立案时间</li>
-       <li class="li_two">2014-10-10</li>
-     </ul>
-     <ul>
-       <li class="li_one">案号</li>
-       <li class="li_two">（2014）湘民一初字第155号</li>
-     </ul>
-      <ul>
-       <li class="li_one">发布时间</li>
-       <li class="li_two">2015-03-30</li>
-     </ul>
- </div>
+    <div class="mycenter_header">
+        <ul>
+            <li class="li_1" onclick="javascript :history.back(-1)"><img src="../../images/icon_2.png"></li>
+            <li class="li_2">失信信息</li>
+            <li class="li_3" style="padding: 7px 0 0 0;">
+                <a href="#"><img src="../../images/pic_5.png"></a>
+            </li>
+            <br style="clear: both;" />
+        </ul>
+    </div>
+    <div ng-if="!occ">
+        暂无失信内容
+    </div>
+    <div class="shixin_con" ng-if="occ">
+        <a href="/law_book">
+            <p><em><img src="../../images/pic_4.png">$查看法院判决书</em><span><img src="../../images/pic_2.png"></span></p>
+        </a>
+        <ul>
+            <li class="li_one">被执行人</li>
+            <li class="li_two">{{occ.gistunit}}</li>
+        </ul>
+        <ul>
+            <li class="li_one">被执行人证件号</li>
+            <li class="li_two">{{occ.cardnum}}</li>
+        </ul>
+        <ul>
+            <li class="li_one">生效法律文书确定的义务</li>
+            <li class="li_two">{{occ.duty}}</li>
+        </ul>
+        <ul>
+            <li class="li_one">被执行的履行情况</li>
+            <li class="li_two">{{occ.performance}}</li>
+        </ul>
+        <ul>
+            <li class="li_one">失信被执行人行为具体情形</li>
+            <li class="li_two">{{occ.disrupttypename}}</li>
+        </ul>
+        <ul>
+            <li class="li_one">执行法院</li>
+            <li class="li_two">{{occ.courtname}}</li>
+        </ul>
+        <ul>
+            <li class="li_one">执行依据文号</li>
+            <li class="li_two">$（2014）湘民一初字第155号</li>
+        </ul>
+        <ul>
+            <li class="li_one">立案时间</li>
+            <li class="li_two">{{occ.regdate}}</li>
+        </ul>
+        <ul>
+            <li class="li_one">案号</li>
+            <li class="li_two">{{occ.gistid}}</li>
+        </ul>
+        <ul>
+            <li class="li_one">发布时间</li>
+            <li class="li_two">{{occ.publishdate}}</li>
+        </ul>
+    </div>
 </div>

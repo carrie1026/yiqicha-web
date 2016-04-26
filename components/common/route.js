@@ -80,7 +80,8 @@ define(['angular'], function (angular) {
                 templateUrl: '/templates/search/search_shixin.html'
             })
                  .when('/shixin_details', {
-                templateUrl: '/templates/search/shixin_details.html'
+                templateUrl: '/templates/search/shixin_details.html',
+                controller: 'ShiXinDetailsCtrl'
             })
                  .when('/search_first', {
                 templateUrl: '/templates/search/search_first.html'
