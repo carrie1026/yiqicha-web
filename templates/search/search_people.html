@@ -7,12 +7,12 @@
         <ul>
             <li class="li_one" onclick="javascript :history.back(-1)"><img src="../../images/Oval 81 + Line@3x.png"></li>
             <li class="li_two">
-                <input type="text"  placeholder="请输入企业名称" ng-model="searchStr" ng-show="'qiye' == type"/>
-                <input type="text" placeholder="请输入法人或股东姓名" ng-model="searchStr" ng-show="'faren' == type"/>
-                <input type="text" placeholder="请输入失信者姓名" ng-model="searchStr" ng-show="'shixin' == type"/>
+                <input type="text"  placeholder="请输入企业名称" ng-model="searchBox" ng-show="'qiye' == type"/>
+                <input type="text" placeholder="请输入法人或股东姓名" ng-model="searchBox" ng-show="'faren' == type"/>
+                <input type="text" placeholder="请输入失信者姓名" ng-model="searchBox" ng-show="'shixin' == type"/>
             </li>
             <!-- Empty button -->
-            <li class="li_three" ng-show="searchStr" ng-click="searchStr=''">
+            <li class="li_three" ng-show="searchBox" ng-click="searchBox=''">
                 <img src="../../images/change@3x.png">
             </li>
         </ul>
@@ -31,23 +31,23 @@
     <!-- s: qiye -->
     <div class="search_pre searchbusiness_con1" ng-if="'qiye' == type">
         <h1 onClick="window.location.href='/search_area'">搜索范围：<span>全国</span><em><img src="../../images/pic_3.png"></em></h1>
-        <ul ng-repeat="Searchpeople in enterpriseList.rows">
-            <a ng-href="/compdet?id={{Searchpeople.id}}&sts={{Searchpeople.sts}}">
-                <p>{{Searchpeople.companyName}}</p>
+        <ul ng-repeat="qiye in qiyeList.rows">
+            <a ng-href="/compdet?id={{qiye.id}}&sts={{qiye.sts}}">
+                <p>{{qiye.companyName}}</p>
                 <li class="li_one"><img src="../../images/company_list@3x.png"></li>
-                <li>公司法人：{{Searchpeople.company}}</li>
+                <li>公司法人：{{qiye.company}}</li>
                 <li class="li_three">在营（开业）企业</li>
                 <div style="clear: both;"></div>
             </a>
         </ul>
-        <div ng-if="!enterpriseList" style="padding:20px 0 20px 40%;">
+        <div ng-if="!qiyeList" style="padding:20px 0 20px 40%;">
             暂无内容
         </div>
-        <div class="load_more" ng-if="enterpriseList.moreDataCanBeLoaded" ng-click="enterpriseLoadMore()">
+        <div class="load_more" ng-if="qiyeList.moreDataCanBeLoaded" ng-click="qiyeLoadMore()">
             <!-- <img src="../../images/loading@3x.png"> -->
             载入更多...
         </div>
-        <div class="load_more" ng-if="!enterpriseList.moreDataCanBeLoaded">
+        <div class="load_more" ng-if="!qiyeList.moreDataCanBeLoaded">
             没有更多
         </div>
     </div>
