@@ -15,6 +15,7 @@
 	<br style="clear: both;" />
 </div>
  -->
+<div class="mycenter_myfocus">
 <div class="mycenter_header">
 	        <ul>
 	            <li class="li_1" onclick="javascript :history.back(-1)"><img src="../../images/icon_2.png"></li>
@@ -24,17 +25,29 @@
 	        </ul>
  </div>
 
+<div class="myfocus" ng-repeat="item in investAbroadArray">
+       <!--  <a ng-href="/compdet?companyId={{myfocus.companyId}}&sts=1"> -->
+        <ul>
+            <p>{{item.companyName}}</p>
+            <li class="li_one"><img src="../../images/company_list@3x.png" style="width: 100%;"></li>
+            <li class="li_two">公司法人：{{item.legalRepPersion}}</li>
+            <li class="li_three">{{item.recordStatus}}</li>
+            <br style="clear: both;" />
+        </ul>
+      <!--   </a> -->
+</div>
 
+</div>
 
-<div style="width:100%;">
+<!-- <div style="width:100%;">
 	<div ng-repeat="item in investAbroadArray"  style="width:100%;padding: 0 4.6%;background-color:white;border-bottom:1px solid #b3b3b3;">
 		<table>
-			<tr style="width: 414px;">
-				<td colspan="4" style="width:414px;font-size:14px;padding: 15px 0 10px 0;color: #3a3a3a;">
+			<tr style="width: 490px;">
+				<td colspan="4" style="width:490px;font-size:14px;padding: 15px 0 10px 0;color: #3a3a3a;">
 					<span ng-bind="item.companyName"></span>
 				</td>
 			</tr>
-			<tr style="width:414px;font-size: 12px;color: #9f9f9f;">
+			<tr style="width:490px;font-size: 12px;color: #9f9f9f;">
 				<td style="float:left;width:16px; height:16px;margin: 0 2% 16px 0;">
 					<img style="width:14px;height:14px;margin: -1px 0 0 0;" src="/images/xiaoren.png" />
 				</td>
@@ -51,12 +64,7 @@
 			</tr>
 		</table>
 	</div>
-	<!--
-    <div ng-if="item == null" style="padding:20px 0 20px 40%;">
-         暂无内容
-    </div>
-    -->
-</div>
+</div> -->
  
 
 
