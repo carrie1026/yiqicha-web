@@ -10,11 +10,12 @@
 
 
 		<div class="compdet2">
-			<div class="compdet21">选择信息有误的部分（多选）</div>
+			<div class="compdet21">选择信息有误的部分</div>
 			<div class="compdet22">
-				<div class="compdet221 mgrb2" ng-repeat="Errortype in Errortype" ng-model="ErrorFormData.errorParts" ng-click="subError(Errortype.dictDescribe)">
-                     {{Errortype.dictDescribe}}
+				<div class="compdet221 mgrb2" ng-repeat="Errortype in Errortype" ng-model="ErrorFormData.errorParts" ng-click="subError()">
+                     {{Errortype.dictName}}
                 </div>
+                <div class="clear"></div>
 			</div>
 			<!-- <div class="compdet23">
 				我们会搜集您提交的信息，并在3~5个工作日内回复

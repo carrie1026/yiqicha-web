@@ -69,16 +69,16 @@
             </a>
         </div>
         <div class="index_follow">
-        <a ng-href="/compdet?companyId={{myfocus.companyId}}&sts=1">
+        <a href="/myfocus">
             <div class="index_followlf">我的关注</div>
             <div class="index_followrg">></div>
             <div class="clear"></div>
         </a>
         </div>
-        <a ng-href="/compdet?companyId={{myfocus.companyId}}&sts=1">
+        <a ng-href="/compdet?id={{myfocus.companyId}}">
         <div id="myfocus" onmouseover=iScrollAmount=0 style="overflow: hidden;background-color:#fff;height:80px;" onmouseout=iScrollAmount=1>
             <div class="index_followde" ng-repeat="myfocus in myfocus.rows">
-                <div class="index23121">{{myfocus.companyName}}</div>
+                <div class="index23121">{{myfocus.companyName}}{{myfocus.companyId}}</div>
                 <div class="index23122">
                     <div class="index231221">
                         <div class="index2312211"><img src="/images/company_list@2x.png" height="20px" /></div>
@@ -149,8 +149,11 @@ var oMarquee = document.getElementById("myfocus"); //滚动对象
 var iLineHeight = 80; //单行高度，像素
 var iLineCount = 1; //实际行数
 var iScrollAmount = 1; //每次滚动高度，像素
-function run() { oMarquee.scrollTop += iScrollAmount; if ( oMarquee.scrollTop == iLineCount * iLineHeight ) oMarquee.scrollTop = 0; if ( oMarquee.scrollTop % iLineHeight == 0 ) { window.setTimeout( "run()", 3500 ); } else { window.setTimeout( "run()", 10 ); } } oMarquee.innerHTML += oMarquee.innerHTML; window.setTimeout( "run()", 3500 );
+function run() { oMarquee.scrollTop += iScrollAmount; if ( oMarquee.scrollTop == iLineCount * iLineHeight ) oMarquee.scrollTop = 0; 
+                if ( oMarquee.scrollTop % iLineHeight == 0 ) { window.setTimeout( "run()", 3500 ); } 
+                else { window.setTimeout( "run()", 10 ); } } oMarquee.innerHTML += oMarquee.innerHTML; window.setTimeout( "run()", 3500 );
 </script>
+<!--
 <script type="text/javascript">
     var scrollDelay=10;//数字越大速度越慢
     var Scroll=document.getElementById("scroll");
@@ -191,6 +194,7 @@ function run() { oMarquee.scrollTop += iScrollAmount; if ( oMarquee.scrollTop ==
     }
     window.setTimeout("Int_Scroll()",5000);
 </script>
+-->
 <script>
 /**
 *  by Mantou qq:676015863

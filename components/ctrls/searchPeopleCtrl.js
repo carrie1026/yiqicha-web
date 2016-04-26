@@ -10,6 +10,7 @@ define(['./mod'], function(mod) {
                 SearchPeopleService.findEnterpriseInfo(enterpriseCurrentPage, rows, isPush)
                     .then(function(data) {
                         $scope.enterpriseList = data;
+                        console.log($scope.enterpriseList);
                     });
             };
 
