@@ -7,5 +7,6 @@ define([
     'enterpriseService',
     'reviseUserService',
     'authService',
-    'searchPeopleService'
+    'searchPeopleService',
+    'echartsService'
 ]);
