@@ -9,15 +9,18 @@ define(['./mod'], function(mod){
 		var setChart = function(index){
 			var industryAnalysisChart = echarts.init(document.getElementById('industryAnalysisChart'));
 			if(index == 1){
-				//console.log(requestParam.industryId);
+				
 				IndustryEnterpriseTotalNumberService.queryIndustryEnterpriseTotalNumber(requestParam.industryId).then(function(data){
+					console.log(data);
+					var rows = data.data;
+					var types = [], values = [];
+					for(var name in rows){
+						console.log(name+":"+rows[name]);
+						types.push(name);
+						values.push(rows[name]);
+					}
 					var getTotalNumberOfIndustryData = function(){
-						var rows = data.data.rows;
-						var types = [], values = [];
-						$.each(rows, function(index, value){
-							types.push(value.type);
-							values.push(value.countNumber);
-						});
+						
 						return {
 
 						    title : {
