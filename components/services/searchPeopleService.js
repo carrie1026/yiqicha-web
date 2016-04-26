@@ -7,6 +7,8 @@ define(['./mod'], function(mod) {
         var findStockMsgUrl = '/yiqicha/companyInfo/findStockMsg.do';
         // 失信
         var findOccupationListUrl = '/yiqicha/courtitemMsg/findOccupationList.do';
+        // 根据股东姓名精确查找
+        var findStockMsgByNameUrl = '/yiqicha/companyInfo/findStockMsgByName.do';
 
         var enterpriseList, stockMsgList;
 
@@ -29,7 +31,7 @@ define(['./mod'], function(mod) {
                 enterpriseList.moreDataCanBeLoaded = (data.rows.length == rows);
 
                 defer.resolve(enterpriseList);
-            }, function() {
+            }, function(data) {
                 defer.reject(data);
             });
             return defer.promise;
@@ -58,7 +60,7 @@ define(['./mod'], function(mod) {
                 stockMsgList.moreDataCanBeLoaded = (data.rows.length == rows);
 
                 defer.resolve(stockMsgList);
-            }, function() {
+            }, function(data) {
                 defer.reject(data);
             });
             return defer.promise;
@@ -71,6 +73,10 @@ define(['./mod'], function(mod) {
             }
             return $$http.get(findOccupationListUrl, param);
         }
+
+        this.findStockMsgByName = function(name, address) {
+            return $$http.get(findStockMsgByNameUrl, {name: name, address: address});
+        };
 
         return this;
     }]);

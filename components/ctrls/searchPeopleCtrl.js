@@ -13,12 +13,18 @@ define(['./mod'], function(mod) {
                         console.log($scope.enterpriseList);
                     });
             };
+            //
+            // var loadStockMsg = function(isPush) {
+            //     SearchPeopleService.findStockMsg(stockMsgPage, rows, isPush)
+            //         .then(function(data) {
+            //             $scope.stockMsgList = data;
+            //         });
+            // };
 
-            var loadStockMsg = function(isPush) {
-                SearchPeopleService.findStockMsg(stockMsgPage, rows, isPush)
-                    .then(function(data) {
-                        $scope.stockMsgList = data;
-                    });
+            var loadStockMsgByName = function(name) {
+                SearchPeopleService.findStockMsgByName(name).then(function(data) {
+                    $scope.stockMsgList = data;
+                });
             };
 
             var loadOccupation = function(iname) {
@@ -33,13 +39,13 @@ define(['./mod'], function(mod) {
                 loadEnterpriseInfo(true);
             };
 
-            $scope.stockMsgLoadMore = function() {
-                stockMsgPage++;
-                loadStockMsg(true);
-            };
+            // $scope.stockMsgLoadMore = function() {
+            //     stockMsgPage++;
+            //     loadStockMsg(true);
+            // };
 
             loadEnterpriseInfo(false);
-            loadStockMsg(false);
+            // loadStockMsg(false);
             loadOccupation();
 
             var search = $location.search();

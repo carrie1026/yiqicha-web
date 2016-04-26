@@ -185,7 +185,10 @@ function isRequestSuccess(data, isHideErrMsg) {
     case 417: // 非法参数异常
     case 500: // 服务器异常
         if (data.message && !isHideErrMsg) {
-            layer.msg(data.message);
+            layer.open({
+                content: data.message,
+                time: 3
+            })
         }
         return false;
     }
