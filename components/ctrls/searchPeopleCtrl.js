@@ -3,7 +3,7 @@ define(['./mod'], function (mod) {
 mod.controller('SearchpeopleCtrl', ['$scope','$location', 'SearchpeopleService','$rootScope','ShareholderService','dishonestyService', function($scope, $location, SearchpeopleService,$rootScope,ShareholderService,dishonestyService) {
     // 企业信息
     var page = 1;
-    var rows = 4;
+    var rows = 7;
     SearchpeopleService.Searchpeople(page,rows).then(function(data){
         $scope.Searchpeople = data.data;
    //     console.log($scope.Searchpeople);
