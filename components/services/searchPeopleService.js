@@ -1,64 +1,71 @@
 define(['./mod'], function(mod) {
     'use strict';
-    //查询企业列表信息 服务
-    mod.factory('SearchpeopleService', ['$http', '$q', function($http, $q) {
-            var Searchpeople = function(page, rows) {
-                var defer = $q.defer();
-                $http.post('/yiqicha/companyInfo/findEnterpriseInfo.do', {
-                    page: page,
-                    rows: rows
-                }).success(function(data) {
-                    if (isRequestSuccess(data)) {
-                        defer.resolve(data);
-                    } else {
-                        defer.reject(data);
-                    }
-                });
-                return defer.promise;
-            };
+    mod.factory('SearchPeopleService', ['$$http', '$q', function($$http, $q) {
+        // 企业
+        var findEnterpriseInfoUrl = '/yiqicha/companyInfo/findEnterpriseInfo.do';
+        // 法人/股东
+        var findStockMsgUrl = '/yiqicha/companyInfo/findStockMsg.do';
+        // 失信
+        var findOccupationListUrl = '/yiqicha/courtitemMsg/findOccupationList.do';
 
-            return {
-                Searchpeople: Searchpeople
-            };
-        }])
-        //查询股东信息 服务
-        .factory('ShareholderService', ['$http', '$q', function($http, $q) {
-            var Shareholder = function(page, rows) {
-                var defer = $q.defer();
-                $http.post('/yiqicha/companyInfo/findStockMsg.do', {
-                    page: page,
-                    rows: rows
-                }).success(function(data) {
-                    if (isRequestSuccess(data)) {
-                        defer.resolve(data);
-                    } else {
-                        defer.reject(data);
-                    }
-                });
-                return defer.promise;
-            };
+        var enterpriseList, stockMsgList;
 
-            return {
-                Shareholder: Shareholder
-            };
-        }]);
-    // 获取失信信息
-    mod.factory('dishonestyService', ['$http', '$q', '$interval', function($http, $q, $interval) {
-        var dishonesty = function(iname) {
+        this.findEnterpriseInfo = function(page, rows, isPush) {
             var defer = $q.defer();
-            $http.post('/yiqicha/courtitemMsg/findOccupationList.do', {
-                iname: iname
-            }).success(function(data) {
-                if (isRequestSuccess(data)) {
-                    defer.resolve(data);
-                } else {
-                    defer.reject(data);
+            $$http.get(findEnterpriseInfoUrl, {
+                page: page,
+                rows: rows
+            }).then(function(data) {
+                if (!enterpriseList || !isPush) {
+                    enterpriseList = data;
+                } else { // push
+                    for (var i in data.rows) {
+                        enterpriseList.rows.push(data.rows[i]);
+                    }
+                    enterpriseList.total = data.total;
                 }
+
+                // check is can load more data
+                enterpriseList.moreDataCanBeLoaded = (data.rows.length == rows);
+
+                defer.resolve(enterpriseList);
+            }, function() {
+                defer.reject(data);
             });
             return defer.promise;
-        }
-        return {
-            dishonesty: dishonesty
         };
+
+        this.findStockMsg = function(page, rows, isPush) {
+            var defer = $q.defer();
+            $$http.get(findStockMsgUrl, {
+                page: page,
+                rows: rows
+            }).then(function(data) {
+                if (!stockMsgList || !isPush) {
+                    stockMsgList = data;
+                } else { // push
+                    for (var i in data.rows) {
+                        stockMsgList.rows.push(data.rows[i]);
+                    }
+                    stockMsgList.total = data.total;
+                }
+
+                // check is can load more data
+                stockMsgList.moreDataCanBeLoaded = (data.rows.length == rows);
+
+                defer.resolve(stockMsgList);
+            }, function() {
+                defer.reject(data);
+            });
+            return defer.promise;
+        };
+
+        this.findOccupationList = function(iname) {
+            return $$http.get(findOccupationListUrl, {
+                iname: iname
+            });
+        }
+
+        return this;
     }]);
 });

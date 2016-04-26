@@ -1,39 +1,51 @@
-define(['./mod'], function (mod) {
+define(['./mod'], function(mod) {
     'use strict';
-mod.controller('SearchpeopleCtrl', ['$scope','$location', 'SearchpeopleService','$rootScope','ShareholderService','dishonestyService', function($scope, $location, SearchpeopleService,$rootScope,ShareholderService,dishonestyService) {
-    // 企业信息
-    var page = 1;
-    var rows = 7;
-    SearchpeopleService.Searchpeople(page,rows).then(function(data){
-        $scope.Searchpeople = data.data;
-   //     console.log($scope.Searchpeople);
-    })
-    // 股东信息
-    var page = 1;
-    var rows = 4;
-    ShareholderService.Shareholder(page,rows).then(function(data){
-        $scope.Shareholder = data.data;
-//        console.log($scope.Shareholder);
-    })
-    // 失信信息
-    var iname = "顾海林";
-    dishonestyService.dishonesty(iname).then(function(data){
-        $scope.dishonesty = data.data;
-        console.log($scope.dishonesty);
-    })
+    mod.controller('SearchpeopleCtrl', ['$scope', '$location', 'SearchPeopleService',
+        function($scope, $location, SearchPeopleService) {
+            var enterpriseCurrentPage = 1;
+            var stockMsgPage = 1;
+            var rows = 5;
 
-    var search = $location.search();
-    switch (search.type) {
-        case 'qiye':
-            $('.searcharea_con ul li:eq(0)').click();
-            break;
-        case 'faren':
-            $('.searcharea_con ul li:eq(1)').click();
-            break;
-        case 'shixin':
-            $('.searcharea_con ul li:eq(2)').click();
-            break;
-        default:
-    }
- }])
+            var loadEnterpriseInfo = function(isPush) {
+                SearchPeopleService.findEnterpriseInfo(enterpriseCurrentPage, rows, isPush)
+                    .then(function(data) {
+                        $scope.enterpriseList = data;
+                    });
+            };
+
+            var loadStockMsg = function(isPush) {
+                SearchPeopleService.findStockMsg(stockMsgPage, rows, isPush)
+                    .then(function(data) {
+                        $scope.stockMsgList = data;
+                    });
+            };
+
+            $scope.enterpriseLoadMore = function() {
+                enterpriseCurrentPage++;
+                loadEnterpriseInfo(true);
+            };
+
+            $scope.stockMsgLoadMore = function() {
+                stockMsgPage++;
+                loadStockMsg(true);
+            };
+
+            loadEnterpriseInfo(false);
+            loadStockMsg(false);
+
+            var search = $location.search();
+            switch (search.type) {
+                case 'qiye':
+                    $('.searcharea_con ul li:eq(0)').click();
+                    break;
+                case 'faren':
+                    $('.searcharea_con ul li:eq(1)').click();
+                    break;
+                case 'shixin':
+                    $('.searcharea_con ul li:eq(2)').click();
+                    break;
+                default:
+            }
+        }
+    ])
 });
