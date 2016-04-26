@@ -61,9 +61,10 @@ define(['./mod'], function(mod) {
         };
 
         this.findOccupationList = function(iname) {
-            return $$http.get(findOccupationListUrl, {
-                iname: iname
-            });
+            // return $$http.get(findOccupationListUrl, {
+            //     iname: iname
+            // });
+            return $$http.get(findOccupationListUrl);
         }
 
         return this;

@@ -1,44 +1,40 @@
-
-
 <div class="search_area">
     <div class="search_header">
-        <p><a href="/index"><img src="../../images/icon_2.png"></a></p>
+        <p>
+            <a href="/index"><img src="../../images/icon_2.png"></a>
+        </p>
         <ul>
             <li class="li_one" onclick="javascript :history.back(-1)"><img src="../../images/Oval 81 + Line@3x.png"></li>
             <li class="li_two">
-            <form action="#" method="post">
-            <input placeholder="请输入法定代表人或股东名" type="text" ng-model="txt"/>
-            </form>
+                <form action="#" method="post">
+                    <input placeholder="请输入法定代表人或股东名" type="text" ng-model="txt" />
+                </form>
             </li>
-                <li class="li_three" ng-show="txt != 0"><img src="../../images/change@3x.png"></li>
-            <br style="clear: both;"/>
+            <li class="li_three" ng-show="txt != 0"><img src="../../images/change@3x.png"></li>
+            <br style="clear: both;" />
         </ul>
     </div>
     <div class="searcharea_con">
         <ul>
-
             <li class="current">企业</li>
             <li>法人/股东</li>
             <li>失信</li>
             <div style="clear: both;"></div>
         </ul>
     </div>
-
-
+    <!-- s: 企业 -->
     <div class="search_pre searchbusiness_con1">
-
-
         <h1 onClick="window.location.href='/search_area'">搜索范围：<span>全国</span><em><img src="../../images/pic_3.png"></em></h1>
-         <ul ng-repeat="Searchpeople in enterpriseList.rows">
+        <ul ng-repeat="Searchpeople in enterpriseList.rows">
             <a ng-href="/compdet?id={{Searchpeople.id}}&sts={{Searchpeople.sts}}">
 
-            <p>{{Searchpeople.companyName}}</p>
-            <li class="li_one"><img src="../../images/company_list@3x.png"></li>
-            <li>公司法人：{{Searchpeople.company}}</li>
-            <li class="li_three">在营（开业）企业</li>
-            <div style="clear: both;"></div>
+                <p>{{Searchpeople.companyName}}</p>
+                <li class="li_one"><img src="../../images/company_list@3x.png"></li>
+                <li>公司法人：{{Searchpeople.company}}</li>
+                <li class="li_three">在营（开业）企业</li>
+                <div style="clear: both;"></div>
             </a>
-          </ul>
+        </ul>
         <div ng-if="!enterpriseList" style="padding:20px 0 20px 40%;">
             暂无内容
         </div>
@@ -50,24 +46,19 @@
             没有更多
         </div>
     </div>
+    <!-- e: 企业 -->
 
-
-
+    <!-- s: 法人/股东 -->
     <div class="search_pre searchpeople_con1">
-
-
         <h1 onClick="window.location.href='/search_area'">搜索范围：<span>全国</span><em><i>搜索信息过多，请按地区筛选</i><img src="../../images/pic_3.png"></em></h1>
-
-
-
         <ul ng-repeat="Shareholder in stockMsgList.rows">
             <a href="/shareholderinfo">
-          <p>{{Shareholder.name}}</p>
-          <li class="li_one"><img src="../../images/company@3x.png"></li>
-          <li>香港万国商业网</li>
-          <li class="li_three">在营（开业）企业</li>
-          <br style="clear: both;" />
-      </a>
+                <p>{{Shareholder.name}}</p>
+                <li class="li_one"><img src="../../images/company@3x.png"></li>
+                <li>香港万国商业网</li>
+                <li class="li_three">在营（开业）企业</li>
+                <br style="clear: both;" />
+            </a>
         </ul>
         <div class="load_more" ng-if="stockMsgList.moreDataCanBeLoaded" ng-click="stockMsgLoadMore()">
             <!-- <img src="../../images/loading@3x.png"> -->
@@ -77,33 +68,32 @@
             没有更多
         </div>
     </div>
+    <!-- e: 法人/股东 -->
 
-
-     <div class="search_pre shixinbs_con1">
+    <!-- s: 失信 -->
+    <div class="search_pre shixinbs_con1">
         <h1 onClick="window.location.href='/search_area'">搜索范围：<span>全国</span><em><img src="../../images/pic_3.png"></em></h1>
-        <ul ng-repeat="dishonesty in dishonesty.rows">
+        <ul ng-repeat="dishonesty in occupationList.rows">
             <a href="/shixin_details">
-             <p>{{dishonesty.iname}}</p>
-             <li class="li_two">
-               <span><img src="../../images/qiyehao@3x.png">{{dishonesty.cardnum}}</span>
-               <em><img src="../../images/address@3x.png">{{dishonesty.areaname}}</em>
-               <br style="clear: both;" />
-             </li>
-             <li class="li_three"><img src="../../images/qiyehao@3x.png">{{dishonesty.casecode}}</li>
-         </a>
-         </ul>
-         <div ng-if="!dishonesty" style="padding:20px 0 20px 40%;">
+                <p>{{dishonesty.iname}}</p>
+                <li class="li_two">
+                    <span><img src="../../images/qiyehao@3x.png">{{dishonesty.cardnum}}</span>
+                    <em><img src="../../images/address@3x.png">{{dishonesty.areaname}}</em>
+                    <br style="clear: both;" />
+                </li>
+                <li class="li_three"><img src="../../images/qiyehao@3x.png">{{dishonesty.casecode}}</li>
+            </a>
+        </ul>
+        <div ng-if="!occupationList" style="padding:20px 0 20px 40%;">
             暂无内容
         </div>
     </div>
-
-
-
+    <!-- e: 失信 -->
 </div>
 <script>
-    $(function(){
+    $(function() {
         $('.search_pre:first').show().siblings('.search_pre').hide();
-        $('.searcharea_con ul li').click(function(){
+        $('.searcharea_con ul li').click(function() {
             $(this).addClass('current').siblings('li').removeClass('current');
             num = $(this).index();
             $('.search_pre').eq(num).show().siblings('.search_pre').hide()

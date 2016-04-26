@@ -20,6 +20,13 @@ define(['./mod'], function(mod) {
                     });
             };
 
+            var loadOccupation = function(iname) {
+                SearchPeopleService.findOccupationList(iname)
+                    .then(function(data) {
+                        $scope.occupationList = data;
+                    });
+            };
+
             $scope.enterpriseLoadMore = function() {
                 enterpriseCurrentPage++;
                 loadEnterpriseInfo(true);
@@ -32,6 +39,7 @@ define(['./mod'], function(mod) {
 
             loadEnterpriseInfo(false);
             loadStockMsg(false);
+            loadOccupation();
 
             var search = $location.search();
             switch (search.type) {
