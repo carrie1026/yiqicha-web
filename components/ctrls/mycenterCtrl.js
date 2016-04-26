@@ -20,11 +20,19 @@ define(['./mod'], function(mod) {
         myfocusService.myfocus(page,rows,accountId).then(function(data){
             $scope.myfocus = data.data;
 //            console.log($scope.myfocus);
+<<<<<<< HEAD
         });  
+=======
+        }); 
+>>>>>>> 38696ce5b3b7b7491839de2a153b7240be161561
 
         $scope.$watch('companyName', function(newValue, oldValue) {
-            if (!newValue || newValue.length < 2)
+            if (!newValue || newValue.length < 2){
                 return;
+<<<<<<< HEAD
+=======
+            }
+>>>>>>> 38696ce5b3b7b7491839de2a153b7240be161561
             $location.path('/search_people').search({type: 'qiye', companyName: newValue});
         });
     }])

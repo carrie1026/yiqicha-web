@@ -19,6 +19,7 @@ body {
 .login_qq,.login_weibo,.login_weixin{width: 33%;float: left;}
 .login_qq p,.login_weibo p,.login_weixin p{text-align: center;}
 
+
 /*register*/
 .register{width: 100%;height:100%;font-family:微软雅黑;font-size:16px;}
 .register_top{height: 40px;line-height: 40px;padding: 0 10px;color: #fff; background-color: #00BBFB;}
