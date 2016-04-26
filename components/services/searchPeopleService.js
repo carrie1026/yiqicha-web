@@ -12,11 +12,13 @@ define(['./mod'], function(mod) {
 
         var enterpriseList, stockMsgList;
 
-        this.findEnterpriseInfo = function(page, rows, isPush) {
+        this.findEnterpriseInfo = function(page, rows, isPush, companyName, address) {
             var defer = $q.defer();
             $$http.get(findEnterpriseInfoUrl, {
                 page: page,
-                rows: rows
+                rows: rows,
+                companyName: companyName,
+                address: address
             }).then(function(data) {
                 if (!enterpriseList || !isPush) {
                     enterpriseList = data;

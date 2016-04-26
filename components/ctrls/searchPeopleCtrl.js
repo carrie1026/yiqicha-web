@@ -8,6 +8,10 @@ define(['./mod'], function(mod) {
         function($scope, $location, SearchPeopleService) {
             // init type
             $scope.type = $location.search().type;
+            var companyName = $location.search().companyName;
+            if (companyName && 'qiye' == $scope.type){
+                $scope.searchBox = companyName;
+            }
 
             // init page
             var qiyePage, farenPage, shixinList;
@@ -16,7 +20,7 @@ define(['./mod'], function(mod) {
 
             // load data
             var loadQiyeList = function(isPush, name, address) {
-                SearchPeopleService.findEnterpriseInfo(qiyePage, rows, isPush).then(function(data) {
+                SearchPeopleService.findEnterpriseInfo(qiyePage, rows, isPush, name, address).then(function(data) {
                     $scope.qiyeList = data;
                 });
             };

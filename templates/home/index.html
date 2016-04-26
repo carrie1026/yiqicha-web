@@ -14,7 +14,7 @@
                 </div>
                 <div class="index_topdecon">
                     <label><img src="/images/fangdajing.png" height="24px"></label>
-                    <input placeholder="请输入公司名和注册号" type="text"/>
+                    <input placeholder="请输入公司名和注册号" type="text" ng-model="companyName"/>
                     <div class="clear"></div>
                 </div>
                 <div class="index_topderg">
@@ -151,8 +151,8 @@ var oMarquee = document.getElementById("myfocus"); //滚动对象
 var iLineHeight = 80; //单行高度，像素
 var iLineCount = 1; //实际行数
 var iScrollAmount = 1; //每次滚动高度，像素
-function run() { oMarquee.scrollTop += iScrollAmount; if ( oMarquee.scrollTop == iLineCount * iLineHeight ) oMarquee.scrollTop = 0; 
-                if ( oMarquee.scrollTop % iLineHeight == 0 ) { window.setTimeout( "run()", 3500 ); } 
+function run() { oMarquee.scrollTop += iScrollAmount; if ( oMarquee.scrollTop == iLineCount * iLineHeight ) oMarquee.scrollTop = 0;
+                if ( oMarquee.scrollTop % iLineHeight == 0 ) { window.setTimeout( "run()", 3500 ); }
                 else { window.setTimeout( "run()", 10 ); } } oMarquee.innerHTML += oMarquee.innerHTML; window.setTimeout( "run()", 3500 );
 </script>
 
