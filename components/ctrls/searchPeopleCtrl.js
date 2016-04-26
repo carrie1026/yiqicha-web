@@ -16,7 +16,7 @@ define(['./mod'], function(mod) {
 
             // load data
             var loadQiyeList = function(isPush, name, address) {
-                SearchPeopleService.findEnterpriseInfo(qiyePage, rows, isPush).then(function(data) {
+                SearchPeopleService.findEnterpriseInfo(qiyePage, rows, isPush, name, address).then(function(data) {
                     $scope.qiyeList = data;
                 });
             };
