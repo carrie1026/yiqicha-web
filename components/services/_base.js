@@ -8,5 +8,6 @@ define([
     'reviseUserService',
     'authService',
     'searchPeopleService',
-    'echartsService'
+    'echartsService',
+    'businessMapService'
 ]);
