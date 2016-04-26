@@ -9,5 +9,5 @@ define(['./mod'], function(mod) {
         function($scope, $location) {
             $scope.holder = $location.search();
         }
-    ])
+    ]);
 });
