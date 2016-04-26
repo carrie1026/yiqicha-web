@@ -78,7 +78,7 @@
         <div id="myfocus" onmouseover=iScrollAmount=0 style="overflow: hidden;background-color:#fff;height:80px;" onmouseout=iScrollAmount=1>
             <div class="index_followde" ng-repeat="myfocus in myfocus.rows">
                 <a ng-href="/compdet?id={{myfocus.companyId}}&sts=1">
-                <div class="index23121">{{myfocus.companyName}}{{myfocus.companyId}}</div>
+                <div class="index23121">{{myfocus.companyName}}</div>
                 <div class="index23122">
                     <div class="index231221">
                         <div class="index2312211"><img src="/images/company_list@2x.png" height="20px" /></div>
@@ -100,9 +100,10 @@
             <div class="clear"></div>
         </div>
         </a>
-        <a href="/compdet">
+        
         <div id="scroll" style="overflow:hidden;background-color:#fff;height:80px;">
             <div class="index_followde" ng-repeat="hotbusiness in hotbusiness.rows">
+                <a  ng-href="/compdet?id={{hotbusiness.id}}">
                 <div class="index2312">
                     <div class="index23121">{{hotbusiness.companyName}}</div>
                     <div class="index23122">
@@ -115,9 +116,10 @@
                         <div style="clear:both;"></div>
                     </div>
                 </div>
+                </a>
             </div>
         </div>
-       </a>
+
         <div id="scroll2" style="display:none;"></div>
 
       <!--
@@ -153,7 +155,7 @@ function run() { oMarquee.scrollTop += iScrollAmount; if ( oMarquee.scrollTop ==
                 if ( oMarquee.scrollTop % iLineHeight == 0 ) { window.setTimeout( "run()", 3500 ); } 
                 else { window.setTimeout( "run()", 10 ); } } oMarquee.innerHTML += oMarquee.innerHTML; window.setTimeout( "run()", 3500 );
 </script>
-<!--
+
 <script type="text/javascript">
     var scrollDelay=10;//数字越大速度越慢
     var Scroll=document.getElementById("scroll");
@@ -194,7 +196,6 @@ function run() { oMarquee.scrollTop += iScrollAmount; if ( oMarquee.scrollTop ==
     }
     window.setTimeout("Int_Scroll()",5000);
 </script>
--->
 <script>
 /**
 *  by Mantou qq:676015863
