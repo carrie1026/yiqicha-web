@@ -2,6 +2,7 @@ define(['./mod'], function(mod) {
     'use strict';
     mod.controller('SearchpeopleCtrl', ['$scope', '$location', 'SearchPeopleService',
         function($scope, $location, SearchPeopleService) {
+            $scope.searchStr = '';
             var enterpriseCurrentPage = 1;
             var stockMsgPage = 1;
             var rows = 5;
@@ -49,6 +50,7 @@ define(['./mod'], function(mod) {
             loadOccupation();
 
             var search = $location.search();
+            $scope.type = search.type;
             switch (search.type) {
                 case 'qiye':
                     $('.searcharea_con ul li:eq(0)').click();

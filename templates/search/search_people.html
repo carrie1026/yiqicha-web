@@ -3,31 +3,36 @@
         <p>
             <a href="/index"><img src="../../images/icon_2.png"></a>
         </p>
+        <!-- s: Search Area -->
         <ul>
             <li class="li_one" onclick="javascript :history.back(-1)"><img src="../../images/Oval 81 + Line@3x.png"></li>
             <li class="li_two">
-                <form action="#" method="post">
-                    <input placeholder="请输入法定代表人或股东名" type="text" ng-model="txt" />
-                </form>
+                <input type="text"  placeholder="请输入企业名称" ng-model="searchStr" ng-show="'qiye' == type"/>
+                <input type="text" placeholder="请输入法人或股东姓名" ng-model="searchStr" ng-show="'faren' == type"/>
+                <input type="text" placeholder="请输入失信者姓名" ng-model="searchStr" ng-show="'shixin' == type"/>
             </li>
-            <li class="li_three" ng-show="txt != 0"><img src="../../images/change@3x.png"></li>
-            <br style="clear: both;" />
+            <!-- Empty button -->
+            <li class="li_three" ng-show="searchStr" ng-click="searchStr=''">
+                <img src="../../images/change@3x.png">
+            </li>
         </ul>
+        <!-- e: Search Area -->
     </div>
+    <!-- s: Tabs -->
     <div class="searcharea_con">
         <ul>
-            <li class="current">企业</li>
-            <li>法人/股东</li>
-            <li>失信</li>
-            <div style="clear: both;"></div>
+            <li ng-class="{current: 'qiye' == type}" ng-click="type='qiye'">企业{{searchStr}}</li>
+            <li ng-class="{current: 'faren' == type}" ng-click="type='faren'">法人/股东</li>
+            <li ng-class="{current: 'shixin' == type}" ng-click="type='shixin'">失信</li>
         </ul>
     </div>
-    <!-- s: 企业 -->
-    <div class="search_pre searchbusiness_con1">
+    <!-- e: Tabs -->
+
+    <!-- s: qiye -->
+    <div class="search_pre searchbusiness_con1" ng-if="'qiye' == type">
         <h1 onClick="window.location.href='/search_area'">搜索范围：<span>全国</span><em><img src="../../images/pic_3.png"></em></h1>
         <ul ng-repeat="Searchpeople in enterpriseList.rows">
             <a ng-href="/compdet?id={{Searchpeople.id}}&sts={{Searchpeople.sts}}">
-
                 <p>{{Searchpeople.companyName}}</p>
                 <li class="li_one"><img src="../../images/company_list@3x.png"></li>
                 <li>公司法人：{{Searchpeople.company}}</li>
@@ -46,10 +51,10 @@
             没有更多
         </div>
     </div>
-    <!-- e: 企业 -->
+    <!-- e: qiye -->
 
-    <!-- s: 法人/股东 -->
-    <div class="search_pre searchpeople_con1">
+    <!-- s: faren/gudong -->
+    <div class="search_pre searchpeople_con1" ng-if="'faren' == type">
         <h1 onClick="window.location.href='/search_area'">搜索范围：<span>全国</span><em><i>搜索信息过多，请按地区筛选</i><img src="../../images/pic_3.png"></em></h1>
         <ul ng-repeat="Shareholder in stockMsgList.rows">
             <a href="/shareholderinfo">
@@ -68,10 +73,10 @@
             没有更多
         </div>
     </div>
-    <!-- e: 法人/股东 -->
+    <!-- e: faren/gudong -->
 
-    <!-- s: 失信 -->
-    <div class="search_pre shixinbs_con1">
+    <!-- s: shixin -->
+    <div class="search_pre shixinbs_con1" ng-if="'shixin' == type">
         <h1 onClick="window.location.href='/search_area'">搜索范围：<span>全国</span><em><img src="../../images/pic_3.png"></em></h1>
         <ul ng-repeat="dishonesty in occupationList.rows">
             <a href="/shixin_details">
@@ -88,15 +93,5 @@
             暂无内容
         </div>
     </div>
-    <!-- e: 失信 -->
+    <!-- e: shixin -->
 </div>
-<script>
-    $(function() {
-        $('.search_pre:first').show().siblings('.search_pre').hide();
-        $('.searcharea_con ul li').click(function() {
-            $(this).addClass('current').siblings('li').removeClass('current');
-            num = $(this).index();
-            $('.search_pre').eq(num).show().siblings('.search_pre').hide()
-        });
-    });
-</script>
