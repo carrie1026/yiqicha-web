@@ -75,9 +75,9 @@
             <div class="clear"></div>
         </a>
         </div>
-        <a ng-href="/compdet?id={{myfocus.companyId}}">
         <div id="myfocus" onmouseover=iScrollAmount=0 style="overflow: hidden;background-color:#fff;height:80px;" onmouseout=iScrollAmount=1>
             <div class="index_followde" ng-repeat="myfocus in myfocus.rows">
+                <a ng-href="/compdet?id={{myfocus.companyId}}&sts=1">
                 <div class="index23121">{{myfocus.companyName}}{{myfocus.companyId}}</div>
                 <div class="index23122">
                     <div class="index231221">
@@ -88,10 +88,10 @@
                     <div class="index231222">{{myfocus.recordStatus}}</div>
                     <div class="clear"></div>
                 </div>
+                </a>
                 <div class="clear"></div>
             </div>
         </div>
-        </a>
         <a href="/hot_business">
         <div class="index_follow" >
 
@@ -99,7 +99,7 @@
             <div class="index_followrg">></div>
             <div class="clear"></div>
         </div>
-    </a>
+        </a>
         <a href="/compdet">
         <div id="scroll" style="overflow:hidden;background-color:#fff;height:80px;">
             <div class="index_followde" ng-repeat="hotbusiness in hotbusiness.rows">
