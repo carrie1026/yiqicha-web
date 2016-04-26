@@ -130,6 +130,7 @@
 	/*width:20px;*/
 	float: left;
 	margin-right:10px;
+	/*margin-top: -1px;*/
 }
 .compdet1311 img{
 	width: 14px;
@@ -140,8 +141,6 @@
 .compdet1312{
 	float: left;
 	width:78%;
-	height:60px;
-	line-height:30px;
 	color:#777;
 }
 .compdet1313{
