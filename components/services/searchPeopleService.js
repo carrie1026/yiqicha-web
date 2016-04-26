@@ -35,12 +35,16 @@ define(['./mod'], function(mod) {
             return defer.promise;
         };
 
-        this.findStockMsg = function(page, rows, isPush) {
+        this.findStockMsg = function(page, rows, isPush, companyId) {
             var defer = $q.defer();
-            $$http.get(findStockMsgUrl, {
+            var param = {
                 page: page,
                 rows: rows
-            }).then(function(data) {
+            };
+            if (companyId) {
+                param.companyId = companyId;
+            }
+            $$http.get(findStockMsgUrl, param).then(function(data) {
                 if (!stockMsgList || !isPush) {
                     stockMsgList = data;
                 } else { // push
