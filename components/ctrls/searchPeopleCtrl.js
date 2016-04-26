@@ -8,6 +8,10 @@ define(['./mod'], function(mod) {
         function($scope, $location, SearchPeopleService) {
             // init type
             $scope.type = $location.search().type;
+            var companyName = $location.search().companyName;
+            if (companyName && 'qiye' == $scope.type){
+                $scope.searchBox = companyName;
+            }
 
             // init page
             var qiyePage, farenPage, shixinList;
