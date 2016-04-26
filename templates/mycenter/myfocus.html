@@ -1,13 +1,13 @@
 <div class="mycenter_myfocus">
      <div class="mycenter_header">
         <ul>
-            <li class="li_1" onclick="javascript :history.back(-1)"><img src="../../images/icon_2.png"></li>
+            <li class="li_1"><a href="/index"><img src="../../images/icon_2.png"></a></li>
             <li class="li_2">我的关注</li>
             <br style="clear: both;" />
         </ul>
     </div>
     <div class="myfocus" ng-repeat="myfocus in myfocus.rows">
-        <a ng-href="/compdet?companyId={{myfocus.companyId}}&sts=1">
+        <a ng-href="/compdet?id={{myfocus.companyId}}&sts=1">
         <ul>
             <p>{{myfocus.companyName}}</p>
             <li class="li_one"><img src="../../images/icon_3.png" style="width: 100%;"></li>

@@ -1,17 +1,21 @@
 <div class="mycenter_myfocus">
-     <div class="mycenter_header">
+    <div class="mycenter_header">
         <ul>
-            <li class="li_1"><a href="/index"><img src="../../images/icon_2.png"></a></li>
+            <li class="li_1">
+                <a href="/index"><img src="../../images/icon_2.png"></a>
+            </li>
             <li class="li_2">热门企业</li>
             <br style="clear: both;" />
         </ul>
     </div>
-    <div class="myfocus" onClick="window.location.href='/compdet'" style="cursor: pointer;"> 
+    <div class="myfocus">
         <ul ng-repeat="hotbusiness in hotbusiness.rows">
-             <p>{{hotbusiness.companyName}}</p>
-            <li class="li_one" style="width: 30%;"><img src="../../images/pic_6.png" style="width: 100%;"></li>
-            <li class="li_three">{{hotbusiness.focus}}人关注</li>
-            <div style="clear: both;"></div>
+            <a ng-href="/compdet?id={{hotbusiness.id}}">
+                <p>{{hotbusiness.companyName}}</p>
+                <li class="li_one" style="width: 30%;"><img src="../../images/pic_6.png" style="width: 100%;"></li>
+                <li class="li_three">{{hotbusiness.focus}}人关注</li>
+                <div style="clear: both;"></div>
+            </a>
         </ul>
     </div>
 </div>
