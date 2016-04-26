@@ -1,50 +1,40 @@
 <div class="shid">
-
-		<!-- <div class="header">
-		股东信息
-		<div class="leftjj" onclick="javascript :history.back(-1)"><img src="../../images/icon_2.png"></div>
-		<div class="rightwz"><a href="/errorcorrect">纠错</a></div>
-	   </div> -->
-
-       <div class="mycenter_header">
-	        <ul>
-	            <li class="li_1" onclick="javascript :history.back(-1)"><img src="../../images/icon_2.png"></li>
-	            <li class="li_2">股东信息</li>
-	            <li class="li_3"><a href="/errorcorrect">纠错</a></li>
-	            <br style="clear: both;" />
-	        </ul>
-        </div>
-
-
-	<div class="shid1">
-		<div class="shid11">
-<!--            ng-repeat="Shareholder in Shareholder.data.rows"-->
-			<div class="shid111">{{Shareholder.name}}</div>
-			<div class="shid112">事业法人</div>
-			<div class="shid113">
-				<div class="shid1131">
-					<div class="shid11311">出资时间</div>
-					<div class="shid11312">2008年03月21日</div>
-				</div>
-				<div class="shid1131">
-					<div class="shid11311">认缴出资额</div>
-					<div class="shid11312">2008.33万人民币</div>
-				</div>
-				<div class="shid1131">
-					<div class="shid11311">实缴时间</div>
-					<div class="shid11312">2008年03月21日</div>
-				</div>
-				<div class="shid1131">
-					<div class="shid11311">实缴出资额</div>
-					<div class="shid11312">2008.33万人民币</div>
-				</div>
-				<div class="shid1131">
-					<div class="shid11311">出资方式</div>
-					<div class="shid11312">货币</div>
-				</div>
+    <div class="mycenter_header">
+        <ul>
+            <li class="li_1" onclick="javascript :history.back(-1)"><img src="../../images/icon_2.png"></li>
+            <li class="li_2">股东信息详情</li>
+            <li class="li_3"><a href="/errorcorrect">纠错</a></li>
+            <br style="clear: both;" />
+        </ul>
+    </div>
+    <div class="shid1">
+        <div class="shid11">
+            <div class="shid111">{{holder.name}}</div>
+            <div class="shid112">事业法人</div>
+            <div class="shid113">
+                <div class="shid1131">
+                    <div class="shid11311">出资时间</div>
+                    <div class="shid11312">{{holder.subcribeTime}}</div>
+                </div>
+                <div class="shid1131">
+                    <div class="shid11311">认缴出资额</div>
+                    <div class="shid11312">{{holder.subcribe}}万人民币</div>
+                </div>
+                <div class="shid1131">
+                    <div class="shid11311">实缴时间</div>
+                    <div class="shid11312">{{holder.realSubcribeTime}}</div>
+                </div>
+                <div class="shid1131">
+                    <div class="shid11311">实缴出资额</div>
+                    <div class="shid11312">{{holder.realSubcribe}}万人民币</div>
+                </div>
+                <div class="shid1131">
+                    <div class="shid11311">出资方式</div>
+                    <div class="shid11312">{{holder.subcribeType}}</div>
+                </div>
                 <div style="clear:both;"></div>
-			</div>
-		</div>
-	</div>
+            </div>
+        </div>
+    </div>
     <div style="clear:both;"></div>
 </div>

@@ -195,9 +195,9 @@ define(['angular'], function (angular) {
                 templateUrl: '/templates/compinfo/reportdet/reportdetl.html',
             })
 
-                .when('/shareholderInfo',{
+                .when('/shareholderInfoDetail',{
                 templateUrl: '/templates/compinfo/shareholderinfo/shareholderinfod.html',
-                controller: 'ShareholderCtrl'
+                controller: 'ShareholderDetailCtrl'
             })
              // 修改用户头像
              .when('/userInfo',{

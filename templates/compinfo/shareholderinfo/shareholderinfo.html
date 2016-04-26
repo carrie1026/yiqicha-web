@@ -7,14 +7,16 @@
             <br style="clear: both;" />
         </ul>
     </div>
-    <div class="myfocus" onClick="window.location.href='/shareholderinfod'" ng-repeat="Shareholder in holders.rows">
-        <p>{{Shareholder.name}}</p>
-        <ul>
-            <li class="li_one"><img src="../../images/icon_3.png" style="width: 100%;"></li>
-            <li class="li_two">{{Shareholder.stockType}}</li>
-            <li class="li_three">{{Shareholder.recordStatus}}</li>
-            <br style="clear: both;" />
-        </ul>
+    <div class="myfocus" ng-repeat="Shareholder in holders.rows">
+        <a ng-href="/shareholderInfoDetail?name={{Shareholder.name}}&subcribeTime={{Shareholder.subcribeTime}}&&realSubcribeTime={{Shareholder.realSubcribeTime}}&subcribe={{Shareholder.subcribe}}&realSubcribe={{Shareholder.realSubcribe}}&subcribeType={{Shareholder.subcribeType}}">
+            <p>{{Shareholder.name}}</p>
+            <ul>
+                <li class="li_one"><img src="../../images/icon_3.png" style="width: 100%;"></li>
+                <li class="li_two">{{Shareholder.stockType}}</li>
+                <li class="li_three">{{Shareholder.recordStatus}}</li>
+                <br style="clear: both;" />
+            </ul>
+        </a>
     </div>
     <div ng-if="0 == holders.rows.length">
         暂无股东信息

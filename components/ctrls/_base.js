@@ -30,5 +30,6 @@ define([
     'hotbusinessCtrl',
     'indexCtrl',
     'businessMapCtrl',
-    'shiXinDetailsCtrl'
+    'shiXinDetailsCtrl',
+    'shareholderDetailCtrl'
 ]);
