@@ -7,11 +7,11 @@ define(['./mod'], function (mod) {
             ErrorService.Errortype(key).then(function(data){
                 $scope.Errortype = data.data;
                 console.log($scope.Errortype);
-                console.log($scope.Errortype[0].dictName);
             })
-            
+            var num = 1;
+            console.log(num);
             $scope.subError = function(){ 
-                $scope.ErrorFormData.errorParts = $scope.Errortype[0].dictName;
+                $scope.ErrorFormData.errorParts = $scope.Errortype[num].dictName;
                 console.log( $scope.ErrorFormData.errorParts);
             }
        

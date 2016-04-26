@@ -14,14 +14,14 @@
 	            <br style="clear: both;" />
 	        </ul>
         </div>
-	<div class="changer1">
+	<div class="changer1" ng-repeat="changeRecord in changeRecord.rows">
 		<div class="changer11">
 			<div class="changer111">
 				<div class="changer1111"><div class="changer11111"></div></div>
 				<div class="changer1112">
 					<div class="changer11121">
-						<div class="changer111211">{{data.editTime}}</div>
-						<div class="changer111212">法定代表人</div>
+						<div class="changer111211">{{changeRecord.editTime}}</div>
+						<div class="changer111212">{{changeRecord.editType}}</div>
 					</div>
 					<div class="changer11122">
 						<div class="changer111221">
@@ -42,18 +42,18 @@
 				<div class="changer1111"><div class="changer11111"></div></div>
 				<div class="changer1112">
 					<div class="changer11121">
-						<div class="changer111211">2015年04月21日</div>
+						<div class="changer111211">{{changeRecord.editTime}}</div>
 						<div class="changer111212">经营范围</div>
 					</div>
 					<div class="changer11122">
 						<div class="changer111221" style="min-height:210px">
 							<div class="changer1112211 bdr">
 								<div class="changer11122111">变更前</div>
-								<div class="changer11122112">变更前变更前变更前变更前变更前变更前变更前变更前变更前变更前</div>
+								<div class="changer11122112">{{changeRecord.beforeEdit}}</div>
 							</div>
 							<div class="changer1112211">
 								<div class="changer11122111 mgl15">变更前</div>
-								<div class="changer11122112 mgl15">变更前变更前变更前变更前变更前变更前变更前变更前变更前变</div>
+								<div class="changer11122112 mgl15">{{changeRecord.beforeEdit}}</div>
 							</div>
 						</div>
 					</div>
@@ -64,8 +64,8 @@
 				<div class="changer1111"><div class="changer11111"></div></div>
 				<div class="changer1112">
 					<div class="changer11121">
-						<div class="changer111211">2015年04月21日</div>
-						<div class="changer111212">法定代表人</div>
+						<div class="changer111211">{{changeRecord.editTime}}</div>
+						<div class="changer111212">{{changeRecord.editType}}</div>
 					</div>
 					<div class="changer11122">
 						<div class="changer111221">

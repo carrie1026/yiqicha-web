@@ -110,7 +110,7 @@
 		<div class="compdet121">
 			<div class="compdet1211 bdrw">
 				<div class="compdet12111">法定代表人</div>
-				<div class="compdet12112">容令坤</div>
+				<div class="compdet12112">{{compdet.legalRepPersion}}</div>
 			</div>
 			<div class="compdet1211 bdrw">
 				<div class="compdet12111">注册资金</div>
@@ -118,7 +118,7 @@
 			</div>
 			<div class="compdet1211">
 				<div class="compdet12111">成立日期</div>
-				<div class="compdet12112">2016-06-25</div>
+				<div class="compdet12112">{{compdet.companyCreatTime}}</div>
 			</div>
 		</div>
 	</div>
@@ -229,8 +229,8 @@
 					</div>
 					<div class="compdet14112">主要成员</div>
 				</div>
-			</a>
-			<a href="/changeRecord">
+			</a> 
+			<a ng-href="/changeRecord?companyId={{companyId}}">
 				<div class="compdet1411">
 					<div class="compdet14111">
 						<img src="../../../images/bgjl@3x.png" />

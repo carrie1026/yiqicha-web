@@ -10,6 +10,7 @@ define(['./mod'], function(mod) {
         // 股东信息
         var compdeted = $location.search();
         var id = compdeted.id;
+        console.log(compdeted);
         var companyId = compdeted.id || compdeted.companyId;
         $scope.companyId = id;
 
