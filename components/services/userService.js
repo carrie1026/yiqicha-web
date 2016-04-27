@@ -116,11 +116,12 @@ mod.factory('UserService', ['$http', '$q','$interval','$$http', function($http, 
 
 //查询诉讼信息 服务
 .factory('LitigationService', ['$http', '$q', function($http, $q) {
-    var Litigation = function(page,rows) {
+    var Litigation = function(page,rows, companyId) {
         var defer = $q.defer();
         $http.post('/yiqicha/companyInfo/findLawsuitMsg.do',{
            page:page,
-           rows:rows
+           rows:rows,
+           companyId: companyId
         }).success(function(data) {
             if (isRequestSuccess(data)) {
                 defer.resolve(data);
