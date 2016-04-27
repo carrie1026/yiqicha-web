@@ -8,9 +8,9 @@
 		</ul>
 	</div>
 	<div class="investa1">
-		<div>
-			<a href="/reportdetl">
-				<div class="investa11" ng-repeat="reportdet in Reportdet.rows">
+		<div ng-repeat="reportdet in Reportdet.rows">
+			<a href="/reportdetl?companyId={{companyId}}&reportId={{reportdet.id}}">
+				<div class="investa11">
 					<div class="investa111">{{reportdet.year}}年年报</div>
 					<div class="investa112">
 						<div class="investa1121 fl nbbg"></div>
