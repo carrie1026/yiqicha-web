@@ -41,14 +41,11 @@ define(['./mod'], function(mod) {
 
         this.findStockMsg = function(page, rows, isPush, companyId) {
             var defer = $q.defer();
-            var param = {
+            $$http.get(findStockMsgUrl, {
                 page: page,
-                rows: rows
-            };
-            if (companyId) {
-                param.companyId = companyId;
-            }
-            $$http.get(findStockMsgUrl, param).then(function(data) {
+                rows: rows,
+                companyId: companyId
+            }).then(function(data) {
                 if (!stockMsgList || !isPush) {
                     stockMsgList = data;
                 } else { // push
