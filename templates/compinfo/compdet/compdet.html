@@ -129,9 +129,11 @@
 
 	<div class="compdet13">
 		<div class="compdet131">
-			<div class="compdet1311 fl"><img src="../../../images/address@2x.png"></div>
-			<div class="compdet1312 fl">{{compdet.address}}</div>
-			<div class="compdet1313 fl"><img src="../../images/icon_1.png" /></div>
+			<a ng-href="/amap?longitude={{compdet.longitude}}&latitude={{compdet.latitude}}&companyName={{compdet.companyName}}&companyAddress={{compdet.address}}">
+				<div class="compdet1311 fl"><img src="../../../images/address@2x.png"></div>
+				<div class="compdet1312 fl">{{compdet.address}}</div>
+				<div class="compdet1313 fl"><img src="../../images/icon_1.png" /></div>
+			</a>
 		</div>
 	</div>
 
