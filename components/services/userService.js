@@ -140,7 +140,7 @@ mod.factory('UserService', ['$http', '$q','$interval','$$http', function($http, 
 .factory('LitigationdeService', ['$http', '$q', function($http, $q) {
     var Litigationde = function(id) {
         var defer = $q.defer();
-        $http.post('/yiqicha/companyInfo/findLawsuitMsgById.do',id).success(function(data) {
+        $http.post('/yiqicha/companyInfo/findLawsuitMsgById.do',{id: id}).success(function(data) {
             if (isRequestSuccess(data)) {
                 defer.resolve(data);
             } else {

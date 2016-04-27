@@ -1,60 +1,55 @@
-	<div class="investa">
-		<!-- <div class="header">
-		诉讼信息
-		<div class="leftjj" onclick="javascript :history.back(-1)"><img src="../../images/icon_2.png"></div>
-		<div class="rightwz"></div>
-		</div> -->
-
-        <div class="mycenter_header">
-	        <ul>
-	            <li class="li_1" onclick="javascript :history.back(-1)"><img src="../../images/icon_2.png"></li>
-	            <li class="li_2">诉讼信息</li>
-	            <br style="clear: both;" />
-	        </ul>
-        </div>
-
-
-
-
-		<div class="liti" ng-if="litinfodde != null">
-			<div class="liti1">
-				<div class="liti11">
-					<div class="liti111">被执行人姓名/名称</div><div class="liti112">郑荣德</div>
-				</div>
-			</div>
-			<div class="liti2"></div>
-			<div class="liti1">
-				<div class="liti11">
-					<div class="liti111">身份证号码/组织机构代码</div><div class="liti112">郑荣德</div>
-				</div>
-			</div>
-			<div class="liti2"></div>
-			<div class="liti1">
-				<div class="liti11">
-					<div class="liti111">执行法院</div><div class="liti112">郑荣德</div>
-				</div>
-			</div>
-			<div class="liti2"></div>
-			<div class="liti1">
-				<div class="liti11">
-					<div class="liti111">立案时间</div><div class="liti112">郑荣德</div>
-				</div>
-			</div>
-			<div class="liti2"></div>
-			<div class="liti1">
-				<div class="liti11">
-					<div class="liti111">案号</div><div class="liti112">郑荣德</div>
-				</div>
-			</div>
-            <div class="liti2"></div>
-			<div class="liti1">
-				<div class="liti11">
-					<div class="liti111">执行标的</div><div class="liti112">郑荣德</div>
-				</div>
+<div class="investa">
+	<div class="mycenter_header">
+		<ul>
+			<li class="li_1" onclick="javascript :history.back(-1)"><img src="../../images/icon_2.png"></li>
+			<li class="li_2">诉讼信息</li>
+			<br style="clear: both;" />
+		</ul>
+	</div>
+	<div class="liti" ng-if="litinfodde">
+		<div class="liti1">
+			<div class="liti11">
+				<div class="liti111">被执行人姓名/名称</div>
+				<div class="liti112">{{litinfodde.name}}</div>
 			</div>
 		</div>
-        <div ng-if="litinfodde == null" style="padding:20px 0 20px 40%;">
-         暂无内容
-       </div>
-
+		<div class="liti2"></div>
+		<div class="liti1">
+			<div class="liti11">
+				<div class="liti111">身份证号码/组织机构代码</div>
+				<div class="liti112">{{litinfodde.cardNo}}</div>
+			</div>
+		</div>
+		<div class="liti2"></div>
+		<div class="liti1">
+			<div class="liti11">
+				<div class="liti111">执行法院</div>
+				<div class="liti112">{{litinfodde.court}}</div>
+			</div>
+		</div>
+		<div class="liti2"></div>
+		<div class="liti1">
+			<div class="liti11">
+				<div class="liti111">立案时间</div>
+				<div class="liti112">{{litinfodde.registrineTime}}</div>
+			</div>
+		</div>
+		<div class="liti2"></div>
+		<div class="liti1">
+			<div class="liti11">
+				<div class="liti111">案号</div>
+				<div class="liti112">{{litinfodde.caseNo}}</div>
+			</div>
+		</div>
+		<div class="liti2"></div>
+		<div class="liti1">
+			<div class="liti11">
+				<div class="liti111">执行标的</div>
+				<div class="liti112">{{litinfodde.zxbd}}</div>
+			</div>
+		</div>
 	</div>
+	<div ng-if="!litinfodde" style="padding:20px 0 20px 40%;">
+		暂无内容
+	</div>
+</div>
