@@ -228,7 +228,8 @@ define(['angular'], function (angular) {
                 controller: 'businessMapCtrl'
              })
              .when('/amap', {
-                 templateUrl: 'templates/common/amap.html'
+                 templateUrl: 'templates/common/amap.html',
+                 controller: 'AMapCtrl'
              })
             // 默认路由-首页
             .otherwise({
