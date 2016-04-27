@@ -8,10 +8,9 @@ define(['./mod'], function(mod) {
     mod.controller('ShiXinDetailsCtrl', ['$location', '$scope', 'SearchPeopleService',
         function($location, $scope, SearchPeopleService) {
             var iname = $location.search().iname;
-            SearchPeopleService.findOccupationList(iname).then(function(data) {
+            SearchPeopleService.findOccupationList('', '', false, iname).then(function(data) {
                 if (data.rows.length > 0) {
                     $scope.occ = data.rows[0];
-                    console.log($scope.occ);
                 }
             });
         }
