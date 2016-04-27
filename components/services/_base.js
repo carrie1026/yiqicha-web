@@ -10,5 +10,6 @@ define([
     'searchPeopleService',
     'echartsService',
     'businessMapService',
-    'annualReportService'
+    'annualReportService',
+    'jobService'
 ]);

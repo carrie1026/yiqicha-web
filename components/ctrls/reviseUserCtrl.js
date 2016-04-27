@@ -1,7 +1,8 @@
-define(['./mod'], function (mod) {
+define(['./mod'], function(mod) {
     'use strict';
-    mod.controller('reviseUserCtrl', ['$scope', '$location', 'reviseUserService','$rootScope', 'UserService', function($scope, $location, reviseUserService,$rootScope, UserService) {
-        // init registerFormData
+    mod.controller('reviseUserCtrl', ['$scope', '$location', 'reviseUserService', '$rootScope', 'UserService', 'JobService',
+        function($scope, $location, reviseUserService, $rootScope, UserService, JobService) {
+            // init registerFormData
             $scope.reviseUserFormData = {};
             UserService.findUserInfo().then(function(data) {
                 $scope.user = data;
@@ -9,6 +10,12 @@ define(['./mod'], function (mod) {
                 $scope.reviseUserFormData.companyName = data.companyName;
                 $scope.reviseUserFormData.job = data.job;
             });
+
+            $scope.loadJob = function(id) {
+                JobService.jobList(id).then(function(data) {
+                    $scope.jobList = data;
+                })
+            };
 
             $scope.submitBtn = function() {
                 if (!$scope.reviseUserFormData.name || $scope.reviseUserFormData.name.length == 0) {
@@ -23,5 +30,8 @@ define(['./mod'], function (mod) {
 
                 });
             };
-      }])
+
+            $scope.loadJob();
+        }
+    ])
 });
