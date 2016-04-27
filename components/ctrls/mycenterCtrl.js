@@ -19,7 +19,7 @@ define(['./mod'], function(mod) {
         var accountId = 1;
         myfocusService.myfocus(page,rows,accountId).then(function(data){
             $scope.myfocus = data.data;
-            console.log($scope.myfocus);
+//            console.log($scope.myfocus);
         });  
 
         $scope.$watch('companyName', function(newValue, oldValue) {
