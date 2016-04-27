@@ -12,7 +12,7 @@ define(['./mod'], function(mod) {
         };
         hotbusinessService.hotbusiness().then(function(data){
             $scope.hotbusiness = data.data;
-//            console.log($scope.hotbusiness);
+            console.log($scope.hotbusiness);
         })
         var page = 1;
         var rows = 3;

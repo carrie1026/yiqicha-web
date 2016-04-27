@@ -8,14 +8,14 @@ define(['./mod'], function (mod) {
                 $scope.Errortype = data.data;
                 console.log($scope.Errortype);
             })
-            var num = 1;
-            $scope.className = true;
-            $scope.subError = function(){ 
-//                $scope.className = false;
-                $scope.ErrorFormData.errorParts = $scope.Errortype[num].dictName;
-                console.log( $scope.ErrorFormData.errorParts);
-                
-            }
+            var selected = $scope.selected;
+            console.log(selected);
+            console.log(123);
+//            $scope.subError = function(){ 
+//                $scope.ErrorFormData.errorParts = $scope.Errortype[num].dictName;
+//                console.log( $scope.ErrorFormData.errorParts);
+//                
+//            }
        
             $scope.submitBtn = function() {
                 console.log($scope.ErrorFormData);

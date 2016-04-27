@@ -12,8 +12,10 @@
 		<div class="compdet2">
 			<div class="compdet21">选择信息有误的部分</div>
 			<div class="compdet22">
-				<div class="mgrb2" ng-class="{true:'compdet221',false:'compdetcur'}[className]" ng-repeat="Errortype in Errortype" ng-model="ErrorFormData.errorParts" ng-click="subError(num)">
-                     {{Errortype.dictName}}
+                
+				<div ng-repeat="Errortype in Errortype">
+                    <p class="mgrb2 compdet221" ng-class="{compdetcur: selected == Errortype.dictName}"  ng-click="selected = Errortype.dictName">{{Errortype.dictName}}</p>
+                    <p>{{selected}}</p>
                 </div>
                 <div class="clear"></div>
 			</div>
