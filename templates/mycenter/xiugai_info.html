@@ -18,7 +18,8 @@
 <!--            <input type="text" placeholder="修改密码" disabled="true" style="padding-left:10px;" />-->
             <input type="text" placeholder="姓名" style="padding-left:10px;" ng-model="reviseUserFormData.name" />
             <input type="text" placeholder="公司名称" style="padding-left:10px;" ng-model="reviseUserFormData.companyName"/>
-            <input type="text" placeholder="职业" style="padding-left:10px;" ng-model="reviseUserFormData.job"/>
+            <!-- <input type="text" placeholder="职业" style="padding-left:10px;" ng-model="reviseUserFormData.job"/> -->
+            <select ng-model="reviseUserFormData.job" style="padding-left:10px;" ng-options="job.occupationName as job.occupationName for job in jobList.rows"></select>
         </form>
 <!--
         <a href="/job">

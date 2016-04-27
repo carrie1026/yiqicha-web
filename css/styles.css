@@ -116,8 +116,8 @@ a:hover{
 }
 
 /*=====01首页=====*/
-.mycenter_home{ 
-	width:100%; 
+.mycenter_home{
+	width:100%;
 }
 .myhome_ban{
 	width: 100%;
@@ -176,7 +176,7 @@ a:hover{
 .mycenter_home .myhome_ban p i{
         position: relative;
     }
-.mycenter_home .myhome_ban p em{ 
+.mycenter_home .myhome_ban p em{
         position: absolute;
        top: 125px;
 
@@ -284,7 +284,7 @@ a:hover{
 	height: 11px;
 	display: inline-block;
 }
-.mycenter_home .myhome_con1 ul.ul_two li.li_two span em{	
+.mycenter_home .myhome_con1 ul.ul_two li.li_two span em{
 	color: #fff;
 	background: url(../../images/xiaoxi-2@3x.png) no-repeat;
 	background-size: 68px 68px;
@@ -370,7 +370,7 @@ a:hover{
 	width: 100%;
 	height: 100%;
     background: #fff;
-    
+
 }
 .mycenter_questions .questions1{
 	padding: 0 5%;
@@ -383,7 +383,7 @@ a:hover{
 	line-height: 40px;
 	color: #fe821e;
 	font-size:14px;
-	
+
 }
 .mycenter_questions .questions1 p.p_2{
 	color: #a1a1a1；
@@ -623,7 +623,7 @@ a{
 .mycenter_xiugaiinfo .xiugai_info{
 	width: 100%;
 }
-.mycenter_xiugaiinfo .xiugai_info input{
+.mycenter_xiugaiinfo .xiugai_info input, .mycenter_xiugaiinfo .xiugai_info select{
 	width: 95%;
 	float: right;
 	height: 45px;
@@ -757,7 +757,7 @@ a{
 }
 .shixinbs_con1 ul li{
 	line-height: 250%;
-	
+
 }
 .shixinbs_con1 ul p{
 	color: #3c3c3c;
@@ -1057,7 +1057,7 @@ a{
 	width: 86%;
 	height: 30px;
 	line-height: 30px;
-	background: #fff; 
+	background: #fff;
 	color: #3c3c3c;
 	font-size: 14px;
 	border-radius: 3px;
@@ -1079,7 +1079,7 @@ a{
 .search_header ul li.li_one img{
 	width: 13px;
 	height: 13px;
-	display: inline-block;	
+	display: inline-block;
 }
 .search_header ul li.li_two input{
 	width: 100%;
@@ -1163,7 +1163,7 @@ a{
 	width: 12px;
 	height: 7px;
 	display: inline-block;
-	
+
 }
 
 
@@ -1201,7 +1201,7 @@ a{
 	height: 7px;
 	display: inline-block;
 	margin: -3px 0 0 0;
-	
+
 }
 /*筛选法人股东     用的是筛选地区的样式*/
  .searcharea_con p em{
@@ -1406,12 +1406,12 @@ a{
 .law_book .lawbook_con3{
 	width: 100%;
 	float: right;
-	text-align: right;	
+	text-align: right;
 	background: #fff;
 	padding: 0 10% 20px 0;
 }
 .law_book .lawbook_con3 p.p_2{
-	margin:25px 0 0 0; 
+	margin:25px 0 0 0;
 }
 
 /*失信详情*/
@@ -1493,5 +1493,3 @@ a{
 	height: 14px;
 	background-size: 50% 50%;
 }
-
-
