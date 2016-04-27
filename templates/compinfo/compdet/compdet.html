@@ -99,10 +99,10 @@
 		<div class="compdet112">
 			<img src="../../../images/starjudge.png" />
 		</div>
-		<div class="compdet113" ng-if="isAlreadyFocus==false">
+		<div class="compdet113" ng-if="0 == compdet.sts">
 			<a href="#" ng-click="addMyAttention()">关注</a>
 		</div>
-		<div class="compdet113" ng-if="isAlreadyFocus==true">
+		<div class="compdet113" ng-if="1 == compdet.sts">
 			<a href="#" ng-click="removeMyAttention()">取消关注</a>
 		</div>
 		<div class="compdet114">
@@ -233,7 +233,7 @@
 					</div>
 					<div class="compdet14112">主要成员</div>
 				</div>
-			</a> 
+			</a>
 			<a ng-href="/changeRecord?companyId={{companyId}}">
 				<div class="compdet1411">
 					<div class="compdet14111">

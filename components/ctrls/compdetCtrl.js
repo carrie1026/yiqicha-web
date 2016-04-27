@@ -10,26 +10,19 @@ define(['./mod'], function(mod) {
         // 股东信息
         var compdeted = $location.search();
         var id = compdeted.id;
-        console.log(compdeted);
         var companyId = compdeted.id || compdeted.companyId;
         $scope.companyId = id;
 
-        var sts = compdeted.sts;
-        if (sts == 1 || sts == "1") {
-            $scope.isAlreadyFocus = true;
-        }
         compdetService.compdet(id).then(function(data) {
             $scope.compdet = data.data;
             $scope.industryId = data.data.industry;
-            console.log($scope.compdet);
         });
 
         // 添加关注
         $scope.addMyAttention = function() {
             if ($rootScope.userInfo) {
                 compdetService.addMyAttention(companyId).then(function(data) {
-                    $scope.isAlreadyFocus = true;
-                    console.log(data);
+                    $scope.compdet.sts = 1;
                 });
             } else {
                 var path = $location.path();
@@ -44,8 +37,7 @@ define(['./mod'], function(mod) {
         // 取消关注
         $scope.removeMyAttention = function() {
             compdetService.removeMyAttention(companyId).then(function(data) {
-                $scope.isAlreadyFocus = false;
-                console.log(data);
+                $scope.compdet.sts = 0;
             });
         };
     }])
