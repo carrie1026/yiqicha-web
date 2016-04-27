@@ -33,8 +33,12 @@ define(['./mod'], function(mod) {
                 }
             };
 
-            var loadShixinList = function(isPush, name, address) {
-
+            var loadShixinList = function(isPush, iname, areaname) {
+                if (iname) {
+                    SearchPeopleService.findOccupationList(shixinPage, rows, isPush, iname, areaname).then(function(data) {
+                        $scope.shixinList = data;
+                    });
+                }
             };
 
             // on search
