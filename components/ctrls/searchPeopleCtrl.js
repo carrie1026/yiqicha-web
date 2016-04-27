@@ -55,7 +55,7 @@ define(['./mod'], function(mod) {
 
             // watch search box
             $scope.$watch('searchBox', function(newValue, oldValue) {
-                if ('qiye' == $scope.type && '' == newValue) {// reset qiye search 
+                if ('qiye' == $scope.type && '' == newValue) {// reset qiye search
                     search(newValue, $scope.address);
                     return;
                 }
@@ -64,6 +64,10 @@ define(['./mod'], function(mod) {
                     return;
 
                 search(newValue, $scope.address);
+            });
+            // watch address
+            $scope.$watch('address', function(newValue, oldValue) {
+                $scope.isShowArea = false;
             });
 
             // load more btn

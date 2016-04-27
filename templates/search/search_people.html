@@ -25,13 +25,58 @@
             <li ng-class="{current: 'faren' == type}" ng-click="type='faren';searchBox=''">法人/股东</li>
             <li ng-class="{current: 'shixin' == type}" ng-click="type='shixin';searchBox=''">失信</li>
         </ul>
+        <h1 ng-click="isShowArea = !isShowArea">
+            搜索范围：
+            <span ng-show="!address">全国</span>
+            <span>{{address}}</span>
+            <em>
+                <img src="../../images/pic_3.png" ng-show="!isShowArea">
+                <img src="../../images/icon_5.png" ng-show="isShowArea">
+            </em>
+        </h1>
+        <div class="searcharea_con1" ng-show="isShowArea">
+            <p ng-click="address = ''"> 全国</p>
+            <p ng-click="address = '北京'"> 北京</p>
+            <p ng-click="address = '天津'"> 天津</p>
+            <p ng-click="address = '上海'"> 上海</p>
+            <p ng-click="address = '重庆'"> 重庆</p>
+            <p ng-click="address = '河北'"> 河北</p>
+            <p ng-click="address = '河南'"> 河南</p>
+            <p ng-click="address = '云南'"> 云南</p>
+            <p ng-click="address = '辽宁'"> 辽宁</p>
+            <p ng-click="address = '黑龙江'"> 黑龙江</p>
+            <p ng-click="address = '湖南'"> 湖南</p>
+            <p ng-click="address = '安徽'"> 安徽</p>
+            <p ng-click="address = '山东'"> 山东</p>
+            <p ng-click="address = '新疆维吾尔'"> 新疆维吾尔</p>
+            <p ng-click="address = '江苏'"> 江苏</p>
+            <p ng-click="address = '浙江'"> 浙江</p>
+            <p ng-click="address = '江西'"> 江西</p>
+            <p ng-click="address = '湖北'"> 湖北</p>
+            <p ng-click="address = '广西'"> 广西</p>
+            <p ng-click="address = '甘肃'"> 甘肃</p>
+            <p ng-click="address = '山西'"> 山西</p>
+            <p ng-click="address = '内蒙古'"> 内蒙古</p>
+            <p ng-click="address = '陕西'"> 陕西</p>
+            <p ng-click="address = '吉林'"> 吉林</p>
+            <p ng-click="address = '福建'"> 福建</p>
+            <p ng-click="address = '贵州'"> 贵州</p>
+            <p ng-click="address = '广东'"> 广东</p>
+            <p ng-click="address = '青海'"> 青海</p>
+            <p ng-click="address = '西藏'"> 西藏</p>
+            <p ng-click="address = '四川'"> 四川</p>
+            <p ng-click="address = '宁夏'"> 宁夏</p>
+            <p ng-click="address = '海南'"> 海南</p>
+            <p ng-click="address = '台湾'"> 台湾</p>
+            <p ng-click="address = '香港'"> 香港</p>
+            <p ng-click="address = '澳门'"> 澳门</p>
+        </div>
     </div>
     <!-- e: Tabs -->
 
     <!-- s: qiye -->
     <div class="search_pre searchbusiness_con1" ng-if="'qiye' == type">
 <!--        onClick="window.location.href='/search_area'"-->
-        <h1 >搜索范围：<span>全国</span><em><img src="../../images/pic_3.png"></em></h1>
         <ul ng-repeat="qiye in qiyeList.rows">
             <a ng-href="/compdet?id={{qiye.id}}&sts={{qiye.sts}}">
                 <p>{{qiye.companyName}}</p>
@@ -56,7 +101,6 @@
 
     <!-- s: faren/gudong -->
     <div class="search_pre searchpeople_con1" ng-if="'faren' == type">
-        <h1 onClick="window.location.href='/search_area'">搜索范围：<span>全国</span><em><i>搜索信息过多，请按地区筛选</i><img src="../../images/pic_3.png"></em></h1>
         <ul ng-repeat="Shareholder in stockMsgList.rows">
             <a href="/shareholderinfo">
                 <p>{{Shareholder.name}}</p>
@@ -78,7 +122,6 @@
 
     <!-- s: shixin -->
     <div class="search_pre shixinbs_con1" ng-if="'shixin' == type">
-        <h1 onClick="window.location.href='/search_area'">搜索范围：<span>全国</span><em><img src="../../images/pic_3.png"></em></h1>
         <ul ng-repeat="dishonesty in occupationList.rows">
             <a href="/shixin_details">
                 <p>{{dishonesty.iname}}</p>
