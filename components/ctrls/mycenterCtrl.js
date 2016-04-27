@@ -12,14 +12,14 @@ define(['./mod'], function(mod) {
         };
         hotbusinessService.hotbusiness().then(function(data){
             $scope.hotbusiness = data.data;
-            console.log($scope.hotbusiness);
+//            console.log($scope.hotbusiness);
         })
         var page = 1;
-        var rows = 1;
+        var rows = 3;
         var accountId = 1;
         myfocusService.myfocus(page,rows,accountId).then(function(data){
             $scope.myfocus = data.data;
-//            console.log($scope.myfocus);
+            console.log($scope.myfocus);
         });  
 
         $scope.$watch('companyName', function(newValue, oldValue) {

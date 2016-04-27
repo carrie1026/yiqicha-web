@@ -6,6 +6,7 @@ require.config({
         angularRoute: 'lib/angular/angular-route.min',
         ngFileUpload: 'lib/ng-file-upload/ng-file-upload',
         jquery: 'lib/jquery/jquery.min',
+        jquerySlide: 'lib/lunbo/jquery.SuperSlide.2.1.1',
         layer: 'lib/layer/layer',
         twitterBootstrap: 'lib/bootstrap/bootstrap.min',
         mobileAngularUi:'lib/angular/mobile-angular-ui.min',
@@ -21,6 +22,7 @@ require.config({
         angularRoute: ['angular'],
         ngFileUpload: ['angular'],
         mobileAngularUi: ['angular'],
+        jquerySlide: ['jquery'],
         layer: {
             deps: ['jquery'],
             exports: 'layer'

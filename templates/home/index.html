@@ -5,6 +5,11 @@
 .mt-number-animate .mt-number-animate-dom{ width: 20px;/*设置单个数字宽度*/ text-align: center; float: left; position: relative; top: 0;}
 .mt-number-animate .mt-number-animate-dom .mt-number-animate-span{ width: 100%; float: left;}
 </style>
+<style type="text/css">
+.slideBox{ width:100%;height:80px; overflow:hidden; position:relative; border:1px solid #ddd;  }
+.slideBox .bd{ position:relative; height:100%; z-index:0;   }
+.slideBox .bd li{ zoom:1; vertical-align:middle;}
+</style>
 <div class="index">
         <div class="index_top">
             <div class="index_topde">
@@ -75,23 +80,33 @@
             <div class="clear"></div>
         </a>
         </div>
-        <div id="myfocus" onmouseover=iScrollAmount=0 style="overflow: hidden;background-color:#fff;height:80px;" onmouseout=iScrollAmount=1>
-            <div class="index_followde" ng-repeat="myfocus in myfocus.rows">
-                <a ng-href="/compdet?id={{myfocus.companyId}}&sts=1">
-                <div class="index23121">{{myfocus.companyName}}</div>
-                <div class="index23122">
-                    <div class="index231221">
-                        <div class="index2312211"><img src="/images/company_list@2x.png" height="20px" /></div>
-                        <div class="index2312212">公司法人：{{myfocus.repPersion}}</div>
+        <div id="slideBox" class="slideBox" style="overflow:hidden;background-color:#fff;height:80px;">
+            <div class="index_followde bd" >
+                <ul> 
+                    <li ng-repeat="myfocus in myfocus.rows" style="height:80px;">
+                        <a ng-href="/compdet?id={{myfocus.companyId}}&sts=1">
+                        <div class="index23121">{{myfocus.companyName}}</div>
+                        <div class="index23122">
+                            <div class="index231221">
+                                <div class="index2312211"><img src="/images/company_list@2x.png" height="20px" /></div>
+                                <div class="index2312212">公司法人：{{myfocus.repPersion}}</div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="index231222">{{myfocus.recordStatus}}</div>
+                            <div class="clear"></div>
+                        </div>
                         <div class="clear"></div>
-                    </div>
-                    <div class="index231222">{{myfocus.recordStatus}}</div>
+                        </a>
+                    </li>
                     <div class="clear"></div>
-                </div>
-                </a>
+                </ul>
                 <div class="clear"></div>
+                
             </div>
         </div>
+       <script type="text/javascript">
+        jQuery(".slideBox").slide({mainCell:".bd ul",effect:"topLoop",autoPlay:true,delayTime:2000});
+        </script>
         <a href="/hot_business">
         <div class="index_follow" >
 
@@ -101,26 +116,36 @@
         </div>
         </a>
 
-        <div id="scroll" style="overflow:hidden;background-color:#fff;height:80px;">
-            <div class="index_followde" ng-repeat="hotbusiness in hotbusiness.rows">
-                <a  ng-href="/compdet?id={{hotbusiness.id}}">
-                <div class="index2312">
-                    <div class="index23121">{{hotbusiness.companyName}}</div>
-                    <div class="index23122">
-                        <div class="index231221">
-                            <div class="index231223"><img src="../../images/starjudge.png"></div>
-                         </div>
-                        <div class="index231222">
-                            <span class="co">{{hotbusiness.focus}}</span>人关注
+        <div class="picMarquee-top" style="overflow:hidden;background-color:#fff;height:80px;">
+            <div class="index_followde bd">
+                <ul>
+                    <li ng-repeat="hotbusiness in hotbusiness.rows">
+                        <a  ng-href="/compdet?id={{hotbusiness.id}}">
+                        <div class="index2312">
+                            <div class="index23121">{{hotbusiness.companyName}}</div>
+                            <div class="index23122">
+                                <div class="index231221">
+                                    <div class="index231223"><img src="../../images/starjudge.png"></div>
+                                 </div>
+                                <div class="index231222">
+                                    <span class="co">{{hotbusiness.focus}}</span>人关注
+                                </div>
+                                <div style="clear:both;"></div>
+                            </div>
+                            <div style="clear:both;"></div>
                         </div>
                         <div style="clear:both;"></div>
-                    </div>
-                </div>
-                </a>
+                        </a>
+                    </li>
+                    <div class="clear"></div>
+                </ul>
             </div>
         </div>
+        <script type="text/javascript">
+		jQuery(".picMarquee-top").slide({mainCell:".bd ul",autoPlay:true,effect:"topMarquee",vis:1,interTime:50});
+		</script>
 
-        <div id="scroll2" style="display:none;"></div>
+<!--        <div id="scroll2" style="display:none;"></div>-->
 
       <!--
         <div class="index_follow">
@@ -146,6 +171,7 @@
 
 
 </div>
+<!--
 <script type="text/javascript">
 var oMarquee = document.getElementById("myfocus"); //滚动对象
 var iLineHeight = 80; //单行高度，像素
@@ -155,9 +181,45 @@ function run() { oMarquee.scrollTop += iScrollAmount; if ( oMarquee.scrollTop ==
                 if ( oMarquee.scrollTop % iLineHeight == 0 ) { window.setTimeout( "run()", 3500 ); }
                 else { window.setTimeout( "run()", 10 ); } } oMarquee.innerHTML += oMarquee.innerHTML; window.setTimeout( "run()", 3500 );
 </script>
-
+-->
+<!--
+<script type="text/javascript">  
+    function startmarquee(lh, speed, delay) {  
+        var t;  
+        var oHeight = 80;/** div的高度 **/　  
+        var p = false;  
+        var o = document.getElementById("show");  
+        var preTop = 0;  
+        o.scrollTop = 0;  
+        function start() {  
+            t = setInterval(scrolling, speed);  
+            o.scrollTop += 1;  
+        }  
+        function scrolling() {  
+            if (o.scrollTop % lh != 0  
+                    && o.scrollTop % (o.scrollHeight - oHeight - 1) != 0) {  
+                preTop = o.scrollTop;  
+                o.scrollTop += 1;  
+                if (preTop >= o.scrollHeight || preTop == o.scrollTop) {  
+                    o.scrollTop = 0;  
+                }  
+            } else {  
+                clearInterval(t);  
+                setTimeout(start, delay);  
+            }  
+        }  
+        setTimeout(start, delay);  
+    }  
+    window.onload=function(){  
+        /**startmarquee(一次滚动高度,速度,停留时间);**/　　  
+        startmarquee(80, 20, 1500);  
+    }  
+  
+</script> 
+-->
+<!--
 <script type="text/javascript">
-    var scrollDelay=10;//数字越大速度越慢
+    var scrollDelay=10;数字越大速度越慢
     var Scroll=document.getElementById("scroll");
     var Scroll2=document.getElementById("scroll2");
     var currentTop=0,preTop=0,stoptime=0,stopscroll=false;
@@ -196,11 +258,13 @@ function run() { oMarquee.scrollTop += iScrollAmount; if ( oMarquee.scrollTop ==
     }
     window.setTimeout("Int_Scroll()",5000);
 </script>
+-->
+<!--
 <script>
 /**
 *  by Mantou qq:676015863
 *  数字滚动插件 v1.0
-*/
+
 ;(function($) {
   $.fn.numberAnimate = function(setting) {
     var defaults = {
@@ -341,3 +405,4 @@ $(function(){
 
 });
 </script>
+-->

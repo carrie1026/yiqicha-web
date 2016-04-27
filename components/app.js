@@ -11,7 +11,8 @@ define([
     'filters/_base',
     'services/_base',
     'mobileAngularUi',
-    'layer'
+    'layer',
+    'jquerySlide',
 ], function(angular) {
     'use strict';
     return angular.module('MyApp', ['ngRoute', 'mobile-angular-ui', 'ngFileUpload', 'app.route', 'app.api', 'app.constants', 'app.ctrls', 'app.directives', 'app.filters', 'app.services'])
