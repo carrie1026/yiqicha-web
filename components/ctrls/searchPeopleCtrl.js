@@ -26,7 +26,11 @@ define(['./mod'], function(mod) {
             };
 
             var loadFarenList = function(isPush, name, address) {
-
+                if (name){
+                    SearchPeopleService.findStockMsgByName(farenPage, rows, isPush, name, address).then(function(data) {
+                        $scope.farenList = data;
+                    });
+                }
             };
 
             var loadShixinList = function(isPush, name, address) {

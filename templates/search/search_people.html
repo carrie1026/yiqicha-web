@@ -99,12 +99,12 @@
 
     <!-- s: faren/gudong -->
     <div class="search_pre searchpeople_con1" ng-if="'faren' == type">
-        <ul ng-repeat="Shareholder in stockMsgList.rows">
+        <ul ng-repeat="faren in farenList.rows">
             <a href="/shareholderinfo">
-                <p>{{Shareholder.name}}</p>
+                <p>{{faren.name}}</p>
                 <li class="li_one"><img src="../../images/company@3x.png"></li>
-                <li>香港万国商业网</li>
-                <li class="li_three">在营（开业）企业</li>
+                <li>$ 香港万国商业网</li>
+                <li class="li_three">{{faren.recordStatus}}</li>
                 <br style="clear: both;" />
             </a>
         </ul>
