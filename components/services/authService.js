@@ -21,15 +21,15 @@ define(['./mod'], function(mod) {
 
             var defer = $q.defer();// define promise
 
-            if (isAuth) {
-                UserService.findUserInfo().then(function(data){// logined
-                    defer.resolve(data);
-                }, function(data) {// no login
+            UserService.findUserInfo().then(function(data){// logined
+                defer.resolve(data);
+            }, function(data) {// no login
+                if (isAuth){
                     defer.reject();
-                });
-            } else {
-                defer.resolve();// no auth
-            }
+                } else {
+                    defer.resolve();// no auth
+                }
+            });
 
             return defer.promise;
         };
