@@ -25,6 +25,8 @@
             <li ng-class="{current: 'faren' == type}" ng-click="type='faren';searchBox=''">法人/股东</li>
             <li ng-class="{current: 'shixin' == type}" ng-click="type='shixin';searchBox=''">失信</li>
         </ul>
+
+        <!-- s: Select Area -->
         <h1 ng-click="isShowArea = !isShowArea">
             搜索范围：
             <span ng-show="!address">全国</span>
@@ -71,13 +73,14 @@
             <p ng-click="address = '香港'"> 香港</p>
             <p ng-click="address = '澳门'"> 澳门</p>
         </div>
+        <!-- e: Select Area -->
     </div>
     <!-- e: Tabs -->
 
     <!-- s: qiye -->
     <div class="search_pre searchbusiness_con1" ng-if="'qiye' == type">
         <ul ng-repeat="qiye in qiyeList.rows">
-            <a ng-href="/compdet?id={{qiye.id}}&sts={{qiye.sts}}">
+            <a ng-href="/compdet?id={{qiye.id}}">
                 <p>{{qiye.companyName}}</p>
                 <li class="li_one"><img src="../../images/company_list@3x.png"></li>
                 <li>公司法人：{{qiye.legalRepPersion}}</li>
@@ -108,11 +111,16 @@
                 <br style="clear: both;" />
             </a>
         </ul>
-        <div class="load_more" ng-if="stockMsgList.moreDataCanBeLoaded" ng-click="stockMsgLoadMore()">
-            <!-- <img src="../../images/loading@3x.png"> -->
+        <div ng-if="!farenList" style="padding:20px 0 20px 40%;">
+            请输入法人或股东姓名
+        </div>
+        <div ng-if="farenList && farenList.rows.length == 0" style="padding:20px 0 20px 40%;">
+            暂无内容
+        </div>
+        <div ng-if="farenList && farenList.rows.length > 0 && farenList.moreDataCanBeLoaded" ng-click="farenLoadMore()" style="padding:20px 0 20px 40%;">
             载入更多...
         </div>
-        <div class="load_more" ng-if="!stockMsgList.moreDataCanBeLoaded">
+        <div ng-if="farenList && farenList.rows.length > 0 && !farenList.moreDataCanBeLoaded" style="padding:20px 0 20px 40%;">
             没有更多
         </div>
     </div>
@@ -120,19 +128,28 @@
 
     <!-- s: shixin -->
     <div class="search_pre shixinbs_con1" ng-if="'shixin' == type">
-        <ul ng-repeat="dishonesty in occupationList.rows">
+        <ul ng-repeat="shixin in shixinList.rows">
             <a href="/shixin_details">
-                <p>{{dishonesty.iname}}</p>
+                <p>{{shixin.iname}}</p>
                 <li class="li_two">
-                    <span><img src="../../images/qiyehao@3x.png">{{dishonesty.cardnum}}</span>
-                    <em><img src="../../images/address@3x.png">{{dishonesty.areaname}}</em>
+                    <span><img src="../../images/qiyehao@3x.png">{{shixin.cardnum}}</span>
+                    <em><img src="../../images/address@3x.png">{{shixin.areaname}}</em>
                     <br style="clear: both;" />
                 </li>
-                <li class="li_three"><img src="../../images/qiyehao@3x.png">{{dishonesty.casecode}}</li>
+                <li class="li_three"><img src="../../images/qiyehao@3x.png">{{shixin.casecode}}</li>
             </a>
         </ul>
-        <div ng-if="!occupationList" style="padding:20px 0 20px 40%;">
+        <div ng-if="!shixinList" style="padding:20px 0 20px 40%;">
+            请输入涉诉人名称
+        </div>
+        <div ng-if="shixinList && shixinList.rows.length == 0" style="padding:20px 0 20px 40%;">
             暂无内容
+        </div>
+        <div ng-if="shixinList && shixinList.rows.length > 0 && shixinList.moreDataCanBeLoaded" ng-click="shixinLoadMore()" style="padding:20px 0 20px 40%;">
+            载入更多...
+        </div>
+        <div ng-if="shixinList && shixinList.rows.length > 0 && !shixinList.moreDataCanBeLoaded" style="padding:20px 0 20px 40%;">
+            没有更多
         </div>
     </div>
     <!-- e: shixin -->

@@ -9,7 +9,7 @@ require.config({
         jquerySlide: 'lib/lunbo/jquery.SuperSlide.2.1.1',
         layer: 'lib/layer/layer',
         twitterBootstrap: 'lib/bootstrap/bootstrap.min',
-        mobileAngularUi:'lib/angular/mobile-angular-ui.min',
+        mobileAngularUi:'lib/angular/mobile-angular-ui.min'
     },
     shim: {
         jquery: {

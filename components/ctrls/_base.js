@@ -31,5 +31,6 @@ define([
     'indexCtrl',
     'businessMapCtrl',
     'shiXinDetailsCtrl',
-    'shareholderDetailCtrl'
+    'shareholderDetailCtrl',
+    'amapCtrl'
 ]);

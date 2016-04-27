@@ -1,28 +1,26 @@
 <div class="investa">
-	<!-- <div class="header">
-		 企业资讯
-		<div class="leftjj"><a href="/compdet"><img src="../../images/icon_2.png"></a></div>
-		<div class="rightwz"><a href="errorcorrect">纠错</a></div>
-	</div> -->
-
-<div class="mycenter_header">
-	        <ul>
-	            <li class="li_1" onclick="javascript :history.back(-1)"><img src="../../images/icon_2.png"></li>
-	            <li class="li_2">企业资讯</li>
-	            <li class="li_3"><a href="/errorcorrect">纠错</a></li>
-	            <br style="clear: both;" />
-	        </ul>
-        </div>
-	
+	<div class="mycenter_header">
+		<ul>
+			<li class="li_1" onclick="javascript :history.back(-1)"><img src="../../images/icon_2.png"></li>
+			<li class="li_2">企业资讯</li>
+			<li class="li_3"><a href="/errorcorrect">纠错</a></li>
+			<br style="clear: both;" />
+		</ul>
+	</div>
 	<div class="investa1">
-		<div class="investa11" ng-repeat="corpinfo in Corpinfo.rows" onClick="window.location.href='/corpinfod'">
-			<div class="investa111">{{corpinfo.companyName}}</div>
-			<div class="investa112">
-				<div class="investa1122 fl wb40 tin">来源：{{corpinfo.newsFrom}}</div><div class="">{{corpinfo.newsTime}}</div>
-			</div>
+		<div ng-repeat="corpinfo in Corpinfo.rows" >
+			<a ng-href="/corpinfod?id={{corpinfo.id}}">
+				<div class="investa11">
+					<div class="investa111">{{corpinfo.companyName}}</div>
+					<div class="investa112">
+						<div class="investa1122 fl wb40 tin">来源：{{corpinfo.newsFrom}}</div>
+						<div class="">{{corpinfo.newsTime}}</div>
+					</div>
+				</div>
+				<div ng-if="!Corpinfo || Corpinfo.rows.length == 0" style="margin:10% 0 0 40%;">
+					暂无内容
+				</div>
+			</a>
 		</div>
-        <div ng-if="!corpinfo" style="margin:10% 0 0 40%;">
-             暂无内容
-        </div>
 	</div>
 </div>

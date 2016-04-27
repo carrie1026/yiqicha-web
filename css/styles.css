@@ -17,7 +17,7 @@ a:hover{
 	width: 25%;
 	cursor: pointer;
 	float: left;
-	padding: 10px 0 0 0;
+	padding: 12px 0 0 0;
 }
 .mycenter_header li.li_2{
 	width: 50%;
@@ -42,8 +42,8 @@ a:hover{
 	color: #fff;
 }
 .mycenter_header li.li_1 img{
-	width: 16px;
-	height: 19px;
+	width: 13px;
+	height: 15px;
 	display: block;
 }
 .mycenter_header li.li_3 img{
@@ -65,16 +65,16 @@ a:hover{
 	width: 12%;
 	cursor: pointer;
 	float: left;
-	padding: 11px 0 0 0;
+	padding: 12px 0 0 0;
 }
 .mycenter_header1 li.li_2{
 	width: 75%;
 	float: left;
 	text-align: center;
 }
-.mycenter_header1 li.li_1 img{
-	width: 16px;
-	height: 19px;
+.compdet .mycenter_header1 li.li_1 img{
+	width: 13px;
+	height: 15px;
 	display: block;
 }
 .mycenter_header1 li.li_2{
@@ -105,8 +105,8 @@ a:hover{
 	color: #fff;
 }
 .mycenter_header1 li.li_1 img{
-	width: 16px;
-	height: 19px;
+	width: 13px;
+	height: 15px;
 	display: block;
 }
 .mycenter_header1 li.li_3 img{
@@ -142,8 +142,8 @@ a:hover{
 	font-size: 16px;
 }
 .myhome_ban ul.ul_one li.li_one img{
-	width: 16px;
-	height: 19px;
+	width: 13px;
+	height: 15px;
 	display: block;
 }
 .myhome_ban ul.ul_one li.li_three{
@@ -160,13 +160,29 @@ a:hover{
 	margin: 20px 0 0 0;
 	/*text-align: center;*/
 }
-.myhome_ban p img{
+.mycenter_home .myhome_ban p i img{
 	width: 100px;
 	height: 95px;
 	display: block;
 	text-align: center;
 	margin: 0 auto;
 }
+
+.mycenter_home .myhome_ban p em img{
+        width: 29px;
+        height: 29px;
+        display: inline-block;
+    }
+.mycenter_home .myhome_ban p i{
+        position: relative;
+    }
+.mycenter_home .myhome_ban p em{ 
+        position: absolute;
+       top: 125px;
+
+        left: 55%;
+    }
+
 .myhome_ban p span{
 	margin-top: 17px 0 30px 0;
 	color: #fff;

@@ -116,11 +116,12 @@ mod.factory('UserService', ['$http', '$q','$interval','$$http', function($http, 
 
 //查询诉讼信息 服务
 .factory('LitigationService', ['$http', '$q', function($http, $q) {
-    var Litigation = function(page,rows) {
+    var Litigation = function(page,rows, companyId) {
         var defer = $q.defer();
         $http.post('/yiqicha/companyInfo/findLawsuitMsg.do',{
            page:page,
-           rows:rows
+           rows:rows,
+           companyId: companyId
         }).success(function(data) {
             if (isRequestSuccess(data)) {
                 defer.resolve(data);
@@ -139,7 +140,7 @@ mod.factory('UserService', ['$http', '$q','$interval','$$http', function($http, 
 .factory('LitigationdeService', ['$http', '$q', function($http, $q) {
     var Litigationde = function(id) {
         var defer = $q.defer();
-        $http.post('/yiqicha/companyInfo/findLawsuitMsgById.do',id).success(function(data) {
+        $http.post('/yiqicha/companyInfo/findLawsuitMsgById.do',{id: id}).success(function(data) {
             if (isRequestSuccess(data)) {
                 defer.resolve(data);
             } else {
@@ -177,12 +178,10 @@ mod.factory('UserService', ['$http', '$q','$interval','$$http', function($http, 
 }])
 //查询企业咨询详情信息 服务
 .factory('CorpinfodeService', ['$http', '$q', function($http, $q) {
-    var Corpinfode = function(companyId,page,rows) {
+    var Corpinfode = function(id) {
         var defer = $q.defer();
         $http.post('/yiqicha/enterpriseNews/findEnterpriseNewsById.do',{
-            companyId:companyId,
-            page:page,
-            rows:rows
+            id:id
         }).success(function(data) {
             if (isRequestSuccess(data)) {
                 defer.resolve(data);
