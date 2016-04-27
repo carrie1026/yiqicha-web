@@ -76,13 +76,12 @@
 
     <!-- s: qiye -->
     <div class="search_pre searchbusiness_con1" ng-if="'qiye' == type">
-<!--        onClick="window.location.href='/search_area'"-->
         <ul ng-repeat="qiye in qiyeList.rows">
             <a ng-href="/compdet?id={{qiye.id}}&sts={{qiye.sts}}">
                 <p>{{qiye.companyName}}</p>
                 <li class="li_one"><img src="../../images/company_list@3x.png"></li>
-                <li>公司法人：{{qiye.company}}</li>
-                <li class="li_three">在营（开业）企业</li>
+                <li>公司法人：{{qiye.legalRepPersion}}</li>
+                <li class="li_three">{{qiye.managementStatus}}</li>
                 <div style="clear: both;"></div>
             </a>
         </ul>
@@ -90,7 +89,6 @@
             暂无内容
         </div>
         <div class="load_more" ng-if="qiyeList.moreDataCanBeLoaded" ng-click="qiyeLoadMore()">
-            <!-- <img src="../../images/loading@3x.png"> -->
             载入更多...
         </div>
         <div class="load_more" ng-if="!qiyeList.moreDataCanBeLoaded">
