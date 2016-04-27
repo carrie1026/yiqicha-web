@@ -10,7 +10,7 @@ define(['./mod'], function(mod) {
         // 根据股东姓名精确查找
         var findStockMsgByNameUrl = '/yiqicha/companyInfo/findStockMsgByName.do';
 
-        var enterpriseList, stockMsgList;
+        var enterpriseList, stockMsgList, farenList;
 
         this.findEnterpriseInfo = function(page, rows, isPush, companyName, address) {
             var defer = $q.defer();
@@ -76,8 +76,31 @@ define(['./mod'], function(mod) {
             return $$http.get(findOccupationListUrl, param);
         }
 
-        this.findStockMsgByName = function(name, address) {
-            return $$http.get(findStockMsgByNameUrl, {name: name, address: address});
+        this.findStockMsgByName = function(page, rows, isPush, name, address) {
+            var defer = $q.defer();
+            $$http.get(findStockMsgByNameUrl, {
+                page: page,
+                rows: rows,
+                name: name,
+                address: address
+            }).then(function(data) {
+                if (!farenList || !isPush) {
+                    farenList = data;
+                } else { // push
+                    for (var i in data.rows) {
+                        farenList.rows.push(data.rows[i]);
+                    }
+                    farenList.total = data.total;
+                }
+
+                // check is can load more data
+                farenList.moreDataCanBeLoaded = (data.rows.length == rows);
+
+                defer.resolve(farenList);
+            }, function(data) {
+                defer.reject(data);
+            });
+            return defer.promise;
         };
 
         return this;
