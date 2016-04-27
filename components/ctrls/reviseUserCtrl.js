@@ -11,9 +11,15 @@ define(['./mod'], function(mod) {
                 $scope.reviseUserFormData.job = data.job;
             });
 
-            $scope.loadJob = function(id) {
-                JobService.jobList(id).then(function(data) {
+            $scope.loadJob = function() {
+                JobService.jobList().then(function(data) {
                     $scope.jobList = data;
+                })
+            };
+
+            $scope.loadSubJob = function(id) {
+                JobService.jobList(id).then(function(data) {
+                    $scope.subJobList = data;
                 })
             };
 
