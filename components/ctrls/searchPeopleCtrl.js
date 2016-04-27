@@ -68,6 +68,8 @@ define(['./mod'], function(mod) {
             // watch address
             $scope.$watch('address', function(newValue, oldValue) {
                 $scope.isShowArea = false;
+
+                search($scope.searchBox, newValue);
             });
 
             // load more btn
