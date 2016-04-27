@@ -178,12 +178,10 @@ mod.factory('UserService', ['$http', '$q','$interval','$$http', function($http, 
 }])
 //查询企业咨询详情信息 服务
 .factory('CorpinfodeService', ['$http', '$q', function($http, $q) {
-    var Corpinfode = function(companyId,page,rows) {
+    var Corpinfode = function(id) {
         var defer = $q.defer();
         $http.post('/yiqicha/enterpriseNews/findEnterpriseNewsById.do',{
-            companyId:companyId,
-            page:page,
-            rows:rows
+            id:id
         }).success(function(data) {
             if (isRequestSuccess(data)) {
                 defer.resolve(data);
