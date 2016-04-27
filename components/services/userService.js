@@ -79,7 +79,7 @@ mod.factory('UserService', ['$http', '$q','$interval','$$http', function($http, 
 
 //忘记密码 服务
 .factory('RetrieveService', ['$http', '$q', function($http, $q) {
-    // find Dict by key
+    // find Dict by key 验证
     var forgetPasswordSmsCaptcha = function(phoneNumber,imageCaptcha,isRegister) {
         var defer = $q.defer();
         $http.post('/yiqicha/manager/unLogin/sendSmsCaptcha.do', {
@@ -96,9 +96,9 @@ mod.factory('UserService', ['$http', '$q','$interval','$$http', function($http, 
         return defer.promise;
     };
 
-    var forgetPassword = function(newPassword,captcha) {
+    var forgetPassword = function(phoneNumber,captcha,newPassword) {
         var defer = $q.defer();
-        $http.post('/yiqicha/manager/unLogin/forgetPassword.do', {newPassword: newPassword, captcha: captcha }).success(function(data) {
+        $http.post('/yiqicha/manager/unLogin/forgetPassword.do', {phoneNumber:phoneNumber,captcha:captcha,newPassword: newPassword}).success(function(data) {
             if (isRequestSuccess(data)) {
                 defer.resolve(data.data);
             } else {

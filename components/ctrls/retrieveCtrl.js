@@ -5,7 +5,7 @@ mod.controller('RetrievepasswordCtrl', ['$scope', '$location', 'UserService', '$
     $scope.retrieveFormData = {};
     $scope.submitBtn = function(newPassword,captcha) {
         // 提交到后台
-        RetrieveService.forgetPassword($scope.retrieveFormData.password, $scope.retrieveFormData.captcha)
+        RetrieveService.forgetPassword($scope.retrieveFormData.phoneNumber,$scope.retrieveFormData.captcha,$scope.retrieveFormData.password)
             .then(function(data) {
                 $location.path('/login');
                 alert("成功");
