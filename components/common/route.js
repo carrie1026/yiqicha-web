@@ -227,6 +227,9 @@ define(['angular'], function (angular) {
                 templateUrl: 'templates/compinfo/indana/businessMap.html',
                 controller: 'businessMapCtrl'
              })
+             .when('/amap', {
+                 templateUrl: 'templates/common/amap.html'
+             })
             // 默认路由-首页
             .otherwise({
                 redirectTo: '/index'

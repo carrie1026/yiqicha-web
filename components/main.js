@@ -8,7 +8,7 @@ require.config({
         jquery: 'lib/jquery/jquery.min',
         layer: 'lib/layer/layer',
         twitterBootstrap: 'lib/bootstrap/bootstrap.min',
-        mobileAngularUi:'lib/angular/mobile-angular-ui.min',
+        mobileAngularUi:'lib/angular/mobile-angular-ui.min'
     },
     shim: {
         jquery: {
