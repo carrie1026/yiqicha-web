@@ -1,15 +1,72 @@
-define(['./mod'], function (mod) {
+define(['./mod'], function(mod) {
     'use strict';
-mod.controller('indexCtrl', ['$scope','$location', 'myfocusService','$rootScope', function($scope, $location,myfocusService,$rootScope) {
-    // 我关注的企业列表详情
-    /*var accountId = 'f271b018c1ad11e5a130eca86ba4ba05';*/
-    var page = 1;
-    var rows = 1;
-    var accountId = 1;
-    console.log(1);
-    myfocusService.myfocus(page,rows,accountId).then(function(data){
-        $scope.myfocus = data.data;
-        console.log($scope.myfocus);
-    });  
- }])
+
+    var COMPANY_DATA_RELOAD_TIME = 3000;
+    var MY_FORCE_PAGE = 1;
+    var MY_FORCE_ROWS = 3;
+    var CHAR_ARRAY_LENGTH = 9;
+
+    mod.controller('IndexCtrl', ['$scope', '$location', 'hotbusinessService', 'myfocusService', '$interval', '$timeout', 'CompanyService',
+        function($scope, $location, hotbusinessService, myfocusService, $interval, $timeout, CompanyService) {
+            hotbusinessService.hotbusiness().then(function(data) {
+                $scope.hotbusiness = data.data;
+//                console.log($scope.hotbusiness);
+                $timeout(function(){
+                    jQuery(".picMarquee-top").slide({mainCell:".bd ul",autoPlay:true,effect:"topMarquee",vis:1,interTime:50});
+                }, 100)
+            })
+
+            myfocusService.myfocus(MY_FORCE_PAGE, MY_FORCE_ROWS).then(function(data) {
+                $scope.myfocus = data.data;
+                 $timeout(function(){
+                    jQuery(".slideBox").slide({mainCell:".bd ul",effect:"topLoop",autoPlay:true,delayTime:2000});
+                }, 100)                 
+            });
+
+            $scope.$watch('companyName', function(newValue, oldValue) {
+                if (!newValue || newValue.length < 2) {
+                    return;
+                }
+                $location.path('/search_people').search({
+                    type: 'qiye',
+                    companyName: newValue
+                });
+            });
+
+            var loadCompanyCount = function() {
+                CompanyService.companyCount().then(function(data) {
+                    $scope.companyCount = toCharArrray(data);
+                    $timeout(function(){
+                        $scope.isShowCompanyData = true;
+                    }, 10)
+                });
+            };
+
+            // refresh company data
+            $scope.isShowCompanyData = true;
+            $interval(function() {
+                $scope.isShowCompanyData = false;
+                loadCompanyCount($scope);
+            }, COMPANY_DATA_RELOAD_TIME);
+
+            loadCompanyCount();
+        }
+    ]);
+
+    // array length is CHAR_ARRAY_LENGTH
+    // if str.length < CHAR_ARRAY_LENGTH, use 0 cover
+    var toCharArrray = function(str) {
+        str = new String(str);
+        var array = [];
+        var strLength = str.length;
+
+        for (var i = 0; i < CHAR_ARRAY_LENGTH; i++) {
+            if (i < (CHAR_ARRAY_LENGTH - strLength)) {
+                array.push(0);
+            } else {
+                array.push(str.charAt((strLength - CHAR_ARRAY_LENGTH) + i));
+            }
+        }
+        return array;
+    };
 });

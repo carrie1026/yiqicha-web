@@ -9,7 +9,8 @@ require.config({
         jquerySlide: 'lib/lunbo/jquery.SuperSlide.2.1.1',
         layer: 'lib/layer/layer',
         twitterBootstrap: 'lib/bootstrap/bootstrap.min',
-        mobileAngularUi:'lib/angular/mobile-angular-ui.min'
+        mobileAngularUi:'lib/angular/mobile-angular-ui.min',
+        ngImgCrop:'lib/ng-image-crop/ng-img-crop'
     },
     shim: {
         jquery: {
@@ -31,7 +32,8 @@ require.config({
         layer: {
             deps: ['jquery'],
             exports: 'layer'
-        }
+        },
+        ngImgCrop: ['angular']
     }
 });
 

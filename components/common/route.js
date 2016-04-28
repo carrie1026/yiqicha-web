@@ -3,8 +3,8 @@ define(['angular'], function(angular) {
     return angular.module('app.route', []).config(['$routeProvider', function($routeProvider) {
         $routeProvider
             .when('/index', {
-                templateUrl: '/templates/index.html',
-                controller: 'mycenterCtrl'
+                templateUrl: '/templates/home/index.html',
+                controller: 'IndexCtrl'
             })
             .when('/home', {
                 templateUrl: '/templates/home.html',
@@ -100,10 +100,6 @@ define(['angular'], function(angular) {
             })
             .when('/search_nopromise', {
                 templateUrl: '/templates/search/search_nopromise.html'
-            })
-            .when('/index', {
-                templateUrl: '/templates/home/index.html',
-                controller: 'mycenterCtrl'
             })
             // 对外投资企业列表
             .when('/investAbroad', {
