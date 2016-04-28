@@ -38,6 +38,15 @@ define(['angular'], function(angular) {
             .when('/job_2', {
                 templateUrl: '/templates/mycenter/job_2.html'
             })
+            .when('/aboutUs', {
+                templateUrl: '/templates/mycenter/aboutUs.html'
+            })
+            .when('/sets', {
+                templateUrl: '/templates/mycenter/sets.html'
+            })
+            .when('/xiugai_mima', {
+                templateUrl: '/templates/mycenter/xiugai_mima.html'
+            })
             //我关注的企业列表详情
             .when('/myfocus', {
                 templateUrl: '/templates/mycenter/myfocus.html',
