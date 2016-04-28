@@ -5,13 +5,19 @@
  */
 define(['./mod'], function(mod) {
 
-    mod.controller('ReportDetlCtrl', ['$scope', '$location',function($scope, $location) {
-        var search = $location.search();
+    mod.controller('ReportDetlCtrl', ['$scope', '$location', 'AnnualReportService',
+        function($scope, $location, AnnualReportService) {
+            var search = $location.search();
 
-        $scope.$watch('companyBaseShow', function(newValue, oldValue) {
-            if (newValue) {
-                console.log('load companyBase');
-            }
-        });
-    }]);
+            $scope.reportName = search.reportName;
+
+            AnnualReportService.annualReportDetail(search.reportId).then(function (data) {
+                $scope.companyBase = data.企业基本信息;
+                $scope.holder = data.股东信息;
+
+                $scope.companyBase = eval('(' + $scope.companyBase + ')');
+                $scope.holder = eval('(' + $scope.holder + ')');
+            });
+        }
+    ]);
 });
