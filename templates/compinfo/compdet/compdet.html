@@ -41,10 +41,10 @@
 		<div class="compdet112">
 			<img src="../../../images/starjudge.png" />
 		</div>
-		<div class="compdet113" ng-if="0 == compdet.sts">
+		<div class="compdet113" ng-if="1 == compdet.sts">
 			<a href="#" ng-click="addMyAttention()">关注</a>
 		</div>
-		<div class="compdet113" ng-if="1 == compdet.sts">
+		<div class="compdet113" ng-if="0 == compdet.sts">
 			<a href="#" ng-click="removeMyAttention()">取消关注</a>
 		</div>
 		<div class="compdet114">
@@ -78,79 +78,79 @@
 	</div>
 	<div class="compdet14">
 		<div class="compdet141">
-			<a ng-href="/industryinfo?companyId={{companyId}}" ng-class="{disabled: 1 == bs.gongshangStatus}">
+			<a ng-href="/industryinfo?companyId={{companyId}}" ng-class="{disabled: 0 == bs.gongshangStatus}">
 				<div class="compdet1411 bdrw">
 					<div class="compdet14111">
-						<img src="../../../images/gongshang@3x.png" ng-if="0 == bs.gongshangStatus" />
-						<img src="../../../images/dis_gongshang@3x.png" ng-if="1 == bs.gongshangStatus" />
+						<img src="../../../images/gongshang@3x.png" ng-if="1 == bs.gongshangStatus" />
+						<img src="../../../images/dis_gongshang@3x.png" ng-if="0 == bs.gongshangStatus" />
 					</div>
 					<div class="compdet14112">工商信息</div>
 				</div>
 			</a>
-			<a ng-href="/businessMap?companyId={{compdet.id}}&companyName={{compdet.companyName}}" ng-class="{disabled: 1 == bs.tupuStatus}">
+			<a ng-href="/businessMap?companyId={{compdet.id}}&companyName={{compdet.companyName}}" ng-class="{disabled: 0 == bs.tupuStatus}">
 				<div class="compdet1411 bdrw">
 					<div class="compdet14111">
-						<img src="../../../images/fzjg@3x.png" ng-if="0 == bs.tupuStatus"/>
-						<img src="../../../images/dis_fzjg@3x.png" ng-if="1 == bs.tupuStatus"/>
+						<img src="../../../images/fzjg@3x.png" ng-if="1 == bs.tupuStatus"/>
+						<img src="../../../images/dis_fzjg@3x.png" ng-if="0 == bs.tupuStatus"/>
 					</div>
 					<div class="compdet14112">企业图谱</div>
 				</div>
 			</a>
-			<a ng-href="/indana?industryId={{industryId}}" ng-class="{disabled: 1 == bs.hangyeStatus}">
+			<a ng-href="/indana?industryId={{industryId}}" ng-class="{disabled: 0 == bs.hangyeStatus}">
 				<div class="compdet1411 bdrw">
 					<div class="compdet14111">
-						<img src="../../../images/hyfx@3x.png" ng-if="0 == bs.hangyeStatus"/>
-						<img src="../../../images/dis_hyfx@3x.png" ng-if="1 == bs.hangyeStatus"/>
+						<img src="../../../images/hyfx@3x.png" ng-if="1 == bs.hangyeStatus"/>
+						<img src="../../../images/dis_hyfx@3x.png" ng-if="0 == bs.hangyeStatus"/>
 					</div>
 					<div class="compdet14112">行业分析</div>
 				</div>
 			</a>
-			<a ng-href="/shixin_details?iname={{compdet.companyName}}" ng-class="{disabled: 1 == bs.courtitemStatus}">
+			<a ng-href="/shixin_details?iname={{compdet.companyName}}" ng-class="{disabled: 0 == bs.courtitemStatus}">
 				<div class="compdet1411">
 					<div class="compdet14111">
-						<img src="../../../images/sxxx@3x.png" ng-if="0 == bs.courtitemStatus"/>
-						<img src="../../../images/dis_sxxx@3x.png" ng-if="1 == bs.courtitemStatus"/>
+						<img src="../../../images/sxxx@3x.png" ng-if="1 == bs.courtitemStatus"/>
+						<img src="../../../images/dis_sxxx@3x.png" ng-if="0 == bs.courtitemStatus"/>
 					</div>
 					<div class="compdet14112">失信信息</div>
 				</div>
 			</a>
 		</div>
 		<div class="compdet141">
-			<a ng-href="/litiinfo?companyId={{companyId}}" ng-class="{disabled: 1 == bs.lawsuitmsgStatus}">
+			<a ng-href="/litiinfo?companyId={{companyId}}" ng-class="{disabled: 0 == bs.lawsuitmsgStatus}">
 				<div class="compdet1411 bdrw">
 					<div class="compdet14111">
-						<img src="../../../images/susong@3x.png" ng-if="0 == bs.lawsuitmsgStatus"/>
-						<img src="../../../images/dis_susong@3x.png" ng-if="1 == bs.lawsuitmsgStatus"/>
+						<img src="../../../images/susong@3x.png" ng-if="1 == bs.lawsuitmsgStatus"/>
+						<img src="../../../images/dis_susong@3x.png" ng-if="0 == bs.lawsuitmsgStatus"/>
 					</div>
 					<div class="compdet14112">诉讼信息</div>
 				</div>
 			</a>
-			<a ng-href="/investAbroad?companyId={{companyId}}" ng-class="{disabled: 1 == bs.abroadinvestmenttatus}">
+			<a ng-href="/investAbroad?companyId={{companyId}}" ng-class="{disabled: 0 == bs.abroadinvestmenttatus}">
 				<div class="compdet1411 bdrw">
 					<div class="compdet14111">
-						<img src="../../../images/dwtz@3x.png" ng-if="0 == bs.abroadinvestmenttatus"/>
-						<img src="../../../images/dis_dwtz@3x.png" ng-if="1 == bs.abroadinvestmenttatus"/>
+						<img src="../../../images/dwtz@3x.png" ng-if="1 == bs.abroadinvestmenttatus"/>
+						<img src="../../../images/dis_dwtz@3x.png" ng-if="0 == bs.abroadinvestmenttatus"/>
 					</div>
 					<div class="compdet14112">对外投资</div>
 				</div>
 			</a>
 
-			<a ng-href="/shareholderinfo?companyId={{compdet.id}}" ng-class="{disabled: 1 == bs.stockmsgStatus}">
+			<a ng-href="/shareholderinfo?companyId={{compdet.id}}" ng-class="{disabled: 0 == bs.stockmsgStatus}">
 				<div class="compdet1411 bdrw">
 					<div class="compdet14111">
-						<img src="../../../images/gdxx@3x.png" ng-if="0 == bs.stockmsgStatus" />
-						<img src="../../../images/dis_gdxx@3x.png" ng-if="1 == bs.stockmsgStatus" />
+						<img src="../../../images/gdxx@3x.png" ng-if="1 == bs.stockmsgStatus" />
+						<img src="../../../images/dis_gdxx@3x.png" ng-if="0 == bs.stockmsgStatus" />
 					</div>
 					<div class="compdet14112">股东信息</div>
 				</div>
 			</a>
 
 
-			<a ng-href="/corpinfo?companyId={{companyId}}"  ng-class="{disabled: 1 == bs.enenewterprissStatus}">
+			<a ng-href="/corpinfo?companyId={{companyId}}"  ng-class="{disabled: 0 == bs.enenewterprissStatus}">
 				<div class="compdet1411">
 					<div class="compdet14111">
-						<img src="../../../images/qyzx@3x.png" ng-if="0 == bs.enenewterprissStatus" />
-						<img src="../../../images/dis_qyzx@3x.png" ng-if="1 == bs.enenewterprissStatus" />
+						<img src="../../../images/qyzx@3x.png" ng-if="1 == bs.enenewterprissStatus" />
+						<img src="../../../images/dis_qyzx@3x.png" ng-if="0 == bs.enenewterprissStatus" />
 					</div>
 					<div class="compdet14112">企业资讯</div>
 				</div>
@@ -159,38 +159,38 @@
 
 
 		<div class="compdet141">
-			<a ng-href="/reportdet?companyId={{companyId}}" ng-class="{disabled: 1 == bs.annualportsmsgStatus}">
+			<a ng-href="/reportdet?companyId={{companyId}}" ng-class="{disabled: 0 == bs.annualportsmsgStatus}">
 				<div class="compdet1411 bdrw">
 					<div class="compdet14111">
-						<img src="../../../images/nbxx@3x.png" ng-if="0 == bs.annualportsmsgStatus"  />
-						<img src="../../../images/dis_nbxx@3x.png" ng-if="1 == bs.annualportsmsgStatus"  />
+						<img src="../../../images/nbxx@3x.png" ng-if="1 == bs.annualportsmsgStatus"  />
+						<img src="../../../images/dis_nbxx@3x.png" ng-if="0 == bs.annualportsmsgStatus"  />
 					</div>
 					<div class="compdet14112">年报信息</div>
 				</div>
 			</a>
-			<a ng-href="/branchStructure?companyId={{companyId}}" ng-class="{disabled: 1 == bs.sonenterpriseStatus}">
+			<a ng-href="/branchStructure?companyId={{companyId}}" ng-class="{disabled: 0 == bs.sonenterpriseStatus}">
 				<div class="compdet1411 bdrw">
 					<div class="compdet14111">
-						<img src="../../../images/fzjg@3x.png" ng-if="0 == bs.sonenterpriseStatus" />
-						<img src="../../../images/dis_fzjg@3x.png" ng-if="1 == bs.sonenterpriseStatus" />
+						<img src="../../../images/fzjg@3x.png" ng-if="1 == bs.sonenterpriseStatus" />
+						<img src="../../../images/dis_fzjg@3x.png" ng-if="0 == bs.sonenterpriseStatus" />
 					</div>
 					<div class="compdet14112">分支机构</div>
 				</div>
 			</a>
-			<a ng-href="/leadpeople?companyId={{companyId}}"  ng-class="{disabled: 1 == bs.mainmemberStatus}">
+			<a ng-href="/leadpeople?companyId={{companyId}}"  ng-class="{disabled: 0 == bs.mainmemberStatus}">
 				<div class="compdet1411 bdrw">
 					<div class="compdet14111">
-						<img src="../../../images/zycy@3x.png" ng-if="0 == bs.mainmemberStatus"  />
-						<img src="../../../images/dis_zycy@3x.png" ng-if="1 == bs.mainmemberStatus"  />
+						<img src="../../../images/zycy@3x.png" ng-if="1 == bs.mainmemberStatus"  />
+						<img src="../../../images/dis_zycy@3x.png" ng-if="0 == bs.mainmemberStatus"  />
 					</div>
 					<div class="compdet14112">主要成员</div>
 				</div>
 			</a>
-			<a ng-href="/changeRecord?companyId={{companyId}}"  ng-class="{disabled: 1 == bs.editrecordStatus}">
+			<a ng-href="/changeRecord?companyId={{companyId}}"  ng-class="{disabled: 0 == bs.editrecordStatus}">
 				<div class="compdet1411">
 					<div class="compdet14111">
-						<img src="../../../images/bgjl@3x.png" ng-if="0 == bs.editrecordStatus" />
-						<img src="../../../images/dis_bgjl@3x.png" ng-if="1 == bs.editrecordStatus" />
+						<img src="../../../images/bgjl@3x.png" ng-if="1 == bs.editrecordStatus" />
+						<img src="../../../images/dis_bgjl@3x.png" ng-if="0 == bs.editrecordStatus" />
 					</div>
 					<div class="compdet14112">变更记录</div>
 				</div>
