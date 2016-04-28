@@ -347,7 +347,7 @@ mod.factory('UserService', ['$http', '$q','$interval','$$http', function($http, 
             rows:rows,
             accountId:accountId
         }).success(function(data) {
-            if (isRequestSuccess(data)) {
+            if (isRequestSuccess(data, true)) {
                 defer.resolve(data);
             } else {
                 defer.reject(data);
