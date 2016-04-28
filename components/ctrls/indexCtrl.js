@@ -1,10 +1,10 @@
 define(['./mod'], function(mod) {
     'use strict';
 
-    var COMPANY_DATA_RELOAD_TIME = 3000;
+    var COMPANY_DATA_RELOAD_TIME = 10000;
     var MY_FORCE_PAGE = 1;
     var MY_FORCE_ROWS = 3;
-    var CHAR_ARRAY_LENGTH = 9;
+    var CHAR_ARRAY_LENGTH = 8;
 
     mod.controller('IndexCtrl', ['$scope', '$location', 'hotbusinessService', 'myfocusService', '$interval', '$timeout', 'CompanyService',
         function($scope, $location, hotbusinessService, myfocusService, $interval, $timeout, CompanyService) {
@@ -20,7 +20,7 @@ define(['./mod'], function(mod) {
                 $scope.myfocus = data.data;
                  $timeout(function(){
                     jQuery(".slideBox").slide({mainCell:".bd ul",effect:"topLoop",autoPlay:true,delayTime:2000});
-                }, 100)                 
+                }, 100)
             });
 
             $scope.$watch('companyName', function(newValue, oldValue) {
@@ -36,9 +36,7 @@ define(['./mod'], function(mod) {
             var loadCompanyCount = function() {
                 CompanyService.companyCount().then(function(data) {
                     $scope.companyCount = toCharArrray(data);
-                    $timeout(function(){
-                        $scope.isShowCompanyData = true;
-                    }, 10)
+                    $scope.isShowCompanyData = true;
                 });
             };
 
