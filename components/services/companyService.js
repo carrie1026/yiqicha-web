@@ -6,6 +6,8 @@
 define(['./mod'], function(mod) {
     'use strict';
 
+    var btnStatusUrl = '/yiqicha/companyInfo/selectStatus.do'
+
     mod.factory('CompanyService', ['$$http', '$q',
         function($$http, $q) {
 
@@ -13,6 +15,10 @@ define(['./mod'], function(mod) {
                 var defer = $q.defer();
                 defer.resolve(Math.ceil(Math.random() * 1000000000));
                 return defer.promise;
+            };
+
+            this.btnStatus = function (companyId) {
+                return $$http.get(btnStatusUrl, {companyId: companyId});
             };
 
             return this;
