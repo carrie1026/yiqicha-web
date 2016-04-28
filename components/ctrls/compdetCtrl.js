@@ -15,8 +15,9 @@ define(['./mod'], function(mod) {
             $scope.companyId = id;
 
             compdetService.compdet(id).then(function(data) {
+                console.log(data);
                 $scope.compdet = data.data;
-                $scope.industryId = data.data.industry;
+                $scope.industry = data.data.industry;
             });
 
             // 添加关注

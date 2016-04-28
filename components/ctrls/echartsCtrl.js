@@ -10,22 +10,22 @@ define(['./mod'], function(mod){
 			var industryAnalysisChart = echarts.init(document.getElementById('industryAnalysisChart'));
 			if(index == 1){
 				
-				IndustryEnterpriseTotalNumberService.queryIndustryEnterpriseTotalNumber(requestParam.industryId).then(function(data){
-					console.log(data);
+				IndustryEnterpriseTotalNumberService.queryIndustryEnterpriseTotalNumber(requestParam.industry).then(function(data){
+					//console.log(data);
 					var rows = data.data;
 					var types = [], values = [];
-					for(var name in rows){
-						console.log(name+":"+rows[name]);
-						types.push(name);
-						values.push(rows[name]);
-					}
+					$.each(rows, function(index, value){
+						types.push(value.year);
+						values.push({value: value.count, name: value.year});
+					});
+					
 					var getTotalNumberOfIndustryData = function(){
 						
 						return {
 
 						    title : {
 						        text: '行业企业总数量(年份/总数量)',
-						        subtext: requestParam.industryId,
+						        subtext: requestParam.industry,
 						        x:'center'
 						    },
 						    tooltip : {
@@ -67,18 +67,19 @@ define(['./mod'], function(mod){
 				});
 			}else if(index == 2){
 
-				RegisterTimeDistributeService.queryRegisterTimeDistribute(requestParam.industryId).then(function(data){
+				RegisterTimeDistributeService.queryRegisterTimeDistribute(requestParam.industry).then(function(data){
+					//console.log(data);
 					var rows = data.data.rows;
 					var types = [], values = [];
 					$.each(rows, function(index, value){
-						types.push(value.type);
-						values.push({value: value.countNumber, name: value.type});
+						types.push(value.key);
+						values.push({value: value.count, name: value.key});
 					});
 					var getRegisterTimeDistributeData = function(){
 						return {
 						    title : {
-						        text: '注册时间分布',
-						        subtext: requestParam.industryId,
+						        text: '注册时间分布(年份区间/总数量)',
+						        subtext: requestParam.industry,
 						        x:'center'
 						    },
 						    tooltip : {
@@ -115,18 +116,20 @@ define(['./mod'], function(mod){
 					industryAnalysisChart.setOption(getRegisterTimeDistributeData());
 				});
 			}else if(index == 3){
-				EnterpriseEmployeeDistributeService.queryEnterpriseEmployeeDistribute(requestParam.industryId).then(function(data){
+				console.log(requestParam.industry);
+				EnterpriseEmployeeDistributeService.queryEnterpriseEmployeeDistribute(requestParam.industry).then(function(data){
+					//console.log(data);
 					var rows = data.data.rows;
 					var types = [], values = [];
 					$.each(rows, function(index, value){
-						types.push(value.type);
-						values.push({value: value.countNumber, name: value.type});
+						types.push(value.key);
+						values.push({value: value.count, name: value.key});
 					});
 					var getEnterpriseEmployeeDistributeData = function(){
 						return {
 						    title : {
-						        text: '企业人员规模分布',
-						        subtext: requestParam.industryId,
+						        text: '企业人员规模分布(规模/总数量)',
+						        subtext: requestParam.industry,
 						        x:'center'
 						    },
 						    tooltip : {
@@ -163,18 +166,19 @@ define(['./mod'], function(mod){
 					industryAnalysisChart.setOption(getEnterpriseEmployeeDistributeData());
 				});
 			}else{
-				EnterpriseRegisteredFoundDistributeService.queryEnterpriseRegisteredFoundDistribute(requestParam.industryId).then(function(data){
+				EnterpriseRegisteredFoundDistributeService.queryEnterpriseRegisteredFoundDistribute(requestParam.industry).then(function(data){
+					//console.log(data);
 					var rows = data.data.rows;
 					var types = [], values = [];
 					$.each(rows, function(index, value){
-						types.push(value.type);
-						values.push({value: value.countNumber, name: value.type});
+						types.push(value.key);
+						values.push({value: value.count, name: value.key});
 					});
 					var getEnterpriseRegisteredFoundDistributeData = function(){
 						return {
 						    title : {
-						        text: '企业注册资金分布',
-						        subtext: requestParam.industryId,
+						        text: '企业注册资金分布(资金规模/总数量)',
+						        subtext: requestParam.industry,
 						        x:'center'
 						    },
 						    tooltip : {

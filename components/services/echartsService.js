@@ -2,10 +2,10 @@ define(['./mod'], function (mod) {
     'use strict';
     // 获取行业企业总数量接口
     mod.factory('IndustryEnterpriseTotalNumberService',['$http', '$q','$interval', function($http, $q,$interval) {
-    	var queryIndustryEnterpriseTotalNumber = function(industryId){
+    	var queryIndustryEnterpriseTotalNumber = function(industry){
     		var defer = $q.defer();
-            console.log(industryId);
-            $http.post('/yiqicha/industryMsg/findInDustryListByCreateYear.do',{industryId: industryId}).success(function(data){
+            
+            $http.post('/yiqicha/industryMsg/findInDustryListByCreateYear.do',{industry: industry}).success(function(data){
                 if (isRequestSuccess(data)) {
                     defer.resolve(data);
                     //console.log(data);
@@ -22,10 +22,10 @@ define(['./mod'], function (mod) {
     }])
     // 注册时间分布
     .factory('RegisterTimeDistributeService',['$http', '$q','$interval', function($http, $q,$interval) {
-        var queryRegisterTimeDistribute = function(industryId){
+        var queryRegisterTimeDistribute = function(industry){
             var defer = $q.defer();
-            console.log(industryId);
-            $http.post('/yiqicha/industryMsg/findInDustryListByCreatTime.do',{industryId: industryId}).success(function(data){
+            
+            $http.post('/yiqicha/industryMsg/findInDustryListByCreatTime.do',{industry: industry}).success(function(data){
                 if (isRequestSuccess(data)) {
                     defer.resolve(data);
                     //console.log(data);
@@ -43,10 +43,10 @@ define(['./mod'], function (mod) {
 
     // 企业人员规模分布
     .factory('EnterpriseEmployeeDistributeService',['$http', '$q','$interval', function($http, $q,$interval) {
-        var queryEnterpriseEmployeeDistribute = function(industryId){
+        var queryEnterpriseEmployeeDistribute = function(industry){
             var defer = $q.defer();
-            console.log(industryId);
-            $http.post('/yiqicha/industryMsg/findInDustryListByEmployeeCount.do',{industryId: industryId}).success(function(data){
+            
+            $http.post('/yiqicha/industryMsg/findInDustryListByEmployeeCount.do',{industry: industry}).success(function(data){
                 if (isRequestSuccess(data)) {
                     defer.resolve(data);
                     //console.log(data);
@@ -64,10 +64,10 @@ define(['./mod'], function (mod) {
 
     // 企业注册资金分布
     .factory('EnterpriseRegisteredFoundDistributeService',['$http', '$q','$interval', function($http, $q,$interval) {
-        var queryEnterpriseRegisteredFoundDistribute = function(industryId){
+        var queryEnterpriseRegisteredFoundDistribute = function(industry){
             var defer = $q.defer();
-            console.log(industryId);
-            $http.post('/yiqicha/industryMsg/findInDustryListByRegistCapital.do',{industryId: industryId}).success(function(data){
+           
+            $http.post('/yiqicha/industryMsg/findInDustryListByRegistCapital.do',{industry: industry}).success(function(data){
                 if (isRequestSuccess(data)) {
                     defer.resolve(data);
                     //console.log(data);
