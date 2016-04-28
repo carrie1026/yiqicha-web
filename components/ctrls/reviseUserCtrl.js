@@ -1,6 +1,6 @@
 define(['./mod'], function(mod) {
     'use strict';
-    mod.controller('reviseUserCtrl', ['$scope', '$location', 'reviseUserService', '$rootScope', 'UserService', 'JobService', 'Upload', 
+    mod.controller('reviseUserCtrl', ['$scope', '$location', 'reviseUserService', '$rootScope', 'UserService', 'JobService', 'Upload',
         function($scope, $location, reviseUserService, $rootScope, UserService, JobService, Upload) {
             // init registerFormData
             $scope.reviseUserFormData = {};
@@ -10,10 +10,8 @@ define(['./mod'], function(mod) {
                 }else{
                     $scope.userImage = '/yiqicha/' + data.icon;
                 }
-                $scope.user = data;
-                $scope.reviseUserFormData.name = data.name;
-                $scope.reviseUserFormData.companyName = data.companyName;
-                $scope.reviseUserFormData.job = data.job;
+                $scope.reviseUserFormData = data;
+                $scope.loadSubJob(data.fId);
             });
 
             $scope.loadJob = function() {
