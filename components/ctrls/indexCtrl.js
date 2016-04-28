@@ -10,11 +10,17 @@ define(['./mod'], function(mod) {
         function($scope, $location, hotbusinessService, myfocusService, $interval, $timeout, CompanyService) {
             hotbusinessService.hotbusiness().then(function(data) {
                 $scope.hotbusiness = data.data;
-                console.log($scope.hotbusiness);
+//                console.log($scope.hotbusiness);
+                $timeout(function(){
+                    jQuery(".picMarquee-top").slide({mainCell:".bd ul",autoPlay:true,effect:"topMarquee",vis:1,interTime:50});
+                }, 100)
             })
 
             myfocusService.myfocus(MY_FORCE_PAGE, MY_FORCE_ROWS).then(function(data) {
                 $scope.myfocus = data.data;
+                 $timeout(function(){
+                    jQuery(".slideBox").slide({mainCell:".bd ul",effect:"topLoop",autoPlay:true,delayTime:2000});
+                }, 100)                 
             });
 
             $scope.$watch('companyName', function(newValue, oldValue) {
