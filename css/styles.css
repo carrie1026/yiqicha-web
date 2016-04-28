@@ -62,13 +62,13 @@ a:hover{
 	padding: 0 4.6%;
 }
 .mycenter_header1 li.li_1{
-	width: 12%;
+	width: 5%;
 	cursor: pointer;
 	float: left;
-	padding: 12px 0 0 0;
+	padding: 14px 0 0 0;
 }
 .mycenter_header1 li.li_2{
-	width: 75%;
+	width: 89%;
 	float: left;
 	text-align: center;
 }
@@ -83,7 +83,7 @@ a:hover{
 	cursor: pointer;
 }
 .mycenter_header1 li.li_3{
-	width: 10%;
+	width: 6%;
 	cursor: pointer;
 	float: right;
 	text-align: right;
