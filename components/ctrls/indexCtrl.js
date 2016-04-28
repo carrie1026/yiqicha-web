@@ -20,13 +20,8 @@ define(['./mod'], function(mod) {
             myfocusService.myfocus(MY_FORCE_PAGE, MY_FORCE_ROWS).then(function(data) {
                 $scope.myfocus = data.data;
                  $timeout(function(){
-<<<<<<< HEAD
                      jQuery(".slideBox").slide({mainCell:".bd ul",effect:"topLoop",autoPlay:true,delayTime:2000});
-                }, 100)                 
-=======
-                    jQuery(".slideBox").slide({mainCell:".bd ul",effect:"topLoop",autoPlay:true,delayTime:2000});
-                }, 100)
->>>>>>> 9650db355031e072338bd80e1aff497d825e0d15
+                }, 100);
             });
 
             $scope.$watch('companyName', function(newValue, oldValue) {
