@@ -7,8 +7,12 @@ mod.controller('RetrievepasswordCtrl', ['$scope', '$location', 'UserService', '$
         // 提交到后台
         RetrieveService.forgetPassword($scope.retrieveFormData.phoneNumber,$scope.retrieveFormData.captcha,$scope.retrieveFormData.password)
             .then(function(data) {
+                layer.open({
+                    content: '修改成功',
+                    style: 'background-color:#fff; color:#999; border:none;',
+                    time: 2
+                });
                 $location.path('/login');
-                alert("成功");
             }, function(data) {
                 alert(data.message);
             });

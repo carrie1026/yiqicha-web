@@ -5,17 +5,28 @@
                    <img src="../../images/icon_2.png">
                 </li>
                 <li class="li_2">修改密码</li>
-                <li class="li_3">保存</li>
+                <li class="li_3" ng-click="submitBtn()">保存</li>
                 <br style="clear: both;" />
             </ul>
         </div>
 
         
         <div class="xiugai_mima">
-            <form action="#" method="post">
-                    <input type="text" placeholder="原密码" style="padding-left:10px;"/>
-                    <input type="text" placeholder="新密码（请输入6-20位密码）" style="padding-left:10px;"/>
-                    <input type="text" placeholder="确认新密码" style="padding-left:10px;border-bottom: 0px;"/>
+            <form action="#" method="post" novalidate>
+                    <input type="password" placeholder="原密码"  ng-model="ModifyFormData.password" style="padding-left:10px;" required/>
+                    <input type="password" placeholder="新密码（请输入6-20位密码）" ng-model="ModifyFormData.newPassword" style="padding-left:10px;" required/>
+                    <input type="password" placeholder="确认新密码" ng-model="ModifyFormData.confirmnewPassword" style="padding-left:10px;border-bottom: 0px;" required/>
             </form>
+<!--
+            <form class="list" name="retrieveForm" novalidate>
+                <div class="register_phone">
+                    <span>+86</span><input placeholder="请输入手机号" type="text" ng-model="retrieveFormData.username" ng-pattern="/^1[3|4|5|8|7][0-9]{9}$/" required/>
+                    <div class="clear"></div>
+                </div>
+                <div class="register_password">
+                    <input placeholder="密码为6-20位数字或字母" type="password" ng-model="retrieveFormData.password" required/>
+                </div>
+            </form>
+-->
         </div>
 </div>

@@ -45,7 +45,8 @@ define(['angular'], function(angular) {
                 templateUrl: '/templates/mycenter/sets.html'
             })
             .when('/xiugai_mima', {
-                templateUrl: '/templates/mycenter/xiugai_mima.html'
+                templateUrl: '/templates/mycenter/xiugai_mima.html',
+                controller:'ModifypasswordCtrl'
             })
             //我关注的企业列表详情
             .when('/myfocus', {

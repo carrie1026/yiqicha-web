@@ -113,6 +113,24 @@ mod.factory('UserService', ['$http', '$q','$interval','$$http', function($http, 
         forgetPassword: forgetPassword
     };
 }])
+//修改密码 服务
+.factory('ModifyService', ['$http', '$q', function($http, $q) {
+    var ModifyPassword = function(password ,newPassword) {
+        var defer = $q.defer();
+        $http.post('/yiqicha/manager/login/modifyUserPassword.do', {password :password,newPassword: newPassword}).success(function(data) {
+            if (isRequestSuccess(data)) {
+                defer.resolve(data.data);
+            } else {
+                defer.reject(data);
+            }
+        });
+        return defer.promise;
+    };
+
+    return {
+        ModifyPassword: ModifyPassword
+    };
+}])
 
 //查询诉讼信息 服务
 .factory('LitigationService', ['$http', '$q', function($http, $q) {

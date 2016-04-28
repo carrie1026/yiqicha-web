@@ -32,5 +32,6 @@ define([
     'shiXinDetailsCtrl',
     'shareholderDetailCtrl',
     'amapCtrl',
-    'reportDetlCtrl'
+    'reportDetlCtrl',
+    'ModifyCtrl'
 ]);
