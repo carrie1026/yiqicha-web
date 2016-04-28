@@ -19,7 +19,6 @@ define([
     'myfocusCtrl',
     'addMyAttentionCtrl',
     'removeMyAttentionCtrl',
-    'userInfoCtrl',
     'enterpriseCtrl',
     'reviseUserCtrl',
     'feedbackCtrl',

@@ -204,11 +204,6 @@ define(['angular'], function(angular) {
                 templateUrl: '/templates/compinfo/shareholderinfo/shareholderinfod.html',
                 controller: 'ShareholderDetailCtrl'
             })
-            // 修改用户头像
-            .when('/userInfo', {
-                templateUrl: '/templates/mycenter/userInfo.html',
-                controller: 'userImageCtrl'
-            })
             // 年报详细
             .when('/annualReportDetails', {
                 templateUrl: '/templates/compinfo/reportdet/reportdetl.html',
