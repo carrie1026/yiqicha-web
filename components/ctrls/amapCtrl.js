@@ -53,6 +53,11 @@ define(['./mod'], function(mod) {'use strict';
     };
 
     var setAMapOption = function(amap, o) {
+        if (!o.longitude || !o.latitude) {
+            layer.open({content: '没有该企业的位置信息！'});
+            return;
+        }
+
         var zoom = 12;
 
         // set center
