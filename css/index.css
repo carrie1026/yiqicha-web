@@ -164,8 +164,7 @@
 .index_followde{
 	width:100%;
     background-color: #fff;
-    padding: 10px 5%;
-    height: 80px;
+    padding: 10px 5% 0 5%;
     cursor: pointer;
 }
 .index23121{
@@ -173,12 +172,12 @@
 	color:#666;
 }
 .index231221{
-	width:60%;
+	width:50%;
 	height:40px;
 	float:left;
 }
 .index231222{
-	width:40%;
+	width:50%;
 	height:20px;
 	float:left;
 	text-align:right;

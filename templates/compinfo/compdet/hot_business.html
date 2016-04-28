@@ -12,7 +12,13 @@
         <ul ng-repeat="hotbusiness in hotbusiness.rows">
             <a ng-href="/compdet?id={{hotbusiness.id}}">
                 <p>{{hotbusiness.companyName}}</p>
-                <li class="li_one" style="width: 30%;"><img src="../../images/pic_6.png" style="width: 100%;"></li>
+                <li class="li_one" style="width: 30%;">
+                    <img ng-if="hotbusiness.level == 1" src="../../images/star1.png">
+                   <img ng-if="hotbusiness.level == 2" src="../../images/star1.png">
+                   <img ng-if="hotbusiness.level == 3" src="../../images/star1.png">
+                   <img ng-if="hotbusiness.level == 4" src="../../images/star1.png">
+                   <img ng-if="hotbusiness.level == 5" src="../../images/star1.png">
+                </li>
                 <li class="li_three">{{hotbusiness.focus}}人关注</li>
                 <div style="clear: both;"></div>
             </a>
