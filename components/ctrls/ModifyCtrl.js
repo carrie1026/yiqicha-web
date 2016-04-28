@@ -37,7 +37,7 @@ mod.controller('ModifypasswordCtrl', ['$scope', '$location', 'ModifyService', '$
                     time: 2
                 });
             console.log($scope.ModifyFormData);
-                    history.back(-1);
+             history.back(-1);
             }, function(data) {
                 alert(data.message);
             });

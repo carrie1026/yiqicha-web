@@ -21,7 +21,12 @@ define(['./mod'], function (mod) {
                 console.log($scope.ErrorFormData);
                 var promise = ErrorService.Error($scope.ErrorFormData);
                 promise.then(function(data) {
-                    alert('提交成功');
+                    layer.open({
+                    content: '提交成功',
+                    style: 'background-color:#fff; color:#999; border:none;',
+                    time: 2
+                });
+                    history.back(-1);
                 }, function(data) {
                      alert('系统异常');
                 });
