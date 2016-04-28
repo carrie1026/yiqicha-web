@@ -8,20 +8,20 @@
 		</ul>
 	</div>
 	<div class="investa1">
-		<div ng-repeat="reportdet in Reportdet.rows">
-			<a href="/reportdetl?companyId={{companyId}}&reportId={{reportdet.id}}">
+		<div ng-repeat="report in reportList.rows">
+			<a href="/reportdetl?companyId={{companyId}}&reportId={{report.id}}">
 				<div class="investa11">
-					<div class="investa111">{{reportdet.year}}年年报</div>
+					<div class="investa111">{{report.year}}年年报</div>
 					<div class="investa112">
 						<div class="investa1121 fl nbbg"></div>
-						<div class="investa1122 fl">{{reportdet.companyName}}</div>
+						<div class="investa1122 fl">{{report.name}}</div>
 						<div class="investa1123 fr"><span class="yjj">></span></div>
 					</div>
 					<div class="investa113"></div>
 				</div>
 			</a>
 		</div>
-		<div ng-if="!Reportdet || Reportdet.rows.length == 0" style="padding:20px 0 20px 40%;">
+		<div ng-if="!reportList || reportList.rows.length == 0" style="padding:20px 0 20px 40%;">
 			暂无内容
 		</div>
 	</div>
