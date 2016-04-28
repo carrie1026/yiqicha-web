@@ -38,6 +38,15 @@ define(['angular'], function(angular) {
             .when('/job_2', {
                 templateUrl: '/templates/mycenter/job_2.html'
             })
+            .when('/aboutUs', {
+                templateUrl: '/templates/mycenter/aboutUs.html'
+            })
+            .when('/sets', {
+                templateUrl: '/templates/mycenter/sets.html'
+            })
+            .when('/xiugai_mima', {
+                templateUrl: '/templates/mycenter/xiugai_mima.html'
+            })
             //我关注的企业列表详情
             .when('/myfocus', {
                 templateUrl: '/templates/mycenter/myfocus.html',
@@ -194,11 +203,6 @@ define(['angular'], function(angular) {
             .when('/shareholderInfoDetail', {
                 templateUrl: '/templates/compinfo/shareholderinfo/shareholderinfod.html',
                 controller: 'ShareholderDetailCtrl'
-            })
-            // 修改用户头像
-            .when('/userInfo', {
-                templateUrl: '/templates/mycenter/userInfo.html',
-                controller: 'userImageCtrl'
             })
             // 年报详细
             .when('/annualReportDetails', {
