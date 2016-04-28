@@ -41,10 +41,6 @@ define(['./mod'], function (mod) {
 
     		var getBusinessMapData = function(){
 	    		return {
-				    title : {
-				        text: '企业图谱',
-				        x:'center',
-				    },
 				    tooltip : {
 				        trigger: 'item',
 				        formatter: '{a} : {b}'
