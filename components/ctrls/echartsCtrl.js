@@ -87,8 +87,9 @@ define(['./mod'], function(mod){
 						        formatter: "{a} <br/>{b} : {c} ({d}%)"
 						    },
 						    legend: {
-						        orient : 'vertical',
-						        x : 'left',
+						        orient : 'horizontal',
+						        x : 'center',
+						        y : 'bottom',
 						        data: types
 						    },
 						    toolbox: {
@@ -137,8 +138,9 @@ define(['./mod'], function(mod){
 						        formatter: "{a} <br/>{b} : {c} ({d}%)"
 						    },
 						    legend: {
-						        orient : 'vertical',
-						        x : 'left',
+						        orient : 'horizontal',
+						        x : 'center',
+						        y : 'bottom',
 						        data:types
 						    },
 						    toolbox: {
@@ -186,8 +188,9 @@ define(['./mod'], function(mod){
 						        formatter: "{a} <br/>{b} : {c} ({d}%)"
 						    },
 						    legend: {
-						        orient : 'vertical',
-						        x : 'left',
+						        orient : 'horizontal',
+						        x : 'center',
+						        y : 'bottom',
 						        data:types
 						    },
 						    toolbox: {
