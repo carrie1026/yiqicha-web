@@ -25,6 +25,7 @@ define(['./mod'], function(mod) {
                 if ($rootScope.userInfo) {
                     compdetService.addMyAttention(companyId).then(function(data) {
                         $scope.compdet.sts = 1;
+                        $scope.compdet.focus++;
                     });
                 } else {
                     var path = $location.path();
@@ -40,6 +41,7 @@ define(['./mod'], function(mod) {
             $scope.removeMyAttention = function() {
                 compdetService.removeMyAttention(companyId).then(function(data) {
                     $scope.compdet.sts = 0;
+                    $scope.compdet.focus--;
                 });
             };
 
