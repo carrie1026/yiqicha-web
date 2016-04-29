@@ -39,7 +39,11 @@
 			<div class="compdet1112">{{compdet.managementStatus}}</div>
 		</div>
 		<div class="compdet112">
-			<img src="../../../images/starjudge.png" />
+			<img ng-if="compdet.level == 1" src="/images/star1.png">
+			<img ng-if="compdet.level == 2" src="/images/star2.png">
+			<img ng-if="compdet.level == 3" src="/images/star3.png">
+			<img ng-if="compdet.level == 4" src="/images/star4.png">
+			<img ng-if="compdet.level == 5" src="/images/star5.png">
 		</div>
 		<div class="compdet113" ng-if="1 == compdet.sts">
 			<a href="#" ng-click="addMyAttention()">关注</a>
