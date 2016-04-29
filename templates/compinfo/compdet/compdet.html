@@ -39,6 +39,7 @@
 			<div class="compdet1112">{{compdet.managementStatus}}</div>
 		</div>
 		<div class="compdet112">
+			<img ng-if="!compdet.level" src="/images/star0.png">
 			<img ng-if="compdet.level == 1" src="/images/star1.png">
 			<img ng-if="compdet.level == 2" src="/images/star2.png">
 			<img ng-if="compdet.level == 3" src="/images/star3.png">
