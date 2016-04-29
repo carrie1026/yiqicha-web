@@ -17,10 +17,21 @@ define(['./mod'], function(mod) {
 
         }
         $scope.submitBtn = function() {
-            if (!$scope.ErrorFormData.mobileEmailQqNo || $scope.ErrorFormData.mobileEmailQqNo.length != 11) {
+            if (!$scope.ErrorFormData.errorParts) {
                 layer.open({
-                    content: '手机号不符合规则',
-                    time: 2
+                    content: '请选择信息有误的部分'
+                });
+                return;
+            }
+            if (!$scope.ErrorFormData.mobileEmailQqNo) {
+                layer.open({
+                    content: '手机号码不能为空'
+                });
+                return;
+            }
+            if (!/^1\d{10}$/.test($scope.ErrorFormData.mobileEmailQqNo)) {
+                layer.open({
+                    content: '手机号不符合规则'
                 });
                 return;
             }
@@ -28,12 +39,13 @@ define(['./mod'], function(mod) {
             var promise = ErrorService.Error($scope.ErrorFormData);
             promise.then(function(data) {
                 layer.open({
-                    content: '提交成功, 感谢您的反馈',
-                    time: 2
+                    content: '提交成功, 感谢您的反馈'
                 });
                 history.back(-1);
             }, function(data) {
-                alert('系统异常');
+                layer.open({
+                    content: '系统异常'
+                });
             });
         };
     }])
