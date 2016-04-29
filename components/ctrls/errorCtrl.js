@@ -17,13 +17,18 @@ define(['./mod'], function(mod) {
 
         }
         $scope.submitBtn = function() {
-            console.log($scope.ErrorFormData.errorParts);
-            console.log($scope.ErrorFormData);
+            if (!$scope.ErrorFormData.mobileEmailQqNo || $scope.ErrorFormData.mobileEmailQqNo.length != 11) {
+                layer.open({
+                    content: '手机号不符合规则',
+                    time: 2
+                });
+                return;
+            }
+
             var promise = ErrorService.Error($scope.ErrorFormData);
             promise.then(function(data) {
                 layer.open({
                     content: '提交成功, 感谢您的反馈',
-                    style: 'background-color:#fff; color:#999; border:none;',
                     time: 2
                 });
                 history.back(-1);
