@@ -3,6 +3,8 @@ define(['./mod'], function(mod) {
     mod.controller('reviseUserCtrl', ['$scope', '$location', 'reviseUserService', '$rootScope', 'UserService', 'JobService', 'Upload',
         function($scope, $location, reviseUserService, $rootScope, UserService, JobService, Upload) {
             // init registerFormData
+            $scope.picFile = '';
+            $scope.croppedDataUrl = '';
             $scope.reviseUserFormData = {};
             UserService.findUserInfo().then(function(data) {
                 if(data.icon == null || data.icon == ""){
