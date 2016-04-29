@@ -15,26 +15,26 @@ define(['./mod'], function (mod) {
     		var stockString = '股东';
     		var lawsuitString = '诉讼信息';
     		var nodesArray = [
-					    		{category:0, name: companyName, value : 20, label: companyName},
-					            {category:1, name: abroadInvestmentString,value : 10},
-					            {category:1, name: stockString,value : 10},
-					            {category:1, name: lawsuitString,value : 10}
+					    		{category:0, name: companyName, label: companyName, symbolSize:25},
+					            {category:1, name: abroadInvestmentString,symbolSize:20},
+					            {category:1, name: stockString,symbolSize:20},
+					            {category:1, name: lawsuitString,symbolSize:20}
 					         ];
 			var linkArray = [
-								{source : companyName, target : abroadInvestmentString, weight : 10},
-				                {source : companyName, target : stockString, weight : 10},
-				                {source : companyName, target : lawsuitString, weight : 10}
+								{source : companyName, target : abroadInvestmentString, weight : 1},
+				                {source : companyName, target : stockString, weight : 1},
+				                {source : companyName, target : lawsuitString, weight : 1}
 				            ];
 			$.each(AbroadInvestment,function(index,value){
-				nodesArray.push({category:2, name:value.companyName, value: 1});
+				nodesArray.push({category:2, name:value.companyName, symbolSize: 5});
 				linkArray.push({source : abroadInvestmentString, target : value.companyName, weight : 1});
 			});
 			$.each(LawsuitMsg,function(index,value){
-				nodesArray.push({category:2, name:value.registrineTime, value: 1});
+				nodesArray.push({category:2, name:value.registrineTime, symbolSize: 5});
 				linkArray.push({source : lawsuitString, target : value.registrineTime, weight : 1});
 			});
 			$.each(StockMsg,function(index,value){
-				nodesArray.push({category:2, name:value.name, value: 1});
+				nodesArray.push({category:2, name:value.name, symbolSize: 5});
 				linkArray.push({source : stockString, target : value.name, weight : 1});
 			});
 
@@ -94,10 +94,10 @@ define(['./mod'], function (mod) {
 				                }
 				            },
 				            useWorker: false,
-				            minRadius : 15,
+				            minRadius : 1,
 				            maxRadius : 25,
-				            gravity: 1.1,
-				            scaling: 1.1,
+				            gravity: 2,
+				            scaling: 1,
 				            roam: 'move',
 				            nodes:nodesArray,
 				            links : linkArray

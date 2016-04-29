@@ -11,7 +11,7 @@
                 </div>
                 <div class="index_topdecon">
                     <label><img src="/images/fangdajing.png" height="24px"></label>
-                    <input placeholder="请输入公司名" type="text" ng-model="companyName"/>
+                    <input placeholder="请输入企业名称" type="text" ng-model="companyName"/>
                     <div class="clear"></div>
                 </div>
                 <div class="index_topderg">
@@ -127,7 +127,7 @@
                                     </div>
                                  </div>
                                 <div class="index231222">
-                                    <span class="co">{{hotbusiness.focus}}</span>人关注
+                                    <span class="co">{{hotbusiness.focus | myNum}}</span>人关注
                                 </div>
                                 <div style="clear:both;"></div>
                             </div>

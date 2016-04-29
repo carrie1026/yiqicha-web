@@ -15,8 +15,8 @@ define(['./mod'], function(mod) {
             $scope.companyId = id;
 
             compdetService.compdet(id).then(function(data) {
-                console.log(data);
                 $scope.compdet = data.data;
+
                 $scope.industry = data.data.industry;
             });
 
