@@ -1,1 +1,4 @@
-define(['./mod', 'httpFilter']);
+define(['./mod',
+    'httpFilter',
+    'myNum'
+]);
