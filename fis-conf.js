@@ -36,3 +36,19 @@ fis.media('dev').match('/components/ctrls/**.js', {
 }).match('/components/constants/*.js', {
     packTo: '/static/constant.js'
 });
+
+// 测试环境
+fis.media('test').match('*', {
+  deploy: fis.plugin('http-push', {
+    receiver: 'http://bigdata.boyuanitsm.com:8999/receiver',
+    to: '/usr/share/nginx/yiqicha-web' // 注意这个是指的是测试机器的路径，而非本地机器
+  })
+}).match('/components/ctrls/**.js', {
+    packTo: '/static/ctrl.js'
+}).match('/components/services/*.js', {
+    packTo: '/static/service.js'
+}).match('/components/directives/*.js', {
+    packTo: '/static/directive.js'
+}).match('/components/constants/*.js', {
+    packTo: '/static/constant.js'
+});
