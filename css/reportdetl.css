@@ -4,12 +4,14 @@
 .rdl1{
 	width:100%;
 	position:relative;
-	top:40px;
+	background: #fff;
+	/*top:40px;*/
 }
 .rdl11{
 	width:100%;
 	height:40px;
-	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	background: #f2f3f4;
 }
 .rdl111{
 	width:80%;
@@ -30,8 +32,10 @@
 	background-repeat: no-repeat;
 }
 .nbnr{
-	width:90%;
-	margin-left:5%;
+	width:100%;
+	/*margin-left:5%;*/
+	padding: 0 4.6%;
+	background: #fff;
 }
 .ititle{
 	height:20px;
@@ -44,7 +48,7 @@
 	color:#777;
 }
 .jj15{
-	height:15px;
+	height:8px;
 }
 .wb50{
 	width:50%;
@@ -60,4 +64,7 @@
 }
 .fz1{
 	font-size:1em;
+}
+.nianbao_bottom{
+	border-bottom: #e0e0e0 1px dashed;
 }
