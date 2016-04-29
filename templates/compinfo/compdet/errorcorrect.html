@@ -12,7 +12,7 @@
 		<div class="compdet2">
 			<div class="compdet21">选择信息有误的部分</div>
 			<div class="compdet22">
-                
+
 				<div ng-repeat="Errortype in Errortype">
                     <p class="mgrb2 compdet221" ng-class="{compdetcur: ErrorFormData.errorParts == Errortype.dictName}" ng-click="subError(Errortype.dictName)">{{Errortype.dictName}}</p>
 <!--                    <p>{{ErrorFormData.errorParts}}</p>-->
@@ -29,7 +29,7 @@
 			</div>
 			<div class="compdet24">
 			    <form action="#" method="post">
-                   <input type="text" placeholder="12345678"  ng-model="ErrorFormData.mobileEmailQqNo"/>
+                   <input type="text" placeholder="请输入您的电话号码"  ng-model="ErrorFormData.mobileEmailQqNo"/>
                 </form>
 			</div>
 			<div class="compdet25">
