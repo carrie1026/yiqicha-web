@@ -6,7 +6,7 @@ define(['./mod'], function(mod) {
             $scope.reviseUserFormData = {};
             UserService.findUserInfo().then(function(data) {
                 if(data.icon == null || data.icon == ""){
-                    $scope.userImage = "/images/组-2@3x.png"
+                    $scope.userImage = "/images/default-2@3x.png"
                 }else{
                     $scope.userImage = '/yiqicha/' + data.icon;
                 }
