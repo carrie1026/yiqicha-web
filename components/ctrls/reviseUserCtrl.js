@@ -47,7 +47,8 @@ define(['./mod'], function(mod) {
             };
 
             $('#file').on('change', function (e) {
-                 $('#imgCropDiv').css('height', (window.innerHeight -50)/2);
+                $('#changeImgDiv').css('height', (window.innerHeight -50));
+                $('#imgCropDiv').css('height', (window.innerHeight -50)/2);
                 $('#changeImgDiv').css('display','block');
 
                 var file = e.target.files[0];
