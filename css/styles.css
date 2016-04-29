@@ -1625,13 +1625,71 @@ a{
 	border-bottom: 1px solid #dbdbdb;
 	font-size: 14px;
 }
-/*.mycenter_xiugaiinfo .xiugai_info p.p_2 em{
-    float: right;
-	margin: 0 5% 0 0;
+
+
+/*三种提示页面*/
+.prompt{
+	width: 100%;
+	background: #f2f3f5;
 }
-.mycenter_xiugaiinfo .xiugai_info p.p_2 img{
-	width: 7px;
-	height: 12px;
+.prompt_1{
+	margin: 0 auto;
+	padding: 240px 0 0 0;
+}
+.prompt_1 p{
+	margin: 0 auto;
+	text-align: center;
+	color: #a0a0a0;
+	font-size: 14px;
+}
+.prompt_1 p img{
+	width: 74px;
+	height: 68px;
 	display: inline-block;
+	text-align: center;
+	padding: 0 0 14px 0;
 }
-*/
+
+
+.prompt_2{
+	margin: 0 auto;
+	padding: 240px 0 0 0;
+}
+.prompt_2 p{
+	margin: 0 auto;
+	text-align: center;
+	color: #a0a0a0;
+	font-size: 16px;
+}
+.prompt_2 p img{
+	width: 77px;
+	height: 58px;
+	display: inline-block;
+	padding: 0 0 14px 0;
+}
+.prompt_2 p.p_3{
+	width: 85px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	margin: 40px auto 0 auto;
+	border: 1px solid #a0a0a0;
+	font-size: 14px;
+}
+
+.prompt_3{
+	margin: 0 auto;
+	padding: 222px 0 0 0;
+}
+.prompt_3 p{
+	margin: 0 auto;
+	text-align: center;
+	color: #a0a0a0;
+	font-size: 14px;
+}
+.prompt_3 p img{
+	width: 90px;
+	height: 90px;
+	display: inline-block;
+	padding: 0 0 14px 0;
+}

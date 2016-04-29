@@ -83,6 +83,9 @@ define(['angular'], function(angular) {
             .when('/search_business', {
                 templateUrl: '/templates/search/search_business.html'
             })
+            .when('/prompt', {
+                templateUrl: '/templates/search/prompt.html'
+            })
             .when('/law_book', {
                 templateUrl: '/templates/search/law_book.html'
             })
