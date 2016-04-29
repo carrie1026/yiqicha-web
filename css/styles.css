@@ -1538,7 +1538,7 @@ a{
 	width: 100%;
 	margin: 0 auto;
 	text-align: center;
-	padding: 24px 0 26px 0;
+	padding: 34px 0 20px 0;
 	background: #f5f5f5;
 	border-bottom: 1px solid #dadada;
 }
@@ -1549,8 +1549,15 @@ a{
 	width: 80px;
 	height: 80px;
 	display: block;
-	margin: 0 auto 15px auto;
+	margin: 0 auto 2px auto;
 	text-align: center;
+}
+.aboutus_ban  p{
+	line-height: 180%;
+}
+.aboutus_ban p.p_2{
+	font-size: 12px;
+	color: #333;
 }
 .aboutus_ban p.p_1{
 	color: #c0c0c0;
