@@ -1583,7 +1583,6 @@ a{
 }
 .sets_con , .sets_bottom{
 	width: 100%;
-	padding: 0 0 0 4.6%;
 	background: #fff;
 	margin: 10px 0 0 0;
 	border-top: 1px solid #dadada;
@@ -1593,7 +1592,7 @@ a{
 	width: 100%;
 	height: 45px;
 	/*padding: 0 0 0 4.6%;*/
-	border-bottom: 1px solid #dadada;
+/*	border-bottom: 1px solid #dadada;*/
 }
 .sets_con li , .sets_bottom li{
 	float: left;
@@ -1601,6 +1600,7 @@ a{
 	line-height: 45px;
 	color: #3c3c3c;
 	font-size: 14px;
+   
 }
 .sets_con li.li_two , .sets_bottom li.li_two{
 	width: 7%;

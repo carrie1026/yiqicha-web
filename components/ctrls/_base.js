@@ -33,5 +33,6 @@ define([
     'shareholderDetailCtrl',
     'amapCtrl',
     'reportDetlCtrl',
-    'ModifyCtrl'
+    'ModifyCtrl',
+    'recommendCtrl'
 ]);

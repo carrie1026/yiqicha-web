@@ -42,7 +42,8 @@ define(['angular'], function(angular) {
                 templateUrl: '/templates/mycenter/aboutUs.html'
             })
             .when('/sets', {
-                templateUrl: '/templates/mycenter/sets.html'
+                templateUrl: '/templates/mycenter/sets.html',
+                controller:'RecommendCtrl'
             })
             .when('/xiugai_mima', {
                 templateUrl: '/templates/mycenter/xiugai_mima.html',
