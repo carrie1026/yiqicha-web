@@ -12,5 +12,6 @@ define([
     'businessMapService',
     'annualReportService',
     'jobService',
-    'companyService'
+    'companyService',
+    'myfocusService'
 ]);

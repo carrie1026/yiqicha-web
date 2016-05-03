@@ -1,14 +1,26 @@
-define(['./mod'], function (mod) {
+/**
+ * 我的关注列表
+ */
+define(['./mod'], function(mod) {
     'use strict';
-mod.controller('myfocusCtrl', ['$scope','$location', 'myfocusService','$rootScope', function($scope, $location,myfocusService,$rootScope) {
-    // 我关注的企业列表详情
-    /*var accountId = 'f271b018c1ad11e5a130eca86ba4ba05';*/
+
     var page = 1;
-    var rows = 3;
-    var accountId = 1;
-    myfocusService.myfocus(page,rows,accountId).then(function(data){
-        $scope.myfocus = data.data;
-        console.log($scope.myfocus);
-    });  
- }])
+    var rows = 5;
+
+    mod.controller('myfocusCtrl', ['$scope', '$location', 'myfocusService' ,
+        function($scope, $location, myfocusService) {
+            var loadMyfocusList = function (isPush) {
+                myfocusService.myfocus(page, rows, isPush).then(function(data) {
+                    $scope.myfocus = data;
+                });
+            };
+
+            $scope.loadMore = function () {
+                page++;
+                loadMyfocusList(true);
+            };
+
+            loadMyfocusList(false);
+        }
+    ])
 });

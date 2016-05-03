@@ -16,15 +16,24 @@ fis.match('/components/**', {
 });
 
 // 生产环境
-fis.media('pro').match('/components/**.js', {
-    packTo: '/static/app.js',
-    optimizer: fis.plugin('uglify-js')
-}).match('/css/**', {
-    packTo: '/static/style.css',
-    optimizer: fis.plugin('clean-css')
-}).match('/static/**', {
-    useHash: true
-})
+// fis.media('pro').match('/components/**.js', {
+//     packTo: '/static/app.js',
+//     optimizer: fis.plugin('uglify-js')
+// }).match('/css/**', {
+//     packTo: '/static/style.css',
+//     optimizer: fis.plugin('clean-css')
+// }).match('/static/**', {
+//     useHash: true
+// })
+fis.media('pro').match('/components/ctrls/**.js', {
+    packTo: '/static/ctrl.js'
+}).match('/components/services/*.js', {
+    packTo: '/static/service.js'
+}).match('/components/directives/*.js', {
+    packTo: '/static/directive.js'
+}).match('/components/constants/*.js', {
+    packTo: '/static/constant.js'
+});
 
 // 开发环境
 fis.media('dev').match('/components/ctrls/**.js', {
