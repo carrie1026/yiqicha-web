@@ -11,16 +11,27 @@ define(['./mod'], function(mod) {
             hotbusinessService.hotbusiness().then(function(data) {
                 $scope.hotbusiness = data.data;
                 console.log($scope.hotbusiness);
-                $timeout(function(){
-                    jQuery(".picMarquee-top").slide({mainCell:".bd ul",autoPlay:true,effect:"topMarquee",vis:5,interTime:50});
-//                    jQuery(".picMarquee-top").slide({mainCell:".bd ul",effect:"topLoop",autoPlay:true,delayTime:2000});
+                $timeout(function() {
+                    jQuery(".picMarquee-top").slide({
+                        mainCell: ".bd ul",
+                        autoPlay: true,
+                        effect: "topMarquee",
+                        vis: 5,
+                        interTime: 50
+                    });
+                    //                    jQuery(".picMarquee-top").slide({mainCell:".bd ul",effect:"topLoop",autoPlay:true,delayTime:2000});
                 }, 100)
             })
 
             myfocusService.myfocus(MY_FORCE_PAGE, MY_FORCE_ROWS).then(function(data) {
                 $scope.myfocus = data.data;
-                 $timeout(function(){
-                     jQuery(".slideBox").slide({mainCell:".bd ul",effect:"topLoop",autoPlay:true,delayTime:2000});
+                $timeout(function() {
+                    jQuery(".slideBox").slide({
+                        mainCell: ".bd ul",
+                        effect: "topLoop",
+                        autoPlay: true,
+                        delayTime: 2000
+                    });
                 }, 100);
             });
 
@@ -43,12 +54,19 @@ define(['./mod'], function(mod) {
 
             // refresh company data
             $scope.isShowCompanyData = true;
-            $interval(function() {
+            var intervaler = $interval(function() {
                 $scope.isShowCompanyData = false;
                 loadCompanyCount($scope);
             }, COMPANY_DATA_RELOAD_TIME);
 
             loadCompanyCount();
+
+            // cancel intervaler when ctrl destroy
+            $scope.$on("$destroy", function() {
+                if (intervaler) {
+                    $interval.cancel(intervaler);
+                }
+            });
         }
     ]);
 
