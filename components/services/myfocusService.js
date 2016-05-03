@@ -8,7 +8,7 @@ define(['./mod'], function(mod) {
             $$http.get('/yiqicha/myAttenttionMsg/findMyAttenttionMsg.do', {
                 page: page,
                 rows: rows
-            }).then(function(data) {
+            }, true).then(function(data) {
                 if (!myfocusList || !isPush) {
                     myfocusList = data;
                 } else { // push
