@@ -17,7 +17,7 @@
 .index_topdecon label,.index_topdecon input{float: left;}
 .index_topdecon label{width: 20%;text-align: center;}
 .index_topdecon input{height: 32px;line-height: 32px;width: 80%;border:none;border-radius: 3px;}
-.index_topderg{width: 10%;text-align: center;line-height: 36px;}
+.index_topderg{width: 10%;text-align: center;line-height: 34px;}
 .Dataupdate{
 	width:90%;
 	margin:0 5%;
@@ -40,9 +40,10 @@
 	height:80px;
 	background-color:#FFF;
 }
+.index_search p{font-size: 16px;}
 .index_search p{color: #fff;float: left;margin-right: 5px;}
 .index_searchlf{float: left;width: 34%;background-color: #43BCC6;height:80px;padding:24px 0 0 5%;}
-.index_searchcon{float: left;width: 33%;background-color: #F68745;height:80px;padding:24px 0 0 5%;}
+.index_searchcon{float: left;width: 33%;background-color: #F68745;height:80px;padding:0px 0 0 5%;}
 .index_searchrg{float: left;width: 33%;background-color: #4C7E54;height:80px;padding:24px 0 0 5%;}
 
 .index2{
@@ -62,8 +63,9 @@
 	float:left;
 	background-image:url("../images/paizi@3x.png");
 	background-size:100% 100%;
-	font-size:2em;
+	font-size:30px;
 	font-weight:700;
+    color: #1B7ACD;
 }
 .index21122{
 	width:6%;
