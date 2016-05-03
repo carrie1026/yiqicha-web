@@ -103,7 +103,7 @@
     <!-- s: faren/gudong -->
     <div class="search_pre searchpeople_con1" ng-if="'faren' == type">
         <ul ng-repeat="faren in farenList.rows">
-            <a href="/shareholderinfo?companyId={{faren.companyId}}">
+            <a href="/compdet?id={{faren.companyId}}">
                 <p>{{faren.name}}</p>
                 <li class="li_one"><img src="../../images/company@3x.png"></li>
                 <li>{{faren.address}}</li>

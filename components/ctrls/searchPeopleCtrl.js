@@ -87,7 +87,7 @@ define(['./mod'], function(mod) {
             };
             $scope.farenLoadMore = function() {
                 farenPage++;
-                loadFarenList(true);
+                loadFarenList(true, $scope.searchBox, $scope.address);
             };
             $scope.shixinLoadMore = function() {
                 shixinList++;
