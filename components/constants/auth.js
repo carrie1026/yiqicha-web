@@ -5,6 +5,7 @@
 define(['./mod'], function(mod) {
     mod.constant('Auths', [
         '/mycenter_home',
-        '/myfocus'
+        '/myfocus',
+        '/xiugai_mima'
     ]);
 });
