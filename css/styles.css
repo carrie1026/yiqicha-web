@@ -42,8 +42,7 @@ a:hover{
 	color: #fff;
 }
 .mycenter_header li.li_1 img{
-	width: 13px;
-	height: 15px;
+	width: 9px;
 	display: block;
 }
 .mycenter_header li.li_3 img{
@@ -105,8 +104,7 @@ a:hover{
 	color: #fff;
 }
 .mycenter_header1 li.li_1 img{
-	width: 13px;
-	height: 15px;
+	width: 9px;
 	display: block;
 }
 .mycenter_header1 li.li_3 img{
@@ -142,8 +140,7 @@ a:hover{
 	font-size: 16px;
 }
 .myhome_ban ul.ul_one li.li_one img{
-	width: 13px;
-	height: 15px;
+	width: 9px;
 	display: block;
 }
 .myhome_ban ul.ul_one li.li_three{
@@ -334,16 +331,14 @@ a:hover{
 }
 .industry_con .industry_con1{
 	background: #fff;
-	padding: 0 0 10px 0;
+	padding:10px 0;
 }
 .industry_con .industry_con2{
 	margin: 12px 0;
 	padding: 10px 0;
 }
 .industry_con .industry_con1 p{
-	/*line-height: 200%;*/
-	height: 25px;
-	line-height: 25px;
+	line-height: 200%;
 	margin: 0 4.6%;
 	color: #3c3c3c;
 }
@@ -1089,8 +1084,7 @@ a{
 	width: 14%;
 }
 .search_header p img{
-	width: 16px;
-	height: 19px;
+	width: 9px;
 	display: inline-block;
 }
 .search_header ul{
