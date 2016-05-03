@@ -355,29 +355,6 @@ mod.factory('UserService', ['$http', '$q','$interval','$$http', function($http, 
 //        removeMyAttention: removeMyAttention
 //    };
 //}])
-
-//我关注的企业列表 服务
-.factory('myfocusService', ['$http', '$q', function($http, $q) {
-    var myfocus = function(page,rows,accountId) {
-        var defer = $q.defer();
-        $http.post('/yiqicha/myAttenttionMsg/findMyAttenttionMsg.do',{
-            page:page,
-            rows:rows,
-            accountId:accountId
-        }).success(function(data) {
-            if (isRequestSuccess(data, true)) {
-                defer.resolve(data);
-            } else {
-                defer.reject(data);
-            }
-        });
-        return defer.promise;
-    };
-
-    return {
-        myfocus: myfocus
-    };
-}])
 //热门企业 服务
 .factory('hotbusinessService', ['$http', '$q', function($http, $q) {
     var hotbusiness = function() {

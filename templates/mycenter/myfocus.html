@@ -17,8 +17,14 @@
         </ul>
         </a>
     </div>
-    <div ng-if="myfocus.total != 0" class="load_more"><img src="../../images/loading@3x.png">载入更多...</div>
-    <div ng-if="myfocus.total == 0" style="padding:20px 0 20px 40%;">
-         暂无内容
+    <!-- <div ng-if="myfocus.total != 0" class="load_more"><img src="../../images/loading@3x.png">载入更多...</div> -->
+    <div ng-if="!myfocus" style="padding:20px 0 20px 40%;">
+        暂无内容
+    </div>
+    <div class="load_more" ng-if="myfocus.moreDataCanBeLoaded" ng-click="qiyeLoadMore()">
+        载入更多...
+    </div>
+    <div class="load_more" ng-if="!myfocus.moreDataCanBeLoaded">
+        没有更多
     </div>
 </div>
