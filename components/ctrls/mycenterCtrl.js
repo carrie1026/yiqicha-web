@@ -4,7 +4,11 @@ define(['./mod'], function(mod) {
         // login button
         $scope.logout = function(request) {
             UserService.logout().then(function(data) {
-                alert("成功");
+                layer.open({
+                    content: '退出登录',
+                    style: 'background-color:#fff; color:#000; border:none;',
+                    time: 2
+                });
                 $location.path('/login');
             }, function(data) {
                 alert(data.data.message);
