@@ -12,7 +12,9 @@ define(['./mod'], function(mod) {
                 }else{
                     $scope.userImage = '/yiqicha/' + data.icon;
                 }
-                $scope.reviseUserFormData = data;
+                $scope.reviseUserFormData.name = data.name;
+                $scope.reviseUserFormData.companyName = data.companyName;
+                $scope.reviseUserFormData.job = data.job;
                 $scope.loadSubJob(data.fId);
             });
 
