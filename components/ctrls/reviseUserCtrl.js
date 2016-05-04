@@ -4,6 +4,7 @@ define(['./mod'], function(mod) {
         function($scope, $location, reviseUserService, $rootScope, UserService, JobService, Upload) {
             // init registerFormData
             $scope.picFile = '';
+            $scope.resImgData = '';
             $scope.croppedDataUrl = '';
             $scope.reviseUserFormData = {};
             UserService.findUserInfo().then(function(data) {
@@ -50,12 +51,20 @@ define(['./mod'], function(mod) {
                 $('#file').click();
             };
 
-            $('#file').on('change', function (e) {
+            $('#file').on('change', function (evt) {
                 $('#changeImgDiv').css('height', (window.innerHeight -50));
                 $('#imgCropDiv').css('height', (window.innerHeight -50)/2);
                 $('#changeImgDiv').css('display','block');
 
-                var file = e.target.files[0];
+                var file = evt.currentTarget.files[0];
+                var reader = new FileReader();
+                reader.onload = function (evt) {
+                    $scope.$apply(function($scope){
+                        $scope.resImgData=evt.target.result;
+                    });
+                };
+                reader.readAsDataURL(file);
+
                 console.log(file);
             });
 
