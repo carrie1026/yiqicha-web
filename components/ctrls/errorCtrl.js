@@ -11,20 +11,16 @@ define(['./mod'], function(mod) {
 //            $scope.ErrorFormData.errorParts = $scope.selected;
         })
 
-        $scope.subError = function(dictName) {
-            $scope.ErrorFormData.errorParts = dictName;
-            console.log($scope.ErrorFormData.errorParts);
+//        $scope.subError = function(dictName) {
+//            $scope.ErrorFormData.errorParts = dictName;
+//            console.log($scope.ErrorFormData.errorParts);
+//
+//        }
+        $scope.err = "";
+        for(var i=0;i<$scope.Errortype.length;i++)
+         {
 
-        }
-//          var err = "";
-//             for(i=0;i<$scope.Errortype.length;i++)
-//             {
-//                  $scope.subError = function(dictName) {
-//                       err = dictName;
-//                       $scope.ErrorFormData.errorParts[i] = err;
-//                       console.log($scope.ErrorFormData.errorParts);
-//                  }
-//             }
+         }
         $scope.submitBtn = function() {
             if (!$scope.ErrorFormData.errorParts) {
                 layer.open({
