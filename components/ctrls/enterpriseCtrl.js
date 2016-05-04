@@ -10,8 +10,10 @@ define(['./mod'], function (mod) {
     	});
     }]);
 
-    mod.controller('findSonEnterpriseInterMsgCtrl', ['$scope', 'SonEnterpriseInterMsgService',function($scope, SonEnterpriseInterMsgService){
-    	var companyId = null;
+    mod.controller('findSonEnterpriseInterMsgCtrl', ['$scope', 'SonEnterpriseInterMsgService','$location',function($scope, SonEnterpriseInterMsgService,$location){
+        var sonEnterpriseMsgArrayed = $location.search();
+        var companyId = sonEnterpriseMsgArrayed.companyId;
+//    	var companyId = 1;
     	var page = 1;
     	var rows = 10;
     	SonEnterpriseInterMsgService.readData(companyId,page,rows).then(function(data){

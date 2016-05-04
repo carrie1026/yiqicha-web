@@ -3,24 +3,26 @@ define(['./mod'], function(mod) {
     mod.controller('ErrorCtrl', ['$scope', '$location', 'ErrorService', '$rootScope', function($scope, $location, ErrorService, $rootScope) {
         // init registerFormData
         $scope.ErrorFormData = {};
-        //            $scope.selected = {};
+        $scope.errlist = [];
         var key = 'er_defect_management';
         ErrorService.Errortype(key).then(function(data) {
             $scope.Errortype = data.data;
             console.log($scope.Errortype);
-//            $scope.ErrorFormData.errorParts = $scope.selected;
         })
 
-//        $scope.subError = function(dictName) {
-//            $scope.ErrorFormData.errorParts = dictName;
-//            console.log($scope.ErrorFormData.errorParts);
-//
-//        }
-        $scope.err = "";
-        for(var i=0;i<$scope.Errortype.length;i++)
-         {
+        $scope.subError = function(dictName) {
+            $scope.ErrorFormData.errorParts = dictName;
+            console.log($scope.ErrorFormData.errorParts);
 
-         }
+        }
+        
+//        $scope.subError = function(dictName) {
+//            $scope.errlist.push("dictName");
+//            $scope.errlist = dictName;
+//            var $scope.ErrorFormData.errorParts = angular.toJson($scope.errlist);
+//            console.log($scope.ErrorFormData.errorParts);            
+//        }
+
         $scope.submitBtn = function() {
             if (!$scope.ErrorFormData.errorParts) {
                 layer.open({
@@ -51,7 +53,7 @@ define(['./mod'], function(mod) {
                     content: '提交成功, 感谢您的反馈',
                     time: 2
                 });
-                history.back(-1);
+//                history.back(-1);
             }, function(data) {
                 layer.open({
                     content: '系统异常'
