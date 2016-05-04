@@ -55,7 +55,7 @@ define(['./mod'], function(mod) {
                     content: '提交成功, 感谢您的反馈',
                     time: 2
                 });
-//                history.back(-1);
+                history.back(-1);
             }, function(data) {
                 layer.open({
                     content: '系统异常'
