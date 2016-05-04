@@ -125,8 +125,9 @@
 .compdet1312{
 	float: left;
 	width:78%;
-	min-height:40px;
+	height:40px;
 	line-height: 40px;
+	overflow: hidden;
 	color:#777;
 }
 .compdet1313{
