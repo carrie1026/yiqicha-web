@@ -24,9 +24,7 @@ define(['./mod'], function(mod) {
             })
 
             myfocusService.myfocus(page,rows).then(function(data) {
-                $scope.myfocus = data.data;
-                console.log(123);
-                console.log($scope.myfocus);
+                $scope.myfocus = data;
                 $timeout(function() {
                     jQuery(".slideBox").slide({
                         mainCell: ".bd ul",
