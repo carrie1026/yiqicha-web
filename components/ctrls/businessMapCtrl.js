@@ -13,31 +13,16 @@ define(['./mod'], function (mod) {
     		var StockMsg = data.data.StockMsg;
     		var abroadInvestmentString = '对外投资';
     		var stockString = '股东';
-    		var lawsuitString = '诉讼信息';
-    		var nodesArray = [
-					    		{category:0, name: companyName, label: companyName, symbolSize:25},
-					            {category:1, name: abroadInvestmentString,symbolSize:20},
-					            {category:1, name: stockString,symbolSize:20},
-					            {category:1, name: lawsuitString,symbolSize:20}
-					         ];
-			var linkArray = [
-								{source : companyName, target : abroadInvestmentString, weight : 1},
-				                {source : companyName, target : stockString, weight : 1},
-				                {source : companyName, target : lawsuitString, weight : 1}
-				            ];
+    		var nodesArray = [{category:0, name: companyName, label: companyName, symbolSize:40}];
+			var linkArray = [{source : companyName, target : stockString, weight : 1}];
 			$.each(AbroadInvestment,function(index,value){
-				nodesArray.push({category:2, name:value.companyName, symbolSize: 5});
-				linkArray.push({source : abroadInvestmentString, target : value.companyName, weight : 1});
-			});
-			$.each(LawsuitMsg,function(index,value){
-				nodesArray.push({category:2, name:value.registrineTime, symbolSize: 5});
-				linkArray.push({source : lawsuitString, target : value.registrineTime, weight : 1});
+				nodesArray.push({category:1, name:value.companyName, symbolSize: 30});
+				linkArray.push({source : companyName, target : value.companyName, weight : 1});
 			});
 			$.each(StockMsg,function(index,value){
-				nodesArray.push({category:2, name:value.name, symbolSize: 5});
-				linkArray.push({source : stockString, target : value.name, weight : 1});
+				nodesArray.push({category:2, name:value.name, symbolSize: 30});
+				linkArray.push({source :companyName, target : value.name, weight : 1});
 			});
-
 
     		var getBusinessMapData = function(){
 	    		return {
@@ -45,7 +30,7 @@ define(['./mod'], function (mod) {
 				        trigger: 'item',
 				        formatter: '{a} : {b}'
 				    },
-		
+
 				    series : [
 				        {
 				            type:'force',
@@ -60,9 +45,6 @@ define(['./mod'], function (mod) {
 				                },
 				                {
 				                    name: stockString
-				                },
-				                {
-				                    name: lawsuitString
 				                }
 				            ],
 				            itemStyle: {
@@ -105,6 +87,7 @@ define(['./mod'], function (mod) {
 				    ]
 				};
 	    	};
+            console.log(getBusinessMapData());
 	    	businessMap.setOption(getBusinessMapData());
     	});
     }]);
