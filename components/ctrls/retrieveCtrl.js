@@ -13,8 +13,6 @@ mod.controller('RetrievepasswordCtrl', ['$scope', '$location', 'UserService', '$
                     time: 2
                 });
                 $location.path('/login');
-            }, function(data) {
-                alert(data.message);
             });
 
     };
@@ -25,7 +23,7 @@ mod.controller('RetrievepasswordCtrl', ['$scope', '$location', 'UserService', '$
             alert('手机号码格式不正确!');
             return;
         }
-        
+
         var isRegister=false;
         var imageCaptcha=null;
         RetrieveService.forgetPasswordSmsCaptcha($scope.retrieveFormData.phoneNumber,imageCaptcha,isRegister)
