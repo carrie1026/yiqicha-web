@@ -117,7 +117,19 @@ define(['./mod'], function(mod) {
             $scope.$watch('address', function(newValue, oldValue) {
                 $scope.isShowArea = false;
 
-                search($scope.searchBox, newValue);
+                switch ($scope.type) {
+                    case 'qiye':
+                    search($scope.searchBox, newValue);
+                        break;
+                    case 'faren':
+                    search($scope.searchBoxName, newValue);
+                        break;
+                    case 'shixin':
+                    search($scope.searchBoxLose, newValue);
+                        break;
+                    default:
+                        console.error('We not have this type:', $scope.type);
+                }
             });
 
             // load more btn
