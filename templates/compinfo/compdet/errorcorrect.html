@@ -14,7 +14,7 @@
 			<div class="compdet22">
 
 				<div ng-repeat="Errortype in Errortype">
-                    <p class="mgrb2 compdet221" ng-class="{compdetcur: ErrorFormData.errorParts == Errortype.dictName}" ng-click="subError(Errortype.dictName)">{{Errortype.dictName}}</p>
+                    <p class="mgrb2" ng-class="{'compdetcur':Errortype.isSelected, 'compdet221':!Errortype.isSelected}" ng-click="subError(Errortype.dictName)">{{Errortype.dictName}}</p>
                 </div>
                 <div class="clear"></div>
 			</div>

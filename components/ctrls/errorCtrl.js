@@ -7,23 +7,30 @@ define(['./mod'], function(mod) {
         var key = 'er_defect_management';
         ErrorService.Errortype(key).then(function(data) {
             $scope.Errortype = data.data;
-            console.log($scope.Errortype);
+//            console.log($scope.Errortype);
         })
 
-        $scope.subError = function(dictName) {
-            $scope.ErrorFormData.errorParts = dictName;
-            console.log($scope.ErrorFormData.errorParts);
-
-        }
-        
 //        $scope.subError = function(dictName) {
-//            $scope.errlist.push("dictName");
-//            var $scope.ErrorFormData.errorParts = angular.toJson($scope.errlist);
-//            console.log($scope.ErrorFormData.errorParts);            
+//            $scope.ErrorFormData.errorParts = dictName;
+//            console.log($scope.ErrorFormData.errorParts);
+//
 //        }
-
+       $scope.subError = function(dictName) {
+            for (var i = 0; i < $scope.Errortype.length; i++){
+               var Errortype = $scope.Errortype[i];
+               console.log(Errortype.dictName);
+               if(Errortype.dictName == dictName){
+                    if(!Errortype.isSelected){
+                      Errortype.isSelected = true; 
+                      $scope.errlist.push(dictName);
+                    }
+                    break;
+               }    
+            }
+            console.log($scope.errlist);
+        }
         $scope.submitBtn = function() {
-            if (!$scope.ErrorFormData.errorParts) {
+            if (!$scope.errlist) {
                 layer.open({
                     content: '请选择信息有误的部分',
                     time: 2
@@ -44,7 +51,9 @@ define(['./mod'], function(mod) {
                 });
                 return;
             }
-
+            $scope.ErrorFormData.errorParts = angular.toJson($scope.errlist);
+            console.log($scope.errlist);
+            console.log($scope.ErrorFormData.errorParts);    
             var promise = ErrorService.Error($scope.ErrorFormData);
             console.log($scope.ErrorFormData);
             promise.then(function(data) {

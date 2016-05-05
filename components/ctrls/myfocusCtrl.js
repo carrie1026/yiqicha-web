@@ -12,7 +12,6 @@ define(['./mod'], function(mod) {
             var loadMyfocusList = function (isPush) {
                 myfocusService.myfocus(page, rows, isPush).then(function(data) {
                     $scope.myfocus = data;
-                    console.log(123);
                     console.log($scope.myfocus);
                 });
             };
