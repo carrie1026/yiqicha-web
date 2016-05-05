@@ -71,7 +71,10 @@ define(['./mod'], function(mod) {
                 if (!newValue || newValue.length < 2)
                     return;
 
-                search(newValue, $scope.address);
+                setTimeout(function(){
+                    search(newValue, $scope.address);
+                },1000);
+                // search(newValue, $scope.address);
             });
             // watch address
             $scope.$watch('address', function(newValue, oldValue) {
