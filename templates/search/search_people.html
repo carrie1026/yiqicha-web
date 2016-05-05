@@ -8,8 +8,8 @@
             <li class="li_one" onclick="javascript :history.back(-1)"><img src="../../images/Oval 81 + Line@3x.png"></li>
             <li class="li_two">
                 <input type="text"  placeholder="请输入企业名称" ng-model="searchBox" ng-show="'qiye' == type"/>
-                <input type="text" placeholder="请输入法人或股东姓名" ng-model="searchBox" ng-show="'faren' == type"/>
-                <input type="text" placeholder="请输入涉诉人名称" ng-model="searchBox" ng-show="'shixin' == type"/>
+                <input type="text" placeholder="请输入法人或股东姓名" ng-model="searchBoxName" ng-show="'faren' == type"/>
+                <input type="text" placeholder="请输入涉诉人名称" ng-model="searchBoxLose" ng-show="'shixin' == type"/>
             </li>
             <!-- Empty button -->
             <li class="li_three" ng-show="searchBox" ng-click="searchBox=''">
@@ -21,9 +21,9 @@
     <!-- s: Tabs -->
     <div class="searcharea_con">
         <ul>
-            <li ng-class="{current: 'qiye' == type}" ng-click="type='qiye';searchBox=''">企业</li>
-            <li ng-class="{current: 'faren' == type}" ng-click="type='faren';searchBox=''">法人/股东</li>
-            <li ng-class="{current: 'shixin' == type}" ng-click="type='shixin';searchBox=''">失信</li>
+            <li ng-class="{current: 'qiye' == type}" ng-click="type='qiye'">企业</li>
+            <li ng-class="{current: 'faren' == type}" ng-click="type='faren'">法人/股东</li>
+            <li ng-class="{current: 'shixin' == type}" ng-click="type='shixin'">失信</li>
         </ul>
 
         <!-- s: Select Area -->

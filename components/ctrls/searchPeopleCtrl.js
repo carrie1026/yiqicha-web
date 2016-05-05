@@ -8,6 +8,8 @@ define(['./mod'], function(mod) {
         function($scope, $location, $timeout, SearchPeopleService) {
             // init type
             $scope.type = $location.search().type;
+            $scope.searchBoxName = '';
+            $scope.searchBoxLose = '';
             var companyName = $location.search().companyName;
             if (companyName && 'qiye' == $scope.type){
                 $scope.searchBox = companyName;
@@ -64,6 +66,7 @@ define(['./mod'], function(mod) {
             // watch search box
             var timeouter;
             $scope.$watch('searchBox', function(newValue, oldValue) {
+            // $scope.$watchGroup(["searchBox","searchBoxName","searchBoxLose"], function(newValue, oldValue) {
                 if ('qiye' == $scope.type && '' == newValue) {// reset qiye search
                     search(newValue, $scope.address);
                     return;
@@ -82,6 +85,22 @@ define(['./mod'], function(mod) {
 
 
             });
+
+            // watch searchBoxName box
+            $scope.$watch('searchBoxName', function(newValue, oldValue) {
+                if (!newValue || newValue.length < 2)
+                    return;
+                
+                search(newValue, $scope.address);
+            });
+            // watch searchBoxLose box
+            $scope.$watch('searchBoxLose', function(newValue, oldValue) {
+                if (!newValue || newValue.length < 2)
+                    return;
+
+                search(newValue, $scope.address);
+            });
+
             // watch address
             $scope.$watch('address', function(newValue, oldValue) {
                 $scope.isShowArea = false;
