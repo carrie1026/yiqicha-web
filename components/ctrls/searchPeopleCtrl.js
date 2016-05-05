@@ -90,15 +90,27 @@ define(['./mod'], function(mod) {
             $scope.$watch('searchBoxName', function(newValue, oldValue) {
                 if (!newValue || newValue.length < 2)
                     return;
-                
-                search(newValue, $scope.address);
+
+                if (timeouter){// 终止之前的查询
+                    $timeout.cancel(timeouter);
+                }
+
+                timeouter =  $timeout(function () {
+                    search(newValue, $scope.address);
+                }, 200);
             });
             // watch searchBoxLose box
             $scope.$watch('searchBoxLose', function(newValue, oldValue) {
                 if (!newValue || newValue.length < 2)
                     return;
 
-                search(newValue, $scope.address);
+                if (timeouter){// 终止之前的查询
+                    $timeout.cancel(timeouter);
+                }
+
+                timeouter =  $timeout(function () {
+                    search(newValue, $scope.address);
+                }, 200);
             });
 
             // watch address
