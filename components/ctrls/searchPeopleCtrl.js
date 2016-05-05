@@ -62,6 +62,7 @@ define(['./mod'], function(mod) {
             };
 
             // watch search box
+            var timeouter;
             $scope.$watch('searchBox', function(newValue, oldValue) {
                 if ('qiye' == $scope.type && '' == newValue) {// reset qiye search
                     search(newValue, $scope.address);
@@ -71,17 +72,15 @@ define(['./mod'], function(mod) {
                 if (!newValue || newValue.length < 2)
                     return;
 
-                var timeouter;
-                function searchTimeout() {
-                    if (timeouter){// 终止之前的查询
-                        $timeout.cancel(timeouter);
-                    }
-
-                    timeouter =  $timeout(function () {
-                        search(newValue, $scope.address);
-                    }, 200);
+                if (timeouter){// 终止之前的查询
+                    $timeout.cancel(timeouter);
                 }
-                searchTimeout();
+
+                timeouter =  $timeout(function () {
+                    search(newValue, $scope.address);
+                }, 200);
+
+
             });
             // watch address
             $scope.$watch('address', function(newValue, oldValue) {
