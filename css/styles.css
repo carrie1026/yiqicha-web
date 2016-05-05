@@ -18,6 +18,7 @@ a:hover{
 	cursor: pointer;
 	float: left;
 	padding: 12px 0 0 0;
+	color: #fff;
 }
 .mycenter_header li.li_2{
 	width: 50%;
@@ -1729,4 +1730,24 @@ a{
 	font-size: 16px;
 	text-align: center;
 	padding: 0 0 0 4%;
+}
+
+
+/*服务协议*/
+.serve_con{
+	background: #fff;
+	padding: 0 0 20px 0;
+}
+.serve_con1{
+	padding: 0 4.6%;
+}
+.serve_con1 p.p_1{
+	font-size: 16px;
+	color: #3c3c3c;
+	padding: 15px 0 18px 0;
+}
+.serve_con1 p.p_2{
+	line-height: 200%;
+	color: #3c3c3c;
+	text-indent: 2em;
 }
