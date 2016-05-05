@@ -4,8 +4,8 @@
  * @author zhanghua on 4/26/16
  */
 define(['./mod'], function(mod) {
-    mod.controller('SearchpeopleCtrl', ['$scope', '$location', 'SearchPeopleService',
-        function($scope, $location, SearchPeopleService) {
+    mod.controller('SearchpeopleCtrl', ['$scope', '$location', '$timeout', 'SearchPeopleService',
+        function($scope, $location, $timeout, SearchPeopleService) {
             // init type
             $scope.type = $location.search().type;
             var companyName = $location.search().companyName;
@@ -62,6 +62,7 @@ define(['./mod'], function(mod) {
             };
 
             // watch search box
+            var timeouter;
             $scope.$watch('searchBox', function(newValue, oldValue) {
                 if ('qiye' == $scope.type && '' == newValue) {// reset qiye search
                     search(newValue, $scope.address);
@@ -71,10 +72,15 @@ define(['./mod'], function(mod) {
                 if (!newValue || newValue.length < 2)
                     return;
 
-                setTimeout(function(){
+                if (timeouter){// 终止之前的查询
+                    $timeout.cancel(timeouter);
+                }
+
+                timeouter =  $timeout(function () {
                     search(newValue, $scope.address);
-                },1000);
-                // search(newValue, $scope.address);
+                }, 200);
+
+
             });
             // watch address
             $scope.$watch('address', function(newValue, oldValue) {
