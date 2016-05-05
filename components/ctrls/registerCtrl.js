@@ -5,26 +5,28 @@ define(['./mod'], function (mod) {
             $scope.registerFormData = {};
             $scope.submitBtn = function() {
                 if (!$scope.registerFormData.phoneNumber || $scope.registerFormData.phoneNumber.length == 0) {
-                    alert('请输入手机号!');
+                    layer.open({content: '请输入正确的手机号码!'});
                     return;
                 }
                 if (!$scope.registerFormData.password || $scope.registerFormData.password.length == 0) {
-                    alert('请输入密码!');
+                    layer.open({content: '请输入密码!'});
+                    return;
+                }
+                if ($scope.registerFormData.password.length < 6 ||  $scope.registerFormData.password.length > 20) {
+                    layer.open({content: '密码为6-20位数字或字母'});
                     return;
                 }
                 $scope.registerFormData.username  = $scope.registerFormData.phoneNumber;
                 var promise = UserService.register($scope.registerFormData);
                 promise.then(function(data) {
-                    alert('注册成功');
+                    layer.open({content: '注册成功'});
                     $location.path('/login');
-                }, function(data) {
-                     
                 });
             };
             $scope.sendMobileCaptchaBtn = function() {
                 // console.log('send');
                 if (!$scope.registerFormData.phoneNumber || $scope.registerFormData.phoneNumber.length != 11) {
-                    alert('手机号码格式不正确!');
+                    layer.open({content: '请输入正确的手机号码!'});
                     return;
                 }
                 var isRegister=true;
