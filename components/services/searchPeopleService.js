@@ -2,7 +2,7 @@ define(['./mod'], function(mod) {
     'use strict';
     mod.factory('SearchPeopleService', ['$$http', '$q', function($$http, $q) {
         // 企业
-        var findEnterpriseInfoUrl = '/yiqicha/companyInfo/findEnterpriseInfo.do';
+        var findEnterpriseInfoUrl = '/yiqicha/companyInfo/unLogin/findEnterpriseInfo.do';
         // 法人/股东
         var findStockMsgUrl = '/yiqicha/companyInfo/unLogin/findStockMsg.do';
         // 失信

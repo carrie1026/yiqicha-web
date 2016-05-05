@@ -271,7 +271,7 @@ mod.factory('UserService', ['$http', '$q','$interval','$$http', function($http, 
 .factory('compdetService', ['$http', '$q', function($http, $q) {
     var compdet = function(id) {
         var defer = $q.defer();
-        $http.post('/yiqicha/companyInfo/unlogin/findEnterpriseInfo.do',{
+        $http.post('/yiqicha/companyInfo/unLogin/findEnterpriseInfoMsgById.do',{
             id:id
         }).success(function(data) {
             if (isRequestSuccess(data)) {
