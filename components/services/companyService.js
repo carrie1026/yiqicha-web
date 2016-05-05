@@ -6,8 +6,8 @@
 define(['./mod'], function(mod) {
     'use strict';
 
-    var btnStatusUrl = '/yiqicha/companyInfo/selectStatus.do'
-    var companyCountUrl = '/yiqicha/companyInfo/countEnterpriseInfo.do';
+    var btnStatusUrl = '/yiqicha/companyInfo/unLogin/selectStatus.do'
+    var companyCountUrl = '/yiqicha/companyInfo/unLogin/countEnterpriseInfo.do';
 
     mod.factory('CompanyService', ['$$http', '$q',
         function($$http, $q) {

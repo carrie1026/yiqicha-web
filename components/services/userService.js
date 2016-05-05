@@ -136,7 +136,7 @@ mod.factory('UserService', ['$http', '$q','$interval','$$http', function($http, 
 .factory('LitigationService', ['$http', '$q', function($http, $q) {
     var Litigation = function(page,rows, companyId) {
         var defer = $q.defer();
-        $http.post('/yiqicha/companyInfo/findLawsuitMsg.do',{
+        $http.post('/yiqicha/companyInfo/unLogin/findLawsuitMsg.do',{
            page:page,
            rows:rows,
            companyId: companyId
@@ -158,7 +158,7 @@ mod.factory('UserService', ['$http', '$q','$interval','$$http', function($http, 
 .factory('LitigationdeService', ['$http', '$q', function($http, $q) {
     var Litigationde = function(id) {
         var defer = $q.defer();
-        $http.post('/yiqicha/companyInfo/findLawsuitMsgById.do',{id: id}).success(function(data) {
+        $http.post('/yiqicha/companyInfo/unLogin/findLawsuitMsgById.do',{id: id}).success(function(data) {
             if (isRequestSuccess(data)) {
                 defer.resolve(data);
             } else {
@@ -176,7 +176,7 @@ mod.factory('UserService', ['$http', '$q','$interval','$$http', function($http, 
 .factory('CorpinfoService', ['$http', '$q', function($http, $q) {
     var Corpinfo = function(companyId,page,rows) {
         var defer = $q.defer();
-        $http.post('/yiqicha/enterpriseNews/findEnterpriseNewsList.do',{
+        $http.post('/yiqicha/enterpriseNews/unLogin/findEnterpriseNewsList.do',{
             companyId:companyId,
             page:page,
             rows:rows
@@ -198,7 +198,7 @@ mod.factory('UserService', ['$http', '$q','$interval','$$http', function($http, 
 .factory('CorpinfodeService', ['$http', '$q', function($http, $q) {
     var Corpinfode = function(id) {
         var defer = $q.defer();
-        $http.post('/yiqicha/enterpriseNews/findEnterpriseNewsById.do',{
+        $http.post('/yiqicha/enterpriseNews/unLogin/findEnterpriseNewsById.do',{
             id:id
         }).success(function(data) {
             if (isRequestSuccess(data)) {
@@ -249,7 +249,7 @@ mod.factory('UserService', ['$http', '$q','$interval','$$http', function($http, 
 .factory('ReportdetService', ['$http', '$q', function($http, $q) {
     var Reportdet = function(page,rows,companyId) {
         var defer = $q.defer();
-        $http.post('/yiqicha/annualPortsMsg/findAnnualPortsMsg.do',{
+        $http.post('/yiqicha/annualPortsMsg/unLogin/findAnnualPortsMsg.do',{
             page:page,
             rows:rows,
             companyId:companyId
@@ -271,7 +271,7 @@ mod.factory('UserService', ['$http', '$q','$interval','$$http', function($http, 
 .factory('compdetService', ['$http', '$q', function($http, $q) {
     var compdet = function(id) {
         var defer = $q.defer();
-        $http.post('/yiqicha/companyInfo/findEnterpriseInfoMsgById.do',{
+        $http.post('/yiqicha/companyInfo/unlogin/findEnterpriseInfo.do',{
             id:id
         }).success(function(data) {
             if (isRequestSuccess(data)) {
@@ -359,7 +359,7 @@ mod.factory('UserService', ['$http', '$q','$interval','$$http', function($http, 
 .factory('hotbusinessService', ['$http', '$q', function($http, $q) {
     var hotbusiness = function() {
         var defer = $q.defer();
-        $http.post('/yiqicha/companyInfo/hotEnterprise.do').success(function(data) {
+        $http.post('/yiqicha/companyInfo/unLogin/hotEnterprise.do').success(function(data) {
             if (isRequestSuccess(data)) {
                 defer.resolve(data);
             } else {
@@ -378,7 +378,7 @@ mod.factory('UserService', ['$http', '$q','$interval','$$http', function($http, 
 .factory('leadpeopleService', ['$http', '$q', function($http, $q) {
     var leadpeople = function(companyId,page,rows) {
         var defer = $q.defer();
-        $http.post('/yiqicha/mainMemberMsg/findMainMemberMsg.do',{
+        $http.post('/yiqicha/mainMemberMsg/unLogin/findMainMemberMsg.do',{
             companyId:companyId,
             page:page,
             rows:rows
@@ -401,7 +401,7 @@ mod.factory('UserService', ['$http', '$q','$interval','$$http', function($http, 
 .factory('changeRecordService', ['$http', '$q', function($http, $q) {
     var changeRecord = function(companyId,page,rows) {
         var defer = $q.defer();
-        $http.post('/yiqicha/editRecordMsg/findEditRecord.do',{
+        $http.post('/yiqicha/editRecordMsg/unLogin/findEditRecord.do',{
             companyId:companyId,
             page:page,
             rows:rows
@@ -423,7 +423,7 @@ mod.factory('UserService', ['$http', '$q','$interval','$$http', function($http, 
 .factory('SonEnterpriseInterMsgService', ['$http', '$q','$interval', function($http, $q,$interval) {
         var readData = function(companyId, page, rows){
             var defer = $q.defer();
-            $http.post('/yiqicha/sonEnterpriseInterMsg/findSonEnterpriseInterMsg.do',{companyId: companyId, page: page, rows: rows}).success(function(data) {
+            $http.post('/yiqicha/sonEnterpriseInterMsg/unLogin/findSonEnterpriseInterMsg.do',{companyId: companyId, page: page, rows: rows}).success(function(data) {
                 if (isRequestSuccess(data)) {
                     defer.resolve(data);
                     console.log(data);
@@ -442,7 +442,7 @@ mod.factory('UserService', ['$http', '$q','$interval','$$http', function($http, 
 mod.factory('businessInformationService',['$http', '$q','$interval', function($http, $q,$interval) {
     	var businessInformation = function(companyId){
     		var defer = $q.defer();
-            $http.post('/yiqicha/companyInfo/findVietinbanhInfoByCompanyId.do',{companyId: companyId}).success(function(data){
+            $http.post('/yiqicha/companyInfo/unLogin/findVietinbanhInfoByCompanyId.do',{companyId: companyId}).success(function(data){
                 if (isRequestSuccess(data)) {
                     defer.resolve(data);
                     console.log(data);

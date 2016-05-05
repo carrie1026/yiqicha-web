@@ -4,7 +4,7 @@ define(['./mod'], function (mod) {
     mod.factory('BusinessMapService', ['$http', '$q','$interval', function($http, $q,$interval) {
     	var queryBusinessMap = function(companyId){
             var defer = $q.defer();
-            $http.post('/yiqicha/companyInfo/findAtlas.do',{companyId: companyId}).success(function(data){
+            $http.post('/yiqicha/companyInfo/unLogin/findAtlas.do',{companyId: companyId}).success(function(data){
                 if (isRequestSuccess(data)) {
                     defer.resolve(data);
                     //console.log(data);

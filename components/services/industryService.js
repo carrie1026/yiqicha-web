@@ -4,7 +4,7 @@ define(['./mod'], function (mod) {
     mod.factory('ObtainIndustryInfoService',['$http', '$q','$interval', function($http, $q,$interval) {
     	var queryIndustryInfo = function(fatherSectorId){
     		var defer = $q.defer();
-            $http.post('/yiqicha/industryMsg/findIndustryByFatherId.do',{fatherSectorId: fatherSectorId}).success(function(data){
+            $http.post('/yiqicha/industryMsg/unLogin/findIndustryByFatherId.do',{fatherSectorId: fatherSectorId}).success(function(data){
                 if (isRequestSuccess(data)) {
                     defer.resolve(data);
                     console.log(data);

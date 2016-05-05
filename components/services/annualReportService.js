@@ -28,7 +28,7 @@ define(['./mod'], function(mod) {
     ]);
 
     var urls = {
-        annualReport: '/yiqicha/annualPortsMsg/findAnnualPortsMsgByCompanyid.do',
-        annualReportDetail: '/yiqicha/annualPortsMsg/findAnnualByAnnualPortsId.do'
+        annualReport: '/yiqicha/annualPortsMsg/unLogin/findAnnualPortsMsgByCompanyid.do',
+        annualReportDetail: '/yiqicha/annualPortsMsg/unLogin/findAnnualByAnnualPortsId.do'
     };
 });

@@ -5,7 +5,7 @@
  */
 define(['./mod'], function(mod) {
 
-    var jobListUrl = '/yiqicha/occupationMsg/findOccupationList.do';
+    var jobListUrl = '/yiqicha/courtitemMsg/unLogin/findOccupationList.do';
 
     mod.factory('JobService', ['$$http', function($$http) {
 

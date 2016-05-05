@@ -4,11 +4,11 @@ define(['./mod'], function(mod) {
         // 企业
         var findEnterpriseInfoUrl = '/yiqicha/companyInfo/findEnterpriseInfo.do';
         // 法人/股东
-        var findStockMsgUrl = '/yiqicha/companyInfo/findStockMsg.do';
+        var findStockMsgUrl = '/yiqicha/companyInfo/unLogin/findStockMsg.do';
         // 失信
-        var findOccupationListUrl = '/yiqicha/courtitemMsg/findOccupationList.do';
+        var findOccupationListUrl = '/yiqicha/courtitemMsg/unLogin/findOccupationList.do';
         // 根据股东姓名精确查找
-        var findStockMsgByNameUrl = '/yiqicha/companyInfo/findStockMsgByName.do';
+        var findStockMsgByNameUrl = '/yiqicha/companyInfo/unLogin/findStockMsgByName.do';
 
         var enterpriseList, stockMsgList, farenList, shixinList;
 

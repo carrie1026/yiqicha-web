@@ -18,7 +18,6 @@ define(['./mod'], function(mod) {
         
 //        $scope.subError = function(dictName) {
 //            $scope.errlist.push("dictName");
-//            $scope.errlist = dictName;
 //            var $scope.ErrorFormData.errorParts = angular.toJson($scope.errlist);
 //            console.log($scope.ErrorFormData.errorParts);            
 //        }

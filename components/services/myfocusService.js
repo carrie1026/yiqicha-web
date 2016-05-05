@@ -5,7 +5,7 @@ define(['./mod'], function(mod) {
 
         this.myfocus = function(page, rows, isPush) {
             var defer = $q.defer();
-            $$http.get('/yiqicha/myAttenttionMsg/findMyAttenttionMsg.do', {
+            $$http.get('/yiqicha/myAttenttionMsg/unLogin/findMyAttenttionMsg.do', {
                 page: page,
                 rows: rows
             }, true).then(function(data) {

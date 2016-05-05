@@ -5,7 +5,7 @@ define(['./mod'], function (mod) {
     	var queryIndustryEnterpriseTotalNumber = function(industry){
     		var defer = $q.defer();
             
-            $http.post('/yiqicha/industryMsg/findInDustryListByCreateYear.do',{industry: industry}).success(function(data){
+            $http.post('/yiqicha/industryMsg/unLogin/findInDustryListByCreateYear.do',{industry: industry}).success(function(data){
                 if (isRequestSuccess(data)) {
                     defer.resolve(data);
                     //console.log(data);
@@ -25,7 +25,7 @@ define(['./mod'], function (mod) {
         var queryRegisterTimeDistribute = function(industry){
             var defer = $q.defer();
             
-            $http.post('/yiqicha/industryMsg/findInDustryListByCreatTime.do',{industry: industry}).success(function(data){
+            $http.post('/yiqicha/industryMsg/unLogin/findInDustryListByCreatTime.do',{industry: industry}).success(function(data){
                 if (isRequestSuccess(data)) {
                     defer.resolve(data);
                     //console.log(data);
@@ -46,7 +46,7 @@ define(['./mod'], function (mod) {
         var queryEnterpriseEmployeeDistribute = function(industry){
             var defer = $q.defer();
             
-            $http.post('/yiqicha/industryMsg/findInDustryListByEmployeeCount.do',{industry: industry}).success(function(data){
+            $http.post('/yiqicha/industryMsg/unLogin/findInDustryListByEmployeeCount.do',{industry: industry}).success(function(data){
                 if (isRequestSuccess(data)) {
                     defer.resolve(data);
                     //console.log(data);
@@ -67,7 +67,7 @@ define(['./mod'], function (mod) {
         var queryEnterpriseRegisteredFoundDistribute = function(industry){
             var defer = $q.defer();
            
-            $http.post('/yiqicha/industryMsg/findInDustryListByRegistCapital.do',{industry: industry}).success(function(data){
+            $http.post('/yiqicha/industryMsg/unLogin/findInDustryListByRegistCapital.do',{industry: industry}).success(function(data){
                 if (isRequestSuccess(data)) {
                     defer.resolve(data);
                     //console.log(data);
