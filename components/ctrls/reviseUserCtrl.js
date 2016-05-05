@@ -1,7 +1,7 @@
 define(['./mod'], function(mod) {
     'use strict';
-    mod.controller('reviseUserCtrl', ['$scope', '$location', 'reviseUserService', '$rootScope', 'UserService', 'JobService', 'Upload',
-        function($scope, $location, reviseUserService, $rootScope, UserService, JobService, Upload) {
+    mod.controller('reviseUserCtrl', ['$scope', '$location', 'reviseUserService', '$rootScope', 'UserService','Upload',
+        function($scope, $location, reviseUserService, $rootScope, UserService,Upload) {
             // init registerFormData
             $scope.picFile = '';
             $scope.resImgData = '';
@@ -16,20 +16,20 @@ define(['./mod'], function(mod) {
                 $scope.reviseUserFormData.name = data.name;
                 $scope.reviseUserFormData.companyName = data.companyName;
                 $scope.reviseUserFormData.job = data.job;
-                $scope.loadSubJob(data.fId);
+//                $scope.loadSubJob(data.fId);
             });
 
-            $scope.loadJob = function() {
-                JobService.jobList().then(function(data) {
-                    $scope.jobList = data;
-                })
-            };
-
-            $scope.loadSubJob = function(id) {
-                JobService.jobList(id).then(function(data) {
-                    $scope.subJobList = data;
-                })
-            };
+//            $scope.loadJob = function() {
+//                JobService.jobList().then(function(data) {
+//                    $scope.jobList = data;
+//                })
+//            };
+//
+//            $scope.loadSubJob = function(id) {
+//                JobService.jobList(id).then(function(data) {
+//                    $scope.subJobList = data;
+//                })
+//            };
 
             $scope.submitBtn = function() {
                 if (!$scope.reviseUserFormData.name || $scope.reviseUserFormData.name.length == 0) {
@@ -38,14 +38,18 @@ define(['./mod'], function(mod) {
                 }
                 var promise = reviseUserService.reviseUser($scope.reviseUserFormData);
                 promise.then(function(data) {
-                    alert('修改成功');
+                    layer.open({
+                    content: '修改成功',
+                    style: 'background-color:#fff; color:#000; border:none;',
+                    time: 2
+                    });
                     $location.path('/mycenter_home');
                 }, function(data) {
 
                 });
             };
 
-            $scope.loadJob();
+//            $scope.loadJob();
 
             $scope.changeImg = function(){
                 $('#file').click();
