@@ -76,16 +76,16 @@
             <div id="slideBox" class="slideBox" style="overflow:hidden;background-color:#fff;height:80px;">
                 <div class="index_followde bd" >
                     <ul>
-                        <li ng-repeat="myfocus in myfocus.rows" style="height:80px;">
-                            <a ng-href="/compdet?id={{myfocus.companyId}}&sts=1">
-                            <div class="index23121">{{myfocus.companyName}}</div>
+                        <li ng-repeat="focus in myfocus.rows" style="height:80px;">
+                            <a ng-href="/compdet?id={{focus.companyId}}&sts=1">
+                            <div class="index23121">{{focus.companyName}}</div>
                             <div class="index23122">
                                 <div class="index231221">
                                   <div class="index2312211"><img src="../../images/icon_3.png" style="height:15px;"></div>
-                                    <div class="index2312212">公司法人：{{myfocus.repPersion}}</div>
+                                    <div class="index2312212">公司法人：{{focus.repPersion}}</div>
                                     <div class="clear"></div>
                                 </div>
-                                <div class="index231222">{{myfocus.recordStatus}}</div>
+                                <div class="index231222">{{focus.recordStatus}}</div>
                                 <div class="clear"></div>
                             </div>
                             <div class="clear"></div>
@@ -115,12 +115,12 @@
                             <div class="index23122">
                                 <div class="index231221">
                                     <div class="index231223">
-                                       <img ng-if="!hotbusiness.level" src="../../images/star0.png" >
-                                       <img ng-if="hotbusiness.level == 1" src="../../images/star1.png">
-                                       <img ng-if="hotbusiness.level == 2" src="../../images/star2.png">
-                                       <img ng-if="hotbusiness.level == 3" src="../../images/star3.png">
-                                       <img ng-if="hotbusiness.level == 4" src="../../images/star4.png">
-                                       <img ng-if="hotbusiness.level == 5" src="../../images/star5.png">
+                                       <img ng-if="!hotbusiness.level" src="../../images/star0.png" height="14">
+                                       <img ng-if="hotbusiness.level == 1" src="../../images/star1.png" height="14">
+                                       <img ng-if="hotbusiness.level == 2" src="../../images/star2.png" height="14">
+                                       <img ng-if="hotbusiness.level == 3" src="../../images/star3.png" height="14">
+                                       <img ng-if="hotbusiness.level == 4" src="../../images/star4.png" height="14">
+                                       <img ng-if="hotbusiness.level == 5" src="../../images/star5.png" height="14">
                                     </div>
                                  </div>
                                 <div class="index231222">

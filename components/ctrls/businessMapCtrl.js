@@ -45,7 +45,7 @@ define(['./mod'], function (mod) {
 				        trigger: 'item',
 				        formatter: '{a} : {b}'
 				    },
-		
+
 				    series : [
 				        {
 				            type:'force',

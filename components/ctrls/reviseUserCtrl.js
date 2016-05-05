@@ -4,6 +4,7 @@ define(['./mod'], function(mod) {
         function($scope, $location, reviseUserService, $rootScope, UserService, JobService, Upload) {
             // init registerFormData
             $scope.picFile = '';
+            $scope.resImgData = '';
             $scope.croppedDataUrl = '';
             $scope.reviseUserFormData = {};
             UserService.findUserInfo().then(function(data) {
@@ -50,13 +51,24 @@ define(['./mod'], function(mod) {
                 $('#file').click();
             };
 
-            $('#file').on('change', function (e) {
+            $('#file').on('change', function (evt) {
+                var file = evt.currentTarget.files[0];
+                if (file.size > (1024 * 500)) {
+                    layer.open({content: '上传的图片不能大于500k！'});
+                    return;
+                }
+                // console.log(file);
+                var reader = new FileReader();
+                reader.onload = function (evt) {
+                    $scope.$apply(function($scope){
+                        $scope.resImgData=evt.target.result;
+                    });
+                };
+                reader.readAsDataURL(file);
+
                 $('#changeImgDiv').css('height', (window.innerHeight -50));
                 $('#imgCropDiv').css('height', (window.innerHeight -50)/2);
                 $('#changeImgDiv').css('display','block');
-
-                var file = e.target.files[0];
-                console.log(file);
             });
 
             $scope.fileSelected = function($files, $event, b){
@@ -69,7 +81,7 @@ define(['./mod'], function(mod) {
             }
 
             $scope.upload = function (dataUrl, name) {
-                console.log(dataUrl);
+                // console.log(dataUrl);
                 Upload.upload({
                     method: 'POST',
                     url: '/yiqicha/manager/login/modifyUserIcon.do',

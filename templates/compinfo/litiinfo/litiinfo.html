@@ -1,3 +1,8 @@
+<style media="screen">
+    .susong .investa112 img{
+        width: 15px;
+    }
+</style>
 <div class="investa">
     <div class="mycenter_header">
         <ul>
@@ -6,22 +11,21 @@
             <br style="clear: both;" />
         </ul>
     </div>
-    <div class="investa1">
+    <div class="investa1 susong">
         <div ng-repeat="litinfod in litinfod.rows">
             <a ng-href="/litiinfod?id={{litinfod.id}}">
                 <div class="investa11">
                     <div class="investa111"></div>
                     <div class="investa112">
-                        <div class="investa1121 fl bgf"></div>
-                        <div class="investa1122 fl">公司法人：{{litinfod.name}}</div>
-                        <div class="investa1123 fr fz12"><img src="../../images/icon_1.png"></div>
+                        <h4 style="color: #000;">&nbsp;&nbsp;{{litinfod.court}}</h4>
                     </div>
                     <div class="investa112">
-                        <div class="investa1121 fl bgt"></div>
-                        <div class="investa1122 fl">{{litinfod.registrineTime}}</div>
-                        <div class="investa1123 fr fz12"></div>
+                        <div class="investa1122 fl"><img src="/images/qiyehao@3x.png">{{litinfod.caseNo}}</div>
+                        <div class="investa1123 fr"><span class="yjj">></span></div>
                     </div>
-                    <div class="investa113"></div>
+                    <div class="investa112">
+                        <div class="investa1122 fl"><img src="/images/clock@3x.png">&nbsp;&nbsp;{{litinfod.registrineTime}}</div>
+                    </div>
                 </div>
             </a>
         </div>

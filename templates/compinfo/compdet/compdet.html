@@ -2,14 +2,14 @@
 	<div class="cpdl" style="display:none">
 		<div class="cpdl1"><img src="../../../images/jiantou@3x.png"></div>
 		<div class="cpdl2">
-			<a href="/aboutUs">
-				<div class="cpdl21 prt5">
+<!--			<a href="/settings" ></a>-->
+				<div class="cpdl21 prt5" ng-click="recommend()">
 					<div class="cpdl211">
 						<div class="cpdl2111"><img src="../../../images/share2@3x.png"></div>
 						<div class="cpdl2112 fxbtn">分享</div>
 					</div>
 				</div>
-			</a>
+			
 			<!-- <div class="cpdl21">
 				<div class="cpdl211"><div class="cpdl2111"><img src="../../../images/phone@3x.png"></div><div class="cpdl2112 dhbtn">电话</div></div>
 			</div> -->
@@ -39,12 +39,12 @@
 			<!-- <div class="compdet1112">{{compdet.managementStatus}}</div> -->
 		</div>
 		<div class="compdet112">
-			<img ng-if="!compdet.level" src="/images/star0.png">
-			<img ng-if="compdet.level == 1" src="/images/star1.png">
-			<img ng-if="compdet.level == 2" src="/images/star2.png">
-			<img ng-if="compdet.level == 3" src="/images/star3.png">
-			<img ng-if="compdet.level == 4" src="/images/star4.png">
-			<img ng-if="compdet.level == 5" src="/images/star5.png">
+			<img ng-if="!compdet.level" src="/images/star0.png" height="14">
+			<img ng-if="compdet.level == 1" src="/images/star1.png" height="14">
+			<img ng-if="compdet.level == 2" src="/images/star2.png" height="14">
+			<img ng-if="compdet.level == 3" src="/images/star3.png" height="14">
+			<img ng-if="compdet.level == 4" src="/images/star4.png" height="14">
+			<img ng-if="compdet.level == 5" src="/images/star5.png" height="14">
 		</div>
 		<div class="compdet113" ng-if="0 == compdet.sts">
 			<a href="#" ng-click="addMyAttention()">关注</a>
@@ -205,7 +205,27 @@
 	</div>
 
 </div>
+<div style="display:none;">
+    <div class="jiathis_style_m"></div>
+    <script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_m.js" charset="utf-8"></script>
+</div>
+<style>
+    .jiathis_style_m{
+        padding: 4px 0 0 0;
+    }
+    .jiathis_style_m .jiathis_txt{
+   /* height: 43px;
+    line-height: 43px;*/
+    font-size: 14px;
 
+    /*padding: 4px 0 0 0;*/
+    }
+    span.jiathis_txt.jtico.jtico_qzone{
+        width: 18px;
+        height: 5px;
+        display: inline-block;
+    }
+</style>
 <script>
 	$(document).ready(function() {
 		$(".cpdl21").mouseover(function() {

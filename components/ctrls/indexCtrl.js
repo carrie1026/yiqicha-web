@@ -2,15 +2,15 @@ define(['./mod'], function(mod) {
     'use strict';
 
     var COMPANY_DATA_RELOAD_TIME = 10000;
-    var MY_FORCE_PAGE = 1;
-    var MY_FORCE_ROWS = 3;
+    var page = 1;
+    var rows = 5;
     var CHAR_ARRAY_LENGTH = 8;
 
     mod.controller('IndexCtrl', ['$scope', '$location', 'hotbusinessService', 'myfocusService', '$interval', '$timeout', 'CompanyService',
         function($scope, $location, hotbusinessService, myfocusService, $interval, $timeout, CompanyService) {
             hotbusinessService.hotbusiness().then(function(data) {
                 $scope.hotbusiness = data.data;
-                console.log($scope.hotbusiness);
+//                console.log($scope.hotbusiness);
                 $timeout(function() {
                     jQuery(".picMarquee-top").slide({
                         mainCell: ".bd ul",
@@ -23,8 +23,8 @@ define(['./mod'], function(mod) {
                 }, 100)
             })
 
-            myfocusService.myfocus(MY_FORCE_PAGE, MY_FORCE_ROWS).then(function(data) {
-                $scope.myfocus = data.data;
+            myfocusService.myfocus(page,rows).then(function(data) {
+                $scope.myfocus = data;
                 $timeout(function() {
                     jQuery(".slideBox").slide({
                         mainCell: ".bd ul",

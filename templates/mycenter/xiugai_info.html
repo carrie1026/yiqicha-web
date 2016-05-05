@@ -44,7 +44,7 @@
             </form>
         </div>
         <div id="stickyFooter" style="width:100%;height:26%;left:0;bottom:0">
-            <div id="ok" style="margin-top:6px;display:block">
+            <div id="ok" ng-if="resImgData" style="margin-top:6px;display:block">
                 <a ng-click="upload(croppedDataUrl, picFile.name)" style="cursor:pointer;" class="changeImgA">确定</a>
             </div>
             <div id="cancel" style="margin-top:6px;display:block">

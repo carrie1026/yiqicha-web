@@ -7,8 +7,20 @@ define(['./mod'], function (mod) {
 
     	$scope.submitSuggestion = function(){
     		if($scope.content == undefined || $scope.mobileNo == undefined){
-				alert("内容或联系电话不能为空！");
-    		}else{
+                layer.open({
+                    content: '内容或联系电话不能为空！',
+                    time: 2
+                });
+                return;
+    		}
+            if (!$scope.mobileNo || $scope.mobileNo.length != 11) {
+                layer.open({
+                        content: '手机号不符合规则',
+                        time: 2
+                    });
+                return;
+             }
+            else{
                 var phoneNo = $scope.mobileNo.trim();
                 var partten = /^1[3,4,5,7,8]\d{9}$/;
 
