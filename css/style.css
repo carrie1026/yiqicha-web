@@ -37,7 +37,7 @@ body {
 .register_yzm a{width: 40%;text-align: center;height: 36px;line-height: 36px;}
 .register_password input{width: 100%;height: 36px;line-height: 36px;padding-left: 20px;border: none;background-color:#fff;font-size:16px;}
 .register_submit p{text-align: center;}
-.register_submit p span{color: #f00;}
+.register_submit p span a{color: #f00;}
 
 .disabled{pointer-events: none;}
 .layermmain .section{background: none;}

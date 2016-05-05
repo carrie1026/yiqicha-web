@@ -171,6 +171,12 @@ define(['angular'], function(angular) {
                 templateUrl: '/templates/loginAndRegister/retrievepassword.html',
                 controller: 'RetrievepasswordCtrl'
             })
+            .when('/xiugai_password', {
+                templateUrl: '/templates/loginAndRegister/xiugai_password.html' 
+            })
+            .when('/serve_deal', {
+                templateUrl: '/templates/loginAndRegister/serve_deal.html' 
+            })
             .when('/search_company', {
                 templateUrl: '/templates/search/search_company.html',
                 controller: ''

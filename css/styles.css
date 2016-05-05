@@ -18,6 +18,7 @@ a:hover{
 	cursor: pointer;
 	float: left;
 	padding: 12px 0 0 0;
+	color: #fff;
 }
 .mycenter_header li.li_2{
 	width: 50%;
@@ -1707,4 +1708,46 @@ a{
 	height: 90px;
 	display: inline-block;
 	padding: 0 0 14px 0;
+}
+
+
+/*重置密码*/
+.reset_con{
+	background: #eef2f6;
+	margin: 0 auto;
+	text-align: center;
+}
+.reset_con p.p_1{
+	padding: 78px 0 30px 0;
+}
+.reset_con p.p_1 img{
+	width: 135px;
+	height: 118px;
+	display: inline-block;
+}
+.reset_con p.p_2{
+	color: #90a4b7;
+	font-size: 16px;
+	text-align: center;
+	padding: 0 0 0 4%;
+}
+
+
+/*服务协议*/
+.serve_con{
+	background: #fff;
+	padding: 0 0 20px 0;
+}
+.serve_con1{
+	padding: 0 4.6%;
+}
+.serve_con1 p.p_1{
+	font-size: 16px;
+	color: #3c3c3c;
+	padding: 15px 0 18px 0;
+}
+.serve_con1 p.p_2{
+	line-height: 200%;
+	color: #3c3c3c;
+	text-indent: 2em;
 }
