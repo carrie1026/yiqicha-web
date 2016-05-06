@@ -69,3 +69,11 @@
 .nianbao_bottom{
 	border-bottom: #e0e0e0 1px dashed;
 }
+
+.noInfo{
+	text-align:right;
+	margin-right: 15px;
+	line-height:40px;
+	font-size:12px;
+	color:#777;
+}
