@@ -7,18 +7,49 @@
             <br style="clear: both;" />
         </ul>
     </div>
-    <div class="myfocus" ng-repeat="Shareholder in holders.rows">
+    <!-- <div class="myfocus" ng-repeat="Shareholder in holders.rows">
         <a ng-href="/shareholderInfoDetail?name={{Shareholder.name}}&subcribeTime={{Shareholder.subcribeTime}}&&realSubcribeTime={{Shareholder.realSubcribeTime}}&subcribe={{Shareholder.subcribe}}&realSubcribe={{Shareholder.realSubcribe}}&subcribeType={{Shareholder.subcribeType}}">
             <p>{{Shareholder.name}}</p>
             <ul>
                 <li class="li_one"><img src="../../images/icon_3.png" style="width: 100%;"></li>
                 <li class="li_two">{{Shareholder.stockType}}</li>
-                <!-- <li class="li_three">{{Shareholder.recordStatus}}</li> -->
                 <div class="investa1123 fr"><span class="yjj">></span></div>
                 <br style="clear: both;" />
             </ul>
         </a>
+    </div> -->
+
+    <div class="shid1">
+        <div class="shid11" ng-repeat="holder in holders.rows">
+            <div class="shid111">{{holder.name}}</div>
+            <div class="shid112">{{holder.stockType}}</div>
+            <div class="shid113">
+                <div class="shid1131">
+                    <div class="shid11311">出资时间</div>
+                    <div class="shid11312">{{holder.subcribeTime}}</div>
+                </div>
+                <div class="shid1131">
+                    <div class="shid11311">认缴出资额</div>
+                    <div class="shid11312">{{holder.subcribe}}万人民币</div>
+                </div>
+                <div class="shid1131">
+                    <div class="shid11311">实缴时间</div>
+                    <div class="shid11312">{{holder.realSubcribeTime}}</div>
+                </div>
+                <div class="shid1131">
+                    <div class="shid11311">实缴出资额</div>
+                    <div class="shid11312">{{holder.realSubcribe}}万人民币</div>
+                </div>
+                <div class="shid1131">
+                    <div class="shid11311">出资方式</div>
+                    <div class="shid11312">{{holder.subcribeType}}</div>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+            <hr>
+        </div>
     </div>
+
     <div ng-if="0 == holders.rows.length">
         暂无股东信息
     </div>

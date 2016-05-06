@@ -5,19 +5,21 @@
 .shid1{
 	position: relative;
 	/*top:40px;*/
-	width:90%;
-	margin-left:5%;
+	width: 100%;
+	padding: 0 4.6%;
+	/*margin-left:5%;*/
 	min-height: 270px;
+	background: #fff;
 }
 .shid11{
 	width:100%;
-	margin-top: 15px;
+	padding-top: 15px;
 }
 .shid111{
 	width:100%;
 	height:30px;
 	line-height: 30px;
-	font-size:1.1em;
+	font-size: 16px;
 	font-weight:600;
 	color:#333;
 }

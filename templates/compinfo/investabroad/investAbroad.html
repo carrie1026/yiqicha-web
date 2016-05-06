@@ -26,7 +26,7 @@
  </div>
 
 <div class="myfocus" ng-repeat="item in investAbroadArray">
-       <!--  <a ng-href="/compdet?companyId={{myfocus.companyId}}&sts=1"> -->
+         <a ng-href="/compdet?id={{item.companyId}}&sts=1">
         <ul>
             <p>{{item.companyName}}</p>
             <li class="li_one"><img src="../../images/company_list@3x.png" style="width: 100%;"></li>
@@ -34,7 +34,7 @@
             <li class="li_three">{{item.recordStatus}}</li>
             <br style="clear: both;" />
         </ul>
-      <!--   </a> -->
+         </a>
 </div>
 
 </div>

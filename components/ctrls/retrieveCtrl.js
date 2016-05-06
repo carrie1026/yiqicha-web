@@ -5,8 +5,13 @@ mod.controller('RetrievepasswordCtrl', ['$scope', '$location', 'UserService', '$
     $scope.retrieveFormData = {};
     $scope.submitBtn = function(newPassword,captcha) {
 
-        if (!$scope.retrieveFormData.phoneNumber || $scope.retrieveFormData.phoneNumber.length != 11) {
+        if (!$scope.retrieveFormData.phoneNumber) {
             layer.open({content: '请输入手机号码'});
+            return;
+        }
+
+        if ($scope.retrieveFormData.phoneNumber.length != 11) {
+            layer.open({content: '手机号格式有误'});
             return;
         }
 
