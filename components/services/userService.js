@@ -268,18 +268,32 @@ mod.factory('UserService', ['$http', '$q','$interval','$$http', function($http, 
     };
 }])
 //查询企业信息 服务
-.factory('compdetService', ['$http', '$q', function($http, $q) {
+.factory('compdetService', ['$http', '$q', 'UserService', function($http, $q, UserService) {
     var compdet = function(id) {
         var defer = $q.defer();
-        $http.post('/yiqicha/companyInfo/unLogin/findEnterpriseInfoMsgById.do',{
-            id:id
-        }).success(function(data) {
-            if (isRequestSuccess(data)) {
-                defer.resolve(data);
-            } else {
-                defer.reject(data);
-            }
+
+        UserService.findUserInfo().then(function (data) {
+            $http.post('/yiqicha/companyInfo/findEnterpriseInfoMsgById.do',{
+                id:id
+            }).success(function(data) {
+                if (isRequestSuccess(data)) {
+                    defer.resolve(data);
+                } else {
+                    defer.reject(data);
+                }
+            });
+        }, function () {
+            $http.post('/yiqicha/companyInfo/unLogin/findEnterpriseInfoMsgById.do',{
+                id:id
+            }).success(function(data) {
+                if (isRequestSuccess(data)) {
+                    defer.resolve(data);
+                } else {
+                    defer.reject(data);
+                }
+            });
         });
+
         return defer.promise;
     };
 
