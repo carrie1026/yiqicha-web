@@ -39,18 +39,18 @@
 			<!-- <div class="compdet1112">{{compdet.managementStatus}}</div> -->
 		</div>
 		<div class="compdet112">
-			<img ng-if="!compdet.level" src="/images/star0.png" height="14">
-			<img ng-if="compdet.level == 1" src="/images/star1.png" height="14">
-			<img ng-if="compdet.level == 2" src="/images/star2.png" height="14">
-			<img ng-if="compdet.level == 3" src="/images/star3.png" height="14">
-			<img ng-if="compdet.level == 4" src="/images/star4.png" height="14">
-			<img ng-if="compdet.level == 5" src="/images/star5.png" height="14">
+			<img ng-if="!compdet.level" src="/images/star_0.png" height="14">
+			<img ng-if="compdet.level == 1" src="/images/star_1.png" height="14">
+			<img ng-if="compdet.level == 2" src="/images/star_2.png" height="14">
+			<img ng-if="compdet.level == 3" src="/images/star_3.png" height="14">
+			<img ng-if="compdet.level == 4" src="/images/star_4.png" height="14">
+			<img ng-if="compdet.level == 5" src="/images/star_5.png" height="14">
 		</div>
 		<div class="compdet113" ng-if="0 == compdet.sts">
-			<a href="#" ng-click="addMyAttention()">关注</a>
+			<a href="#" ng-click="addMyAttention()" style="color: #fff;">关注</a>
 		</div>
-		<div class="compdet113" ng-if="1 == compdet.sts">
-			<a href="#" ng-click="removeMyAttention()">取消关注</a>
+		<div class="compdet113" ng-if="1 == compdet.sts" style="background:#fff600;">
+			<a href="#" ng-click="removeMyAttention()" style="color:#bca300;">取消关注</a>
 		</div>
 		<div class="compdet114">
 			浏览：{{compdet.browseCount}}<span class="mgl10">关注：{{compdet.focus | myNum}}</span>
