@@ -37,20 +37,27 @@ define(['./mod'], function(mod) {
                 });
                 return;
             }
+            if (!$scope.ErrorFormData.errorContent) {
+                layer.open({
+                    content: '请输入提交内容部分',
+                    time: 2
+                });
+                return;
+            }
             if (!$scope.ErrorFormData.mobileEmailQqNo) {
                 layer.open({
-                    content: '手机号码不能为空',
+                    content: '联系方式不能为空',
                     time: 2
                 });
                 return;
             }
-            if (!/^1\d{10}$/.test($scope.ErrorFormData.mobileEmailQqNo)) {
-                layer.open({
-                    content: '手机号不符合规则',
-                    time: 2
-                });
-                return;
-            }
+//            if (!/^1\d{10}$/.test($scope.ErrorFormData.mobileEmailQqNo)) {
+//                layer.open({
+//                    content: '手机号不符合规则',
+//                    time: 2
+//                });
+//                return;
+//            }
             $scope.ErrorFormData.errorParts = angular.toJson($scope.errlist);
             console.log($scope.errlist);
             console.log($scope.ErrorFormData.errorParts);    
@@ -61,7 +68,7 @@ define(['./mod'], function(mod) {
                     content: '提交成功, 感谢您的反馈',
                     time: 2
                 });
-//                history.back(-1);
+                history.back(-1);
             }, function(data) {
                 layer.open({
                     content: '系统异常'

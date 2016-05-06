@@ -31,7 +31,11 @@ define(['./mod'], function (mod) {
                         $scope.content = "";
                         $scope.mobileNo = "";
                         $scope.mobileNoPlaceholder = "您的联系电话";
-                        alert(data.message);
+                        layer.open({
+                            content: '意见反馈提交成功！',
+                            time: 2
+                        });
+                        $location.path('/mycenter_home');
                     });
                 }else{
                     $scope.mobileNo = "";
