@@ -4,6 +4,29 @@ mod.controller('RetrievepasswordCtrl', ['$scope', '$location', 'UserService', '$
 
     $scope.retrieveFormData = {};
     $scope.submitBtn = function(newPassword,captcha) {
+
+        if (!$scope.retrieveFormData.phoneNumber) {
+            layer.open({content: '请输入手机号码'});
+            return;
+        }
+
+        if ($scope.retrieveFormData.phoneNumber.length != 11) {
+            layer.open({content: '手机号格式有误'});
+            return;
+        }
+
+        if (!$scope.retrieveFormData.password) {
+            layer.open({content: '请输入密码'});
+            return;
+        }
+
+        if ($scope.retrieveFormData.password.length < 6 || $scope.retrieveFormData.password.length > 20) {
+            layer.open({content: '密码为6-20位数字或字母'});
+            return;
+        }
+
+
+
         // 提交到后台
         RetrieveService.forgetPassword($scope.retrieveFormData.phoneNumber,$scope.retrieveFormData.captcha,$scope.retrieveFormData.password)
             .then(function(data) {

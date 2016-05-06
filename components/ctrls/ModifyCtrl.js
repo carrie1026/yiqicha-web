@@ -7,13 +7,13 @@ mod.controller('ModifypasswordCtrl', ['$scope', '$location', 'ModifyService', '$
         // 提交到后台
        if (!$scope.ModifyFormData.password || $scope.ModifyFormData.password.length == 0) {
            layer.open({
-                content: '请输入密码',
+                content: '请输入原密码',
                 style: 'background-color:#fff; color:#999; border:none;',
                 time: 2
             });
             return;
         }
-        if (!$scope.ModifyFormData.newPassword || $scope.ModifyFormData.newPassword.length == 0) {
+        if (!$scope.ModifyFormData.newPassword || !$scope.ModifyFormData.confirmnewPassword) {
            layer.open({
                 content: '请输入新密码',
                 style: 'background-color:#fff; color:#999; border:none;',
@@ -21,9 +21,17 @@ mod.controller('ModifypasswordCtrl', ['$scope', '$location', 'ModifyService', '$
             });
             return;
         }
+        if ($scope.ModifyFormData.newPassword.length < 6 || $scope.ModifyFormData.newPassword.length < 20) {
+           layer.open({
+                content: '密码为6-20位数字或字母',
+                style: 'background-color:#fff; color:#999; border:none;',
+                time: 2
+            });
+            return;
+        }
         if ($scope.ModifyFormData.newPassword != $scope.ModifyFormData.confirmnewPassword) {
            layer.open({
-                content: '密码不相同',
+                content: '新密码两次输入不一致',
                 style: 'background-color:#fff; color:#999; border:none;',
                 time: 2
             });

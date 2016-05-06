@@ -2,11 +2,6 @@ define(['./mod'], function(mod) {
     'use strict';
     mod.controller('compdetCtrl', ['$scope', '$location', 'compdetService', '$rootScope', 'UserService', 'CompanyService',
         function($scope, $location, compdetService, $rootScope, UserService, CompanyService) {
-
-            UserService.findUserInfo().then(function(data) { // logined
-                $rootScope.userInfo = data;
-            });
-
             $scope.isAlreadyFocus = false;
             // 股东信息
             var compdeted = $location.search();
@@ -16,7 +11,7 @@ define(['./mod'], function(mod) {
 
             compdetService.compdet(id).then(function(data) {
                 $scope.compdet = data.data;
-                console.log($scope.compdet);
+                // console.log($scope.compdet);
                 $scope.industry = data.data.industry;
             });
 

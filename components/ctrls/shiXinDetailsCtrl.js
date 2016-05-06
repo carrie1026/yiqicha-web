@@ -11,6 +11,7 @@ define(['./mod'], function(mod) {
             SearchPeopleService.findOccupationList('', '', false, iname).then(function(data) {
                 if (data.rows.length > 0) {
                     $scope.occ = data.rows[0];
+                    console.log($scope.occ);
                 }
             });
         }
