@@ -18,11 +18,15 @@ define(['./mod'], function(mod) {
        $scope.subError = function(dictName) {
             for (var i = 0; i < $scope.Errortype.length; i++){
                var Errortype = $scope.Errortype[i];
-               console.log(Errortype.dictName);
+//               console.log(Errortype.dictName);
                if(Errortype.dictName == dictName){
                     if(!Errortype.isSelected){
                       Errortype.isSelected = true; 
                       $scope.errlist.push(dictName);
+                    }
+                    else{
+                       Errortype.isSelected = false;
+                       $scope.errlist.splice(dictName,1);
                     }
                     break;
                }    
@@ -59,7 +63,7 @@ define(['./mod'], function(mod) {
 //                return;
 //            }
             $scope.ErrorFormData.errorParts = angular.toJson($scope.errlist);
-            console.log($scope.errlist);
+//            console.log($scope.errlist);
             console.log($scope.ErrorFormData.errorParts);    
             var promise = ErrorService.Error($scope.ErrorFormData);
             console.log($scope.ErrorFormData);
