@@ -3,20 +3,17 @@
         <ul>
             <li class="li_1" onclick="javascript :history.back(-1)"><img src="../../images/icon_2.png"></li>
             <li class="li_2">企业资讯</li>
-            <li class="li_3"><a href="/errorcorrect">纠错</a></li>
+            <li class="li_3"><a href="javascript:void(0)" ng-click="recommend()">分享</a></li>
             <br style="clear: both;" />
         </ul>
     </div>
     <div class="investa1">
         <div class="investa11">
-            <div class="investa111">{{Corpinfode.newsName}}</div>
-            <div class="investa112">
-                <div class="investa1122 fl wb40 tin">来源：{{Corpinfode.newsFrom}}</div>
-                <div class="investa1123 fr wb60">{{Corpinfode.newsTime}}</div>
-            </div>
-            <div class="investa113"></div>
+            <p class="ti2 p2">{{Corpinfode.content}}</p>
         </div>
-        <!-- <p class="corpp1">传统产品升级，增厚业绩</p> -->
-        <p class="ti2 p2">{{Corpinfode.content}}</p>
+    </div>
+    <div style="display:none;">
+        <div class="jiathis_style_m"></div>
+        <script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_m.js" charset="utf-8"></script>
     </div>
 </div>
