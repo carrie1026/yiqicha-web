@@ -21,9 +21,9 @@
     <!-- s: Tabs -->
     <div class="searcharea_con">
         <ul>
-            <li ng-class="{current: 'qiye' == type}" ng-click="type='qiye'">企业</li>
-            <li ng-class="{current: 'faren' == type}" ng-click="type='faren'">法人/股东</li>
-            <li ng-class="{current: 'shixin' == type}" ng-click="type='shixin'">失信</li>
+            <li ng-class="{current: 'qiye' == type}" ng-click="type='qiye';search(searchBox)" >企业</li>
+            <li ng-class="{current: 'faren' == type}" ng-click="type='faren';search(searchBox)">法人/股东</li>
+            <li ng-class="{current: 'shixin' == type}" ng-click="type='shixin';search(searchBox)">失信</li>
         </ul>
 
         <!-- s: Select Area -->

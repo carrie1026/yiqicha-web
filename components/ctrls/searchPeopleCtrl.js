@@ -44,7 +44,7 @@ define(['./mod'], function(mod) {
             };
 
             // on search
-            var search = function(name, address) {
+            $scope.search = function(name, address) {
                 switch ($scope.type) {
                     case 'qiye':
                         qiyePage = 1;
@@ -80,38 +80,13 @@ define(['./mod'], function(mod) {
                 }
 
                 timeouter =  $timeout(function () {
-                    search(newValue, $scope.address);
+                    $scope.search(newValue, $scope.address);
                 }, 200);
 
 
             });
 
-            // watch searchBoxName box
-            $scope.$watch('searchBoxName', function(newValue, oldValue) {
-                if (!newValue || newValue.length < 2)
-                    return;
-
-                if (timeouter){// 终止之前的查询
-                    $timeout.cancel(timeouter);
-                }
-
-                timeouter =  $timeout(function () {
-                    search(newValue, $scope.address);
-                }, 200);
-            });
-            // watch searchBoxLose box
-            $scope.$watch('searchBoxLose', function(newValue, oldValue) {
-                if (!newValue || newValue.length < 2)
-                    return;
-
-                if (timeouter){// 终止之前的查询
-                    $timeout.cancel(timeouter);
-                }
-
-                timeouter =  $timeout(function () {
-                    search(newValue, $scope.address);
-                }, 200);
-            });
+            
 
             // watch address
             $scope.$watch('address', function(newValue, oldValue) {
