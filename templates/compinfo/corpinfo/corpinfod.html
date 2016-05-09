@@ -2,12 +2,19 @@
     <div class="mycenter_header">
         <ul>
             <li class="li_1" onclick="javascript :history.back(-1)"><img src="../../images/icon_2.png"></li>
-            <li class="li_2">企业资讯</li>
+            <li class="li_2">详情</li>
             <li class="li_3"><a href="javascript:void(0)" ng-click="recommend()">分享</a></li>
             <br style="clear: both;" />
         </ul>
     </div>
     <div class="investa1">
+        <div class="investa11">
+            <div class="investa111">{{Corpinfode.newsName}}</div>
+            <div class="investa112">
+                <div class="investa1122 fl wb40 tin">来源：{{Corpinfode.newsFrom}}</div>
+                <div class="">{{Corpinfode.newsTime}}</div>
+            </div>
+        </div>
         <div class="investa11">
             <p class="ti2 p2">{{Corpinfode.content}}</p>
         </div>
