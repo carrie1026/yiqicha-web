@@ -10,6 +10,7 @@ define(['./mod'], function(mod) {
     mod.controller('myfocusCtrl', ['$scope', '$location', 'myfocusService' ,
         function($scope, $location, myfocusService) {
             var loadMyfocusList = function (isPush) {
+                var page = 1;
                 myfocusService.myfocus(page, rows, isPush).then(function(data) {
                     $scope.myfocus = data;
                     // console.log($scope.myfocus);
