@@ -63,7 +63,8 @@ define(['angular'], function(angular) {
                 templateUrl: '/templates/nopromise/nopromise_details.html'
             })
             .when('/nopromise_business', {
-                templateUrl: '/templates/nopromise/nopromise_business.html'
+                templateUrl: '/templates/nopromise/nopromise_business.html',
+                controller: 'nopromisebusinessCtrl'
             })
             .when('/nopromise_inquire', {
                 templateUrl: '/templates/nopromise/nopromise_inquire.html'

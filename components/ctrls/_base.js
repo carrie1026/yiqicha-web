@@ -34,5 +34,6 @@ define([
     'amapCtrl',
     'reportDetlCtrl',
     'ModifyCtrl',
-    'recommendCtrl'
+    'recommendCtrl',
+    'nopromisebusinessCtrl'
 ]);
